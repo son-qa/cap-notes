@@ -1,0 +1,1250 @@
+-------------------------------------
+Translated Report (Full Report Below)
+-------------------------------------
+
+Process:               MySQLWorkbench [13060]
+Path:                  /Applications/MySQLWorkbench.app/Contents/MacOS/MySQLWorkbench
+Identifier:            com.oracle.workbench.MySQLWorkbench
+Version:               8.0.32.CE (1)
+Code Type:             X86-64 (Native)
+Parent Process:        launchd [1]
+User ID:               502
+
+Date/Time:             2023-04-04 21:53:51.8066 +0530
+OS Version:            macOS 13.3 (22E252)
+Report Version:        12
+Bridge OS Version:     7.4 (20P4252)
+Anonymous UUID:        C52D6A74-1E7D-7467-037B-44759E7F0938
+
+Sleep/Wake UUID:       177FFD6A-4C06-4F14-BD49-0CF43D913C25
+
+Time Awake Since Boot: 33000 seconds
+Time Since Wake:       3644 seconds
+
+System Integrity Protection: enabled
+
+Crashed Thread:        0  Dispatch queue: com.apple.main-thread
+
+Exception Type:        EXC_BAD_INSTRUCTION (SIGILL)
+Exception Codes:       0x0000000000000001, 0x0000000000000000
+
+Termination Reason:    Namespace SIGNAL, Code 4 Illegal instruction: 4
+Terminating Process:   exc handler [13060]
+
+Application Specific Backtrace 0:
+0   CoreFoundation                      0x00007ff810b711ba __exceptionPreprocess + 242
+1   libobjc.A.dylib                     0x00007ff81069742b objc_exception_throw + 48
+2   CoreFoundation                      0x00007ff810c0d01f -[NSObject(NSObject) __retain_OA] + 0
+3   CoreFoundation                      0x00007ff810adc8d7 ___forwarding___ + 1392
+4   CoreFoundation                      0x00007ff810adc2d8 _CF_forwarding_prep_0 + 120
+5   WBExtras                            0x00000001081c41a1 -[MResultsetViewer tableView:willDisplayCell:forTableColumn:row:] + 393
+6   AppKit                              0x00007ff813ed3620 -[NSTableView _delegateWillDisplayCell:forColumn:row:] + 104
+7   AppKit                              0x00007ff813e18fd0 -[NSTableView preparedCellAtColumn:row:] + 1806
+8   MySQLWorkbench                      0x0000000107b19a98 -[MGridView preparedCellAtColumn:row:] + 54
+9   AppKit                              0x00007ff813e187b9 -[NSTableView _drawContentsAtRow:column:withCellFrame:] + 42
+10  AppKit                              0x00007ff813e1843f -[NSTableView drawRow:clipRect:] + 1656
+11  AppKit                              0x00007ff813e17aa5 -[NSTableView drawRowIndexes:clipRect:] + 707
+12  AppKit                              0x00007ff813da3c77 -[NSTableView drawRect:] + 1670
+13  AppKit                              0x00007ff813cd8b70 _NSViewDrawRect + 121
+14  AppKit                              0x00007ff8144b862a -[NSView _recursive:displayRectIgnoringOpacity:inContext:stopAtLayerBackedViews:] + 1810
+15  AppKit                              0x00007ff813cd829f -[NSView(NSLayerKitGlue) _drawViewBackingLayer:inContext:drawingHandler:] + 753
+16  QuartzCore                          0x00007ff8183b3390 CABackingStoreUpdate_ + 246
+17  QuartzCore                          0x00007ff818415b71 ___ZN2CA5Layer8display_Ev_block_invoke + 53
+18  QuartzCore                          0x00007ff8183b236b -[CALayer _display] + 2289
+19  AppKit                              0x00007ff813cd7eed -[_NSBackingLayer display] + 462
+20  AppKit                              0x00007ff813c505e8 -[_NSViewBackingLayer display] + 554
+21  QuartzCore                          0x00007ff8183b12e0 _ZN2CA5Layer17display_if_neededEPNS_11TransactionE + 856
+22  QuartzCore                          0x00007ff8185382cf _ZN2CA7Context18commit_transactionEPNS_11TransactionEdPd + 645
+23  QuartzCore                          0x00007ff818392213 _ZN2CA11Transaction6commitEv + 713
+24  AppKit                              0x00007ff813ce914f __62+[CATransaction(NSCATransaction) NS_setFlushesWithDisplayLink]_block_invoke + 285
+25  AppKit                              0x00007ff8144fbea8 ___NSRunLoopObserverCreateWithHandler_block_invoke + 41
+26  CoreFoundation                      0x00007ff810af9584 __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 23
+27  CoreFoundation                      0x00007ff810af94ab __CFRunLoopDoObservers + 482
+28  CoreFoundation                      0x00007ff810af8a36 __CFRunLoopRun + 859
+29  CoreFoundation                      0x00007ff810af8071 CFRunLoopRunSpecific + 560
+30  HIToolbox                           0x00007ff81a560fcd RunCurrentEventLoopInMode + 292
+31  HIToolbox                           0x00007ff81a560dde ReceiveNextEventCommon + 657
+32  HIToolbox                           0x00007ff81a560b38 _BlockUntilNextEventMatchingListInModeWithFilter + 64
+33  AppKit                              0x00007ff813b8a7a0 _DPSNextEvent + 858
+34  AppKit                              0x00007ff813b8964a -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1214
+35  AppKit                              0x00007ff813b7bcb8 -[NSApplication run] + 586
+36  AppKit                              0x00007ff813b4fed2 NSApplicationMain + 817
+37  dyld                                0x00007ff8106c441f start + 1903
+
+
+Thread 0 Crashed::  Dispatch queue: com.apple.main-thread
+0   AppKit                        	    0x7ff813eee98e -[NSApplication _crashOnException:] + 287
+1   AppKit                        	    0x7ff813ce938b __62+[CATransaction(NSCATransaction) NS_setFlushesWithDisplayLink]_block_invoke + 857
+2   AppKit                        	    0x7ff8144fbea8 ___NSRunLoopObserverCreateWithHandler_block_invoke + 41
+3   CoreFoundation                	    0x7ff810af9584 __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 23
+4   CoreFoundation                	    0x7ff810af94ab __CFRunLoopDoObservers + 482
+5   CoreFoundation                	    0x7ff810af8a36 __CFRunLoopRun + 859
+6   CoreFoundation                	    0x7ff810af8071 CFRunLoopRunSpecific + 560
+7   HIToolbox                     	    0x7ff81a560fcd RunCurrentEventLoopInMode + 292
+8   HIToolbox                     	    0x7ff81a560dde ReceiveNextEventCommon + 657
+9   HIToolbox                     	    0x7ff81a560b38 _BlockUntilNextEventMatchingListInModeWithFilter + 64
+10  AppKit                        	    0x7ff813b8a7a0 _DPSNextEvent + 858
+11  AppKit                        	    0x7ff813b8964a -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1214
+12  AppKit                        	    0x7ff813b7bcb8 -[NSApplication run] + 586
+13  AppKit                        	    0x7ff813b4fed2 NSApplicationMain + 817
+14  dyld                          	    0x7ff8106c441f start + 1903
+
+Thread 1:: GRTDispatcher
+0   libsystem_kernel.dylib        	    0x7ff8109e20ee __psynch_cvwait + 10
+1   libsystem_pthread.dylib       	    0x7ff810a1e78d _pthread_cond_wait + 1295
+2   libglib-2.0.0.dylib           	       0x1084e060b g_cond_wait_until + 123
+3   libglib-2.0.0.dylib           	       0x108454636 g_async_queue_pop_intern_unlocked + 166
+4   libglib-2.0.0.dylib           	       0x108454798 g_async_queue_timeout_pop + 56
+5   libwbpublic.be.dylib          	       0x108b4bf49 bec::GRTDispatcher::worker_thread(void*) + 209
+6   libglib-2.0.0.dylib           	       0x1084b4df2 g_thread_proxy + 66
+7   libsystem_pthread.dylib       	    0x7ff810a1e1d3 _pthread_start + 125
+8   libsystem_pthread.dylib       	    0x7ff810a19bd3 thread_start + 15
+
+Thread 2:: com.apple.NSEventThread
+0   libsystem_kernel.dylib        	    0x7ff8109df5b2 mach_msg2_trap + 10
+1   libsystem_kernel.dylib        	    0x7ff8109ed72d mach_msg2_internal + 78
+2   libsystem_kernel.dylib        	    0x7ff8109e65e4 mach_msg_overwrite + 692
+3   libsystem_kernel.dylib        	    0x7ff8109df89a mach_msg + 19
+4   CoreFoundation                	    0x7ff810afa1af __CFRunLoopServiceMachPort + 145
+5   CoreFoundation                	    0x7ff810af8c30 __CFRunLoopRun + 1365
+6   CoreFoundation                	    0x7ff810af8071 CFRunLoopRunSpecific + 560
+7   AppKit                        	    0x7ff813cea909 _NSEventThread + 132
+8   libsystem_pthread.dylib       	    0x7ff810a1e1d3 _pthread_start + 125
+9   libsystem_pthread.dylib       	    0x7ff810a19bd3 thread_start + 15
+
+Thread 3:
+0   libsystem_kernel.dylib        	    0x7ff8109e1fbe __semwait_signal + 10
+1   libsystem_c.dylib             	    0x7ff8108d4585 nanosleep + 196
+2   libglib-2.0.0.dylib           	       0x1084b6475 g_usleep + 69
+3   libwbbase.dylib               	       0x107cbb9e1 ThreadedTimer::main_loop() + 85
+4   libwbbase.dylib               	       0x107cbb79f ThreadedTimer::start(void*) + 9
+5   libglib-2.0.0.dylib           	       0x1084b4df2 g_thread_proxy + 66
+6   libsystem_pthread.dylib       	    0x7ff810a1e1d3 _pthread_start + 125
+7   libsystem_pthread.dylib       	    0x7ff810a19bd3 thread_start + 15
+
+Thread 4:: pool-spawner
+0   libsystem_kernel.dylib        	    0x7ff8109e20ee __psynch_cvwait + 10
+1   libsystem_pthread.dylib       	    0x7ff810a1e758 _pthread_cond_wait + 1242
+2   libglib-2.0.0.dylib           	       0x1084e0426 g_cond_wait + 38
+3   libglib-2.0.0.dylib           	       0x108454615 g_async_queue_pop_intern_unlocked + 133
+4   libglib-2.0.0.dylib           	       0x1084b53c8 g_thread_pool_spawn_thread + 72
+5   libglib-2.0.0.dylib           	       0x1084b4df2 g_thread_proxy + 66
+6   libsystem_pthread.dylib       	    0x7ff810a1e1d3 _pthread_start + 125
+7   libsystem_pthread.dylib       	    0x7ff810a19bd3 thread_start + 15
+
+Thread 5:: GRTDispatcher
+0   libsystem_kernel.dylib        	    0x7ff8109e20ee __psynch_cvwait + 10
+1   libsystem_pthread.dylib       	    0x7ff810a1e78d _pthread_cond_wait + 1295
+2   libglib-2.0.0.dylib           	       0x1084e060b g_cond_wait_until + 123
+3   libglib-2.0.0.dylib           	       0x108454636 g_async_queue_pop_intern_unlocked + 166
+4   libglib-2.0.0.dylib           	       0x108454798 g_async_queue_timeout_pop + 56
+5   libwbpublic.be.dylib          	       0x108b4bf49 bec::GRTDispatcher::worker_thread(void*) + 209
+6   libglib-2.0.0.dylib           	       0x1084b4df2 g_thread_proxy + 66
+7   libsystem_pthread.dylib       	    0x7ff810a1e1d3 _pthread_start + 125
+8   libsystem_pthread.dylib       	    0x7ff810a19bd3 thread_start + 15
+
+Thread 6:: GRTDispatcher
+0   libsystem_kernel.dylib        	    0x7ff8109e20ee __psynch_cvwait + 10
+1   libsystem_pthread.dylib       	    0x7ff810a1e78d _pthread_cond_wait + 1295
+2   libglib-2.0.0.dylib           	       0x1084e060b g_cond_wait_until + 123
+3   libglib-2.0.0.dylib           	       0x108454636 g_async_queue_pop_intern_unlocked + 166
+4   libglib-2.0.0.dylib           	       0x108454798 g_async_queue_timeout_pop + 56
+5   libwbpublic.be.dylib          	       0x108b4bf49 bec::GRTDispatcher::worker_thread(void*) + 209
+6   libglib-2.0.0.dylib           	       0x1084b4df2 g_thread_proxy + 66
+7   libsystem_pthread.dylib       	    0x7ff810a1e1d3 _pthread_start + 125
+8   libsystem_pthread.dylib       	    0x7ff810a19bd3 thread_start + 15
+
+Thread 7:: GRTDispatcher
+0   libsystem_kernel.dylib        	    0x7ff8109e20ee __psynch_cvwait + 10
+1   libsystem_pthread.dylib       	    0x7ff810a1e78d _pthread_cond_wait + 1295
+2   libglib-2.0.0.dylib           	       0x1084e060b g_cond_wait_until + 123
+3   libglib-2.0.0.dylib           	       0x108454636 g_async_queue_pop_intern_unlocked + 166
+4   libglib-2.0.0.dylib           	       0x108454798 g_async_queue_timeout_pop + 56
+5   libwbpublic.be.dylib          	       0x108b4bf49 bec::GRTDispatcher::worker_thread(void*) + 209
+6   libglib-2.0.0.dylib           	       0x1084b4df2 g_thread_proxy + 66
+7   libsystem_pthread.dylib       	    0x7ff810a1e1d3 _pthread_start + 125
+8   libsystem_pthread.dylib       	    0x7ff810a19bd3 thread_start + 15
+
+Thread 8:
+0   libsystem_pthread.dylib       	    0x7ff810a19bb0 start_wqthread + 0
+
+Thread 9:
+0   libsystem_pthread.dylib       	    0x7ff810a19bb0 start_wqthread + 0
+
+Thread 10:
+0   libsystem_pthread.dylib       	    0x7ff810a19bb0 start_wqthread + 0
+
+Thread 11:
+0   libsystem_pthread.dylib       	    0x7ff810a19bb0 start_wqthread + 0
+
+Thread 12:
+0   libsystem_pthread.dylib       	    0x7ff810a19bb0 start_wqthread + 0
+
+Thread 13:
+0   libsystem_pthread.dylib       	    0x7ff810a19bb0 start_wqthread + 0
+
+Thread 14:
+0   libsystem_pthread.dylib       	    0x7ff810a19bb0 start_wqthread + 0
+
+Thread 15:
+0   libsystem_pthread.dylib       	    0x7ff810a19bb0 start_wqthread + 0
+
+Thread 16:
+0   libsystem_pthread.dylib       	    0x7ff810a19bb0 start_wqthread + 0
+
+Thread 17:
+0   libsystem_pthread.dylib       	    0x7ff810a19bb0 start_wqthread + 0
+
+Thread 18:
+0   libsystem_pthread.dylib       	    0x7ff810a19bb0 start_wqthread + 0
+
+
+Thread 0 crashed with X86 Thread State (64-bit):
+  rax: 0x00007fc6a8a55800  rbx: 0x00007ff810689480  rcx: 0x444904b4d775001c  rdx: 0x0000000000000f24
+  rdi: 0x00007fc6a8a566e0  rsi: 0x00007ff7b841bc30  rbp: 0x00007ff7b841c0c0  rsp: 0x00007ff7b841c090
+   r8: 0x0000000000000000   r9: 0x00007fc6a8a56724  r10: 0x00007ff7b841bb98  r11: 0x000000000000a7ff
+  r12: 0x00007fc6a900f058  r13: 0x0000600001aecbe0  r14: 0x00006000022b1b90  r15: 0x00007ff82f973640
+  rip: 0x00007ff813eee98e  rfl: 0x0000000000010206  cr2: 0x000018e702652000
+  
+Logical CPU:     6
+Error Code:      0x00000000 
+Trap Number:     6
+
+Thread 0 instruction stream:
+  00 e8 32 a5 91 00 48 8b-35 7d b2 bd 3c 48 8b 1d  ..2...H.5}..<H..
+  06 cc 46 3e 4c 89 f7 ff-d3 48 8d 3d 1a 8b 9d 3c  ..F>L....H.=...<
+  48 89 c6 31 c0 e8 92 dd-e3 ff 4c 89 f7 4c 89 fe  H..1......L..L..
+  ff d3 48 8b 35 91 8f bd-3c 48 8d 15 7a 7b 9d 3c  ..H.5...<H..z{.<
+  48 89 c7 ff 15 d1 cb 46-3e 48 8b 35 7a 46 bb 3c  H......F>H.5zF.<
+  48 89 c7 ff 15 c1 cb 46-3e 48 89 05 b2 ff 5c 3e  H......F>H....\>
+ [0f]0b 48 89 c7 e8 50 aa-91 00 31 ff 31 f6 31 c0  ..H...P...1.1.1.	<==
+  e8 47 dd e3 ff e8 70 aa-91 00 0f 0b eb 00 48 89  .G....p.......H.
+  c3 e8 58 aa 91 00 48 89-df e8 66 a3 91 00 e8 47  ..X...H...f....G
+  ab 91 00 90 55 48 89 e5-41 57 41 56 41 55 41 54  ....UH..AWAVAUAT
+  53 48 83 ec 68 4d 89 c6-f2 0f 11 4d 90 f2 0f 11  SH..hM.....M....
+  45 98 49 89 cd 48 89 d3-48 8b 35 db 8e bf 3c 48  E.I..H..H.5...<H
+
+Binary Images:
+       0x107ae2000 -        0x107b31fff com.oracle.workbench.MySQLWorkbench (8.0.32.CE) <3a797cf0-e54a-38b2-8939-483d31b6040a> /Applications/MySQLWorkbench.app/Contents/MacOS/MySQLWorkbench
+       0x107cb4000 -        0x107ceffff libwbbase.dylib (*) <966e350f-b59e-32b0-914f-40aa26a62879> /Applications/MySQLWorkbench.app/Contents/Frameworks/libwbbase.dylib
+       0x107ed1000 -        0x107f4cfff libgrt.dylib (*) <9e1e7e6a-10f2-3f4b-aef3-55288cc95918> /Applications/MySQLWorkbench.app/Contents/Frameworks/libgrt.dylib
+       0x108049000 -        0x108090fff libmysql.canvas.dylib (*) <712aa0d7-6634-381d-b626-5db7cd535f3a> /Applications/MySQLWorkbench.app/Contents/Frameworks/libmysql.canvas.dylib
+       0x107c48000 -        0x107c5bfff libcdbc.dylib (*) <a1d28b48-0354-3230-a522-de085414424f> /Applications/MySQLWorkbench.app/Contents/Frameworks/libcdbc.dylib
+       0x108aa2000 -        0x108d0dfff libwbpublic.be.dylib (*) <bd41d9c1-c827-3655-aa42-d76b718706ad> /Applications/MySQLWorkbench.app/Contents/Frameworks/libwbpublic.be.dylib
+       0x10a27c000 -        0x10a70bfff libwbprivate.be.dylib (*) <dbc6617c-340b-3857-b572-6a9b42f1f597> /Applications/MySQLWorkbench.app/Contents/Frameworks/libwbprivate.be.dylib
+       0x1093a6000 -        0x1094c9fff libmforms.dylib (*) <2e716aff-c780-3bb1-a34f-02ce189b113f> /Applications/MySQLWorkbench.app/Contents/Frameworks/libmforms.dylib
+       0x108774000 -        0x1089fffff com.apple.python3 (3.9.6) <ccb8cbd0-ba8f-37e3-bd61-0ad1b0a9f5b5> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/Python3
+       0x10b15c000 -        0x10b333fff libparsers.dylib (*) <c9c6be2e-63f4-3d7c-95d8-d6858d307a77> /Applications/MySQLWorkbench.app/Contents/Frameworks/libparsers.dylib
+       0x10ba2c000 -        0x10bf3bfff libmysqlcppconn.9.8.0.32.dylib (*) <29bf26e2-8618-3b1f-96d2-92a91288f9ec> /Applications/MySQLWorkbench.app/Contents/Frameworks/libmysqlcppconn.9.8.0.32.dylib
+       0x1081a1000 -        0x1081e8fff WBExtras (*) <5e68d3b2-bbcb-3cf3-b0e9-53bb1e57d707> /Applications/MySQLWorkbench.app/Contents/Frameworks/WBExtras.framework/Versions/A/WBExtras
+       0x107de4000 -        0x107e33fff libssh.4.8.7.dylib (*) <a83d222b-1f1b-3677-b554-a23103a57eb1> /Applications/MySQLWorkbench.app/Contents/Frameworks/libssh.4.8.7.dylib
+       0x10844a000 -        0x108589fff libglib-2.0.0.dylib (*) <624106d5-8b5c-3818-a6a5-d2bbaf78ae6f> /Applications/MySQLWorkbench.app/Contents/Frameworks/libglib-2.0.0.dylib
+       0x109aad000 -        0x109bf4fff com.sun.Scintilla (3.7.0) <e8c07f0d-cee9-3a44-b5d8-d514896541f2> /Applications/MySQLWorkbench.app/Contents/Frameworks/Scintilla.framework/Versions/A/Scintilla
+       0x107e6c000 -        0x107eaffff libpcre.1.dylib (*) <f818ddfb-ab7f-3c1f-b086-78811a02a999> /Applications/MySQLWorkbench.app/Contents/Frameworks/libpcre.1.dylib
+       0x107c21000 -        0x107c24fff libgmodule-2.0.0.dylib (*) <730d2bb4-001a-3c0c-b6f1-2755fdb7e475> /Applications/MySQLWorkbench.app/Contents/Frameworks/libgmodule-2.0.0.dylib
+       0x1085fa000 -        0x1086bdfff libcairo.2.dylib (*) <efd6743e-a868-3ad1-bca7-b0396da67f20> /Applications/MySQLWorkbench.app/Contents/Frameworks/libcairo.2.dylib
+       0x10982a000 -        0x1098c9fff libpixman-1.0.dylib (*) <5faef324-b180-3cff-8beb-472abe24b46b> /Applications/MySQLWorkbench.app/Contents/Frameworks/libpixman-1.0.dylib
+       0x10829d000 -        0x1082ccfff libpng16.16.dylib (*) <45586515-9ef5-3ec0-8b36-abc5f51b9371> /Applications/MySQLWorkbench.app/Contents/Frameworks/libpng16.16.dylib
+       0x109d35000 -        0x109db0fff libantlr4-runtime.dylib (*) <6b776646-2fba-3439-af3a-6192dc50618c> /Applications/MySQLWorkbench.app/Contents/Frameworks/libantlr4-runtime.dylib
+       0x108375000 -        0x1083d0fff libssl.1.1.dylib (*) <9227e9da-df05-3673-a3df-cf6dfbe028b9> /Applications/MySQLWorkbench.app/Contents/Frameworks/libssl.1.1.dylib
+       0x10c358000 -        0x10c537fff libcrypto.1.1.dylib (*) <0d7f2a43-2daf-3c1c-9e8a-fb5c9e48dd39> /Applications/MySQLWorkbench.app/Contents/Frameworks/libcrypto.1.1.dylib
+       0x107d8d000 -        0x107d98fff libmtemplate.dylib (*) <03eed2f9-1fa9-3b27-b220-f8d8ffc3b364> /Applications/MySQLWorkbench.app/Contents/Frameworks/libmtemplate.dylib
+       0x10d80a000 -        0x10e3b5fff libgdal.28.dylib (*) <1736e9ad-a33b-3930-8862-704342d43dc9> /Applications/MySQLWorkbench.app/Contents/Frameworks/libgdal.28.dylib
+       0x108325000 -        0x108338fff libvsqlitepp.3.dylib (*) <48ac1d3a-b2c8-3edb-99eb-1c5bee59f196> /Applications/MySQLWorkbench.app/Contents/Frameworks/libvsqlitepp.3.dylib
+       0x10ca2d000 -        0x10cce8fff libproj.19.dylib (*) <5639dfda-e05e-316a-b595-db236f3c7e7b> /Applications/MySQLWorkbench.app/Contents/Frameworks/libproj.19.dylib
+       0x10a06b000 -        0x10a1d6fff libsqlite3.so (*) <057c15ed-8a07-382b-84a5-ac0b34666a6c> /Applications/MySQLWorkbench.app/Contents/Frameworks/libsqlite3.so
+       0x10ea46000 -        0x10eebdfff libmysqlclient.21.dylib (*) <f21bde17-6311-39af-9305-419ae04eadb4> /Applications/MySQLWorkbench.app/Contents/Frameworks/libmysqlclient.21.dylib
+       0x108401000 -        0x108414fff libwbssh.dylib (*) <8810c074-9fe2-3760-b96b-9b072e7accf7> /Applications/MySQLWorkbench.app/Contents/Frameworks/libwbssh.dylib
+       0x107d5c000 -        0x107d63fff libpcrecpp.0.dylib (*) <634438ff-f167-3543-ac82-a40d3626d458> /Applications/MySQLWorkbench.app/Contents/Frameworks/libpcrecpp.0.dylib
+       0x10872a000 -        0x10873dfff libzip.5.3.dylib (*) <dbef4255-e2ad-3a55-b25c-49d31e566470> /Applications/MySQLWorkbench.app/Contents/Frameworks/libzip.5.3.dylib
+       0x109a85000 -        0x109a94fff libobjc-trampolines.dylib (*) <d2da3b5f-f5ba-3ef1-b99d-bc64a8487401> /usr/lib/libobjc-trampolines.dylib
+       0x109a63000 -        0x109a66fff _heapq.cpython-39-darwin.so (*) <6d064bf1-e605-3fb6-8c26-316d24c5ae04> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_heapq.cpython-39-darwin.so
+       0x1193f0000 -        0x11945bfff db.mysql.parser.grt.dylib (*) <7ca02d43-91aa-3e3f-89b1-dd7172a807e7> /Applications/MySQLWorkbench.app/Contents/PlugIns/db.mysql.parser.grt.dylib
+       0x10d6c9000 -        0x10d730fff db.mysql.grt.dylib (*) <931246c2-19d5-38ea-8695-fe755d2cf4f3> /Applications/MySQLWorkbench.app/Contents/PlugIns/db.mysql.grt.dylib
+       0x10c8d4000 -        0x10c8e7fff db.mysql.query.grt.dylib (*) <edd1afe4-d347-3f2a-b88c-ac81b38d7c58> /Applications/MySQLWorkbench.app/Contents/PlugIns/db.mysql.query.grt.dylib
+       0x119248000 -        0x11927ffff wb.model.grt.dylib (*) <256cecd8-5ced-3e9c-bef7-223c05b4c75d> /Applications/MySQLWorkbench.app/Contents/PlugIns/wb.model.grt.dylib
+       0x119709000 -        0x119784fff db.mysql.sqlparser.grt.dylib (*) <252fa510-bd8f-3aba-84f8-217051265f0e> /Applications/MySQLWorkbench.app/Contents/PlugIns/db.mysql.sqlparser.grt.dylib
+       0x119a70000 -        0x119bbbfff sql.parser.dylib (*) <89befd0c-21ee-303b-9174-fd61ddec8375> /Applications/MySQLWorkbench.app/Contents/Frameworks/sql.parser.dylib
+       0x10c894000 -        0x10c89bfff utilities.grt.dylib (*) <7c8d65cf-1407-30e0-96a7-77678bb961a6> /Applications/MySQLWorkbench.app/Contents/PlugIns/utilities.grt.dylib
+       0x109a9d000 -        0x109aa0fff _queue.cpython-39-darwin.so (*) <294f78a8-2788-305d-8365-ff8562e5d56c> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_queue.cpython-39-darwin.so
+       0x10a25f000 -        0x10a266fff _struct.cpython-39-darwin.so (*) <306f03b9-88d0-3f94-8865-755a71be2f3c> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_struct.cpython-39-darwin.so
+       0x10a03a000 -        0x10a051fff _pickle.cpython-39-darwin.so (*) <3e154f0a-ee5a-3675-ad12-ad0f75a6cbf3> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_pickle.cpython-39-darwin.so
+       0x10c8b4000 -        0x10c8c3fff _socket.cpython-39-darwin.so (*) <7f203b68-f36f-3abc-9ce5-997d7e6688be> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_socket.cpython-39-darwin.so
+       0x10ca0b000 -        0x10ca16fff math.cpython-39-darwin.so (*) <a6f854a9-a6f2-3807-8750-a5bcf5e9f646> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/math.cpython-39-darwin.so
+       0x10d799000 -        0x10d7a0fff select.cpython-39-darwin.so (*) <3217987c-7c94-3a54-a4c9-5104b6520d9e> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/select.cpython-39-darwin.so
+       0x10d7ad000 -        0x10d7b8fff array.cpython-39-darwin.so (*) <5ba268a8-de3c-35ee-8e98-f17499846c4b> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/array.cpython-39-darwin.so
+       0x119e7b000 -        0x119f56fff _mforms.so (*) <7779ed9c-d490-3441-a097-7c42e030ff9e> /Applications/MySQLWorkbench.app/Contents/Resources/libraries/_mforms.so
+       0x10c9fa000 -        0x10c9fdfff grp.cpython-39-darwin.so (*) <218f92dc-cd72-311a-a7c5-f2fd85648cee> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/grp.cpython-39-darwin.so
+       0x1193e0000 -        0x1193e3fff _posixsubprocess.cpython-39-darwin.so (*) <acded11e-1d8a-3afb-89cb-89d41418a5ba> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_posixsubprocess.cpython-39-darwin.so
+       0x10c9d4000 -        0x10c9dbfff zlib.cpython-39-darwin.so (*) <9ff6706e-9894-3684-980b-d3a399904985> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/zlib.cpython-39-darwin.so
+       0x10c9e8000 -        0x10c9ebfff _bz2.cpython-39-darwin.so (*) <be133abe-1716-3cf5-8cc0-755101cfa1a0> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_bz2.cpython-39-darwin.so
+       0x119647000 -        0x11964efff _lzma.cpython-39-darwin.so (*) <07d60c77-6083-3dd4-8adb-8d3763d31185> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_lzma.cpython-39-darwin.so
+       0x11965b000 -        0x11965efff _bisect.cpython-39-darwin.so (*) <756ba830-904d-32ef-ac1c-c5a5524adf61> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_bisect.cpython-39-darwin.so
+       0x11966b000 -        0x11966efff _random.cpython-39-darwin.so (*) <6f737211-897d-3303-9868-574b4cee2e45> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_random.cpython-39-darwin.so
+       0x11967b000 -        0x119682fff _sha512.cpython-39-darwin.so (*) <f58ae34e-9ae7-316f-a3e5-edc37be7d4b0> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_sha512.cpython-39-darwin.so
+       0x119618000 -        0x11962bfff _datetime.cpython-39-darwin.so (*) <60a3b99f-80f8-39f8-8c3c-9b1890c41bdb> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_datetime.cpython-39-darwin.so
+       0x11993d000 -        0x119944fff _csv.cpython-39-darwin.so (*) <8ac639f4-1cdb-3cd3-951f-137fe8536e13> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_csv.cpython-39-darwin.so
+       0x119991000 -        0x119998fff _json.cpython-39-darwin.so (*) <e5020b23-c889-3447-96f8-92006b2f546f> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_json.cpython-39-darwin.so
+       0x1199a5000 -        0x1199acfff binascii.cpython-39-darwin.so (*) <e7dceaec-db49-3b5f-a045-4ace45776630> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/binascii.cpython-39-darwin.so
+       0x1196f5000 -        0x1196f8fff _opcode.cpython-39-darwin.so (*) <99379a8c-a97f-39fe-9783-3213ae279728> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_opcode.cpython-39-darwin.so
+       0x1196cf000 -        0x1196e2fff _ctypes.cpython-39-darwin.so (*) <32bc038f-c87d-3c13-9cbc-a946104322ee> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_ctypes.cpython-39-darwin.so
+       0x119a5f000 -        0x119a62fff termios.cpython-39-darwin.so (*) <30d876d1-4ed0-30e7-afe4-af9dd4c1452f> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/termios.cpython-39-darwin.so
+       0x11a2ad000 -        0x11a2d8fff _cairo.so (*) <7330e533-ff16-3030-b15d-f337e59432c5> /Applications/MySQLWorkbench.app/Contents/Resources/libraries/_cairo.so
+       0x119a39000 -        0x119a44fff _sqlite3.cpython-39-darwin.so (*) <6bb1adad-69d7-39a5-8b7e-a089746bc358> /Applications/MySQLWorkbench.app/Contents/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload/_sqlite3.cpython-39-darwin.so
+       0x11a53b000 -        0x11a54afff wb.printing.wbp.dylib (*) <f97d46c9-d0ad-37ff-a3b4-f36b93803ad8> /Applications/MySQLWorkbench.app/Contents/PlugIns/wb.printing.mwbplugin/Contents/Frameworks/wb.printing.wbp.dylib
+       0x11a6c9000 -        0x11a720fff db.mysql.editors.wbp.dylib (*) <e01bbea5-4998-35e9-9678-3ca4216b9de0> /Applications/MySQLWorkbench.app/Contents/PlugIns/db.mysql.editors.mwbplugin/Contents/Frameworks/db.mysql.editors.wbp.dylib
+       0x11a5e8000 -        0x11a603fff wb.model.editors.wbp.dylib (*) <ef6de0dd-4cd9-3282-93f7-0da0a55972c9> /Applications/MySQLWorkbench.app/Contents/PlugIns/wb.model.editors.mwbplugin/Contents/Frameworks/wb.model.editors.wbp.dylib
+       0x11a8c4000 -        0x11a8ebfff db.mysql.diff.reporting.wbp.dylib (*) <60f7def0-8660-3a0a-9f4d-95adfce5c5af> /Applications/MySQLWorkbench.app/Contents/PlugIns/db.mysql.diff.reporting.wbp.dylib
+       0x11abd1000 -        0x11ac84fff db.mysql.wbp.dylib (*) <1511aaa6-3c59-396f-adf1-50300fe71c39> /Applications/MySQLWorkbench.app/Contents/PlugIns/db.mysql.wbp.dylib
+       0x11aa11000 -        0x11aa38fff db.search.wbp.dylib (*) <0ae0adb7-e620-3281-b10b-a1027c02c9c9> /Applications/MySQLWorkbench.app/Contents/PlugIns/db.search.wbp.dylib
+       0x11a664000 -        0x11a677fff wb.model.snippets.wbp.dylib (*) <c5bdbac6-59eb-3275-a35a-42bcdebb6c17> /Applications/MySQLWorkbench.app/Contents/PlugIns/wb.model.snippets.wbp.dylib
+       0x11a293000 -        0x11a296fff com.oracle.workbench.printing (*) <0e94300b-c674-358b-aa9b-cc0f24ef95c9> /Applications/MySQLWorkbench.app/Contents/PlugIns/wb.printing.mwbplugin/Contents/MacOS/wb.printing
+       0x11a964000 -        0x11a983fff com.oracle.workbench.deb-editors (*) <8c9aa284-51fa-3711-bcfd-5d00c786d65a> /Applications/MySQLWorkbench.app/Contents/PlugIns/db.mysql.editors.mwbplugin/Contents/MacOS/db.mysql.editors
+       0x11a865000 -        0x11a86cfff com.oracle.workbench.wb-editors (*) <1a1dc001-f5ef-358e-8e92-d755e7d032d3> /Applications/MySQLWorkbench.app/Contents/PlugIns/wb.model.editors.mwbplugin/Contents/MacOS/wb.model.editors
+    0x7ff813b4c000 -     0x7ff814b53ff0 com.apple.AppKit (6.9) <8c5b6fc1-1e16-30f9-9523-950a8c367c5a> /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+    0x7ff810a7d000 -     0x7ff810f19fef com.apple.CoreFoundation (6.9) <315a3f65-0954-3635-96dc-2f65c691d074> /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+    0x7ff81a532000 -     0x7ff81a829ffd com.apple.HIToolbox (2.1.1) <a6003e8b-72cc-3d98-b569-26102836c61f> /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+    0x7ff8106be000 -     0x7ff8107565a7 dyld (*) <afa3518c-143e-3060-bbe8-624d4ca41063> /usr/lib/dyld
+    0x7ff8109de000 -     0x7ff810a17ff7 libsystem_kernel.dylib (*) <08606a44-7008-3658-9f00-6c250b80e9c3> /usr/lib/system/libsystem_kernel.dylib
+    0x7ff810a18000 -     0x7ff810a23fff libsystem_pthread.dylib (*) <86dfa543-95fa-36b4-83c6-bf03d01b2aad> /usr/lib/system/libsystem_pthread.dylib
+    0x7ff8108c5000 -     0x7ff81094cff7 libsystem_c.dylib (*) <0773ddbc-707e-3b56-ad3e-97aaa9b2c3ed> /usr/lib/system/libsystem_c.dylib
+
+External Modification Summary:
+  Calls made by other processes targeting this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by all processes on this machine:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+
+VM Region Summary:
+ReadOnly portion of Libraries: Total=882.5M resident=0K(0%) swapped_out_or_unallocated=882.5M(100%)
+Writable regions: Total=1.3G written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=1.3G(100%)
+
+                                VIRTUAL   REGION 
+REGION TYPE                        SIZE    COUNT (non-coalesced) 
+===========                     =======  ======= 
+Accelerate framework               256K        2 
+Activity Tracing                   256K        1 
+CG backing stores                 2528K        4 
+CG image                          1416K       62 
+ColorSync                          264K       30 
+CoreAnimation                    297.8M      125 
+CoreGraphics                        12K        2 
+CoreImage                          100K       13 
+CoreUI image data                 5440K       40 
+Foundation                          36K        2 
+Image IO                           480K       57 
+Kernel Alloc Once                    8K        1 
+MALLOC                           333.4M      126 
+MALLOC guard page                   48K       11 
+MALLOC_LARGE (reserved)            384K        1         reserved VM address space (unallocated)
+MALLOC_NANO (reserved)           384.0M        1         reserved VM address space (unallocated)
+STACK GUARD                         76K       19 
+Stack                            265.2M       23 
+VM_ALLOCATE                       14.1M       74 
+__CTF                               824        1 
+__DATA                            38.7M      648 
+__DATA_CONST                      39.9M      421 
+__DATA_DIRTY                      1712K      209 
+__FONT_DATA                        2352        1 
+__INFO_FILTER                         8        1 
+__LINKEDIT                       224.0M       78 
+__OBJC_RO                         66.2M        1 
+__OBJC_RW                         2012K        2 
+__TEXT                           658.5M      659 
+dyld private memory                580K        4 
+mapped file                      249.8M      194 
+shared memory                      800K       22 
+===========                     =======  ======= 
+TOTAL                              2.5G     2835 
+TOTAL, minus reserved VM space     2.2G     2835 
+
+
+
+-----------
+Full Report
+-----------
+
+{"app_name":"MySQLWorkbench","timestamp":"2023-04-04 21:53:52.00 +0530","app_version":"8.0.32.CE","slice_uuid":"3a797cf0-e54a-38b2-8939-483d31b6040a","build_version":"1","platform":1,"bundleID":"com.oracle.workbench.MySQLWorkbench","share_with_app_devs":1,"is_first_party":0,"bug_type":"309","os_version":"macOS 13.3 (22E252)","roots_installed":0,"name":"MySQLWorkbench","incident_id":"55EA5520-D3C4-4D46-93B8-84E7CB1F1B71"}
+{
+  "uptime" : 33000,
+  "procRole" : "Foreground",
+  "version" : 2,
+  "userID" : 502,
+  "deployVersion" : 210,
+  "modelCode" : "MacBookPro15,1",
+  "coalitionID" : 5447,
+  "osVersion" : {
+    "train" : "macOS 13.3",
+    "build" : "22E252",
+    "releaseType" : "User"
+  },
+  "captureTime" : "2023-04-04 21:53:51.8066 +0530",
+  "incident" : "55EA5520-D3C4-4D46-93B8-84E7CB1F1B71",
+  "pid" : 13060,
+  "cpuType" : "X86-64",
+  "roots_installed" : 0,
+  "bug_type" : "309",
+  "procLaunch" : "2023-04-04 21:45:56.9181 +0530",
+  "procStartAbsTime" : 32860054231763,
+  "procExitAbsTime" : 33334971829539,
+  "procName" : "MySQLWorkbench",
+  "procPath" : "\/Applications\/MySQLWorkbench.app\/Contents\/MacOS\/MySQLWorkbench",
+  "bundleInfo" : {"CFBundleShortVersionString":"8.0.32.CE","CFBundleVersion":"1","CFBundleIdentifier":"com.oracle.workbench.MySQLWorkbench"},
+  "storeInfo" : {"deviceIdentifierForVendor":"1F78D96B-24C8-54B2-9CD5-FB2099A88F61","thirdParty":true},
+  "parentProc" : "launchd",
+  "parentPid" : 1,
+  "coalitionName" : "com.oracle.workbench.MySQLWorkbench",
+  "crashReporterKey" : "C52D6A74-1E7D-7467-037B-44759E7F0938",
+  "throttleTimeout" : 2147483647,
+  "codeSigningID" : "com.oracle.workbench.MySQLWorkbench",
+  "codeSigningTeamID" : "VB5E2TV963",
+  "codeSigningFlags" : 570495745,
+  "codeSigningValidationCategory" : 6,
+  "codeSigningTrustLevel" : 0,
+  "wakeTime" : 3644,
+  "bridgeVersion" : {"build":"20P4252","train":"7.4"},
+  "sleepWakeUUID" : "177FFD6A-4C06-4F14-BD49-0CF43D913C25",
+  "sip" : "enabled",
+  "exception" : {"codes":"0x0000000000000001, 0x0000000000000000","rawCodes":[1,0],"type":"EXC_BAD_INSTRUCTION","signal":"SIGILL"},
+  "termination" : {"flags":0,"code":4,"namespace":"SIGNAL","indicator":"Illegal instruction: 4","byProc":"exc handler","byPid":13060},
+  "asiBacktraces" : ["0   CoreFoundation                      0x00007ff810b711ba __exceptionPreprocess + 242\n1   libobjc.A.dylib                     0x00007ff81069742b objc_exception_throw + 48\n2   CoreFoundation                      0x00007ff810c0d01f -[NSObject(NSObject) __retain_OA] + 0\n3   CoreFoundation                      0x00007ff810adc8d7 ___forwarding___ + 1392\n4   CoreFoundation                      0x00007ff810adc2d8 _CF_forwarding_prep_0 + 120\n5   WBExtras                            0x00000001081c41a1 -[MResultsetViewer tableView:willDisplayCell:forTableColumn:row:] + 393\n6   AppKit                              0x00007ff813ed3620 -[NSTableView _delegateWillDisplayCell:forColumn:row:] + 104\n7   AppKit                              0x00007ff813e18fd0 -[NSTableView preparedCellAtColumn:row:] + 1806\n8   MySQLWorkbench                      0x0000000107b19a98 -[MGridView preparedCellAtColumn:row:] + 54\n9   AppKit                              0x00007ff813e187b9 -[NSTableView _drawContentsAtRow:column:withCellFrame:] + 42\n10  AppKit                              0x00007ff813e1843f -[NSTableView drawRow:clipRect:] + 1656\n11  AppKit                              0x00007ff813e17aa5 -[NSTableView drawRowIndexes:clipRect:] + 707\n12  AppKit                              0x00007ff813da3c77 -[NSTableView drawRect:] + 1670\n13  AppKit                              0x00007ff813cd8b70 _NSViewDrawRect + 121\n14  AppKit                              0x00007ff8144b862a -[NSView _recursive:displayRectIgnoringOpacity:inContext:stopAtLayerBackedViews:] + 1810\n15  AppKit                              0x00007ff813cd829f -[NSView(NSLayerKitGlue) _drawViewBackingLayer:inContext:drawingHandler:] + 753\n16  QuartzCore                          0x00007ff8183b3390 CABackingStoreUpdate_ + 246\n17  QuartzCore                          0x00007ff818415b71 ___ZN2CA5Layer8display_Ev_block_invoke + 53\n18  QuartzCore                          0x00007ff8183b236b -[CALayer _display] + 2289\n19  AppKit                              0x00007ff813cd7eed -[_NSBackingLayer display] + 462\n20  AppKit                              0x00007ff813c505e8 -[_NSViewBackingLayer display] + 554\n21  QuartzCore                          0x00007ff8183b12e0 _ZN2CA5Layer17display_if_neededEPNS_11TransactionE + 856\n22  QuartzCore                          0x00007ff8185382cf _ZN2CA7Context18commit_transactionEPNS_11TransactionEdPd + 645\n23  QuartzCore                          0x00007ff818392213 _ZN2CA11Transaction6commitEv + 713\n24  AppKit                              0x00007ff813ce914f __62+[CATransaction(NSCATransaction) NS_setFlushesWithDisplayLink]_block_invoke + 285\n25  AppKit                              0x00007ff8144fbea8 ___NSRunLoopObserverCreateWithHandler_block_invoke + 41\n26  CoreFoundation                      0x00007ff810af9584 __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 23\n27  CoreFoundation                      0x00007ff810af94ab __CFRunLoopDoObservers + 482\n28  CoreFoundation                      0x00007ff810af8a36 __CFRunLoopRun + 859\n29  CoreFoundation                      0x00007ff810af8071 CFRunLoopRunSpecific + 560\n30  HIToolbox                           0x00007ff81a560fcd RunCurrentEventLoopInMode + 292\n31  HIToolbox                           0x00007ff81a560dde ReceiveNextEventCommon + 657\n32  HIToolbox                           0x00007ff81a560b38 _BlockUntilNextEventMatchingListInModeWithFilter + 64\n33  AppKit                              0x00007ff813b8a7a0 _DPSNextEvent + 858\n34  AppKit                              0x00007ff813b8964a -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1214\n35  AppKit                              0x00007ff813b7bcb8 -[NSApplication run] + 586\n36  AppKit                              0x00007ff813b4fed2 NSApplicationMain + 817\n37  dyld                                0x00007ff8106c441f start + 1903"],
+  "extMods" : {"caller":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"system":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"targeted":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"warnings":0},
+  "faultingThread" : 0,
+  "threads" : [{"triggered":true,"id":361442,"instructionState":{"instructionStream":{"bytes":[0,232,50,165,145,0,72,139,53,125,178,189,60,72,139,29,6,204,70,62,76,137,247,255,211,72,141,61,26,139,157,60,72,137,198,49,192,232,146,221,227,255,76,137,247,76,137,254,255,211,72,139,53,145,143,189,60,72,141,21,122,123,157,60,72,137,199,255,21,209,203,70,62,72,139,53,122,70,187,60,72,137,199,255,21,193,203,70,62,72,137,5,178,255,92,62,15,11,72,137,199,232,80,170,145,0,49,255,49,246,49,192,232,71,221,227,255,232,112,170,145,0,15,11,235,0,72,137,195,232,88,170,145,0,72,137,223,232,102,163,145,0,232,71,171,145,0,144,85,72,137,229,65,87,65,86,65,85,65,84,83,72,131,236,104,77,137,198,242,15,17,77,144,242,15,17,69,152,73,137,205,72,137,211,72,139,53,219,142,191,60,72],"offset":96}},"threadState":{"r13":{"value":105553144499168},"rax":{"value":140491209660416},"rflags":{"value":66054},"cpu":{"value":6},"r14":{"value":105553152646032},"rsi":{"value":140701924965424},"r8":{"value":0},"cr2":{"value":27380456693760},"rdx":{"value":3876},"r10":{"value":140701924965272},"r9":{"value":140491209664292},"r15":{"value":140703927055936,"objc-selector":"callStackSymbols"},"rbx":{"value":140703403906176,"symbolLocation":0,"symbol":"objc_msgSend"},"trap":{"value":6},"err":{"value":0},"r11":{"value":43007},"rip":{"value":140703463041422,"matchesCrashFrame":1},"rbp":{"value":140701924966592},"rsp":{"value":140701924966544},"r12":{"value":140491215663192},"rcx":{"value":4920469242634371100},"flavor":"x86_THREAD_STATE","rdi":{"value":140491209664224}},"queue":"com.apple.main-thread","frames":[{"imageOffset":3811726,"symbol":"-[NSApplication _crashOnException:]","symbolLocation":287,"imageIndex":76},{"imageOffset":1692555,"symbol":"__62+[CATransaction(NSCATransaction) NS_setFlushesWithDisplayLink]_block_invoke","symbolLocation":857,"imageIndex":76},{"imageOffset":10157736,"symbol":"___NSRunLoopObserverCreateWithHandler_block_invoke","symbolLocation":41,"imageIndex":76},{"imageOffset":509316,"symbol":"__CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__","symbolLocation":23,"imageIndex":77},{"imageOffset":509099,"symbol":"__CFRunLoopDoObservers","symbolLocation":482,"imageIndex":77},{"imageOffset":506422,"symbol":"__CFRunLoopRun","symbolLocation":859,"imageIndex":77},{"imageOffset":503921,"symbol":"CFRunLoopRunSpecific","symbolLocation":560,"imageIndex":77},{"imageOffset":192461,"symbol":"RunCurrentEventLoopInMode","symbolLocation":292,"imageIndex":78},{"imageOffset":191966,"symbol":"ReceiveNextEventCommon","symbolLocation":657,"imageIndex":78},{"imageOffset":191288,"symbol":"_BlockUntilNextEventMatchingListInModeWithFilter","symbolLocation":64,"imageIndex":78},{"imageOffset":255904,"symbol":"_DPSNextEvent","symbolLocation":858,"imageIndex":76},{"imageOffset":251466,"symbol":"-[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:]","symbolLocation":1214,"imageIndex":76},{"imageOffset":195768,"symbol":"-[NSApplication run]","symbolLocation":586,"imageIndex":76},{"imageOffset":16082,"symbol":"NSApplicationMain","symbolLocation":817,"imageIndex":76},{"imageOffset":25631,"symbol":"start","symbolLocation":1903,"imageIndex":79}]},{"id":361627,"name":"GRTDispatcher","frames":[{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":80},{"imageOffset":26509,"symbol":"_pthread_cond_wait","symbolLocation":1295,"imageIndex":81},{"imageOffset":615947,"symbol":"g_cond_wait_until","symbolLocation":123,"imageIndex":13},{"imageOffset":42550,"symbol":"g_async_queue_pop_intern_unlocked","symbolLocation":166,"imageIndex":13},{"imageOffset":42904,"symbol":"g_async_queue_timeout_pop","symbolLocation":56,"imageIndex":13},{"imageOffset":696137,"symbol":"bec::GRTDispatcher::worker_thread(void*)","symbolLocation":209,"imageIndex":5},{"imageOffset":437746,"symbol":"g_thread_proxy","symbolLocation":66,"imageIndex":13},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":81},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":81}]},{"id":361691,"name":"com.apple.NSEventThread","frames":[{"imageOffset":5554,"symbol":"mach_msg2_trap","symbolLocation":10,"imageIndex":80},{"imageOffset":63277,"symbol":"mach_msg2_internal","symbolLocation":78,"imageIndex":80},{"imageOffset":34276,"symbol":"mach_msg_overwrite","symbolLocation":692,"imageIndex":80},{"imageOffset":6298,"symbol":"mach_msg","symbolLocation":19,"imageIndex":80},{"imageOffset":512431,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":145,"imageIndex":77},{"imageOffset":506928,"symbol":"__CFRunLoopRun","symbolLocation":1365,"imageIndex":77},{"imageOffset":503921,"symbol":"CFRunLoopRunSpecific","symbolLocation":560,"imageIndex":77},{"imageOffset":1698057,"symbol":"_NSEventThread","symbolLocation":132,"imageIndex":76},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":81},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":81}]},{"id":362543,"frames":[{"imageOffset":16318,"symbol":"__semwait_signal","symbolLocation":10,"imageIndex":80},{"imageOffset":62853,"symbol":"nanosleep","symbolLocation":196,"imageIndex":82},{"imageOffset":443509,"symbol":"g_usleep","symbolLocation":69,"imageIndex":13},{"imageOffset":31201,"symbol":"ThreadedTimer::main_loop()","symbolLocation":85,"imageIndex":1},{"imageOffset":30623,"symbol":"ThreadedTimer::start(void*)","symbolLocation":9,"imageIndex":1},{"imageOffset":437746,"symbol":"g_thread_proxy","symbolLocation":66,"imageIndex":13},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":81},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":81}]},{"id":362544,"name":"pool-spawner","frames":[{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":80},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":81},{"imageOffset":615462,"symbol":"g_cond_wait","symbolLocation":38,"imageIndex":13},{"imageOffset":42517,"symbol":"g_async_queue_pop_intern_unlocked","symbolLocation":133,"imageIndex":13},{"imageOffset":439240,"symbol":"g_thread_pool_spawn_thread","symbolLocation":72,"imageIndex":13},{"imageOffset":437746,"symbol":"g_thread_proxy","symbolLocation":66,"imageIndex":13},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":81},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":81}]},{"id":362546,"name":"GRTDispatcher","frames":[{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":80},{"imageOffset":26509,"symbol":"_pthread_cond_wait","symbolLocation":1295,"imageIndex":81},{"imageOffset":615947,"symbol":"g_cond_wait_until","symbolLocation":123,"imageIndex":13},{"imageOffset":42550,"symbol":"g_async_queue_pop_intern_unlocked","symbolLocation":166,"imageIndex":13},{"imageOffset":42904,"symbol":"g_async_queue_timeout_pop","symbolLocation":56,"imageIndex":13},{"imageOffset":696137,"symbol":"bec::GRTDispatcher::worker_thread(void*)","symbolLocation":209,"imageIndex":5},{"imageOffset":437746,"symbol":"g_thread_proxy","symbolLocation":66,"imageIndex":13},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":81},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":81}]},{"id":362693,"name":"GRTDispatcher","frames":[{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":80},{"imageOffset":26509,"symbol":"_pthread_cond_wait","symbolLocation":1295,"imageIndex":81},{"imageOffset":615947,"symbol":"g_cond_wait_until","symbolLocation":123,"imageIndex":13},{"imageOffset":42550,"symbol":"g_async_queue_pop_intern_unlocked","symbolLocation":166,"imageIndex":13},{"imageOffset":42904,"symbol":"g_async_queue_timeout_pop","symbolLocation":56,"imageIndex":13},{"imageOffset":696137,"symbol":"bec::GRTDispatcher::worker_thread(void*)","symbolLocation":209,"imageIndex":5},{"imageOffset":437746,"symbol":"g_thread_proxy","symbolLocation":66,"imageIndex":13},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":81},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":81}]},{"id":362719,"name":"GRTDispatcher","frames":[{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":80},{"imageOffset":26509,"symbol":"_pthread_cond_wait","symbolLocation":1295,"imageIndex":81},{"imageOffset":615947,"symbol":"g_cond_wait_until","symbolLocation":123,"imageIndex":13},{"imageOffset":42550,"symbol":"g_async_queue_pop_intern_unlocked","symbolLocation":166,"imageIndex":13},{"imageOffset":42904,"symbol":"g_async_queue_timeout_pop","symbolLocation":56,"imageIndex":13},{"imageOffset":696137,"symbol":"bec::GRTDispatcher::worker_thread(void*)","symbolLocation":209,"imageIndex":5},{"imageOffset":437746,"symbol":"g_thread_proxy","symbolLocation":66,"imageIndex":13},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":81},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":81}]},{"id":365235,"frames":[{"imageOffset":7088,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":81}]},{"id":366638,"frames":[{"imageOffset":7088,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":81}]},{"id":366651,"frames":[{"imageOffset":7088,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":81}]},{"id":366658,"frames":[{"imageOffset":7088,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":81}]},{"id":366659,"frames":[{"imageOffset":7088,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":81}]},{"id":366660,"frames":[{"imageOffset":7088,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":81}]},{"id":366661,"frames":[{"imageOffset":7088,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":81}]},{"id":366668,"frames":[{"imageOffset":7088,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":81}]},{"id":366669,"frames":[{"imageOffset":7088,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":81}]},{"id":366670,"frames":[{"imageOffset":7088,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":81}]},{"id":366671,"frames":[{"imageOffset":7088,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":81}]}],
+  "usedImages" : [
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4423819264,
+    "CFBundleShortVersionString" : "8.0.32.CE",
+    "CFBundleIdentifier" : "com.oracle.workbench.MySQLWorkbench",
+    "size" : 327680,
+    "uuid" : "3a797cf0-e54a-38b2-8939-483d31b6040a",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/MacOS\/MySQLWorkbench",
+    "name" : "MySQLWorkbench",
+    "CFBundleVersion" : "1"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4425728000,
+    "size" : 245760,
+    "uuid" : "966e350f-b59e-32b0-914f-40aa26a62879",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libwbbase.dylib",
+    "name" : "libwbbase.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4427943936,
+    "size" : 507904,
+    "uuid" : "9e1e7e6a-10f2-3f4b-aef3-55288cc95918",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libgrt.dylib",
+    "name" : "libgrt.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4429484032,
+    "size" : 294912,
+    "uuid" : "712aa0d7-6634-381d-b626-5db7cd535f3a",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libmysql.canvas.dylib",
+    "name" : "libmysql.canvas.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4425285632,
+    "size" : 81920,
+    "uuid" : "a1d28b48-0354-3230-a522-de085414424f",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libcdbc.dylib",
+    "name" : "libcdbc.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4440334336,
+    "size" : 2539520,
+    "uuid" : "bd41d9c1-c827-3655-aa42-d76b718706ad",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libwbpublic.be.dylib",
+    "name" : "libwbpublic.be.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4465344512,
+    "size" : 4784128,
+    "uuid" : "dbc6617c-340b-3857-b572-6a9b42f1f597",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libwbprivate.be.dylib",
+    "name" : "libwbprivate.be.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4449787904,
+    "size" : 1196032,
+    "uuid" : "2e716aff-c780-3bb1-a34f-02ce189b113f",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libmforms.dylib",
+    "name" : "libmforms.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4437000192,
+    "CFBundleShortVersionString" : "3.9.6",
+    "CFBundleIdentifier" : "com.apple.python3",
+    "size" : 2670592,
+    "uuid" : "ccb8cbd0-ba8f-37e3-bd61-0ad1b0a9f5b5",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/Python3",
+    "name" : "Python3",
+    "CFBundleVersion" : "3.9.6"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4480942080,
+    "size" : 1933312,
+    "uuid" : "c9c6be2e-63f4-3d7c-95d8-d6858d307a77",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libparsers.dylib",
+    "name" : "libparsers.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4490182656,
+    "size" : 5308416,
+    "uuid" : "29bf26e2-8618-3b1f-96d2-92a91288f9ec",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libmysqlcppconn.9.8.0.32.dylib",
+    "name" : "libmysqlcppconn.9.8.0.32.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4430893056,
+    "size" : 294912,
+    "uuid" : "5e68d3b2-bbcb-3cf3-b0e9-53bb1e57d707",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/WBExtras.framework\/Versions\/A\/WBExtras",
+    "name" : "WBExtras",
+    "CFBundleVersion" : "1.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4426973184,
+    "size" : 327680,
+    "uuid" : "a83d222b-1f1b-3677-b554-a23103a57eb1",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libssh.4.8.7.dylib",
+    "name" : "libssh.4.8.7.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4433682432,
+    "size" : 1310720,
+    "uuid" : "624106d5-8b5c-3818-a6a5-d2bbaf78ae6f",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libglib-2.0.0.dylib",
+    "name" : "libglib-2.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4457156608,
+    "CFBundleShortVersionString" : "3.7.0",
+    "CFBundleIdentifier" : "com.sun.Scintilla",
+    "size" : 1343488,
+    "uuid" : "e8c07f0d-cee9-3a44-b5d8-d514896541f2",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Scintilla.framework\/Versions\/A\/Scintilla",
+    "name" : "Scintilla",
+    "CFBundleVersion" : "3.7.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4427530240,
+    "size" : 278528,
+    "uuid" : "f818ddfb-ab7f-3c1f-b086-78811a02a999",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libpcre.1.dylib",
+    "name" : "libpcre.1.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4425125888,
+    "size" : 16384,
+    "uuid" : "730d2bb4-001a-3c0c-b6f1-2755fdb7e475",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libgmodule-2.0.0.dylib",
+    "name" : "libgmodule-2.0.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4435451904,
+    "size" : 802816,
+    "uuid" : "efd6743e-a868-3ad1-bca7-b0396da67f20",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libcairo.2.dylib",
+    "name" : "libcairo.2.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4454522880,
+    "size" : 655360,
+    "uuid" : "5faef324-b180-3cff-8beb-472abe24b46b",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libpixman-1.0.dylib",
+    "name" : "libpixman-1.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4431925248,
+    "size" : 196608,
+    "uuid" : "45586515-9ef5-3ec0-8b36-abc5f51b9371",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libpng16.16.dylib",
+    "name" : "libpng16.16.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4459810816,
+    "size" : 507904,
+    "uuid" : "6b776646-2fba-3439-af3a-6192dc50618c",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libantlr4-runtime.dylib",
+    "name" : "libantlr4-runtime.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4432809984,
+    "size" : 376832,
+    "uuid" : "9227e9da-df05-3673-a3df-cf6dfbe028b9",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libssl.1.1.dylib",
+    "name" : "libssl.1.1.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4499800064,
+    "size" : 1966080,
+    "uuid" : "0d7f2a43-2daf-3c1c-9e8a-fb5c9e48dd39",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libcrypto.1.1.dylib",
+    "name" : "libcrypto.1.1.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4426616832,
+    "size" : 49152,
+    "uuid" : "03eed2f9-1fa9-3b27-b220-f8d8ffc3b364",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libmtemplate.dylib",
+    "name" : "libmtemplate.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4521500672,
+    "size" : 12238848,
+    "uuid" : "1736e9ad-a33b-3930-8862-704342d43dc9",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libgdal.28.dylib",
+    "name" : "libgdal.28.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4432482304,
+    "size" : 81920,
+    "uuid" : "48ac1d3a-b2c8-3edb-99eb-1c5bee59f196",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libvsqlitepp.3.dylib",
+    "name" : "libvsqlitepp.3.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4506963968,
+    "size" : 2867200,
+    "uuid" : "5639dfda-e05e-316a-b595-db236f3c7e7b",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libproj.19.dylib",
+    "name" : "libproj.19.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4463177728,
+    "size" : 1490944,
+    "uuid" : "057c15ed-8a07-382b-84a5-ac0b34666a6c",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libsqlite3.so",
+    "name" : "libsqlite3.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4540620800,
+    "size" : 4685824,
+    "uuid" : "f21bde17-6311-39af-9305-419ae04eadb4",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libmysqlclient.21.dylib",
+    "name" : "libmysqlclient.21.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4433383424,
+    "size" : 81920,
+    "uuid" : "8810c074-9fe2-3760-b96b-9b072e7accf7",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libwbssh.dylib",
+    "name" : "libwbssh.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4426416128,
+    "size" : 32768,
+    "uuid" : "634438ff-f167-3543-ac82-a40d3626d458",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libpcrecpp.0.dylib",
+    "name" : "libpcrecpp.0.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4436697088,
+    "size" : 81920,
+    "uuid" : "dbef4255-e2ad-3a55-b25c-49d31e566470",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/libzip.5.3.dylib",
+    "name" : "libzip.5.3.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64h",
+    "base" : 4456992768,
+    "size" : 65536,
+    "uuid" : "d2da3b5f-f5ba-3ef1-b99d-bc64a8487401",
+    "path" : "\/usr\/lib\/libobjc-trampolines.dylib",
+    "name" : "libobjc-trampolines.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4456853504,
+    "size" : 16384,
+    "uuid" : "6d064bf1-e605-3fb6-8c26-316d24c5ae04",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_heapq.cpython-39-darwin.so",
+    "name" : "_heapq.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4718526464,
+    "size" : 442368,
+    "uuid" : "7ca02d43-91aa-3e3f-89b1-dd7172a807e7",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/db.mysql.parser.grt.dylib",
+    "name" : "db.mysql.parser.grt.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4520185856,
+    "size" : 425984,
+    "uuid" : "931246c2-19d5-38ea-8695-fe755d2cf4f3",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/db.mysql.grt.dylib",
+    "name" : "db.mysql.grt.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4505550848,
+    "size" : 81920,
+    "uuid" : "edd1afe4-d347-3f2a-b88c-ac81b38d7c58",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/db.mysql.query.grt.dylib",
+    "name" : "db.mysql.query.grt.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4716789760,
+    "size" : 229376,
+    "uuid" : "256cecd8-5ced-3e9c-bef7-223c05b4c75d",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/wb.model.grt.dylib",
+    "name" : "wb.model.grt.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4721774592,
+    "size" : 507904,
+    "uuid" : "252fa510-bd8f-3aba-84f8-217051265f0e",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/db.mysql.sqlparser.grt.dylib",
+    "name" : "db.mysql.sqlparser.grt.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4725342208,
+    "size" : 1359872,
+    "uuid" : "89befd0c-21ee-303b-9174-fd61ddec8375",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/sql.parser.dylib",
+    "name" : "sql.parser.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4505288704,
+    "size" : 32768,
+    "uuid" : "7c8d65cf-1407-30e0-96a7-77678bb961a6",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/utilities.grt.dylib",
+    "name" : "utilities.grt.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4457091072,
+    "size" : 16384,
+    "uuid" : "294f78a8-2788-305d-8365-ff8562e5d56c",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_queue.cpython-39-darwin.so",
+    "name" : "_queue.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4465225728,
+    "size" : 32768,
+    "uuid" : "306f03b9-88d0-3f94-8865-755a71be2f3c",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_struct.cpython-39-darwin.so",
+    "name" : "_struct.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4462977024,
+    "size" : 98304,
+    "uuid" : "3e154f0a-ee5a-3675-ad12-ad0f75a6cbf3",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_pickle.cpython-39-darwin.so",
+    "name" : "_pickle.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4505419776,
+    "size" : 65536,
+    "uuid" : "7f203b68-f36f-3abc-9ce5-997d7e6688be",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_socket.cpython-39-darwin.so",
+    "name" : "_socket.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4506824704,
+    "size" : 49152,
+    "uuid" : "a6f854a9-a6f2-3807-8750-a5bcf5e9f646",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/math.cpython-39-darwin.so",
+    "name" : "math.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4521037824,
+    "size" : 32768,
+    "uuid" : "3217987c-7c94-3a54-a4c9-5104b6520d9e",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/select.cpython-39-darwin.so",
+    "name" : "select.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4521119744,
+    "size" : 49152,
+    "uuid" : "5ba268a8-de3c-35ee-8e98-f17499846c4b",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/array.cpython-39-darwin.so",
+    "name" : "array.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4729581568,
+    "size" : 901120,
+    "uuid" : "7779ed9c-d490-3441-a097-7c42e030ff9e",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Resources\/libraries\/_mforms.so",
+    "name" : "_mforms.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4506755072,
+    "size" : 16384,
+    "uuid" : "218f92dc-cd72-311a-a7c5-f2fd85648cee",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/grp.cpython-39-darwin.so",
+    "name" : "grp.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4718460928,
+    "size" : 16384,
+    "uuid" : "acded11e-1d8a-3afb-89cb-89d41418a5ba",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_posixsubprocess.cpython-39-darwin.so",
+    "name" : "_posixsubprocess.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4506599424,
+    "size" : 32768,
+    "uuid" : "9ff6706e-9894-3684-980b-d3a399904985",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/zlib.cpython-39-darwin.so",
+    "name" : "zlib.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4506681344,
+    "size" : 16384,
+    "uuid" : "be133abe-1716-3cf5-8cc0-755101cfa1a0",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_bz2.cpython-39-darwin.so",
+    "name" : "_bz2.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4720979968,
+    "size" : 32768,
+    "uuid" : "07d60c77-6083-3dd4-8adb-8d3763d31185",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_lzma.cpython-39-darwin.so",
+    "name" : "_lzma.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4721061888,
+    "size" : 16384,
+    "uuid" : "756ba830-904d-32ef-ac1c-c5a5524adf61",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_bisect.cpython-39-darwin.so",
+    "name" : "_bisect.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4721127424,
+    "size" : 16384,
+    "uuid" : "6f737211-897d-3303-9868-574b4cee2e45",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_random.cpython-39-darwin.so",
+    "name" : "_random.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4721192960,
+    "size" : 32768,
+    "uuid" : "f58ae34e-9ae7-316f-a3e5-edc37be7d4b0",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_sha512.cpython-39-darwin.so",
+    "name" : "_sha512.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4720787456,
+    "size" : 81920,
+    "uuid" : "60a3b99f-80f8-39f8-8c3c-9b1890c41bdb",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_datetime.cpython-39-darwin.so",
+    "name" : "_datetime.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4724084736,
+    "size" : 32768,
+    "uuid" : "8ac639f4-1cdb-3cd3-951f-137fe8536e13",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_csv.cpython-39-darwin.so",
+    "name" : "_csv.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4724428800,
+    "size" : 32768,
+    "uuid" : "e5020b23-c889-3447-96f8-92006b2f546f",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_json.cpython-39-darwin.so",
+    "name" : "_json.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4724510720,
+    "size" : 32768,
+    "uuid" : "e7dceaec-db49-3b5f-a045-4ace45776630",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/binascii.cpython-39-darwin.so",
+    "name" : "binascii.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4721692672,
+    "size" : 16384,
+    "uuid" : "99379a8c-a97f-39fe-9783-3213ae279728",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_opcode.cpython-39-darwin.so",
+    "name" : "_opcode.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4721537024,
+    "size" : 81920,
+    "uuid" : "32bc038f-c87d-3c13-9cbc-a946104322ee",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_ctypes.cpython-39-darwin.so",
+    "name" : "_ctypes.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4725272576,
+    "size" : 16384,
+    "uuid" : "30d876d1-4ed0-30e7-afe4-af9dd4c1452f",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/termios.cpython-39-darwin.so",
+    "name" : "termios.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4733980672,
+    "size" : 180224,
+    "uuid" : "7330e533-ff16-3030-b15d-f337e59432c5",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Resources\/libraries\/_cairo.so",
+    "name" : "_cairo.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4725116928,
+    "size" : 49152,
+    "uuid" : "6bb1adad-69d7-39a5-8b7e-a089746bc358",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/Frameworks\/Python3.framework\/Versions\/3.9\/lib\/python3.9\/lib-dynload\/_sqlite3.cpython-39-darwin.so",
+    "name" : "_sqlite3.cpython-39-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4736659456,
+    "size" : 65536,
+    "uuid" : "f97d46c9-d0ad-37ff-a3b4-f36b93803ad8",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/wb.printing.mwbplugin\/Contents\/Frameworks\/wb.printing.wbp.dylib",
+    "name" : "wb.printing.wbp.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4738289664,
+    "size" : 360448,
+    "uuid" : "e01bbea5-4998-35e9-9678-3ca4216b9de0",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/db.mysql.editors.mwbplugin\/Contents\/Frameworks\/db.mysql.editors.wbp.dylib",
+    "name" : "db.mysql.editors.wbp.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4737368064,
+    "size" : 114688,
+    "uuid" : "ef6de0dd-4cd9-3282-93f7-0da0a55972c9",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/wb.model.editors.mwbplugin\/Contents\/Frameworks\/wb.model.editors.wbp.dylib",
+    "name" : "wb.model.editors.wbp.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4740366336,
+    "size" : 163840,
+    "uuid" : "60f7def0-8660-3a0a-9f4d-95adfce5c5af",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/db.mysql.diff.reporting.wbp.dylib",
+    "name" : "db.mysql.diff.reporting.wbp.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4743565312,
+    "size" : 737280,
+    "uuid" : "1511aaa6-3c59-396f-adf1-50300fe71c39",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/db.mysql.wbp.dylib",
+    "name" : "db.mysql.wbp.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4741730304,
+    "size" : 163840,
+    "uuid" : "0ae0adb7-e620-3281-b10b-a1027c02c9c9",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/db.search.wbp.dylib",
+    "name" : "db.search.wbp.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4737875968,
+    "size" : 81920,
+    "uuid" : "c5bdbac6-59eb-3275-a35a-42bcdebb6c17",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/wb.model.snippets.wbp.dylib",
+    "name" : "wb.model.snippets.wbp.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4733874176,
+    "CFBundleIdentifier" : "com.oracle.workbench.printing",
+    "size" : 16384,
+    "uuid" : "0e94300b-c674-358b-aa9b-cc0f24ef95c9",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/wb.printing.mwbplugin\/Contents\/MacOS\/wb.printing",
+    "name" : "wb.printing",
+    "CFBundleVersion" : "1.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4741021696,
+    "CFBundleIdentifier" : "com.oracle.workbench.deb-editors",
+    "size" : 131072,
+    "uuid" : "8c9aa284-51fa-3711-bcfd-5d00c786d65a",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/db.mysql.editors.mwbplugin\/Contents\/MacOS\/db.mysql.editors",
+    "name" : "db.mysql.editors",
+    "CFBundleVersion" : "1.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4739977216,
+    "CFBundleIdentifier" : "com.oracle.workbench.wb-editors",
+    "size" : 32768,
+    "uuid" : "1a1dc001-f5ef-358e-8e92-d755e7d032d3",
+    "path" : "\/Applications\/MySQLWorkbench.app\/Contents\/PlugIns\/wb.model.editors.mwbplugin\/Contents\/MacOS\/wb.model.editors",
+    "name" : "wb.model.editors",
+    "CFBundleVersion" : "1.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703459229696,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.AppKit",
+    "size" : 16809969,
+    "uuid" : "8c5b6fc1-1e16-30f9-9523-950a8c367c5a",
+    "path" : "\/System\/Library\/Frameworks\/AppKit.framework\/Versions\/C\/AppKit",
+    "name" : "AppKit",
+    "CFBundleVersion" : "2299.50.120"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64h",
+    "base" : 140703408050176,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.CoreFoundation",
+    "size" : 4837360,
+    "uuid" : "315a3f65-0954-3635-96dc-2f65c691d074",
+    "path" : "\/System\/Library\/Frameworks\/CoreFoundation.framework\/Versions\/A\/CoreFoundation",
+    "name" : "CoreFoundation",
+    "CFBundleVersion" : "1971"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703570272256,
+    "CFBundleShortVersionString" : "2.1.1",
+    "CFBundleIdentifier" : "com.apple.HIToolbox",
+    "size" : 3112958,
+    "uuid" : "a6003e8b-72cc-3d98-b569-26102836c61f",
+    "path" : "\/System\/Library\/Frameworks\/Carbon.framework\/Versions\/A\/Frameworks\/HIToolbox.framework\/Versions\/A\/HIToolbox",
+    "name" : "HIToolbox"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703404122112,
+    "size" : 624040,
+    "uuid" : "afa3518c-143e-3060-bbe8-624d4ca41063",
+    "path" : "\/usr\/lib\/dyld",
+    "name" : "dyld"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703407398912,
+    "size" : 237560,
+    "uuid" : "08606a44-7008-3658-9f00-6c250b80e9c3",
+    "path" : "\/usr\/lib\/system\/libsystem_kernel.dylib",
+    "name" : "libsystem_kernel.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703407636480,
+    "size" : 49152,
+    "uuid" : "86dfa543-95fa-36b4-83c6-bf03d01b2aad",
+    "path" : "\/usr\/lib\/system\/libsystem_pthread.dylib",
+    "name" : "libsystem_pthread.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703406247936,
+    "size" : 557048,
+    "uuid" : "0773ddbc-707e-3b56-ad3e-97aaa9b2c3ed",
+    "path" : "\/usr\/lib\/system\/libsystem_c.dylib",
+    "name" : "libsystem_c.dylib"
+  }
+],
+  "sharedCache" : {
+  "base" : 140703403499520,
+  "size" : 21474836480,
+  "uuid" : "66dae95b-ca80-35b2-88d7-442211619642"
+},
+  "vmSummary" : "ReadOnly portion of Libraries: Total=882.5M resident=0K(0%) swapped_out_or_unallocated=882.5M(100%)\nWritable regions: Total=1.3G written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=1.3G(100%)\n\n                                VIRTUAL   REGION \nREGION TYPE                        SIZE    COUNT (non-coalesced) \n===========                     =======  ======= \nAccelerate framework               256K        2 \nActivity Tracing                   256K        1 \nCG backing stores                 2528K        4 \nCG image                          1416K       62 \nColorSync                          264K       30 \nCoreAnimation                    297.8M      125 \nCoreGraphics                        12K        2 \nCoreImage                          100K       13 \nCoreUI image data                 5440K       40 \nFoundation                          36K        2 \nImage IO                           480K       57 \nKernel Alloc Once                    8K        1 \nMALLOC                           333.4M      126 \nMALLOC guard page                   48K       11 \nMALLOC_LARGE (reserved)            384K        1         reserved VM address space (unallocated)\nMALLOC_NANO (reserved)           384.0M        1         reserved VM address space (unallocated)\nSTACK GUARD                         76K       19 \nStack                            265.2M       23 \nVM_ALLOCATE                       14.1M       74 \n__CTF                               824        1 \n__DATA                            38.7M      648 \n__DATA_CONST                      39.9M      421 \n__DATA_DIRTY                      1712K      209 \n__FONT_DATA                        2352        1 \n__INFO_FILTER                         8        1 \n__LINKEDIT                       224.0M       78 \n__OBJC_RO                         66.2M        1 \n__OBJC_RW                         2012K        2 \n__TEXT                           658.5M      659 \ndyld private memory                580K        4 \nmapped file                      249.8M      194 \nshared memory                      800K       22 \n===========                     =======  ======= \nTOTAL                              2.5G     2835 \nTOTAL, minus reserved VM space     2.2G     2835 \n",
+  "legacyInfo" : {
+  "threadTriggered" : {
+    "queue" : "com.apple.main-thread"
+  }
+},
+  "logWritingSignature" : "94e3ea95d735d6c7ccf6a26ea5e179042bda78b3",
+  "trialInfo" : {
+  "rollouts" : [
+    {
+      "rolloutId" : "6112d17137f5d11121dcd4e2",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000250
+    },
+    {
+      "rolloutId" : "5ffde50ce2aacd000d47a95f",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000255
+    }
+  ],
+  "experiments" : [
+
+  ]
+}
+}
+
+Model: MacBookPro15,1, BootROM 1968.100.17.0.0 (iBridge: 20.16.4252.0.0,0), 6 processors, 6-Core Intel Core i7, 2.6 GHz, 16 GB, SMC 
+Graphics: Intel UHD Graphics 630, Intel UHD Graphics 630, Built-In
+Display: Color LCD, 2880 x 1800 Retina, Main, MirrorOff, Online
+Graphics: Radeon Pro 555X, Radeon Pro 555X, PCIe, 4 GB
+Memory Module: BANK 0/ChannelA-DIMM0, 8 GB, DDR4, 2400 MHz, Micron, 8ATF1G64HZ-2G6E1
+Memory Module: BANK 2/ChannelB-DIMM0, 8 GB, DDR4, 2400 MHz, Micron, 8ATF1G64HZ-2G6E1
+AirPort: spairport_wireless_card_type_wifi (0x14E4, 0x7BF), wl0: Dec  9 2022 16:56:24 version 9.30.492.0.32.5.87 FWID 01-3a11ec19
+Bluetooth: Version (null), 0 services, 0 devices, 0 incoming serial ports
+Network Service: Wi-Fi, AirPort, en0
+Network Service: wireguard, VPN (com.wireguard.macos), utun3
+USB Device: USB31Bus
+USB Device: T2Bus
+USB Device: Touch Bar Backlight
+USB Device: Touch Bar Display
+USB Device: Apple Internal Keyboard / Trackpad
+USB Device: Headset
+USB Device: Ambient Light Sensor
+USB Device: FaceTime HD Camera (Built-in)
+USB Device: Apple T2 Controller
+Thunderbolt Bus: MacBook Pro, Apple Inc., 47.5
+Thunderbolt Bus: MacBook Pro, Apple Inc., 47.5

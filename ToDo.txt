@@ -1,8 +1,8 @@
 Tasks:
-	- Option Pruning  https://trello.com/c/MhHQiXR1/3349-option-pruning-logic-to-be-included-in-auto-survey
 	- Meaning of
 		return self._driver.execute_script(f'''return (_=>{{return {item};}})();''') --> Arrow function in javascript
-	- Purchase PW course Anush
+	- https://trello.com/c/AqN5LVZz/826-adcopy-to-provider-fix
+	- Device atlas on canary
 	
 		
 Secondary:
@@ -10,7 +10,7 @@ Secondary:
 	- CMT table optimizations 	https://trello.com/c/WWQjKNv6/758-all-tables-optimization-on-cmt-mysql
 	- GMail filter update
 	- HOAX, tunnel, dot vpn
-	- 
+	- Option Pruning  https://trello.com/c/MhHQiXR1/3349-option-pruning-logic-to-be-included-in-auto-survey
 
 			
 Requirement Gathering:
@@ -44,4 +44,3 @@ Validation scope:
 python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=regression-compliance
 
 	
-	8652650722 - Gpay busineess
