@@ -1,0 +1,4 @@
+ToDo:
+	
+	Project exploration
+	Python - decorators, yeild, lambda, 

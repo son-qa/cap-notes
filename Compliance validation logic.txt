@@ -1,0 +1,100 @@
+Scope:
+	- verify optin entries
+	- verify lead posting
+	- verify no ghost lead id is present
+	- verify null lead posting
+
+Columns for DB
+	Unique id - varchar
+	user id - int
+	leads - list
+	steps_passed? - bool
+	expectations - json
+	date - date
+	
+
+-------------------------><-------------------------
+
+Lead posting data storing format:
+	tcpa_survey_optin = 
+		{ leadid1 : [brandedTcpa, preTcpa, tcpaOptIn, tcpaOptOut]
+		  leadid2 : [brandedTcpa, preTcpa, tcpaOptIn, tcpaOptOut]
+		}
+	
+	max_leadgen_sponsor_ad
+	leadid1 = { 
+				tcpa = {tags = <count of tags for offer_sold_at 3>, notag = <count of notag tags for offer sold at 3>}
+				aged = {tags = <count of tags for offer_sold_at 2>, notag = <count of notag tags for offer sold at 2>}
+				email = {tags = <count of tags for offer_sold_at 4>], notag = <count of notag tags for offer sold at 4>}	  
+				}
+	leadid2 = { 
+				tcpa = {tags = <count of tags for offer_sold_at 3>, notag = <count of notag tags for offer sold at 3>}
+				aged = {tags = <count of tags for offer_sold_at 2>, notag = <count of notag tags for offer sold at 2>}
+				email = {tags = <count of tags for offer_sold_at 4>], notag = <count of notag tags for offer sold at 4>}	  
+				}
+				
+Optin entires expectations format:
+	
+	optin_expectations = { leadid1 = [brandedTcpa, preTcpa, tcpaOptIn, tcpaOptOut]
+						   leadid2 = [brandedTcpa, preTcpa, tcpaOptIn, tcpaOptOut]
+						  }
+							
+
+
+Lead posting expectations format:
+
+	lead_posting_expectations = { leadid1 = { tcpa = {tag:0, notag:1}
+								 aged = {tag:0, notag:1}
+								 email = {tag:0, notag:1}
+								}
+					}
+Here,
+1 == lead posting should happen
+0 == lead posting may happen
+-1 == no lead posting
+
+
+-------------------------><-------------------------
+
+Logic:
+
+	- if execution steps are passed
+		- fetch data and store in the Lead posting data storing format
+		- fetch expectations
+		- compare and validate optin entires
+		- compare and validate lead posting			// either by fetching the count or by advertiser tags
+		- check for any null lead posting
+		- check for any ghost lead id
+
+
+
+-------------------------><-------------------------
+
+validate optin entries:
+
+	for dict in optin_expectations:
+		for optin in dict.values:
+			if optin not in the tcpa_survey_optin[respective lead id].values:
+				FAIL
+			
+			
+validate lead posting:
+	
+	for leadid in lead_posting_expectations:
+		for leadid
+
+
+
+-------------------------><-------------------------
+
+DB schema:
+	- Unique identifier = test case id
+	- user_id
+	- lead_ids
+	- step execution result
+	- 
+
+
+
+
+

@@ -1,0 +1,47 @@
+Tasks:
+	- Option Pruning  https://trello.com/c/MhHQiXR1/3349-option-pruning-logic-to-be-included-in-auto-survey
+	- Meaning of
+		return self._driver.execute_script(f'''return (_=>{{return {item};}})();''') --> Arrow function in javascript
+	- Purchase PW course Anush
+	
+		
+Secondary:
+	- Check CCPA for autoposting, duplicate user
+	- CMT table optimizations 	https://trello.com/c/WWQjKNv6/758-all-tables-optimization-on-cmt-mysql
+	- GMail filter update
+	- HOAX, tunnel, dot vpn
+	- 
+
+			
+Requirement Gathering:
+	- What is the feature?
+	- Why is it introduced? What problem is being solved using this feature?
+	- How does this feature works
+	- What inputs are required? What is the output of the feature? Expected result
+	- DB involved? Which columns
+	- Test link?
+	- How to test?
+	- Where to test?
+	- Scope of testing?
+	- What is the impact of this feature on other features?
+	- Trello
+
+Learnings:
+	- Code comprehension
+	- API course
+	- API questions
+	- Python advance
+	- BDD
+
+Validation scope:
+	- Validating tcpa leads are posted only in the intended cases
+	- No null lead posting
+	- NO posting for invalid leadid
+	- Eye on the number & type of leads posted
+	- Checking trusted form
+
+
+python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=regression-compliance
+
+	
+	8652650722 - Gpay busineess

@@ -1,0 +1,89 @@
+Link:
+
+https://fsputesting.com/ & https://*.fsputesting.com/
+
+https://fsputesting.com/?cid=qa-slug1&test=1
+
+
+if any domain is not working please clear the cache -> https://fsputesting.com/api/admin/app/refresh-cache/key?id=leadgensite:12345.fsputesting.com
+
+
+https://trello.com/c/zLunnyAD/3403-daily-new-domain-for-user-flow-for-pushnami-optins
+
+Campaigns: qa-slug1, xfjon
+
+
+==============================================================================================
+
+DB
+	- entry in user_master, user_master_pii looks good
+	- 
+
+Survey: (Smoke)
+- Smart survey
+- Manual
+	- Checked the survey id, smart survey group id on default and dup
+	- Changed the checked the above ids if they are reflecting on default flow
+	
+Profanity --> Sanket
+	- Goes to 403 with no reason?		//Works same on live
+	- Where is profanity feedback text shown?		//Did not see any feedback text
+
+Pushnami:
+	- Off
+	- Force push on main and duplicate
+		- Not redirecting to main domain
+		
+	
+
+
+==============================================================================================
+
+
+
+
+
+
+Conversions: Sanket
+- TCPA conversions
+- Linkout Conversions
+- Aged lead conversions
+
+
+Linkout- get-linkout (Sanket)
+- Limit Linkout
+- Ranking
+- Linkout order
+- Ranked by
+- Max
+- linkout order
+- Exit Linkout
+
+Prepop : Sanket
+- Partial
+- Full
+- Invalid
+- LocalStorage
+
+DB: common
+- User survey responses
+- TCPA survey optin
+- User metadata
+- Events (also check which domain is being logged)
+
+HO (Sanket)
+- Partner pixel
+Impression & click
+- client pixel
+- Server pixel
+- payout
+- Pub id
+
+Features:
+- Pushnami --> Sanket
+
+
+CCPA:
+	- For dup user - autoposting
+	- Raised requeest on subdomain (user created on main domain)
+	- Raised requeest on main domain (user created on sub domain)

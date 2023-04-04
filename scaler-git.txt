@@ -1,0 +1,127 @@
+For more, follow me on youtube - https://www.youtube.com/@AkhilSharmaTech 
+
+
+Installation Guide - 
+
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git 
+Create an account on github
+Your PC must be connected to github for you to be able to push code to github, you can either do that with https (simple login) or a more secure way, via SSH -> https://docs.github.com/en/authentication/connecting-to-github-with-ssh 
+
+Sandboxes - 
+
+https://learngitbranching.js.org/
+https://www.gitpod.io/ 
+
+Presentation - 
+
+https://www.slideshare.net/naimlatifi/gitpresentation-140814102916phpapp01 
+
+Reading Material - 
+
+https://medium.com/free-code-camp/how-you-can-learn-git-and-github-while-youre-learning-to-code-7a592ea287ba 
+https://towardsdatascience.com/how-to-learn-git-in-simple-words-263618071dd8 
+https://medium.com/quick-code/top-tutorials-to-learn-git-for-beginners-622289ffdfe5 
+https://javinpaul.medium.com/top-10-free-courses-to-learn-git-and-github-best-of-lot-967aa314ea 
+https://blog.devgenius.io/git-tutorial-learn-git-branching-in-5-minutes-cf2c01f63a5 
+https://towardsdatascience.com/how-git-truly-works-cd9c375966f6 
+
+Tutorial Guide - 
+
+https://git-scm.com/docs/gittutorial 
+https://www.simplilearn.com/tutorials/git-tutorial/git-installation-on-windows 
+https://www.tutorialspoint.com/git/index.htm 
+https://githowto.com/ 
+https://www.w3schools.com/git/git_branch.asp?remote=github 
+
+
+Videos to watch -
+
+https://www.youtube.com/watch?v=evknSAkUIvs&list=PLu0W_9lII9agwhy658ZPA0MTStKUJTWPi 
+https://www.youtube.com/watch?v=WbwIoQYP6no 
+https://www.youtube.com/playlist?list=PLeo1K3hjS3usJuxZZUBdjAcilgfQHkRzW 
+https://www.youtube.com/playlist?list=PLUDwpEzHYYLuMNNTu0EdWBeBtXdRhj4Lv 
+https://www.youtube.com/playlist?list=PLu-nSsOS6FRIg52MWrd7C_qSnQp3ZoHwW 
+
+
+Session Flow
+
+Install git
+
+git - -version
+
+git config -e global
+
+git config - -global user.name “AkhilSharma90”
+
+git config - -global user.email “akhilsails@gmail.com”
+
+git config –global core.editor “code - -wait” (setting vscode as our default editor for git config file)
+
+git config -e global (opening up git config again)
+
+git config - - global core.autocrlf true (Carriage return, line feed for windows)
+
+git config - - global core.autocrlf input (Carriage return, line feed for mac and linux)
+
+git config - -help (getting help for the config command), git add - -help
+
+git config -h (short summary of help)
+
+mkdir test, cd test, git init
+
+ls, ls -a (ls won’t show you the .git folder, but ls -a will)
+
+xdg-open test 
+
+git touch file1.txt, git touch file2.txt, git add file1.txt, git add file2.txt
+
+git add file3.txt (adding a file that doesn’t exit, know what the errors look like)
+
+Add multiple files like git touch file3.txt and git touch file4.txt, git add .
+
+After adding files, we can git commit -m “some useful message”
+
+Add more file like git touch file5.txt and git touch file6.txt, git status (will show all the added files, committed files and untracked files). You can also run git status -s for a shorter status.
+
+ Make changes in the file1.txt and check git status again (since this file has been changed after we started tracking it, it will show changes not staged), so you again have to add it with git add file1.txt
+
+If you just type git commit, it will open up your configured code editor and you can write a long description for the commit message and once you close it, your changes will be committed and you will see the status in the terminal.
+
+Let’s first delete a file, rm file2.txt, now run git status and you will see that the file has not been staged message, this means that this file is still in the staging area and we can confirm this by git ls-files, these are the list of the files in the staging area. To stage this deletion, run git add file2.txt again. Basically everytime any change is made, make sure to add it to staging. If we run git ls-files one more time now, we can see that it has been removed from the staging area. Now run git status again and we can see that we have one change ready to be committed. We can now run git commit -m “removed unused code” and now git status shows that there’s nothing to commit.
+
+Touch file2.txt, git add file2.txt, git rm file2.txt to remove in one go
+
+git log, see all that’s been done till now. git log --pretty=oneline for one line log.
+
+After everything has been committed, you want the code to be available online so that even if it gets deleted from your PC, there’s still a place where it exists. Create a new project on github, select https or git (for git, you need to setup ssh).
+git remote add origin git@github.com:AkhilSharma90/test-git.git
+git branch -M main
+git push -u origin main
+
+git branch to know we’re on which branch at the moment
+
+git checkout -b branch-1 main for a new branch called branch-1 spinned off from main
+
+git checkout main to go back to main branch and git checkout branch-1 to switch to branch-1
+
+While in branch-1, create a new file touch file7.txt and git add . and git commit -m “file 7 added”, now switch over to main branch with git checkout main, and git merge branch-1 to merge the new changes on branch-1 at main as well.
+
+If you want to push the new branch to github and want it to be available as well, say     git push origin branch-1
+
+Make another repo, git-test-2, clone the repo into this by git clone git@github.com:AkhilSharma90/test-git.git and then check git branch, you won’t see the branch-1, so say git fetch - -all and git branch -r
+
+
+Optional stuff - beyond today’s masterclass learning
+
+.gitignore file, create a directory called “logs” in your test folder and in your gitignore file, which should at the root of your directory, add logs/. Git will ignore this folder completely. You can then add gitignore to staging and commit it. All the things mentioned in gitignore will be ignored.
+
+If by mistake, you had added a folder to staging area and also committed it, and then later you add it to gitignore, git won’t ignore it and will keep tracking it as it exists in the staging area and this folder needs to be removed from staging. You run this command ->
+git rm -- cached -r logs/
+
+If you want to be sure what’s changed in the staging area and is going to the next commit, say git diff - -staged
+
+For viewing diff, we can again set it up to open in VSCode->
+git config --global difftool.vscode.cmd “code --wait --diff $LOCAL $REMOTE”
+Many times this isn’t persisted to our global config settings, so we need to do that -
+git config --global -e, you will most likely see a difftool section, add $LOCAL $REMOTE there in case you don’t see it.
+So next time, you will use git difftool --staged and it will open diff in VSCode

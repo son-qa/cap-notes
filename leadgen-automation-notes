@@ -1,0 +1,129 @@
+Libraries - urllib, functools, jsmin, 
+
+cap/libs
+	constants.py
+		_config - named tuple, contains mainly the keys from the config.ini file
+		CONFIG - named table object, of _config
+		US_PHONE_AREA_CODES
+		LOCALSTORAGE_KEY_MAPPINGS
+		URL_PREPOP_KEYS
+		FIELD_NAMES
+		
+		
+	config.py
+		def read_yaml(filename: str = None) -> typing.Optional[dict] - load and reads yml file and returns the object of yaml file
+		
+		def read_ini(filename: str = None, to_dict=True) - loads and parse a config file, converts into a dictionary if required. Returns the object of config file
+		
+		def convert_ini_to_dict(config_reader) - converts and returns the ini object into dictionary
+
+
+	db.py
+		class DBBaseController:
+			def __init__(self, _property: Property._DB): creates & starts a tunnel
+			
+			def _convert_to_str(cls, data: typing.Union[list, dict]): converts values of dict or list into string
+			
+			class MySQL(DBBaseController):
+				def __init__(self, _property: Property._DB): - calls constructor of parent class & creates a MySQL connection pool
+				
+				def __del__(self): disconnect pool
+				
+				def query(self, query_stmt="", data=None): if query_stmt is a string then calls the __exectue function
+				
+				def __connect(self) -> mysql.connector.pooling.PooledMySQLConnection: adds/create and MySQL DB connection and returns it
+				
+				def __execute(self, query_stmt="", data=None): checks if a DB connection exits and then executes the query and returns the output
+				
+				def pool_disconnect(self) -> int: removes pool connections, stops tunnel and returns the current count of connections
+				
+			
+			class PostgreSQL(DBBaseController):
+				def __init__(self, _property: Property._DB): calls constructor of parent class & creates a postgress connection pool
+				
+				//contains all the methods from the class MySQL(DBBaseController), as well as the below methods
+				
+				def __is_connected(self, _cnx, from_cache=True, reconnect: bool = False, attempts: int = 1, delay: float = 0.0): checks if the connection exists and the returns the status as a boolean value
+				
+				def __reconnect(self, _cnx: psycopg2.extensions.connection, attempts: int = 1, delay: float = 0.0) -> psycopg2.extensions.connection: attempts to reconnect, or create a connection pool
+				
+	
+	logger.py
+		def setup_logging(): sets logging config from logger.yml
+		
+		class AllowCAPFilter(logging.Filter):
+			def filter(self, record: logging.LogRecord) -> bool: return 'cap' in record.name
+			
+		Similar other classs as above, and functions same as above - AllowBehave, AllowSelenium, AllowOthers
+		
+		def incr_key_index(key, lstr: typing.List[str]): returns "<key>:<incremented count/index>"
+				
+				
+				
+	property.py
+		class Property:
+			def __init__(self, behave_userdata): sets various attributes whose values are fetched from behave userdata 
+			
+			various @property methods that returns the values of the above attributes
+			
+			class _DB:
+				def __init__(self, _db: typing.Union[_MySQL_Leadgen, _PGSQL_IMedia]): sets DB realated attributes 
+				
+	smtp.py
+		various methods to validate the email related information, build an email, send it via SMTP
+		
+	
+	utils.py:
+		repeat() - decorator/wrapper function to repeat actions
+		
+		is_set() - returns false if argument is equal to none OR is instance of str, list, tuple, dict, set AND len is zero, else returns true
+		
+		update_querystring() - updates the query string using the urllib library
+		
+		get_parent_prepop_key() - takes a prepop key as value, compares it with values from the dict from const and returns the key
+		
+		get_parent_field_key() - similar as above but returns the field/name //question
+		
+		get_object_from_json_path(obj, key) - fetches & stores the value of obj[key] if present, else returns none
+		
+		formatted_converter(value) - takes some key value pair and returns the value based on the type of key
+		
+		list_of_dict_to_xlsx(fname, messages) - function to write data into a .xlsx file
+		
+		list_of_dict_to_csv(fname, message, mode='wb') - fucntion to write data into a .csv file
+		
+		read_csv_to_dict(fname) - returns rows from csv as a list
+		
+		mp_apply_async(function, args, procs) - 
+		
+		mobile_number_generator() - 
+		
+		Class LocalPortForwarding(sshtunnel.SSHTunnelForwarder)
+		
+			status() - returns the status of the connection
+			
+			reconnect() - attempts to reconnect				
+				
+
+		
+Questions:
+ - libs/utils -> def get_parent_field_key(current_field_key) -> will always return the same value
+ 
+ - return {section: dict(parse(config_reader.items(section))) for section in config_reader.sections()} -> need to understand the working
+ 
+ -  def __connect(self) -> mysql.connector.pooling.PooledMySQLConnection:
+        self._tunnel.status(restart=True) if self._tunnel else ...
+        if self.available_connections <= 0:
+            self._pool.add_connection()
+        _cnx = self._pool.get_connection()
+        _cnx.autocommit = True
+        self.available_connections = self._pool._cnx_queue.qsize()
+        return _cnx
+		
+		what is '...' here?
+		
+		
+		
+		
+		
+		

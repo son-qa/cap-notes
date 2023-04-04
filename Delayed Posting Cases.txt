@@ -1,0 +1,37 @@
+If day parting is on 
+          - if Delayed posting is enabled											
+               - if user comes within day parting hours									
+                    - question for that offer should be shown
+                    - if answered positively, leads should be posted instantly
+
+               - if user comes outside day parting hours							Of10	212147855	posting @7:45		
+                    - question for that offer should be shown
+                    - job should be scheduled as per working hours of the offer
+                    - Once the job is executed leads should be posted
+ 
+          - if Delayed posting is disabled											
+               - if user comes within day parting hours								o1	212147858 verified
+                    - question for that offer should be shown							
+                    - if answered positively, leads should be posted instantly
+               - if user comes outside day parting hours							o2 212147858 verified		
+                    - question for that offer should not be shown
+
+                    - if same question is tagged for other tag(which do not have dayparting/delayed posting off)	Of1 out, Of2	212147015	verified
+                      - Question should be shown for other tag							
+
+                    - if offer is of tag group (TBC)
+                      - if  question is  of tag group and its a parent question 		
+                         - Question should be seen 
+                      - if question is  of tag group and its a child question 			
+                         - - Question should be seen 
+                    
+     if day parting is off
+          - Working should as normal question should work
+               - Question should be retrieved
+                    - If answered postively, lead should be posted instantly
+					
+					
+
+offer1 - 222, 794
+offer2 - 223, 795
+offer3 - 224, 233, 796

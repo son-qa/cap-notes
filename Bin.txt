@@ -1,0 +1,107 @@
+Table optimization
+
+To test:
+
+What does the feature do?
+	- Delete PII info for unsubbed users
+	- Remove Inactive users
+	
+Unsub:
+	- Email users
+		- Delete PII
+		- Move PII data into archive table	(Performed by cron)
+		- User comes with same data then entry in "users" table should not be made
+	- Phone users
+		- For single/few entities
+			- Delete row for that entity from company mapping
+			- Move company mapping data in archive table	(Performed by cron)
+			- User comes with same data then entry in "users" table should not be made
+		- For all entities
+			- Delete from company mapping
+			- Delete PII
+			- Move PII data into archive table	(Performed by cron)
+			- Move company mapping data in archive table	(Performed by cron)
+			- User comes with same data then entry in "users" table should not be made
+
+
+
+Inactive users:
+	- Email users (180)
+		- Delete data and mark inactive in two tables
+		- New user ki entry hogi
+	- Phone users (90)
+		- 
+		
+		
+Doubts:
+	- Entity level and full unsub
+	- When does the cron run and how what is the output of the cron?
+		- 30th min of every hour
+		- will add everything in the backup table
+	- On staging can we reduce the cron's scheduled time
+	- Can a user be unsub as well as inactive
+		- user_tracking table - stores optin, confirmed, 
+	- Document says inactive = no event from user's side
+	- 
+
+
+Tables in use:
+	- camapaignmanager.users - stores user's information
+	- camapaignmanager.user_company_mapping - stores user's entities (marketing partners for which user has opted in on leadgen)
+	- camapaignmanager.user_event_snap - snapshot of user's event
+	- camapaignmanager.users_entity_unsub - stores request -> 
+	
+	
+------------------------><------------------------
+
+user_event_snap to fetch/check optin dates -> 90 se purane wale delete
+users_entity_unsub stores unsub -> unsub users ko nikal do
+
+IF  optin date >= 90 days
+	delete
+If unsub
+	delete
+	
+
+=========================================================================
+DB Schema - automation
+
+identifier - 					- string			user_id OR cookie_id or session_id
+testcase_id 					- string
+
+user_id 						- int
+lead_id 						- array
+
+step_execution_success 			- boolean	
+step_exectuion_timestamp 		- timestamp
+is_rerun 						- boolean
+
+validation_success 				- boolean
+validation_failure_message		- string		//if required
+validation_execution_timestamp 	- timestamp
+
+tester's name/employee_code 	- string
+
+
+Should be able to pick my cases only
+	tester = 'Sanket.Oswal',
+	step_execution_success = true
+	step_exectuion_timestamp >= curdate()
+	testcase_id = testcase_id of the scenario under test
+	validation_success = NULL
+	
+
+If I execute multiple times then I should be able to pick the desired range of cases only	
+	
+	- if the (current_time ~ step_exectuion_timestamp + 30 mins)
+	
+	- before_all - create a batch number = HHMM and use it for all scenario under test in the current behave execution
+	
+	- 
+
+
+
+===========================================================
+
+
+
