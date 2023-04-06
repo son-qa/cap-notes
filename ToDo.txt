@@ -2,7 +2,6 @@ Tasks:
 	- Meaning of
 		return self._driver.execute_script(f'''return (_=>{{return {item};}})();''') --> Arrow function in javascript
 	- https://trello.com/c/AqN5LVZz/826-adcopy-to-provider-fix
-	- Device atlas on canary
 	
 		
 Secondary:
@@ -11,6 +10,7 @@ Secondary:
 	- GMail filter update
 	- HOAX, tunnel, dot vpn
 	- Option Pruning  https://trello.com/c/MhHQiXR1/3349-option-pruning-logic-to-be-included-in-auto-survey
+	- Qyrus tool
 
 			
 Requirement Gathering:
