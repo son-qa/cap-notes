@@ -2,6 +2,7 @@ Tasks:
 	- Meaning of
 		return self._driver.execute_script(f'''return (_=>{{return {item};}})();''') --> Arrow function in javascript
 	- https://trello.com/c/AqN5LVZz/826-adcopy-to-provider-fix
+	- SSH key whitelisting - vinay
 	
 		
 Secondary:
