@@ -1,18 +1,19 @@
 Tasks:
 	- Meaning of
 		return self._driver.execute_script(f'''return (_=>{{return {item};}})();''') --> Arrow function in javascript
-	- https://trello.com/c/AqN5LVZz/826-adcopy-to-provider-fix
-	- SSH key whitelisting - vinay
-	
+	- https://trello.com/c/AF0GlewT/842-stack-level-option-to-not-strictly-follow-set-delivery-time-and-user-to-be-able-to-select-range-of-hours
+		- https://trello.com/c/rhAwnxmd/843-stack-level-option-for-buffer-hours
+	- https://trello.com/c/5AviM3uP/120-sms-text-and-sms-link-should-be-visible-while-editing
+		- Validations on both SMS TEXT and Link
+	- https://trello.com/c/v4Sv1bAq/3494-prs-alias-domain-rewards-insider
+		- https://trello.com/c/XgZ7o7sz/3215-domain-aliasing-support-in-leadgen 
 		
 Secondary:
 	- Check CCPA for autoposting, duplicate user
 	- CMT table optimizations 	https://trello.com/c/WWQjKNv6/758-all-tables-optimization-on-cmt-mysql
 	- GMail filter update
 	- HOAX, tunnel, dot vpn
-	- Option Pruning  https://trello.com/c/MhHQiXR1/3349-option-pruning-logic-to-be-included-in-auto-survey
-	- Qyrus tool
-
+	- 
 			
 Requirement Gathering:
 	- What is the feature?
@@ -28,7 +29,6 @@ Requirement Gathering:
 	- Trello
 
 Learnings:
-	- Code comprehension
 	- API course
 	- API questions
 	- Python advance
@@ -44,4 +44,3 @@ Validation scope:
 
 python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=regression-compliance
 
-	

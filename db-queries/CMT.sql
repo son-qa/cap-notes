@@ -1,0 +1,2 @@
+-- SELECT * from email_monetization.email_config_master ecm ;
+-- SELECT * from email_monetization.sms_config_master scm ;

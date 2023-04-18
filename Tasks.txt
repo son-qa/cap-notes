@@ -1,0 +1,83 @@
+Macro support for linkout offers
+API - multi feed keyword support for jobs
+Ops interface - MAX + HasOffer + leadGen offer linkout offer creation
+Duplicate user identification + Flow switch
+user_master refactoring
+Email Domain Split - O&O
+APIs - O&O - offer/text/link/adCopyGroup hierarchies
+
+Pushnami #core
+Notes
+Use US IP
+DB - user optin status entries in leadgen.pushnami_user_optin_status
+
+Push User to Subdomain:
+User (new/duplicate) should be redirected to the subdomain regardless of their optin status. Like a force Redirection
+Exp level setting → pushUserToSubdomain key in config_data
+Force push will not work on the sites which are alias, it will only work on the sites who has an entry in the leadgen_sites table
+Redirection timeout
+https://trello.com/c/XImqfM4v/3419-make-pushnami-subdomain-redirect-back-to-lander-time-duration-configurable
+`leadgen`.ab_experiment_v2 -> config_data -> pushnamiRedirectTimeout
+Default = 5000 miliseconds
+permanentSubdomainRedirection
+Works only on root domains - users are redirected to to subdomain which has the subdomain as current date. Users are not redirected back to root domain
+CID level setting -> config -> permanentSubdomainRedirection
+Exp level
+
+Device Atlas #core
+https://trello.com/c/ozzM70Bb/3310-upgrade-to-device-atlas-package-version-30-for-php
+Used to collect and store user’s device information. The ‘accpet-ch’ key is passed in response header of the very first request and in request headers of the subsequent call the data is received and is stored, most likely in image?page-ab request
+
+Email verification using emailable & xverify
+https://trello.com/c/i5va4jE8/3402-emailable-for-email-verification
+Two entities which would verify the email
+Set on config level, in leadgen.campaign_master -> campaign_config
+“xverify-emailable”: [ {“op”: , “key”: , “value”: } ]
+emailable.score, emailable.disposable, emailable.state, emailable.reason, xverify.status, 	xverify_reason
+emailable.score : 0 to 100
+emailable.disposable: true, false
+emailable.state: deliverable, undeliverable, risky, unknown, duplicate
+emailable.reason: accepted_email, invalid_domain, invalid_email, rejected_email, invalid_smtp, low_quality, low_deliverability, no_connect, timeout, unavailable_smtp, unexpected_error
+xverify.status : valid, invalid, accept_all, risky, unknown
+xverify_reason: verified, invalid_syntax, invalid_domain, mailbox_full, invalid_mailbox, unverifiable, high_risk, complainer, fraud, block_affiliate, block_by_user, block_country, no_result
+Kibana logs
+for async call: "Async Call for xverify & emailable"
+for both responses already present in cache:  "emailable and xverify data present in cache"
+for emailable present in cache : "Call xverify, emailable present in cache"
+for xverify present in cache: "Call emailable, xverify already present in cache"
+
+CCPA #core
+Creating a new key in redis
+https://trello.com/c/PCvJWpcp/3339-ccpa-request-handling-for-scheduled-leads-aged-delayed
+Earlier, while executing the job for lead posting the DB was being queried to check if the user has raised any CCPA request. It was increasing the load on DB hence now a key is being added into the redis 
+Verified deletion/masking PII data  & max_leadgen_sponsor_ad, entry in one_trust, entry in leadgen_unsubscribed_list, event (for the user whose CCPA was raised before lead posting), value of the new redis key
+API for checking the new key in redis cluster - https://demo.freesamplesprousa.com/api/get-cache-key/?key=ccpa_request_74933182
+
+Option Pruning
+https://trello.com/c/MhHQiXR1/3349-option-pruning-logic-to-be-included-in-auto-survey
+Removes the option of a question, the option whose associated tag was removed during survey pruning
+Example, tag group (Offer1_QA) → two questions
+Q1 → o1 = offer1_qa, o2 = offer2, o3 = offer3
+Q2 → o1 = offer1_qa, o2
+Now if offer1_qa gets pruned during survey pruning then ‘o1’ from q1 will be removed
+
+
+
+================== ONO ==================
+
+
+All table optimization #ono
+https://trello.com/c/WWQjKNv6/758-all-tables-optimization-on-cmt-mysql
+Unsub + Inactive
+Unsub
+Email users - delete/mask PII
+Phone users - delete company mapping
+
+Adcopy fix:
+https://trello.com/c/AqN5LVZz/826-adcopy-to-provider-fix
+Problem - the offer text whose provider was not matching with the available route was also being fetched for comparison. In this task this issue has been optimized
+Checked if the offer text whose provider is matching with the available route is being selected to send to the user
+
+
+
+
