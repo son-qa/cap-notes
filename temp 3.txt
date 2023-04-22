@@ -4,8 +4,7 @@ Checklist
     - Max feed call
     - Events
     - xVerify
-    - linkout
-    - leadposting
+    - linkouts
     - journaya
     - privacy policy, T&C
     - Email disclaimer
@@ -37,6 +36,4 @@ Footer - Do not sell my information - holds the name of the PRS domain
 
 
 
-Lead posting
-    "userId": 81443661, "leadId": 53629888, - postive optin
      
