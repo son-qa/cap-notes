@@ -4,7 +4,7 @@ If day parting is on
                     - question for that offer should be shown
                     - if answered positively, leads should be posted instantly
 
-               - if user comes outside day parting hours							Of10	212147855	posting @7:45		
+               - if user comes outside day parting hours									
                     - question for that offer should be shown
                     - job should be scheduled as per working hours of the offer
                     - Once the job is executed leads should be posted

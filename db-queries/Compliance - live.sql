@@ -1,4 +1,4 @@
-set @uid = 81823792 ;
+set @uid = 81834522	 ;
 select * from max_leadgen_sponsor_ad where user_id = @uid order by lead_id, offer_sold_at ;
 select * from tcpa_survey_optin where user_id = @uid ;
 
