@@ -1,12 +1,20 @@
-https://trello.com/c/AF0GlewT/842-stack-level-option-to-not-strictly-follow-set-delivery-time-and-user-to-be-able-to-select-range-of-hours
+https://theamericansamplesfinder.com/?cid=abf6r&test=1&exp=FSPU-SrcDisp-DynamicFlow-TCPAonReg-FE-QA&t7=downy
 
-To test:
- - UI validations
- - Use send right now
- - Check for stack type other than schedule
- - What data is being stored in DB for schedule type stack
- - Apply buffer and see the results
- - 
+https://theamericansamplesfinder.com/?cid=abf6r&test=1&exp=FSPU-Pushnami-All-Users-Test
+
+pushnami
+
+------------------------------
+
+footer, diclaimer, privacy-policy, T&C
+xverify
+lead posting
+max-feedcall (PII + linkout) - purl
+user details - PII
+duplicate user
+events
+OnO - user details - session id - 8f52fcd0-96fe-4613-a162-7c77f7486a2e
+CCPA  86482957
 
 
 

@@ -1,42 +1,27 @@
-PRS Alias domain
-
-Checklist
-    - Max feed call
-    - Events
-    - xVerify
-    - linkout
-    - leadposting
-    - journaya
-    - privacy policy, T&C
-    - Email disclaimer
-    - footer disclaimer
-    - OnO
-    - 
-
-    - user details in user master
-    - duplicate user detection
-    - ccpa
-    - 
-
-
-7lult
-
-https://rewardsinsider.net/?test=1&cid=7lult
-
-https://primerewardspot.com.com/api/survey/get-user-details?flow=
-
-Header logo - is of primerewardspot
-
-Privacy policy:
-    - From campaign's diclaimer hyperlink - open's root domain's link
-    - From footer of the privacy page (or any page) - open's dynamic subdomain
-    - 
-
-Footer - Do not sell my information - holds the name of the PRS domain
-
-
-
-
-Lead posting
-    "userId": 81443661, "leadId": 53629888, - postive optin
-     
+{
+    "payload": {
+        "requestId": "5210eccf-fdfe-40c5-ba22-13c80e025377",
+        "requestRefId": "WSKD3XTC00",
+        "language": "en-us",
+        "requestStatus": "",
+        "requestTypes": [
+            "Request For Information"
+        ],
+        "subjectTypes": [
+            "Yes"
+        ],
+        "email": "phamanathon1@gmail.com",
+        "type": "ccpaRequestInformation",
+        "firstName": "badambaa",
+        "lastName": "balloon",
+        "otherData": {
+            "formField30": "",
+            "requestDetails": "No additional request details provided.",
+            "phoneNumber": "2345671932",
+            "phoneFieldCountryCode": "US",
+            "formField29": [
+                "I Agree"
+            ]
+        }
+    }
+}

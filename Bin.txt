@@ -108,3 +108,47 @@ Pushnami URLs
 
 =================================================================
 
+db details:
+Endpoint: leadgen-prod-slave-serving1.c5rg9dilhqmr.us-east-1.rds.amazonaws.com
+Port: 3306
+requires wireguard
+
+=================================================================
+
+"surveyOnPII": false,
+"surveyOnLander": false,
+"currentpage": "survey",
+
+experimentConfig
+    same as above
+
+==================================================================
+
+5007 - mjtbc - clone
+
+1002320 - CRUD-Test-QA-Sanket - create
+
+1713 - CRUD-Test-QA-Sanket - create ab exp
+
+307 - CRUD-Test-QA-Sanket - create bucket
+
+==================================================================
+
+Alias domain checklist
+
+MAX feed call
+OnO
+Events
+Anti Spam
+xVerify
+Pushnami - can be changed ( service worker configuration )
+Linkout
+Offerwall
+lead posting
+Journaya
+Privacy Policy & TOS 
+Email Disclaimer
+Footer Disclaimer 
+
+=====================================================================
+

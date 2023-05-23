@@ -1,20 +1,17 @@
 Tasks:
-	- Meaning of
-		return self._driver.execute_script(f'''return (_=>{{return {item};}})();''') --> Arrow function in javascript
-	- https://trello.com/c/AF0GlewT/842-stack-level-option-to-not-strictly-follow-set-delivery-time-and-user-to-be-able-to-select-range-of-hours
-		- https://trello.com/c/rhAwnxmd/843-stack-level-option-for-buffer-hours
-	- https://trello.com/c/5AviM3uP/120-sms-text-and-sms-link-should-be-visible-while-editing
-		- Validations on both SMS TEXT and Link
-	- https://trello.com/c/v4Sv1bAq/3494-prs-alias-domain-rewards-insider
-		- https://trello.com/c/XgZ7o7sz/3215-domain-aliasing-support-in-leadgen 
+	- Dependency doc
+	- https://trello.com/c/vbp96a2z/3498-fspu-alias-domain-the-american-samples-finder
+	- https://trello.com/c/sPhGLT7k/847-cmt-email-offer-frequency-default-setting
+	- CCPA Request for Information https://trello.com/c/1711ip47/3228-ccpa-automating-request-for-information
+	- https://trello.com/c/4aDKE46n/604-alias-domains-notify-ai
+
 		
 Secondary:
 	- Check CCPA for autoposting, duplicate user
-	- CMT table optimizations 	https://trello.com/c/WWQjKNv6/758-all-tables-optimization-on-cmt-mysql
-	- GMail filter update
-	- HOAX, tunnel, dot vpn
-	- 
-			
+	- https://trello.com/c/vbp96a2z/3498-fspu-alias-domain-the-american-samples-finder
+
+
+
 Requirement Gathering:
 	- What is the feature?
 	- Why is it introduced? What problem is being solved using this feature?
@@ -43,4 +40,5 @@ Validation scope:
 
 
 python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=regression-compliance
+
 
