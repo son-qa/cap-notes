@@ -1,0 +1,11 @@
+https://trello.com/c/AF0GlewT/842-stack-level-option-to-not-strictly-follow-set-delivery-time-and-user-to-be-able-to-select-range-of-hours
+
+To test:
+ - UI validations
+ - Use send right now
+ - Check for stack type other than schedule
+ - What data is being stored in DB for schedule type stack
+ - Apply buffer and see the results
+ - 
+
+

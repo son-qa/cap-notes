@@ -1,5 +1,5 @@
--- Set @mail = 'dilewi9771@jthoven.com' ;
-Set @uid = 78435134 ;
+-- Set @mail = 'vidipi4260@gam1fy.com' ;
+Set @uid = 81664719 ;
 select * from user_master where user_id = @uid ;
 select * from user_master_pii where user_id = @uid ;
 select * from max_leadgen_sponsor_ad where user_id = @uid ;

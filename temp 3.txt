@@ -1,0 +1,40 @@
+PRS Alias domain
+
+Checklist
+    - Max feed call - 
+    - Events - done
+    - xVerify - done
+    - linkouts
+    - journaya - done FE
+    - privacy policy, T&C - done FE
+    - Email disclaimer - done FE
+    - footer disclaimer - done FE
+    - OnO - done - parent domain is being passed to OnO -> parent_domain column and domain column
+    - 
+
+    - user details in user master - done
+    - duplicate user detection - 
+    - ccpa - done
+    - 
+
+
+7lult
+
+https://rewardsinsider.net/?test=1&cid=7lult
+
+https://primerewardspot.com.com/api/survey/get-user-details?flow=
+
+Header logo - is of primerewardspot
+
+
+
+
+- Max feed call (purl paremeter in the call)
+- xVerify
+- User details in user master
+- CCPA
+- Events (domain column)
+- Privacy-policy, T&C links
+- OnO (user details shared with OnO)    
+- Lead Posting
+- Linkout (max feed call)
