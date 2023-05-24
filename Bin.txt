@@ -136,19 +136,20 @@ experimentConfig
 
 Alias domain checklist
 
-MAX feed call
-OnO
-Events
-Anti Spam
-xVerify
-Pushnami - can be changed ( service worker configuration )
-Linkout
-Offerwall
-lead posting
-Journaya
 Privacy Policy & TOS 
 Email Disclaimer
-Footer Disclaimer 
+Footer Disclaimer
+xVerify
+Anti Spam
+lead posting
+Linkout
+Offerwall
+Journaya
+Trusted form
+Events
+MAX feed call (PII + linkout) - purl
+OnO
+Pushnami - can be changed ( service worker configuration )
 
 =====================================================================
 
