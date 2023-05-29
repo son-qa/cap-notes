@@ -1,9 +1,13 @@
-Notify AI - https://trello.com/c/HWnnJ9eV/3478-investigate-notify-ai-push-service-worker-setup
+I ran into an argument or a disturbance and it happened 
 
-https://freesamplestoreusa.com/?cid=4rsp5
+I believe you are her childhood friend so just wanted to ask if that burst was becuase of some other things happening or 
 
-- Notifications are coming - allow/block
-- Sub domain
-- Differnet Devices - windows, mac, ios, safari
-    - sub domain and domain as well
-- 
+
+Condition:
+    interval range = count of unique offerss
+
+Under campaignmanager.offer_stack_master table, columns - event_filter, offer_frequency_enabled
+
+
+No of offers
+    - offer_group

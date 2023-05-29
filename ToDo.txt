@@ -1,18 +1,18 @@
 Tasks:
 	- Dependency doc
 	- https://trello.com/c/4aDKE46n/604-alias-domains-notify-ai
-	- https://trello.com/c/HWnnJ9eV/3478-investigate-notify-ai-push-service-worker-setup
+	- https://trello.com/c/m3gy6RXS/893-default-setting-for-offer-frequency-show-number-of-offers-in-a-offer-stack-number-of-each-element-in-hierarchy
+		- https://trello.com/c/sPhGLT7k/847-cmt-email-offer-frequency-default-setting
+	- CCPA Request for Information https://trello.com/c/1711ip47/3228-ccpa-automating-request-for-information
+	- Update all the above trellos
 
 
-		
+
 Secondary:
 	- Check CCPA for autoposting, duplicate user
 	- https://trello.com/c/vbp96a2z/3498-fspu-alias-domain-the-american-samples-finder
-		- FE fixes required
-	- https://trello.com/c/sPhGLT7k/847-cmt-email-offer-frequency-default-setting
-		- Waiting for BE
-	- CCPA Request for Information https://trello.com/c/1711ip47/3228-ccpa-automating-request-for-information
-		- Waiting to be setup on Demo
+	- 
+	- 
 
 
 

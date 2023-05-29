@@ -13,6 +13,8 @@ raise request --> to onetrust --> to leadgen --> acknowledge onetrust --> proces
 - Profile score
 - Email + phone cases
 - email not present
+- request after entering email (no name)
+
 
 -------------------------
 
