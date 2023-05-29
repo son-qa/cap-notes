@@ -5,6 +5,7 @@ Tasks:
 		- https://trello.com/c/sPhGLT7k/847-cmt-email-offer-frequency-default-setting
 	- CCPA Request for Information https://trello.com/c/1711ip47/3228-ccpa-automating-request-for-information
 	- Update all the above trellos
+	- Bulk zip update - https://trello.com/c/XMDVciMV/974-validate-postal-codes-in-bulk-update
 
 
 
