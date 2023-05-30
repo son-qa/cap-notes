@@ -108,36 +108,48 @@ Pushnami URLs
 
 =================================================================
 
-HROne
-Slack, Flock, Skype, Microsoft Teams
-Google - drive, docs, meet, sheets, 
-Redmine, Trello, Gitlab, Clubhouse
-Github, Gitlab, BitBucket
-TestNG, JUnit, Appium, QTP, Cucumber, Maven
-Eclipse, PyCharm, VSCode, Katalon
-Ngrok, wireguard, openvpn, softether, 
-MySQL, Postgress, 
-Postman, Swagger, Fidler, newman
-BrowserStack, LambdaTest
-Kobiton, Percy.io
-Talk.to, zeta, flock,
-Cypress, capybara, protractor, nightwatch, puppeteer, playwrite, clockify
+db details:
+Endpoint: leadgen-prod-slave-serving1.c5rg9dilhqmr.us-east-1.rds.amazonaws.com
+Port: 3306
+requires wireguard
 
+=================================================================
 
-JIRA - 2
-Selenium - 1
-TestNG - 1
-LambdaTest - 1
-Trello - 2
-Microsoft Power BI - 2
-Postman - 1
-PyCharm - 1
-DBeaver - 2
-Google Drive - 1
-VS Code - 1
-Microsoft Multi Factor Authenticator - 2000
-Microsoft Office 365 - 2000
-Microsoft Defender for Endpoint Security - 2000
+"surveyOnPII": false,
+"surveyOnLander": false,
+"currentpage": "survey",
 
-======================================================================
+experimentConfig
+    same as above
+
+==================================================================
+
+5007 - mjtbc - clone
+
+1002320 - CRUD-Test-QA-Sanket - create
+
+1713 - CRUD-Test-QA-Sanket - create ab exp
+
+307 - CRUD-Test-QA-Sanket - create bucket
+
+==================================================================
+
+Alias domain checklist
+
+Privacy Policy & TOS 
+Email Disclaimer
+Footer Disclaimer
+xVerify
+Anti Spam
+lead posting
+Linkout
+Offerwall
+Journaya
+Trusted form
+Events
+MAX feed call (PII + linkout) - purl
+OnO
+Pushnami - can be changed ( service worker configuration )
+
+=====================================================================
 

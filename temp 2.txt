@@ -1,2 +1,18 @@
-1546 (1134) - 17766981, 17766980, check offer_delivery at 2023-04-14 02:35:00
-1547 (1134) - 17766981, 17766980
+CCPA Request for Information - https://trello.com/c/1711ip47/3228-ccpa-automating-request-for-information
+
+raise request --> to onetrust --> to leadgen --> acknowledge onetrust --> process information --> schedule job --> as per job status make entry in oneturst table
+
+
+- End to end (via UI)
+- Types of users
+- Email receiving
+- Email template
+- Sanity for other requests
+- Request raised from domain
+- Email to advertisers
+- Profile score
+- Email + phone cases
+- email not present
+
+-------------------------
+

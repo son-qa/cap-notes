@@ -10,10 +10,10 @@ If day parting is on
                     - Once the job is executed leads should be posted
  
           - if Delayed posting is disabled											
-               - if user comes within day parting hours								o1	212147858 verified
+               - if user comes within day parting hours								
                     - question for that offer should be shown							
                     - if answered positively, leads should be posted instantly
-               - if user comes outside day parting hours							o2 212147858 verified		
+               - if user comes outside day parting hours									
                     - question for that offer should not be shown
 
                     - if same question is tagged for other tag(which do not have dayparting/delayed posting off)	Of1 out, Of2	212147015	verified

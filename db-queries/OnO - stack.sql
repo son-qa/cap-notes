@@ -1,8 +1,8 @@
-set @stackid = 1549 ;
+set @stackid = 1669 ;
 select * from campaignmanager.offer_stack_master osm where id = @stackid ;
 SELECT * from campaignmanager.user_offer_delivery uoh WHERE offer_stack_master_id = @stackid ;
 -- delete from campaignmanager.user_offer_delivery where stats_date >= curdate() and offer_id in (1134, 1136) ;
-
+-- select 
 -- select * from campaignmanager.user_offer_failure_history uofh WHERE offer_stack_master_id = @stackid ;
 -- SELECT * from campaignmanager.user_offer_delivery uod WHERE offer_stack_master_id = @stackid and mail_sent=1 ;
 
