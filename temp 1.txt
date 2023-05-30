@@ -1,7 +1,0 @@
-Toggle
-
-
-- Add/Remove offers => save
-    - keeping the toggle ON
-    - Keeping the toggle OFF
-- 
