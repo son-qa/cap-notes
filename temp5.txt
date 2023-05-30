@@ -1,0 +1,13 @@
+I ran into an argument or a disturbance and it happened 
+
+I believe you are her childhood friend so just wanted to ask if that burst was becuase of some other things happening or 
+
+
+Condition:
+    interval range = count of unique offerss
+
+Under campaignmanager.offer_stack_master table, columns - event_filter, offer_frequency_enabled
+
+
+No of offers
+    - offer_group
