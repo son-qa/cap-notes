@@ -20,16 +20,16 @@ raise request --> to onetrust --> to leadgen --> acknowledge onetrust --> proces
 
 
 Issues:
-	- unable to lookup using number only
-	- name is only fname
+	- unable to lookup using number only - done
+	- name is only fname - done
 	- no email when only mail is submitted
 	- 
 
 
 
 To check:
-	- request after entering email (no name) on staging
-	- different sites
+	- request after entering email (no name) on staging - done
+	- different sites - done
 	- alias (can be tested on canary)
 	- 
 
