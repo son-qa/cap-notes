@@ -1,8 +1,5 @@
 Tasks:
 	- Dependency doc
-	- https://trello.com/c/4aDKE46n/604-alias-domains-notify-ai
-	- https://trello.com/c/m3gy6RXS/893-default-setting-for-offer-frequency-show-number-of-offers-in-a-offer-stack-number-of-each-element-in-hierarchy
-		- https://trello.com/c/sPhGLT7k/847-cmt-email-offer-frequency-default-setting
 	- CCPA Request for Information https://trello.com/c/1711ip47/3228-ccpa-automating-request-for-information
 	- Update all the above trellos
 
@@ -11,7 +8,6 @@ Tasks:
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
-	- https://trello.com/c/vbp96a2z/3498-fspu-alias-domain-the-american-samples-finder
 	- 
 	- 
 
@@ -31,7 +27,6 @@ Requirement Gathering:
 	- Trello
 
 Learnings:
-	- API course
 	- API questions
 	- Python advance
 	- BDD
