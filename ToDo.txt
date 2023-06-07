@@ -1,7 +1,7 @@
 Tasks:
 	- Dependency doc
 	- CCPA Request for Information https://trello.com/c/1711ip47/3228-ccpa-automating-request-for-information
-	- https://trello.com/c/pRuN8ObG/922-show-stack-types-for-selection-and-an-all-option-by-default-all-option-to-be-shown-and-selected-all-other-filters-to-work-as-exp
+	- 
 
 
 
