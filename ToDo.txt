@@ -1,7 +1,7 @@
 Tasks:
 	- Dependency doc
 	- CCPA Request for Information https://trello.com/c/1711ip47/3228-ccpa-automating-request-for-information
-	- 
+	- https://trello.com/c/EPZbLGob/992-dynamic-10-hooks-to-be-automatically-created-fro-20-whenever-new-hooks-created-from-interface-verify-for-all-exiting-10-hooks
 
 
 
@@ -25,6 +25,14 @@ Requirement Gathering:
 	- Scope of testing?
 	- What is the impact of this feature on other features?
 	- Trello
+
+Mindset:
+	- Is the requirement meeting? Is the problem solved?
+	- Is there an exisiting way to solve the problem
+	- Does the solution/functionality/outcome makes sense?
+	- Business perspective
+	- End user's perspective
+	- 
 
 Learnings:
 	- API questions
