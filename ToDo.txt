@@ -1,23 +1,20 @@
 Tasks:
 	- Dependency doc
-	- Revamp compliance email body/report
-	- Update compliance sheet - tabs, checklist, test cases, 
 	- CCPA Request for Information https://trello.com/c/1711ip47/3228-ccpa-automating-request-for-information
 		- Update CCPA compliance test cases
 	- https://trello.com/c/EPZbLGob/992-dynamic-10-hooks-to-be-automatically-created-fro-20-whenever-new-hooks-created-from-interface-verify-for-all-exiting-10-hooks
-	- Postman - variables, enviroment, sites for CCPA
-	- CCPA test planning
 	- https://trello.com/c/9zXK3DEa/965-show-offer-tag-group-coloumns-in-offers-pagesearch-filter-should-work-along-with-filter-on-coloumn-name-show-as-tabs-in-offers-p
-	- wget on windows
-	
-
 
 
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
-	- 
-	- 
+	- Revamp compliance email body/report
+	- Update compliance sheet - tabs, checklist, test cases, 
+	- Postman - variables, enviroment, sites for CCPA
+	- CCPA test planning	
+	- wget on windows
+
 
 
 

@@ -1,0 +1,4 @@
+Offer filtering:
+
+- does not update when an offer is removed/added in the group - page needs to be refreshed
+- 
