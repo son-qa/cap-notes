@@ -1,3 +1,43 @@
+Pushnami URLs
+	- https://topsurveyspot.com/?cid=urw2j&test=1&exp=TSS-Default-Test-QA
+
+	- https://topsurveyspot.com/?cid=urw2j&test=1&exp=TSS-Duplicate-Test-QA
+
+	- https://topsurveyspot.com/?cid=urw2j&test=1&exp=TSS-Default-Test-QA&email=emilyjames202115@gmail.com&userFname=ray&last=Jenson&userAddress=601%20Westchester%20Ave&cityName=Bronx&stateName=Newyork&stateCode=NY&zipcode=10455&countryName=%7Bcountry%7D&mobile=6095587775&dobdate=09&dobmonth=09&dobyear=2000&gender=M
+
+	- https://freesamplesprousa.com/?cid=vn1ws&test=1&email=emilyjames202115@gmail.com&userFname=ray&last=Jenson&userAddress=601%20Westchester%20Ave&cityName=Bronx&stateName=Newyork&stateCode=NY&zipcode=10455&countryName=%7Bcountry%7D&mobile=6095587775&dobdate=09&dobmonth=09&dobyear=2000&gender=M
+
+----------------------------------------------------------------
+
+Alias domain checklist
+
+	- Privacy Policy & TOS 
+	- Email Disclaimer
+	- Footer Disclaimer
+	- xVerify
+		- oiuwqepoiruqoiweuor@yahoo.in
+		- gibberish@fakemail.pk
+	- Anti Spam
+	- lead posting
+		- auto posting
+	- Linkout (loading, no console error)
+	- Offerwall (loading, no console error)
+	- Journaya
+	- Trusted form
+	- Events
+	- MAX feed call (PII + linkout) - purl
+	- OnO
+	- Pushnami/NotifyAI - can be changed ( service worker configuration )
+	- CCPA
+	- Subdomains
+		- assets
+		- end to end
+		- console/network error
+
+
+---X---X---X---X---X--X---X---X---X---X--X---X---X---X---X--X---X---X---X---X--X---X---X---X---X---
+
+
 Table optimization
 
 To test:
@@ -97,21 +137,6 @@ If I execute multiple times then I should be able to pick the desired range of c
 	
 	- before_all - create a batch number = HHMM and use it for all scenario under test in the current behave execution
 	
-===========================================================
-
-Pushnami URLs
-	- https://topsurveyspot.com/?cid=urw2j&test=1&exp=TSS-Default-Test-QA
-
-	- https://topsurveyspot.com/?cid=urw2j&test=1&exp=TSS-Duplicate-Test-QA
-
-	- https://topsurveyspot.com/?cid=urw2j&test=1&exp=TSS-Default-Test-QA&email=emilyjames202115@gmail.com&userFname=ray&last=Jenson&userAddress=601%20Westchester%20Ave&cityName=Bronx&stateName=Newyork&stateCode=NY&zipcode=10455&countryName=%7Bcountry%7D&mobile=6095587775&dobdate=09&dobmonth=09&dobyear=2000&gender=M
-
-=================================================================
-
-db details:
-Endpoint: leadgen-prod-slave-serving1.c5rg9dilhqmr.us-east-1.rds.amazonaws.com
-Port: 3306
-requires wireguard
 
 =================================================================
 
@@ -134,22 +159,7 @@ experimentConfig
 
 ==================================================================
 
-Alias domain checklist
 
-Privacy Policy & TOS 
-Email Disclaimer
-Footer Disclaimer
-xVerify
-Anti Spam
-lead posting
-Linkout
-Offerwall
-Journaya
-Trusted form
-Events
-MAX feed call (PII + linkout) - purl
-OnO
-Pushnami - can be changed ( service worker configuration )
 
 =====================================================================
 

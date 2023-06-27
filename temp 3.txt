@@ -1,0 +1,27 @@
+https://trello.com/c/EPZbLGob/992-dynamic-10-hooks-to-be-automatically-created-fro-20-whenever-new-hooks-created-from-interface-verify-for-all-exiting-10-hooks
+
+Coverage:
+    - Create, update, clone
+        - Conditions
+        - Operations
+            - Create #done
+                - Keeping toggle on/off
+            - Update - #done
+                - Keeping toggle on/off
+            - Clone - #done
+                - Cloning a toggle-off config
+                - Cloning a toogle-on config
+    - End to end
+        - Availablity of the configs
+            - If v2 is not present
+            - If both are present and v1 is outdated
+                - v2 is updated manually
+                - first converted then toggle off and saved
+    - Conversion of all configs, each field
+
+
+Special character test // \\ @ ! ; ' " " ' " '
+
+
+
+

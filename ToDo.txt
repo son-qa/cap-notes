@@ -1,21 +1,24 @@
 Tasks:
 	- Dependency doc
-	- CCPA Request for Information https://trello.com/c/1711ip47/3228-ccpa-automating-request-for-information
-		- Update CCPA compliance test cases
-	- https://trello.com/c/EPZbLGob/992-dynamic-10-hooks-to-be-automatically-created-fro-20-whenever-new-hooks-created-from-interface-verify-for-all-exiting-10-hooks
-	- https://trello.com/c/9zXK3DEa/965-show-offer-tag-group-coloumns-in-offers-pagesearch-filter-should-work-along-with-filter-on-coloumn-name-show-as-tabs-in-offers-p
+	- v1 to v2 config - https://trello.com/c/EPZbLGob/992-dynamic-10-hooks-to-be-automatically-created-fro-20-whenever-new-hooks-created-from-interface-verify-for-all-exiting-10-hooks
+	- TSS alias - https://trello.com/c/s348K7or/652-domain-aliasing-tss-prs
+	- https://trello.com/c/uBhHlssu/664-alias-domain-samplesforusa
+	- is pii available flag's working
 
 
 
 Secondary:
+	- Tab filters on offers page - https://trello.com/c/9zXK3DEa/965-show-offer-tag-group-coloumns-in-offers-pagesearch-filter-should-work-along-with-filter-on-coloumn-name-show-as-tabs-in-offers-p - on hold
+	- CCPA Request for Information https://trello.com/c/1711ip47/3228-ccpa-automating-request-for-information
+		- Update CCPA compliance test cases
+	- GTM events - https://trello.com/c/PV2aVYaf/3586-emailsubmitsuccess-and-registrationcompletesuccess-events-to-gtm
 	- Check CCPA for autoposting, duplicate user
 	- Revamp compliance email body/report
 	- Update compliance sheet - tabs, checklist, test cases, 
 	- Postman - variables, enviroment, sites for CCPA
-	- CCPA test planning	
-	- wget on windows
-
-
+	- CCPA test planning
+	- https://github.com/typhoon-hil/allure-docx
+	- Allure reporting - jyoti (allure-docx, ctrl+p, )
 
 
 Requirement Gathering:
@@ -32,6 +35,7 @@ Requirement Gathering:
 	- What is the impact of this feature on other features?
 	- Trello
 
+
 Mindset:
 	- Is the requirement meeting? Is the problem solved?
 	- Is there an exisiting way to solve the problem
@@ -39,11 +43,6 @@ Mindset:
 	- Business perspective
 	- End user's perspective
 	- 
-
-Learnings:
-	- API questions
-	- Python advance
-	- BDD
 
 Validation scope:
 	- Validating tcpa leads are posted only in the intended cases
@@ -54,5 +53,8 @@ Validation scope:
 
 
 python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=regression-compliance
+allure serve output/reports/ to generate html reports
+allure-docx output/reports/ filename.docx
 
 
+python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=sanket

@@ -1,13 +1,21 @@
 ---------- Core ----------
 
+Alias domains:
+	- https://trello.com/c/4aDKE46n/604-alias-domains-notify-ai
+	- americansamplesfinder - https://trello.com/c/vbp96a2z/3498-fspu-alias-domain-the-american-samples-finder
+	- toprewardspot & topsurveysamerica - https://trello.com/c/s348K7or/652-domain-aliasing-tss-prs
+	- samplesforusa - https://trello.com/c/uBhHlssu/664-alias-domain-samplesforusa
+	- 
 
 
 Notify AI - https://trello.com/c/HWnnJ9eV/3478-investigate-notify-ai-push-service-worker-setup
 
-Alias domains:
-	- https://trello.com/c/4aDKE46n/604-alias-domains-notify-ai
-	- americansamplesfinder - https://trello.com/c/vbp96a2z/3498-fspu-alias-domain-the-american-samples-finder
-	- 
+GTM events - https://trello.com/c/PV2aVYaf/3586-emailsubmitsuccess-and-registrationcompletesuccess-events-to-gtm
+
+Multiple LOs - https://trello.com/c/FkYqJr0h/663-tas-multiple-lo-flow-qa
+
+
+---------- Ops Interface ----------
 
 
 
@@ -17,5 +25,7 @@ Alias domains:
 
 Default offer frequency filter 	- https://trello.com/c/m3gy6RXS/893-default-setting-for-offer-frequency-show-number-of-offers-in-a-offer-stack-number-of-each-element-in-hierarchy
 		- https://trello.com/c/sPhGLT7k/847-cmt-email-offer-frequency-default-setting
+
+
 
 

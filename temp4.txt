@@ -1,42 +1,42 @@
-https://trello.com/c/4aDKE46n/604-alias-domains-notify-ai
+Alias checklist
 
-
-https://freesamplestoreusa.com/?cid=dtm3f&test=1&exp=FSPU-Dynamic-Flow-SPII-AutoSurvey-V5B-Variant&t7=shift44
-    - 1a47fd91-55f3-4215-9f6e-f666149d57bf
-    - 88947935
-
-
-https://primerewardsforamerica.com/?cid=snvsj&test=1&exp=PRS-Optimized-Dynamic-Flow-Auto-Linkout-Exploration
-    - 630651fd-fa2f-4e9a-819f-d815c4ed6ffb
-    - 88948027
-
-
-https://americansweepscentre.com/?test=1&cid=nt1sz&exp=TAS-50k-Flow
-    - 3931608c-23ca-4e05-ba1d-e09bfc5d6270
-    - 88948183
-
-
-https://freesamplestoreusa.com/?cid=4rsp5
-
-
-oiuwqepoiruqoiweuor@yahoo.in
-
-iouopiuoapetoiupoeirut@rediffmail.com
+FE
+Logo changes
+Domain name changes
+Events
+Trusted form recoding
+Journaya logs
+One android And iOS devices for smoke test on flows
+Pre-Tcpa checks
+Express Smoke test with Auto-redirect & Not you click for dup flow
+Hyperlinks redirections
+Disclaimer texts
+Footer links redirections
+Legal pages domain name changes
+Full flow run check
 
 
 
-https://freesamplestoreusa.com/?cid=utmoe&test=1
 
-
-3 alias domains
-
-MAX feed call
-OnO
-Anti Spam
+Privacy Policy & TOS 
+Email Disclaimer
+Footer Disclaimer
 xVerify
-Pushnami - can be changed ( service worker configuration )
+        - oiuwqepoiruqoiweuor@yahoo.in
+        - gibberish@fakemail.pk
+Anti Spam
 lead posting
-
-- 4aa7df02-a20b-465c-a4a1-4c07220da029
-- d65e9841-8e05-455f-83f5-f9343aeda4d8
-- 8dd46787-b4af-4b3b-b23c-73abcd5e4fb2
+        - auto posting
+Linkout (loading, no console error)
+Offerwall (loading, no console error)
+Journaya
+Trusted form
+Events
+ MAX feed call (PII + linkout) - purl
+OnO
+Pushnami/NotifyAI - can be changed ( service worker configuration )
+CCPA
+Subdomains
+        - assets
+        - end to end
+        - console/network error

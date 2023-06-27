@@ -1,4 +1,88 @@
-Offer filtering:
+https://trello.com/c/s348K7or/652-domain-aliasing-tss-prs
 
-- does not update when an offer is removed/added in the group - page needs to be refreshed
-- 
+https://toprewardspot.com/?cid=hmxb3&t8=1000paypal&test=1&canary=1
+
+
+-------------
+
+	- Privacy Policy & TOS 
+	- Email Disclaimer
+	- Footer Disclaimer
+	- xVerify
+	- Anti Spam
+	- Trusted form
+	- Linkout
+	- MAX feed call (PII + linkout) - purl
+	- Offerwall
+	- lead posting
+	- Journaya
+	- Events
+	- Subdomains - assets
+	- OnO
+	- Pushnami/NotifyAI - can be changed ( service worker configuration )
+
+	"userId": 93017439, "leadId": 62253168,
+
+--------------------------------------------------------------------------------
+
+http://topsurveysamerica.com/?cid=x2jzp&test=1&exp=TSS-Flow-V2
+
+	- Pushnami/NotifyAI - can be changed ( service worker configuration )
+	- Privacy Policy & TOS 
+	- Email Disclaimer
+	- Footer Disclaimer
+	- xVerify
+		- gibberish@fakemail.pk
+	- Journaya
+	- Trusted form
+	- Subdomains
+		- assets
+		- end to end
+		- console/network error
+	- MAX feed call (PII + linkout) - purl
+	- Linkout (loading, no console error)
+	- Offerwall (loading, no console error)
+	- CCPA
+	- Anti Spam
+	- lead posting
+		- auto posting
+	- Events
+	- OnO
+
+
+"userId": 93323280, "leadId": 62478226,
+'c533c10b-ba79-47bc-be41-413727755cc0'
+
+
+
+-----------------------------------------------------------------------------------
+
+https://samplesforusa.com/?cid=abf6r&test=1&exp=FSPU-Dynamic-Facebook-Prelander-Control
+
+	- MAX feed call (PII + linkout) - purl
+
+
+"userId": 93743226, "leadId": 62783848,
+97c93582-9889-4553-b595-bc7746e0f436
+
+	- Pushnami/NotifyAI - can be changed ( service worker configuration )
+	- Events
+	- xVerify
+		- oiuwqepoiruqoiweuor@yahoo.in
+		- gibberish@fakemail.pk
+	- Anti Spam
+	- Linkout (loading, no console error)
+	- Offerwall (loading, no console error)
+	- Journaya
+	- Trusted form
+	- Privacy Policy & TOS 
+	- Email Disclaimer
+	- Footer Disclaimer
+	- Subdomains
+		- assets
+		- end to end
+		- console/network error
+	- lead posting
+		- auto posting
+	- CCPA
+	- OnO
