@@ -1,12 +1,13 @@
 Tasks:
 	- Dependency doc
-	- v1 to v2 config - https://trello.com/c/EPZbLGob/992-dynamic-10-hooks-to-be-automatically-created-fro-20-whenever-new-hooks-created-from-interface-verify-for-all-exiting-10-hooks
 	- TSS alias - https://trello.com/c/s348K7or/652-domain-aliasing-tss-prs
-	- https://trello.com/c/uBhHlssu/664-alias-domain-samplesforusa
-	- is pii available flag's working
+	- FSPU alias - https://trello.com/c/uBhHlssu/664-alias-domain-samplesforusa
 	- update CCPA domains - 4 domains
 	- CCPA 'Correct My Information'
-	- 
+	- Trello - regression alias
+	- Divya's task
+	- https://trello.com/c/A7z5S4uX/991-configure-preping-reactivation-email-so-that-it-doesnt-go-through-the-confirmation-series-only-for-email
+		- preping stack should not be able to be triggered from another stack
 
 
 
@@ -62,16 +63,4 @@ allure-docx output/reports/ filename.docx
 
 python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=sanket
 
-
-
-
-https://www.linkedin.com/jobs/view/3594715330
-
-https://www.linkedin.com/jobs/view/3625719663
-
-https://www.linkedin.com/jobs/view/3604743586
-
-https://www.linkedin.com/jobs/view/3616127588
-
-https://www.linkedin.com/jobs/view/3637993626
-
+https://qa-v2.freesamplesprousa.com/?test=1&cid=qa-slug2&exp=Flow1-QA-Only
