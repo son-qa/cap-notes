@@ -1,88 +1,614 @@
-https://trello.com/c/s348K7or/652-domain-aliasing-tss-prs
 
-https://toprewardspot.com/?cid=hmxb3&t8=1000paypal&test=1&canary=1
+Conversation opened. 1 unread message.
+
+Skip to content
+Using Customer Acquisition.co Mail with screen readers
+
+2 of 42
+Compliance Regression Testing | 23-Jun-2023
+Inbox
+
+Kishan S
+Attachments
+Jun 23, 2023, 8:55 PM (13 days ago)
+to Govinda, Jyoti, me
+
+Please find the compliance testing report below.
+
+A. Feature : Branded TCPA:
+
+Testing Link : https://freesamplesprousa.com/?cid=vn1ws
+ 
+Checkpoints:
+
+I . Responding to the TCPA tag question and its dynamic tag questions, did not reach TCPA page
+        1.Branded TCPA feature should also work if its question and dynamic tag questions are responded and the user has left the survey mid way
+        2. Leads will be posted once Tag/Question based lead post job is completed
+        3. questiontcpaoptin=1 optin should be seen in tcpa_survey_optin but trusted form should not claimed
+        4. jornaya's lead id is stored in tcpa_survey_optin table
+        5. On Jornaya
+            i. User activity logs should be seen for jornaya id
+            ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+II. Responded to the TCPA tag question and its dynamic tag questions, reached the TCPA page and opted-in.
+        1. TCPA feature should work as expected for normal flows, if TCPA is opted-in on TCPA page, leads will be posted
+        2. Leads will be posted once TCPA job is completed (instantly)
+        3. tcpaoptin = 1 should be seen in tcpa_survey_optin db but the trusted form should not claimed
+        4. jornaya's lead id is stored in tcpa_survey_optin table
+        5. On Jornaya
+            i. User activity logs should be seen for jornaya id
+            ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+III. Not Responding to the TCPA tag question, the user reached the TCPA page and opted-in TCPA
+       1. TCPA feature should work as expected for normal flows, if TCPA is opted-in on TCPA page,
+            -  For positively answered questions, leads should be posted
+            -  For Negatively answered questions, leads should not be posted
+        2. jornaya's lead id is stored in tcpa_survey_optin table
+        3. On Jornaya
+           i. User activity logs should be seen for jornaya id
+           ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+IV. Responded to the TCPA tag question and its dynamic tag questions, reached the TCPA page and opted-out
+        1. TCPA feature should work as expected for normal flows, if TCPA is opted-out on TCPA page, leads wont be posted
+        2. Leads will not be posted once TCPA job is completed (instantly)
+        3. tcpaoptin = 0 should be seen in tcpa_survey_optin db
+        4. jornaya's lead id is stored in tcpa_survey_optin table
+        5. On Jornaya
+           i. User activity logs should be seen for jornaya id
+           ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+V. Responded to the TCPA tag question and its dynamic tag questions, reached the TCPA page and opted-in tcpa then navigated back to tcpa page and opted-out
+       1. If the user has revisited back to survey after opt-ing in and then opted-out, then he will be opted-out. Although, at first when he had opted-in, lead should be posted and tcpa_survey_opt-in.is_opt-in = 1
+       2. Leads will be posted once the TCPA job is completed (instantly) for 1st flow
+       3. tcpaoptin = 1 should be seen in tcpa_survey_optin db for 1st leadid
+       4. tcpaoptin = 0 should be seen in tcpa_survey_optin db for 2nd leadid
+       5. jornaya's lead id is stored in tcpa_survey_optin table
+       6. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+VI. Responded to the TCPA tag question and its dynamic tag questions, reached the TCPA page and opted-out then came back to the TCPA page opt in
+       1. If the user has opted-out, he will stay opted-out, leads won't be posted
+       2. Leads will not be posted once TCPA job is completed (instantly) for 1st flow
+       3. tcpaoptin = 0 should be seen in tcpa_survey_optin db for 1st leadid
+       4. tcpaoptin = 0 should be seen in tcpa_survey_optin db for 2nd leadid
+       5. jornaya's lead id is stored in tcpa_survey_optin table
+       6. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+VII. Responding positively to TCPA questions, click back, negatively respond to Branded TCPA questions and don't complete the survey
+        1. Leads should be posted according to lead id for positive response flow
+        2. Trusted form for question TCPA opt-ins to be observed for one lead id
+        3. jornaya's lead id is stored in tcpa_survey_optin table
+        4. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+VIII. Responding negatively to TCPA questions, click back, positively respond to Branded TCPA questions and don't complete the survey
+        1. Leads should be posted according to lead id for positive response flow
+        2. Trusted form for question TCPA opt-ins to be observed for one lead id
+        3. jornaya's lead id is stored in tcpa_survey_optin table
+        4. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+IX. Responding positively to TCPA questions, click back, positively respond to Branded TCPA questions and don't complete the survey
+       1. Leads should be posted according to lead id for positive response flow, no duplication of posting
+        2. Trusted form for question TCPA opt-ins to be observed for only one leadid
+        3. jornaya's lead id is stored in tcpa_survey_optin table
+        4. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+X. Responding negatively to TCPA questions, click back, negatively respond to Branded TCPA questions and don't complete the survey
+        1. No lead posting for TCPA leads
+        2. No Branded TCPA opt-in since there was no opt-in
+
+XI. Some Positive response, Some negative to TCPA questions, click back, reverse the response, Don't complete the survey
+        1. Leads should be posted according to lead id for all the positive responses
+        2. Trusted form for question TCPA opt-ins to be observed for both the lead id
+        3. jornaya's lead id is stored in tcpa_survey_optin table
+        4. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XII. Question disclaimer and TCPA text added to a Branded TCPA question - TCPA text seen
+
+XIII. Only Question disclaimer added to a Branded TCPA question - Usual question disclaimer seen
+
+XIV. Only TCPA text to a Branded TCPA question - TCPA text seen
+
+XV. Marketing partner names on question TCPA - offer specific Advertiser names is listed
+
+XVI. Responded positively to the TCPA tag questions, reached the TCPA page , navigated back to the start of the survey and answered all the questions negatively then opted-out in TCPA page
+        1. If the user has opted-out, he will stay opted-out, leads won't be posted
+        2. Leads will not be posted once TCPA job and question based lead post job is completed
+        3. tcpaoptin = 0 should be seen in tcpa_survey_optin db for 2nd leadid
+        4. jornaya's lead id is stored in tcpa_survey_optin table
+        5. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XVII. Responded Negatively to the TCPA tag questions, reached the TCPA page , navigated back to the start of the survey and answered all the questions negatively then opted-out in TCPA page
+        1. If the user has opted-out, he will stay opted-out, leads won't be posted
+        2. Leads will not be posted once TCPA job and question based lead post job is completed
+        3. tcpaoptin = 0 should be seen in tcpa_survey_optin db for 2nd leadid
+        4. jornaya's lead id is stored in tcpa_survey_optin table
+        5. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XVIII. Responded Negatively to the TCPA tag questions, reached the TCPA page , navigated back to the start of the survey and answered all the questions Positively then opted-out in TCPA page
+        1. If the user has opted-out, he will stay opted-out, leads won't be posted
+        2. Leads will not be posted once TCPA job and question based lead post job is completed
+        3. tcpaoptin = 0 should be seen in tcpa_survey_optin db for 2nd leadid
+        4. jornaya's lead id is stored in tcpa_survey_optin table
+        5. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XIX. Responded Positively to the TCPA tag questions, reached the TCPA page , navigated back to the start of the survey and answered all the questions Positively then opted-out in TCPA page
+        1. If the user has opted-out, he will stay opted-out, leads won't be posted
+        2. Leads will not be posted once TCPA job and question based lead post job is completed
+        3. tcpaoptin = 0 should be seen in tcpa_survey_optin db for 2nd leadid
+        4. jornaya's lead id is stored in tcpa_survey_optin table
+        5. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XX. Responded positively to the TCPA tag questions, reached the TCPA page , opted-out TCPA page, navigated back to the start of the survey and answered all the questions Positively, did not complete the survey
+        1. If the user has opted-out, he will stay opted-out, leads won't be posted
+        2. Leads will not be posted once TCPA job and question based lead post job is completed
+        3. tcpaoptin = 0 should be seen in tcpa_survey_optin db for 1st leadid
+        4. jornaya's lead id is stored in tcpa_survey_optin table
+        5. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XXI. Responded Negatively to the TCPA tag questions, reached the TCPA page , opted-out TCPA page, navigated back to the start of the survey and answered all the questions Positively, did not complete the survey
+        1. If the user has opted-out, he will stay opted-out, leads won't be posted
+        2. Leads will not be posted once TCPA job and question based lead post job is completed
+        3. tcpaoptin = 0 should be seen in tcpa_survey_optin db for 1st leadid
+        4. jornaya's lead id is stored in tcpa_survey_optin table
+        5. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XXII. Responded Positively to the TCPA tag questions, reached the TCPA page , opted-out TCPA page, navigated back to the start of the survey and answered all the questions Negatively, did not complete the survey
+        1. If the user has opted-out, he will stay opted-out, leads won't be posted
+        2. Leads will not be posted once TCPA job and question based lead post job is completed
+        3. tcpaoptin = 0 should be seen in tcpa_survey_optin db for 1st leadid
+        4. jornaya's lead id is stored in tcpa_survey_optin table
+        5. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XXIII. Responded Negatively to the TCPA tag questions, reached the TCPA page , opted-out TCPA page, navigated back to the start of the survey and answered all the questions Negatively, did not complete the survey
+        1. If the user has opted-out, he will stay opted-out, leads won't be posted
+        2. Leads will not be posted once TCPA job and question based lead post job is completed
+        3. tcpaoptin = 0 should be seen in tcpa_survey_optin db for 1st leadid
+        4. jornaya's lead id is stored in tcpa_survey_optin table
+        5. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XXIV. Responded positively to the TCPA tag questions, reached the TCPA page , navigated back to the start of the survey and answered all the questions negatively then opted-in on TCPA page
+        1. If the user has opted-in, leads will be posted
+        2. Leads will be posted once question based lead post job is completed
+        3. tcpaoptin = 1 should be seen in tcpa_survey_optin db for 1st leadid
+        4. questiontcpaoptin = 1 should be seen since, offers will be posted via questiontcpa job
+        5. jornaya's lead id is stored in tcpa_survey_optin table
+        6. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XXV. Responded negatively to the TCPA tag questions, reached the TCPA page , navigated back to the start of the survey and answered all the questions negatively then opted-in on TCPA page
+        1. Leads will be posted according to tcpa optins
+        2. Leads will be posted once TCPA job lead post job is completed
+        3. tcpaoptin = 1 should be seen in tcpa_survey_optin db for 1st leadid
+        4. jornaya's lead id is stored in tcpa_survey_optin table
+        5. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XXVI. Responded negatively to the TCPA tag questions, reached the TCPA page , navigated back to the start of the survey and answered all the questions Positively then opted-in in TCPA page
+        1. Leads will be posted according to tcpa optins
+        2. Leads will be posted once TCPA job lead post job is completed
+        3. tcpaoptin = 1 should be seen in tcpa_survey_optin db for 1st leadid
+        4. jornaya's lead id is stored in tcpa_survey_optin table
+        5. On Jornaya
+           i. User activity logs should be seen for jornaya id
+           ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XXVII. Responded positively to the TCPA tag questions, reached the TCPA page , navigated back to the start of the survey and answered all the questions positively then opted-in on TCPA page
+        1. If the user has opted-in, leads will be posted
+        2. Leads will be posted once question tcpa job/ Question based is completed
+        3. tcpaoptin = 1 should be seen in tcpa_survey_optin db for 1st leadid
+        4. questiontcpaoptin = 1 should be seen since
+        5. jornaya's lead id is stored in tcpa_survey_optin table
+        6. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XXVIII. Responded positively to the TCPA tag questions, reached the TCPA page , opted-in TCPA page, navigated back to the start of the survey and answered all the questions Positively, did not complete the survey
+        i. If the user has opted-in, leads will be posted
+        1. Leads will be posted once tcpa based lead post job is completed
+        2. tcpaoptin = 1 should be seen in tcpa_survey_optin db for 1st leadid
+        3. jornaya's lead id is stored in tcpa_survey_optin table
+        4. On Jornaya
+        i. User activity logs should be seen for jornaya id
+        ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XXIX. Responded Negatively to the TCPA tag questions, reached the TCPA page , opted-in TCPA page, navigated back to the start of the survey and answered all the questions Positively, did not complete the survey
+        1. If the user has opted-in, leads will be posted
+        2. Leads will be posted once question based lead post job is completed
+        3. tcpaoptin = 1 should be seen in tcpa_survey_optin db for 1st leadid
+        4. questiontcpaoptin = 1 should be seen since, offers will be posted via question optin job
+        5. jornaya's lead id is stored in tcpa_survey_optin table
+        6. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XXX. Responding negatively to the TCPA tag questions, reached the TCPA page , opted-in on the TCPA page, navigated back to the start of the survey and answered all the questions negatively, did not complete the survey
+        1. If the user has opted-in, leads will be posted
+        2. Leads will not be posted once question based lead post job is completed
+        3. tcpaoptin = 1 should be seen in tcpa_survey_optin db for 1st leadid
+        4. jornaya's lead id is stored in tcpa_survey_optin table
+        5. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XXXI. Responded Positively to the TCPA tag questions, reached the TCPA page , opted-in TCPA page, navigated back to the start of the survey and answered all the questions negatively, did not complete the survey
+        1. If the user has opted-in, leads will be posted
+        2. Leads will be posted once TCPA lead post job is completed
+        3. tcpaoptin = 1 should be seen in tcpa_survey_optin db for 1st leadid
+        4. jornaya's lead id is stored in tcpa_survey_optin table
+        5. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / full tcpa / marketing place must be logged in jornaya.
+
+XXXII. Delayed Lead posting
+
+     Test Link - https://qa-v1.freesamplesprousa.com/?cid=qa-slug1&test=1
+        - Within working hours
+            - Leads should be posted as if Branded TCPA job and Pre tcpa job is completed
+       - outside working hours
+            - job should be scheduled as per working hours of the offer
+            - Once the job is executed leads should be posted
+      - If day parting is on
+          - if Delayed posting is enabled
+               - if user comes within day parting hours
+                    - question for that offer should be shown
+                    - if answered positively, leads should be posted instantly
+
+               - if user comes outside day parting hours
+                    - question for that offer should be shown
+                    - job should be scheduled as per working hours of the offer
+                    - Once the job is executed leads should be posted
+ 
+          - if Delayed posting is disabled
+               - if user comes within day parting hours
+                    - question for that offer should be shown
+                    - if answered positively, leads should be posted instantly
+               - if user comes outside day parting hours
+                    - question for that offer should not be shown
+                         - job should be scheduled as per working hours of the offer
+                         - Once the job is executed leads should be posted
+                    - if same question is tagged for other tag(which do not have dayparting/delayed posting off)
+                      - Question should be shown for other tag
+
+                    - if offer is of tag group
+                      - if  question is  of tag group and its a parent question
+                         - Question should be seen
+                      - if question is  of tag group and its a child question
+                         - Question should be seen
+                   
+     - if day parting is off
+          - Working should as normal question should work
+               - Question should be retrieved
+                    - If answered positively, lead should be posted instantly
+
+XXXIII. Duplicate Auto Posting
+
+   Test Link -  https://qa-v1.freesamplesprousa.com/?cid=qa-slug1&test=1
+        1. checked & compare for userResponse on redis, new and duplicate flows
+            User response key for duplicate user should match with the first flow/new user
+        2. Sponsor ad table
+            TCPA leads should be AUtoposted as per TCPA leads posted as new user
+              url_lead_status: Autopost-UnMatched or Autopost-Matched
 
 
--------------
+B. Feature : Pre-TCPA:
 
-	- Privacy Policy & TOS 
-	- Email Disclaimer
-	- Footer Disclaimer
-	- xVerify
-	- Anti Spam
-	- Trusted form
-	- Linkout
-	- MAX feed call (PII + linkout) - purl
-	- Offerwall
-	- lead posting
-	- Journaya
-	- Events
-	- Subdomains - assets
-	- OnO
-	- Pushnami/NotifyAI - can be changed ( service worker configuration )
+Testing Link : https://theamericansweepstakes.com/?cid=kejy4&test=1&exp=TAS-SS-TCPA-On-Reg-PersonalizedV2
+ 
+Checkpoints:
 
-	"userId": 93017439, "leadId": 62253168,
+I. When the user has Clicked Continue on preTCPA optin page and answer the question positively and complete the survey
+        1. Notag TCPA leads should be posted
+        2. Email lead should be posted
+        3. No Tag Age leads should be posted
+        4. pretcpaoptin optintype and questiontcpaoptin should be seen in tcpa_survey_optin db, trusted form url should not be claimed
+        5. Jornaya's lead id is stored in tcpa_survey_optin table
+        6. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / marketing place must be logged in jornaya.
 
---------------------------------------------------------------------------------
+II. When the user has Clicked Continue on preTCPA optin page and answer the question negatively and complete the survey
+        1. Notag TCPA leads should be posted
+        2. Email lead should be posted
+        3. No Tag Age leads should be posted
+        4. pretcpaoptin optintype should be seen in tcpa_survey_optin db, trusted form url should not be claimed
+        5. Jornaya's lead id is stored in tcpa_survey_optin table
+        6. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / marketing place must be logged in jornaya.
 
-http://topsurveysamerica.com/?cid=x2jzp&test=1&exp=TSS-Flow-V2
+III. When the user has Clicked Continue on preTCPA optin page completed the survey positively, click back, again clicked continue, positively answered all the questions
+        1. Notag TCPA leads should be posted
+        2. Email lead should be posted
+        3. No Tag Age leads should be posted
+        4. New leadid should be generated with respect to flow
+        5. pretcpaoptin optintype and questiontcpa optintype  should be seen in tcpa_survey_optin db with latest leadid, trusted form url should not be claimed
+        6. Jornaya's lead id is stored in tcpa_survey_optin table
+        7. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / marketing place must be logged in jornaya.
 
-	- Pushnami/NotifyAI - can be changed ( service worker configuration )
-	- Privacy Policy & TOS 
-	- Email Disclaimer
-	- Footer Disclaimer
-	- xVerify
-		- gibberish@fakemail.pk
-	- Journaya
-	- Trusted form
-	- Subdomains
-		- assets
-		- end to end
-		- console/network error
-	- MAX feed call (PII + linkout) - purl
-	- Linkout (loading, no console error)
-	- Offerwall (loading, no console error)
-	- CCPA
-	- Anti Spam
-	- lead posting
-		- auto posting
-	- Events
-	- OnO
+IV. When the user has Clicked Continue on preTCPA optin page completed the survey positively, click back, again clicked continue, negatively answered all the questions
+        1. Notag TCPA leads should be posted
+        2. Email lead should be posted
+        3. No Tag Age leads should be posted
+        4. New leadid should be generated with respect to flow
+        5. pretcpaoptin optintype optintype and questiontcpaoptin on tcpa_survey_optin db with latest leadid, trusted form url should not be claimed
+        6. Jornaya's lead id is stored in tcpa_survey_optin table
+        7. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / marketing place must be logged in jornaya.
+
+V. When the user has Clicked Continue on preTCPA optin page completed the survey Negatively, click back, again clicked continue, positively answered all the questions
+       1. Notag TCPA leads should be posted
+        2. Email lead should be posted
+        3. No Tag Age leads should be posted
+        4. New leadid should be generated with respect to flow
+        5. pretcpaoptin optintype and questiontcpaoptin on tcpa_survey_optin db with latest leadid, trusted form url should not be claimed
+        6. Jornaya's lead id is stored in tcpa_survey_optin table
+        7. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / marketing place must be logged in jornaya.
+
+VI. When the user has Clicked Continue on preTCPA optin page and left the survey
+        1. Notag TCPA leads should not be posted
+        2. Email lead should be posted
+        3. No Tag Age leads should be posted
+        4. pretcpaoptin optintype optintype on tcpa_survey_optin db with latest leadid, trusted form url should not be claimed
+        5. Jornaya's lead id is stored in tcpa_survey_optin table
+        6. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / pretcpa / marketing place must be logged in jornaya.
+
+VII. Delayed Lead Posting
+
+     Test Link - https://qa-v1.freesamplesprousa.com/?cid=qa-slug1&test=1
+        - Within working hours
+            - Leads should be posted as if Branded TCPA job and Pre tcpa job is completed
+       - outside working hours
+            - job should be scheduled as per working hours of the offer
+            - Once the job is executed leads should be posted
+      - If day parting is on
+          - if Delayed posting is enabled
+               - if user comes within day parting hours
+                    - question for that offer should be shown
+                    - if answered positively, leads should be posted instantly
+
+               - if user comes outside day parting hours
+                    - question for that offer should be shown
+                    - job should be scheduled as per working hours of the offer
+                    - Once the job is executed leads should be posted
+ 
+          - if Delayed posting is disabled
+               - if user comes within day parting hours
+                    - question for that offer should be shown
+                    - if answered positively, leads should be posted instantly
+               - if user comes outside day parting hours
+                    - question for that offer should not be shown
+                   
+     - if day parting is off
+          - Working should as normal question should work
+               - Question should be retrieved
+                    - If answered positively, lead should be posted instantly
+
+VIII. Duplicate Auto Posting
+
+     Test Link - https://freesamplesprousa.com/?cid=vn1ws
+
+        1. checked & compared for userResponse on redis, new and duplicate flows
+            User response key for duplicate user should match with the first flow/new user
+        2. Sponsor ad table
+            TCPA leads should be AUtoposted as per TCPA leads posted as new user
+            url_lead_status: Autopost-UnMatched or Autopost-Matched
+
+C. Feature : TCPA on Lander:
+
+Testing Link : https://freesamplesprousa.com/?cid=21eo8&test=1&exp=FSPU-Zeeto-Templating-FE-QA&t7=launchpotato
+
+Checkpoints:
+
+I. When the user has Clicked Continue on TCPA on Lander  page and answers the question positively and completes the survey    
+        1. Notag TCPA leads should be posted
+        2. Email lead should be posted
+        3. No Tag Age leads should be posted
+        4. pretcpaoptin optintype and questiontcpaoptin (provided user should see branded TCPA question in the flow, or else questiontcpaoptin will not be seen) should be seen in tcpa_survey_optin db, trusted form url should not be claimed
+        5. Jornaya's lead id is stored in tcpa_survey_optin table
+        6. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / TCPA on Lander / marketing place must be logged in jornaya.
+
+II. When the user has Clicked Continue on TCPA on Lander page and answered the question negatively and completed the survey
+        1. Notag TCPA leads should be posted
+        2. Email lead should be posted
+        3 No Tag Age leads should be posted
+        4. pretcpaoptin optintype should be seen in tcpa_survey_optin db, trusted form url should not be claimed
+        5 Jornaya's lead id is stored in tcpa_survey_optin table
+        6. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / TCPA on Lander / marketing place must be logged in jornaya.
+
+III. When the user has Clicked Continue on TCPA on the Lander page and leaves the survey
+        1. Notag TCPA leads should be posted
+        2. Email lead should be posted
+        3. No Tag Age leads should be posted
+        4. pretcpaoptin optintype on tcpa_survey_optin db with latest leadid, trusted form url should not be claimed
+        5 Jornaya's lead id is stored in tcpa_survey_optin table
+        6. On Jornaya
+          i. User activity logs should be seen for jornaya id
+          ii. Tcpa disclaimers for at question level / TCPA on Lander / marketing place must be logged in jornaya.
+
+IV. Trusted Form Didn't Load in 2 Secs and user Clicked "Ship my Samples"
+       1. Notag TCPA leads should be posted      
+       2. Email lead should be posted
+       3. No Tag Age leads should be posted      
+       4. TCPA Leads should not be posted
+'      3. No Optin entries should be seen in tcpa_survey_optin table
 
 
-"userId": 93323280, "leadId": 62478226,
-'c533c10b-ba79-47bc-be41-413727755cc0'
+D. TCPA Optin/Optout:
+
+Testing Link : https://freesamplesprousa.com/?cid=vn1ws&test=1
+
+Checkpoints:
+
+I. Check for CTA clickability & handpointer effect should be present
+
+II. Check for trustedform id in URL, it should change on every time when survey loads.
+
+III. If user opts in then (7th point)
+   1. Check "tcpa-opt-in" api call for "tcpaopt-in" is "on"
+   2. And in "get-user-details" api, "is_tcpa_optin" should be "true"
+   3. And in "get-user-details" api, "tcpaOptedOutEvent" should be missing
+
+IV. If user opts out then (6th point)
+  1. Check "tcpa-opt-in" api call for "tcpaopt-in" is null
+  2. And in "get-user-details" api, "is_tcpa_optin" should be "false"
+  3. And in "get-user-details" api, "tcpaOptedOutEvent" should be "true'
+
+V. Check max_leadgen_sponsor_ad table when user opted out then accepted tcpa offers which require TCPA should show null data in columns:
+  1. request_url
+  2. request_data
+  3. advertiser_tag
+  4. responce_url
+  5. lead_sold_time
+  6. max_response_time
+  7. transaction_id
+
+VI. If the user opts in after opt-ing out then
+ 1. No tcpa lead posting should occur
+ 2. In "get-user-details" api, "is_tcpa_optin" should be "false"
+ 3. In "get-user-details" api, "tcpaOptedOutEvent" should be "true'
+
+7. If the user opts out after opt-ing in then
+ 1. If TCPA lead posting is not over then from that time on, no new leads should be posted. (will unable to test)
+ 2. In the "get-user-details" api, "is_tcpa_opt-in" should be "false"
+ 3. In "get-user-details" api, "tcpaOptedOutEvent" should be "true'
+
+E. Forward/Backward Cases:
+
+Checkpoints:
+
+Smoke Testing : Every Time on survey load, generate new lead id, generate new trusted_form_url, map trusted form url with lead id
+
+  1. PII to Survey, then back to PII, then forward to Survey
+  2. On survey reload
+  3. All question +ve answer -> tcpa opt-in -> expect lead posted
+  4. All question +ve answer -> tcpa opt-out -> expect no lead posting
+  5. All question -ve answer -> tcpa opt-in -> expect no lead posting (No Tag Leads will be posted)
+  6. All question -ve answer -> tcpa opt-out -> expect no lead posting
+
+I. Scenario: [yes, yes] (opt-in, opt-in | opt-out, opt-out)
+  1. +ve respond -> tcpa opt-in -> back -> +ve respond -> tcpa opt-in -> expect lead posted once(lead_id1, trusted_form_url1)
+  2. +ve respond -> tcpa opt-out -> back -> +ve respond -> tcpa opt-out -> expect no lead posting
+
+II. Scenario: [yes, no] (opt-in, opt-in | opt-out, opt-out)
+  1. +ve respond -> tcpa opt-in -> back -> -ve respond -> tcpa opt-in -> lead posted once(lead_id1, trusted_form_url1)
+  2. +ve respond -> tcpa opt-out -> back -> -ve respond -> tcpa opt-out -> no lead posting
+
+III. Scenario: [no, yes] (opt-in, opt-in | opt-out, opt-out)
+  1. -ve respond -> tcpa opt-in -> back -> +ve respond -> tcpa opt-in -> no lead posting
+  2. -ve respond -> tcpa opt-out -> back -> +ve respond -> tcpa opt-out -> no lead posting
+
+IV. Scenario: [no, no] (opt-in, opt-in | opt-out, opt-out)
+  1. -ve respond -> tcpa opt-in -> back -> -ve respond -> tcpa opt-in -> no lead posting
+  2. -ve respond -> tcpa opt-out -> back -> -ve respond -> tcpa opt-out -> no lead posting
+
+V. Scenario: [no, yes] (opt-in, opt-out | opt-out, opt-in)
+  1. -ve respond -> tcpa opt-in -> back -> +ve respond -> tcpa opt-out -> no lead posting
+  2. -ve respond -> tcpa opt-out -> back -> +ve respond -> tcpa opt-in -> no lead posting
+
+VI. Scenario: [yes, no] (opt-in, opt-out | opt-out, opt-in)
+  1. +ve respond -> tcpa opt-in -> back -> -ve respond -> tcpa opt-out -> lead posted once(lead_id1, trusted_form_url1)
+  2. +ve respond -> tcpa opt-out -> back -> -ve respond -> tcpa opt-in -> no lead posting
+
+F. Periodic check of Random Journaya IDs:
+ Pick any random 6 journaya IDs from live data table tcpa_survey_optin and validate their entries in Journaya
+                 -  Verify if the marketing partner names, disclaimer text, user actions are visible  
+
+G. 3rd Party Integration Data Scrape Check:
+Check all the API calls to Pushnami which are visible in the network tab and verify if no PII data is scraped from URL's query string and Localstorage.
+- GET Check for https://api.pushnami.com/scripts/v1/hub
+- POST Check for https://psp.pushnami.com/api/psp
+- POST Check for https://trc.pushnami.com/api/push/track
+- POST Check for https://api.pushnami.com/api/push/subscribe
+2. For GET request check query string and Request Header's referrer of above URLs
+3. For POST request check query string, request header's referrer and body/payload
+
+I. Random E2E Recordings of Trusted forms along with Jornaya Logs:
+Pick any random 3 trusterd_form_cert_url  from live data table tcpa_survey_optin and validate their entries in Journaya
+Validate recording end to end, we should be able to see survey responses and optin in the recording
+
+Issues Raised:
+https://gitlab.com/cap_tech1/frontend/freesamplesprousa.com/-/issues/3163 - As discussed with @Sanket oswal the issue is still open. This is been highlighted to Dev/PM in the call
+
+https://gitlab.com/cap_tech1/frontend/freesamplesprousa.com/-/issues/3393 - Discrepencies in Random Journaya Check - Raised Trello - https://trello.com/c/UMYX4Uq1/3517-discrepancies-in-journaya-wrt-to-statecode-and-code-of-gendervalue1
+
+https://gitlab.com/cap_tech1/frontend/freesamplesprousa.com/-/issues/3633 - Recording for survey not done for some trusted forms
+
+https://gitlab.com/cap_tech1/frontend/freesamplesprousa.com/-/issues/3632 - No Disclaimer/Disclosure seen in Journya ID
 
 
+Notes & Known issues:
+On the TCPA page, TCPAOPTIN is "ON" by default
+If the user has opted out, There is no log in jornaya
+Even after clearing user data and cookies, the jornaya id recorder in TCPA survey optin db is the same, hence the logs are appended to it
+user DOB and gender is logged in jornaya from the PII section
+For PreTCPA, we don't have any log if a user clicked on continue
+Jornaya for Pre-TCPA flow also logs FULL_TCPA disclosure at the end i.e we can see FULL_TCPA text even if its not shown in the flow
 
------------------------------------------------------------------------------------
 
-https://samplesforusa.com/?cid=abf6r&test=1&exp=FSPU-Dynamic-Facebook-Prelander-Control
+Test Results:
+- Lead Posting working fine
+- Discrepancy in Journaya,
+    Issue -
+    Disclaimer issue:
+        https://app.leadid.com/leads/lead?token=879C7424-36C2-42E1-1A20-510EC3AF34BC
+        https://app.leadid.com/leads/lead?token=AE557D44-372E-129B-26F6-8D3327B6096C
+        https://app.leadid.com/leads/lead?token=7AEB37FD-1DFB-40E0-89EC-03109E375C76
 
-	- MAX feed call (PII + linkout) - purl
+    Survey Skip -
+    https://cert.trustedform.com/b79cb6f721729095dd9c96f84d65f37374e32d2c
+    https://cert.trustedform.com/9b608a16e00527618e7b03ad9b10d3fe5cab3138
 
 
-"userId": 93743226, "leadId": 62783848,
-97c93582-9889-4553-b595-bc7746e0f436
+- Auto Posting is being verified by data. could bot test due to staging issue
+- Delayed Posting ie tested on stage.
+- All the above mentioned flows i.e Branded TCPA, Pre TCPA and TCPA on Lander, working fine
+- Trusted form, working fine
+- Verification of Events Done, Working Fine
+- Pushnami is not scraping data from Lander's URL and LocalStorage. Issue is intermittent.his is been highlighted to Dev/PM in the call
+    - POST Check for https://api.pushnami.com/api/push/subscribe  
 
-	- Pushnami/NotifyAI - can be changed ( service worker configuration )
-	- Events
-	- xVerify
-		- oiuwqepoiruqoiweuor@yahoo.in
-		- gibberish@fakemail.pk
-	- Anti Spam
-	- Linkout (loading, no console error)
-	- Offerwall (loading, no console error)
-	- Journaya
-	- Trusted form
-	- Privacy Policy & TOS 
-	- Email Disclaimer
-	- Footer Disclaimer
-	- Subdomains
-		- assets
-		- end to end
-		- console/network error
-	- lead posting
-		- auto posting
-	- CCPA
-	- OnO
+
+Regards,
+Kishan 
+ One attachment
+  •  Scanned by Gmail

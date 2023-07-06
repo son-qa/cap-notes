@@ -1,27 +1,40 @@
-https://trello.com/c/EPZbLGob/992-dynamic-10-hooks-to-be-automatically-created-fro-20-whenever-new-hooks-created-from-interface-verify-for-all-exiting-10-hooks
+Event data - hash values
 
-Coverage:
-    - Create, update, clone
-        - Conditions
-        - Operations
-            - Create #done
-                - Keeping toggle on/off
-            - Update - #done
-                - Keeping toggle on/off
-            - Clone - #done
-                - Cloning a toggle-off config
-                - Cloning a toogle-on config
-    - End to end
-        - Availablity of the configs
-            - If v2 is not present
-            - If both are present and v1 is outdated
-                - v2 is updated manually
-                - first converted then toggle off and saved
-    - Conversion of all configs, each field
+https://stage.freesamplesprousa.com/?cid=emily1&test=1&exp=Dummy-flow1
 
 
-Special character test // \\ @ ! ; ' " " ' " '
+https://stage.freesamplesprousa.com/?cid=emily1&test=1&exp=Dummy-flow1&email=emilyjames202115@gmail.com&userFname=ray&last=Jenson&userAddress=601%20Westchester%20Ave&cityName=Bronx&stateName=Newyork&stateCode=NY&zipcode=10455&countryName=%7Bcountry%7D&mobile=5048316788&dobdate=09&dobmonth=09&dobyear=2000&gender=M
 
 
 
+403
+flow-session-error -> 1
+spam-redirect -> 3
+anura-spam-redirect -> 4
+retarget-user-error -> 5
+register-user-error -> 6
+update-user-error -> 7
+not-approved-user -> 9
+other -> 999
 
+
+- 403 includes base64code
+- only email -> email blacklisted
+- email + phone -> phone blacklisted
+- DOB error
+- duplicate user
+- prepop - campaignInitiate
+- autoprepop
+- 
+
+
+-----------------
+darasew392@dronetz.com - blacklisted
+figaxa3869@kameili.com - blacklisted
+--------------
+email-unsubscribed-user -> 2 - a120db51-5765-4b5a-bf35-a25744b46dda
+phone-blacklisted-user -> 8 - fc6118d2-827a-4d5e-a5f9-09d526e0bb17
+DOB < 18 error -> 16 - 'b9f30e39-d8c6-4846-a6e8-21a596b0f51b' - encrypted email, plain number
+prepop
+    - phone blacklist - '88f5f117-4823-4b92-b970-267353870c60'
+    - email blacklist - 
