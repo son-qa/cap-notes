@@ -159,9 +159,14 @@ experimentConfig
 
 ==================================================================
 
-secret key - e94qi1nga235DhsJtyw7vshd9bwh
+hash_key (stage) - e94qi1nga2
+
+hash_key (live) - e94qi1nga235DhsJtyw7vshd9bwh
 
 =====================================================================
 
 
+Links for different domain types
 
+Alias - https://toprewardspot.com/?cid=hmxb3&t8=1000paypal&test=1&canary=1
+Alias sub - https://rewardsinsider.net/?test=1&cid=7lult&canary=1&t8=500Walmart

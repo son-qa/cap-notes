@@ -1,14 +1,11 @@
-Event data - hash values
-
 https://stage.freesamplesprousa.com/?cid=emily1&test=1&exp=Dummy-flow1
 
-
-https://stage.freesamplesprousa.com/?cid=emily1&test=1&exp=Dummy-flow1&email=emilyjames202115@gmail.com&userFname=ray&last=Jenson&userAddress=601%20Westchester%20Ave&cityName=Bronx&stateName=Newyork&stateCode=NY&zipcode=10455&countryName=%7Bcountry%7D&mobile=5048316788&dobdate=09&dobmonth=09&dobyear=2000&gender=M
-
+https://stage.freesamplesprousa.com/?cid=emily1&test=1&exp=Dummy-flow1&email=phamanathon@gmail.com&userFname=ray&last=Jenson&userAddress=601%20Westchester%20Ave&cityName=Bronx&stateName=Newyork&stateCode=NY&zipcode=10455&countryName=%7Bcountry%7D&mobile=5048316788&dobdate=09&dobmonth=09&dobyear=2000&gender=M
 
 
-403
+403 Reasons:
 flow-session-error -> 1
+email-unsubscribed-user -> 2
 spam-redirect -> 3
 anura-spam-redirect -> 4
 retarget-user-error -> 5
@@ -18,23 +15,36 @@ not-approved-user -> 9
 other -> 999
 
 
+
 - 403 includes base64code
-- only email -> email blacklisted
-- email + phone -> phone blacklisted
-- DOB error
 - duplicate user
 - prepop - campaignInitiate
 - autoprepop
-- 
+- backforward
 
 
 -----------------
 darasew392@dronetz.com - blacklisted
 figaxa3869@kameili.com - blacklisted
 --------------
-email-unsubscribed-user -> 2 - a120db51-5765-4b5a-bf35-a25744b46dda
-phone-blacklisted-user -> 8 - fc6118d2-827a-4d5e-a5f9-09d526e0bb17
-DOB < 18 error -> 16 - 'b9f30e39-d8c6-4846-a6e8-21a596b0f51b' - encrypted email, plain number
-prepop
-    - phone blacklist - '88f5f117-4823-4b92-b970-267353870c60'
-    - email blacklist - 
+
+phone-blacklisted-user -> 8
+email-unsubscribed-user -> 2
+    Normal submit
+        - email - d5cc47f9-c057-4cb0-94ed-cf38613bb15e
+        - email + phone - 1600a853-8a32-47a5-9103-00255efefc73
+    Prepop
+        - email + backforward - d5cc47f9-c057-4cb0-94ed-cf38613bb15e
+        - phone only - 97fa8cbd-cbaa-4b62-a620-15518098e90e
+        - email only - 
+        - email + phone - 9aeaf113-7722-49af-99cd-f31b9e9e6777
+    Auto prepop
+        - email - 
+        - email + phone
+
+DOB < 18 error -> 16 - d96967fe-2be9-4558-858e-74de1163901d
+
+Profanity - 73e1a798-eb3a-49d1-a01b-ad3672a3f3b5
+
+
+&ap=1&lk=263cc7250236870126afec784c6a451908d0cbc26a31bdd33191a3eb5dea8657&ph=1010a16edd6a292375cbff9e1d47a63b
