@@ -33,3 +33,14 @@ To check:
 	- alias (can be tested on canary)
 	- 
 
+
+
+------------------------------------
+email change
+to user - compliance
+to advertiser - support
+
+blacklist for each type request now
+
+mail format - user side and advertiser side
+

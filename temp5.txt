@@ -1,0 +1,21 @@
+    - Multiple Linkout - override config - 
+        enableExitMonetization
+        linkout_order
+        linkout_group
+        limit_linkout
+        enableDynamicLinkout
+
+https://qa-v1.freesamplesprousa.com/?test=1&cid=qa-slug1&exp=fspuso
+
+-------------------------------------------------------------------------------
+
+- Default settings
+- Overidden settings
+- AB test impact
+- Global config impact
+- AB & Global config both configured
+
+
+
+- No repetition of offers
+- No offers in 1st section

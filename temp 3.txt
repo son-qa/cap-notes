@@ -1,3 +1,5 @@
+Phone email hash in event data
+
 https://stage.freesamplesprousa.com/?cid=emily1&test=1&exp=Dummy-flow1
 
 https://stage.freesamplesprousa.com/?cid=emily1&test=1&exp=Dummy-flow1&email=phamanathon@gmail.com&userFname=ray&last=Jenson&userAddress=601%20Westchester%20Ave&cityName=Bronx&stateName=Newyork&stateCode=NY&zipcode=10455&countryName=%7Bcountry%7D&mobile=5048316788&dobdate=09&dobmonth=09&dobyear=2000&gender=M
@@ -48,3 +50,18 @@ Profanity - 73e1a798-eb3a-49d1-a01b-ad3672a3f3b5
 
 
 &ap=1&lk=263cc7250236870126afec784c6a451908d0cbc26a31bdd33191a3eb5dea8657&ph=1010a16edd6a292375cbff9e1d47a63b
+
+
+----------------------------------------------------------------
+
+canary test
+
+unsub email - 60631a44-36ce-44e6-a1e0-e976d8edfecc
+unsub phone - cfb3e6fe-2973-4431-bc3f-db553a2bffef
+    - encrypted mobile is being registered instead of phone hash
+prepop - 1352f1a9-d6fa-49a0-a127-714b92ea71ea
+spam redirect - 0a012f6f-9ae2-4f72-a8ec-be0adf5c7c95
+
+unsub phone - 7ca6a315-bd77-4827-b4f2-c1e66222d65a
+
+https://freesamplesprousa.com/?cid=vn1ws&test=1&canary=1&email=goxefa5899@nasskar.com&userFname=ray&last=Jenson&userAddress=601%20Westchester%20Ave&cityName=Bronx&stateName=Newyork&stateCode=NY&zipcode=10455&countryName=%7Bcountry%7D&mobile=5048316788&dobdate=09&dobmonth=09&dobyear=2000&gender=M
