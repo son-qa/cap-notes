@@ -1,0 +1,13 @@
+User segment filters
+
+- No filter
+	- Processing
+	- DB value
+- Filters
+	- Create, view, edit & save
+	- Processing
+	- DB value
+	- Preference - offer level vs stack level
+	- Individual filters
+
+
