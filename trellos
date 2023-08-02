@@ -20,7 +20,7 @@ Email_hash & phone_hash in event data - https://trello.com/c/KmTWZpRR/3654-campa
 
 External preping, pass email & phone hash to OnO reactivation API - https://trello.com/c/RrZNYUk0/3685-send-emailhash-and-phonehash-to-ono-in-reactivation-api
 
-
+Offerwall Redis expiry - https://trello.com/c/K8VAliDF/3668-ow-user-level-redis-reset-happening-after-30-days-from-1st-conversion-but-redis-again-gets-updated-with-previous-recorded-conver
 
 ---------- Ops Interface ----------
 
@@ -35,4 +35,8 @@ Default offer frequency filter 	- https://trello.com/c/m3gy6RXS/893-default-sett
 Preping stack - https://trello.com/c/A7z5S4uX/991-configure-preping-reactivation-email-so-that-it-doesnt-go-through-the-confirmation-series-only-for-email-preping stack should not be able to be triggered from another stack
 
 Dry run stack - https://trello.com/c/hgD6sfm5/990-for-a-given-cmt-stack-show-the-estimated-number-of-users-that-will-qualify-given-the-settings-of-the-stack
+
+User segment filters on stack
+		- https://trello.com/c/8uOFTTOZ/1013-all-offer-segment-filters-on-stack-page-as-well
+		- https://trello.com/c/P53uzSV3/1021-segment-filter-fe
 

@@ -1,13 +1,4 @@
-User segment filters
+https://trello.com/c/GW8QNiDz/3667-ow-offer-preclick-event-is-getting-fired-for-every-other-offer-visible-on-tier-while-it-should-get-fired-only-for-the-offer-for
 
-- No filter
-	- Processing
-	- DB value
-- Filters
-	- Create, view, edit & save
-	- Processing
-	- DB value
-	- Preference - offer level vs stack level
-	- Individual filters
-
+https://stage.primerewardspot.com/?cid=ybcjn&test=1&exp=prs-stage-v3-test
 

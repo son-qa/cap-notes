@@ -1,8 +1,73 @@
-External preping - Email/Phone hash
+curl --location 'https://demo.freesamplesprousa.com/api/active-window/?redisKey=offerwall%3A53fe9ddc6a8c8740ade7f647d9bb9e05-18&redisExpiry=3600' \
+--header 'Cookie: leadgennewcookie=eyJpdiI6IjhnL25ZU0pjdHhwMFYxQ1UxYzZSRmc9PSIsInZhbHVlIjoickxTL01GV3Y4akdEZ013cFNUY1NTSDhxSVBnNUR1YUljL05Odzg5SXJ5STg3NVgwZGtTZFpTaWxkMUl1bzNEMSIsIm1hYyI6ImQwMTVmYzQ4NzhlNGRlYmZhNGE1NzQ4ZmU5ZThmMmQwNzBmNzgwZjc5NjAyNWM5YTVhMTYzN2Y0OTFmM2I0MTcifQ%3D%3D; leadgenuid=1968bf37-c4fc-4d0b-b747-4583f76d8204; usercookie=9b5222da-93b6-4b67-8b0b-75802466e5d0; leadgennewcookie=eyJpdiI6Im9BZE54V2hhd0hsaGJhU25HQ1NHbEE9PSIsInZhbHVlIjoiRmNWVHFuRk1vdE5RNFJVNW5MM0ZVZnRYS2ZkZnBnVVY4ckxTOXNUaHVGM2JCYWdBWVU4dzM4NEFkTkl5Z0pHVCIsIm1hYyI6IjJiZjY2Y2VlMzgyZTJhMmI1OTVjMGM2ODdkNDE0MmU3ODgzNWJlOGI1Mzc2NzBjODA0NWVhNjMxZGQ5YWQ4ODAifQ%3D%3D; leadgenuid=b7619444-8cb7-4047-8f8e-d0737e1f69f9; usercookie=f8a8da9f-b00a-451c-a548-d7918b6eaeb2'
 
-"-------------payload-----------"
 
-celocic507@sparkroi.com
-5048319091
-212151230
-28
+
+[30/03/2023 5:58 PM] Govinda S: https://ads.cap-cloud.co/campaigns/113459
+https://ads.cap-cloud.co/campaigns/112496
+https://ads.cap-cloud.co/campaigns/112494
+https://ads.cap-cloud.co/campaigns/112483
+https://ads.cap-cloud.co/campaigns/112497
+https://ads.cap-cloud.co/campaigns/112493
+
+[30/03/2023 6:01 PM] Govinda S: https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e0009e4cc1
+https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e0009e4cc123
+https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e00e4cc234
+https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e0009e4cc345
+https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e0009e4cc456
+https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e0009e4cc567
+
+
+https://demo-prod.primerewardspot.com/?cid=9swmg&test=1&exp=PRS-offerwallv2-QA-Only&emailAddress=alex123@gmail.com&userFname=james&userLname=luis&zipcode=10001&gendervalue1=Female&userAddress=test%20dr&cityName=New%20York%20City&stateCode=NY&mobile=8128348235&dobdate=17&dobmonth=12&dobyear=1999&stateName=New%20York
+
+https://demo.freesamplesprousa.com/webhook/offerwall-conversion?oid={offer_id}&sid={aff_unique2}&tid={transaction_id}&owallid={aff_unique3}&owalltypeid={aff_unique4}&po={payout}&rev={revenue}&owsid={aff_unique5}&lgsid={aff_sub3}
+
+https://demo.freesamplesprousa.com/webhook/offerwall-conversion?oid=342&sid=35cb750e743dbe52bfae797d7c0d9918&tid=1&owallid=18&owalltypeid=1&po=1&rev=5&owsid=808872fb-95e7-41ef-966b-bc91f461cba3&lgsid=b4460b84-1039-437f-b222-975bc3ee179a
+
+oid --> HasOffer id
+sid --> aff_unique2(email_md5 hash)
+tid --> transaction_id
+owallid --> aff_unique3(offerwall id)
+owalltypeid --> aff_unique4
+po --> payout
+rev --> revenue
+owsid --> aff_unique5(session_offerwall_conversion_id)
+lgsid --> aff_sub3(session_id)
+
+
+PRS-Offerwallv2-FE-QA - slug with strategy set to 'manual '
+
+offerwall ranking flags enabled on experiments slugs
+
+PRS-offerwallv2-QA-Only
+PRS-Offerwallv1-FE-QA
+
+--------------------------------
+
+Cases:
+- Existing User
+- New User
+    - Key creation
+    - Expiry value
+    - is_converstion
+
+
+- First conversion
+    - expiry value
+    - Second conversion
+        - no change
+    - different session conversions
+
+
+- After expiry
+    - Same user same offerwall
+
+- Same user new offerwall
+
+
+========================
+
+Isssues/Questions:
+- No instruction for completing the offers within duration
+- After expiry a new redis is created -> in this the is_conversion is 0 whereas user had done some conversions in the past
+- 

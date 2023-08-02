@@ -5,10 +5,8 @@ ToDo:
 		- Correct My Information
 		- Request for Information
 	- Preping end-to-end
-	- https://trello.com/c/RrZNYUk0/3685-send-emailhash-and-phonehash-to-ono-in-reactivation-api
-	- https://trello.com/c/8uOFTTOZ/1013-all-offer-segment-filters-on-stack-page-as-well
-		- https://trello.com/c/P53uzSV3/1021-segment-filter-fe
-
+	- https://trello.com/c/K8VAliDF/3668-ow-user-level-redis-reset-happening-after-30-days-from-1st-conversion-but-redis-again-gets-updated-with-previous-recorded-conver
+	- https://trello.com/c/GW8QNiDz/3667-ow-offer-preclick-event-is-getting-fired-for-every-other-offer-visible-on-tier-while-it-should-get-fired-only-for-the-offer-for
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
@@ -58,7 +56,7 @@ allure serve output/reports/ to generate html reports
 allure-docx output/reports/ filename.docx
 
 
-python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=sanket
+python -m behave --tags=sanket
 
 https://qa-v1.freesamplesprousa.com/?test=1&cid=qa-slug1&exp=Flow2-qa-v1-QA-Only
 https://qa-v2.freesamplesprousa.com/?test=1&cid=qa-slug2&exp=Flow1-QA-Only
