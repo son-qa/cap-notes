@@ -22,6 +22,13 @@ External preping, pass email & phone hash to OnO reactivation API - https://trel
 
 Offerwall Redis expiry - https://trello.com/c/K8VAliDF/3668-ow-user-level-redis-reset-happening-after-30-days-from-1st-conversion-but-redis-again-gets-updated-with-previous-recorded-conver
 
+Offerwall offerPreClick event bug fix - https://trello.com/c/GW8QNiDz/3667-ow-offer-preclick-event-is-getting-fired-for-every-other-offer-visible-on-tier-while-it-should-get-fired-only-for-the-offer-for
+
+Skip registration on email submit - https://trello.com/c/thuNGwSM/3690-new-flow-with-email-submit
+
+Offerwall reward popup - https://trello.com/c/uqKqSrRR/3689-ow-compliance-changes
+
+
 ---------- Ops Interface ----------
 
 Content management v1 to v2 conversion - https://trello.com/c/EPZbLGob/992-dynamic-10-hooks-to-be-automatically-created-fro-20-whenever-new-hooks-created-from-interface-verify-for-all-exiting-10-hooks

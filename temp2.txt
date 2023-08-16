@@ -1,4 +1,48 @@
-https://trello.com/c/GW8QNiDz/3667-ow-offer-preclick-event-is-getting-fired-for-every-other-offer-visible-on-tier-while-it-should-get-fired-only-for-the-offer-for
+https://trello.com/c/uqKqSrRR/3689-ow-compliance-changes
 
-https://stage.primerewardspot.com/?cid=ybcjn&test=1&exp=prs-stage-v3-test
+https://stage.primerewardspot.com/?cid=d1mfq&test=1&exp=PRS-test-default
 
+https://stage.primerewardspot.com/webhook/offerwall-conversion?oid=342&sid=15d3e603394bb8087833f5265392fa22&tid=1&owallid=99&owalltypeid=1&po=1&rev=5&owsid=8245e9ce-51f1-4c27-a259-8db79134f6fb&lgsid=5a65d657-1d21-4519-ba9e-5b3cb85c7aa6
+
+
+Raise to aman
+	- Event required for close/CTA button? - 
+	- Description for next reward is vague
+		- not clear offers from which page shall be claimed
+		- required offer count is not dynamic
+	- Duplicate conversions are also considered
+	- No where mentioned how to claim rewards or from which page
+		- For the first reward
+		- For the last reward, no where mentioned how to claim
+	- User can see a different hooks in different sessoins 
+	- Trello Points - 3, 5, 6
+	- Behaviour - what happens after user claims the reward
+
+
+-------------------------------------------------------------------------------------
+
+
+https://primerewardspot.com/?cid=9swmg&test=1&exp=PRS-offerwallv2-QA-Only&canary=1
+
+
+https://primerewardspot.com/?cid=9swmg&test=1&exp=PRS-Offerwallv1-FE-QA&canary=1
+
+https://primerewardspot.com/?cid=akytq&test=1&canary=1&exp=Offerwallv1-FE-QA
+	- redis
+	- popup
+	- expiry
+	- gray out
+
+
+
+https://primerewardspot.com/?cid=akytq&test=1&canary=1&exp=PRS-Offerwallv2-FE-QA
+
+
+https://primerewardspot.com/?cid=z86fr&test=1&canary=1&exp=PRS-Offerwallv2-FE-QA
+
+
+https://primerewardspot.com/?cid=9swmg&test=1&exp=PRS-offerwallv2-QA-Only&canary=1
+
+
+offer 20
+https://primerewardspot.com/?cid=akytq&test=1&exp=PRS-offerwallv2-QA-Only&canary=1

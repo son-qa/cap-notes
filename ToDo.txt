@@ -4,9 +4,9 @@ ToDo:
 		- Domains - 4 domains
 		- Correct My Information
 		- Request for Information
-	- Preping end-to-end
-	- https://trello.com/c/K8VAliDF/3668-ow-user-level-redis-reset-happening-after-30-days-from-1st-conversion-but-redis-again-gets-updated-with-previous-recorded-conver
-	- https://trello.com/c/GW8QNiDz/3667-ow-offer-preclick-event-is-getting-fired-for-every-other-offer-visible-on-tier-while-it-should-get-fired-only-for-the-offer-for
+	- Compliance - disclaimer checks for random flows, add to list
+	- https://trello.com/c/RE8McYK8/3703-change-the-way-ow-offer-impression-is-determined-update-impression-counter-only-when-offer-is-visible-to-user-and-not-update-imp
+	- 
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
@@ -17,6 +17,7 @@ Secondary:
 	- https://github.com/typhoon-hil/allure-docx
 	- Allure reporting - jyoti (allure-docx, ctrl+p, )
 	- CCPA automation
+	- Cookie hack by Arihant
 
 
 Requirement Gathering:
