@@ -1,0 +1,60 @@
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=396&exp=FSPU-Dynamic-Flow-SPII-AutoSurvey-V5B-Variant -> TCPA On REG with Fname & Lname
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=396&exp=FSPU-SrcDisp-DynamicFlow-3-Step-PII -> TCPA On REG Direct
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=396&exp=FSPU-Dynamic-SPII-Zeeto-AutoSurvey-V5B -> TCPA On Lander
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=396&exp=FSPU-TCPAOnReg-AutoSurvey-V5-Control -> TCPA On Reg Only Email
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=396&exp=FSPU-Personalized-Auto-Rank-CstmLP -> Full TCPA 3 step
+
+
+&userFname=ray&last=Jenson&userAddress=601%20Westchester%20Ave&cityName=Bronx&stateName=Newyork&stateCode=NY&zipcode=10455&countryName=%7Bcountry%7D&mobile=6095587775&dobdate=09&dobmonth=09&dobyear=2000&gender=M
+
+
+TCPA On Reg Only Email #1
+    - New user
+        - bonepe8893@cwtaa.com
+        - "userId": 102790973,
+    - Skip reg
+        - "userId": 102791774,
+    - Partial
+        - mewibi3354@jontra.com
+        - "userId": 102794335,
+
+
+TCPA On Lander #2
+    - User
+        - mewibi3354@jontra.com
+        - "userId": 102795316,
+
+
+TCPA On REG Direct #3
+    - Skip reg
+        - mewibi3354@jontra.com
+        - "userId": 102796202,
+    - New
+        - xocey61636@backva.com
+        - "userId": 102797639,
+    - Partial + prepop
+        - botakob861@gienig.com
+        - "userId": 102798848,
+
+TCPA On REG with Fname & Lname #4
+    - New
+        - kebos20278@jontra.com
+        - "userId": 102802093,
+    - Skip reg
+        - "userId": 102802801,
+    - Partial
+        - 
+    - Not matching DB
+        - "userId": 102800835,
+
+3 step reg full tcpa
+    - "userId": 102808002,
+
+-----------------------------
+
+
+Issues found
+#1
+    - Mis indent for text box
+    - Skip reg - last reg step visible for a moment
+    - 

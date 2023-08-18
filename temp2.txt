@@ -41,8 +41,14 @@ https://primerewardspot.com/?cid=akytq&test=1&canary=1&exp=PRS-Offerwallv2-FE-QA
 https://primerewardspot.com/?cid=z86fr&test=1&canary=1&exp=PRS-Offerwallv2-FE-QA
 
 
-https://primerewardspot.com/?cid=9swmg&test=1&exp=PRS-offerwallv2-QA-Only&canary=1
+https://primerewardspot.com/?cid=9swmg&test=1&exp=PRS-offerwallv2-QA-Only
 
 
 offer 20
 https://primerewardspot.com/?cid=akytq&test=1&exp=PRS-offerwallv2-QA-Only&canary=1
+
+
+
+https://gitlab.com/cap_tech1/platform/leadgen-automation-tests/-/merge_requests/39
+
+uncommented the step in TC_Full_TCPA_24, corrected the mistake in the tag for TC_Full_TCPA_26

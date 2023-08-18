@@ -1,0 +1,29 @@
+offerwall conversion 
+
+https://primerewardspot.com/?cid=9swmg&test=1&exp=PRS-Offerwallv1-FE-QA&canary=1
+
+
+
+conversion rev=0 cpa => rev 
+
+flag -> offer_config -> enableZeroConvertedEvent(true/false)
+
+
+
+1 0
+2 0
+3 $
+
+converted_offer_unique_id , weight = 1  current for every conversion
+
+zeroconversion => offer level feature enabled / rev = 0 / cpa
+
+zeroConverted_offer_unique_id, weight = 0 -> no entry in mysql conversion table
+
+
+httpGet Request and Response
+
+maxConversionPostback
+
+
+https://vpc-leadgen-q4yb6mssiq5gt24no7baggzea4.us-east-1.es.amazonaws.com/_dashboards/goto/b959349f31fe6be9e33f00fcd9c42eef

@@ -1,0 +1,11 @@
+https://trello.com/c/RE8McYK8/3703-change-the-way-ow-offer-impression-is-determined-update-impression-counter-only-when-offer-is-visible-to-user-and-not-update-imp
+
+https://stage.primerewardspot.com/?cid=ybcjn&test=1&exp=prs-stage-v3-test
+
+Offer impression event
+
+- No scroll
+- Fast scroll to end
+- Scroll down
+- Scroll down and then up
+- Fast down and then up
