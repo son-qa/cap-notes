@@ -1,11 +1,149 @@
-https://trello.com/c/RE8McYK8/3703-change-the-way-ow-offer-impression-is-determined-update-impression-counter-only-when-offer-is-visible-to-user-and-not-update-imp
+env qa-v1
+session based lead quality
 
-https://stage.primerewardspot.com/?cid=ybcjn&test=1&exp=prs-stage-v3-test
+site config - default scores
 
-Offer impression event
+"lead_score": 2.745, (lower the better)
+"lead_score_minimal": 2 (lower the better),
+    - $num_ips_score + $ip_state_mismatch_score + $fast_revenue_score + $system_single_optin_score;
 
-- No scroll
-- Fast scroll to end
-- Scroll down
-- Scroll down and then up
-- Fast down and then up
+
+"user_clicked_or_touched": touch/click
+"user_clicked_or_touched_score": > 0 is bad, 0 is good score
+
+
+"num_ips_score": 2
+
+"ip_state_mismatch_score": 0,
+    if more than 1 ips then increase score
+    netacuity ip based
+    if not match then score is given
+    test with netacuity on demo
+
+    "ip_state_mismatch_values": [
+        0,
+        0,
+        0
+    ],
+
+    "ips": [
+        "122.169.63.217",
+        "165.22.14.114"
+    ],
+
+
+"fast_survey_score": 0.7450000000000001 (threshold < 2.2 secs)
+    - avg_question_time is sum(total time consumed)/sum(number of questions)
+    - sum(total time consumed) = time_per_question -> [] of time taken per question
+        - question_time = is set on each quesiton impr and reset on each new question impression
+    - 3 - min(avg q time, 3)
+
+
+blind_revenue_score: 
+    - single optin questions (yes/no questions only)
+    - `Min(Optin-rates/avg, 3)`, here avg=0.06
+        - optin-rates = number of question_type 1 answered positively / number of questions
+            - "system_single_optin_questions" variable is number of question type 1 answered positively
+
+"fast_revenue_score": sum of total revenue / number of questions -> (threshold > 0.013)
+    - sum of total revenue = "expected_revenue" variable
+
+
+site, 
+campagin, 
+experiment, 
+offer
+    leadQualityConfig {
+        "type": "and",
+        "fields": [
+{
+        "type": "and",
+        "fields": [
+            {
+                "type": "selector",
+                "dimension": "num_ips_score",
+                "value": 3,
+                "operator": "!="
+            },
+            {
+                "type": "selector",
+                "dimension": "ip_state_mismatch_score",
+                "value": 3,
+                "operator": ">="
+            }
+        ]
+    },
+            {
+                "type": "selector",
+                "dimension": "ip_state_mismatch_score",
+                "value": 3,
+                "operator": ">="
+            }
+        ]
+    }
+
+    LeadsDoNotPostLogActivate: true/false (event = LeadsDoNotPostLogging)
+    LeadsDoNotPost: true/false (event = LeadsDoNotPost)
+
+[
+ 'lead_score' ,
+ 'lead_score_minimal',
+ 'fast_survey_score' ,
+ 'fast_revenue_score',
+ 'num_ips_score' ,
+ 'ip_state_mismatch_score' ,
+ 'user_clicked_or_touched_score' ,
+ 'system_single_optin_score'
+]
+
+api:
+https://qa-v1.freesamplesprousa.com/api/survey/get-json-details?key=jsonset:campaign:survey:user:leadquality:e1d0727f-89ae-4cc4-89fd-a9a52e4c1e4d
+
+getLeadQualityStatus
+
+
+-------------------------------------------
+
+Scoring mechanism
+
+Individual metrics calculation
+    - user_clicked_or_touched
+    - num_ips_score
+    - ip_state_mismatch_score
+    - fast_survey_score
+    - blind_revenue_score
+    - fast_revenue_score
+    - lead_score
+    - lead_score_minimal
+
+
+Decision making:
+    - Configs
+        - LeadsDoNotPostLogActivate
+        - LeadsDoNotPost
+        - leadQualityConfig
+            - each key
+            - operators
+    - Rule
+        - Single metrics - Individual metrics
+        - Multiple metrics
+            - AND
+            - OR
+    - Complex rule - tree structure
+    - Config level
+    - Config present at multiple levels
+    - LeadsDoNotPostLogActivate, LeadsDoNotPost, leadQualityConfig - each one is on different levels or mutiple levels
+    - Impact on email offer, tcpa offer, aged offer
+    - Impact on Autoposting, Delayed posting
+
+--------------------------------
+
+Issues/Doubts:
+    - Event LeadsDoNotPostLogging should be logged for all the offers or only the ones for whom leads would be posted or tags are applied?
+    - 
+
+---------------------
+Works on campaign level
+Works on offer level
+Skips if the flag is missing
+Mulitple level

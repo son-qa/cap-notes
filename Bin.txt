@@ -10,16 +10,6 @@ Pushnami URLs
 	
 ------------------------><------------------------
 
-user_event_snap to fetch/check optin dates -> 90 se purane wale delete
-users_entity_unsub stores unsub -> unsub users ko nikal do
-
-IF  optin date >= 90 days
-	delete
-If unsub
-	delete
-	
-=================================================================
-
 "surveyOnPII": false,
 "surveyOnLander": false,
 "currentpage": "survey",
@@ -70,6 +60,24 @@ https://ads.cap-cloud.co/campaigns/112493
 
 =========================================
 
+Offerwall group ids
+	- 20
+	- 10
+	- 18 (try avoiding - as its live)
+
+Offerwall cids
+	- 9swmg
+	- akytq
+	- z86fr
+
+Offerwall experiments
+	- PRS-offerwallv2-QA-Only
+	- PRS-Offerwallv1-FE-QA
+	- Offerwallv1-FE-QA
+	- Offerwallv2-FE-QA
+
+=========================================
+
 Offerwall quick check list
 	- Redis generation - expiry time, is_conversion
 	- First Conversion - expiry time reset, is_conversion
@@ -83,18 +91,6 @@ Offerwall quick check list
 		- Offer impression (only for visbile offers)
 		- Reward popup impression
 		- OfferPreclickImpression
-
-=========================================
-
-Skip reg on email submit new implementation
-
-final implementation :
-1.on email sub with ONLY email field : user to skip reg and goto survey if platform dup
-2. on emailsub with multiple PII field (but NOT all) : find best complete profile score, compare PII +email (given by user) with DB returned value -> if same skip to sruvey
-IN all cases, this is just a flag on slug level no new template configuration required
-MAKE sure this flag doesn't break anything even if enabled on tcpa on lander , reg or any other flow
-
-Test will be setup on ABv3 so we will select say FSPU NEW as control targetting and test targetting will be NEWFEATURE enabled
 
 =========================================
 
@@ -113,8 +109,6 @@ Disclaimer Font color: #000, Hyperlinks Font color: #2851e1, Font size: 10px
 For colored backgrounds > TCPA/iTCPA disclaimer: Disclaimer Font color: #FFF, Hyperlinks Font color: #FFAEFF, Font size: 10px
 For colored backgrounds > TCPA/iTCPA disclaimer: Disclaimer Font color: #FFF, Hyperlinks Font color: #F832F8, Font size: 10px
 For colored backgrounds > TCPA/iTCPA disclaimer: Disclaimer Font color: #FFF, Hyperlinks Font color: #FF7CFF, Font size: 10px
-
-
 
 https://topsurveyspot.com/?cid=gl0o4&test=1
 

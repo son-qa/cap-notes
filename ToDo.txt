@@ -5,10 +5,12 @@ ToDo:
 		- Correct My Information
 		- Request for Information
 	- Compliance - disclaimer checks for random flows, add to list
-	- https://trello.com/c/RE8McYK8/3703-change-the-way-ow-offer-impression-is-determined-update-impression-counter-only-when-offer-is-visible-to-user-and-not-update-imp
-	- Multiple conversions - Offer conversion zero event - on canary
-	- Skip reg - on canary
-	- offerPreClick event fix - on prod
+	- Skip reg
+		- skip reg - no notag tcpa leads
+		- skip lo - no tcpa leads 
+	- OW - ac7bbf87-ee2d-4ca6-b990-803cccacc6ff - https://vpc-leadgen-q4yb6mssiq5gt24no7baggzea4.us-east-1.es.amazonaws.com/_dashboards/goto/b959349f31fe6be9e33f00fcd9c42eef
+	- On prod - HO impression , max impression , 2sec & 20% threshold vala thing(event firing)..!
+	- https://trello.com/c/Htt7V63k/3730-lead-quality-lead-postings-do-not-post-lead-to-advertiser-based-on-bad-quality-score-of-session
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
@@ -48,6 +50,7 @@ Mindset:
 	- End user's perspective
 	- 
 
+
 Validation scope:
 	- Validating tcpa leads are posted only in the intended cases
 	- No null lead posting
@@ -61,8 +64,11 @@ python -m behave @rerun_failing.features
 allure serve output/reports/ to generate html reports
 allure-docx output/reports/ filename.docx
 
-
 python -m behave --tags=sanket
 
 https://qa-v1.freesamplesprousa.com/?test=1&cid=qa-slug1&exp=Flow2-qa-v1-QA-Only
 https://qa-v2.freesamplesprousa.com/?test=1&cid=qa-slug2&exp=Flow1-QA-Only
+
+
+https://freesamplesprousa.com/?cid=21eo8&test=1&var=405&exp=FSPU-Personalized-Auto-Rank-CstmLP
+
