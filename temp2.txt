@@ -1,0 +1,10 @@
+#1 Impression configurable
+Flag level = cid, exp, site
+Millis, %
+
+
+#2
+Claimed in previous session and MAX is not returning in new session - should be visible for current session - grayed out in that respective tier
+
+Case
+    - Different group id
