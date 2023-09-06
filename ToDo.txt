@@ -7,9 +7,10 @@ ToDo:
 	- Compliance - disclaimer checks for random flows, add to list
 	- Skip reg
 		- skip reg - no notag tcpa leads
-		- skip lo - no tcpa leads 
+		- skip lo - no tcpa leads
+	- Compliance - VID addition 
+	- Compliance - CCPA - raw data - addition/deletion
 	- OW - ac7bbf87-ee2d-4ca6-b990-803cccacc6ff - https://vpc-leadgen-q4yb6mssiq5gt24no7baggzea4.us-east-1.es.amazonaws.com/_dashboards/goto/b959349f31fe6be9e33f00fcd9c42eef
-	- On prod - HO impression , max impression , 2sec & 20% threshold vala thing(event firing)..!
 	- https://trello.com/c/Htt7V63k/3730-lead-quality-lead-postings-do-not-post-lead-to-advertiser-based-on-bad-quality-score-of-session
 
 Secondary:

@@ -1,0 +1,78 @@
+"leadQualityConfig": {
+        "type": "selector",
+        "value": 0,
+        "operator": ">=",
+        "dimension": "lead_score"
+    },
+"LeadsDoNotPostLogActivate": true,
+"LeadsDoNotPost": true,
+
+---------------------
+
+"leadQualityConfig": "(lead_score >= 0)",
+"LeadsDoNotPostLogActivate": true,
+"LeadsDoNotPost": true,
+
+
+-------------------
+
+"leadQualityConfig": {
+        "LeadsDoNotPost": true,
+        "LeadQualityExpression": "lead_score>=0",
+        "LeadsDoNotPostLogActivate": true
+},
+
+
+----------------------
+
+
+"leadQualityConfig": [
+{
+    "LeadQualityExpression": "(lead_score  >= 0) ",
+    "LeadsDoNotPost": true,
+    "LeadsDoNotPostLogActivate": true,
+    "AMMDoNotFireConversion": true,
+    "AMMDoNotFireConversionLogActivate": true,
+    "AMMDoNotCreditTxnID": true,
+    "AMMDoNotCreditTxnIDLogActivate": true,
+    "RedirectTo": "403"
+},
+{
+    "LeadQualityExpression": "(lead_score  >= 6)",
+    "AMMDoNotFireConversion": false,
+    "AMMDoNotFireConversionLogActivate": true
+}
+]
+
+-------------------------
+
+"leadQualityConfig": [
+{
+    "LeadQualityExpression": "(lead_score >= 0) ",
+    "LeadsDoNotPost": true,
+    "LeadsDoNotPostLogActivate": true,
+    "AMMDoNotFireConversion": true,
+    "AMMDoNotFireConversionLogActivate": true,
+    "AMMDoNotCreditTxnID": true,
+    "AMMDoNotCreditTxnIDLogActivate": true,
+    "RedirectTo": "403"
+},
+{
+    "LeadQualityExpression": "(lead_score >= 2) ",
+    "LeadsDoNotPost": false,
+    "LeadsDoNotPostLogActivate": true,
+    "AMMDoNotFireConversion": true,
+    "AMMDoNotFireConversionLogActivate": true,
+    "AMMDoNotCreditTxnID": true,
+    "AMMDoNotCreditTxnIDLogActivate": true,
+    "RedirectTo": "403"
+}
+]
+
+---------------------------
+
+"leadQualityConfig":{
+    "LeadQualityExpression": "(lead_score >= 0) ",
+    "LeadsDoNotPost": true,
+    "LeadsDoNotPostLogActivate": true,
+}

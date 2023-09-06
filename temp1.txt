@@ -136,14 +136,41 @@ Decision making:
     - Impact on email offer, tcpa offer, aged offer
     - Impact on Autoposting, Delayed posting
 
---------------------------------
-
-Issues/Doubts:
-    - Event LeadsDoNotPostLogging should be logged for all the offers or only the ones for whom leads would be posted or tags are applied?
-    - 
-
 ---------------------
+
 Works on campaign level
 Works on offer level
 Skips if the flag is missing
 Mulitple level
+
+---------------------
+
+Functionality
+    - Log
+    - Post
+    - Expression
+Entity level
+    - Offer
+    - Exp
+    - Camp
+    - Site
+Types of offers
+    - Aged
+    - Email
+    - TCPA -> auto, delayed
+
+Multiple expression on one entity:
+    - None satisfy
+    - One satisfy
+    - Multiple satisfy
+
+Mulitiple vs multiple
+    - None on none level satisfy
+    - One on current level
+    - One on another level
+    - Multiple on current level
+
+Partial configs
+    - No other available - matching
+    - Available on only current
+    - Available on next entity
