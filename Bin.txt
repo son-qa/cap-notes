@@ -9,35 +9,6 @@ Pushnami URLs
 
 ----------------------------------------------------------------
 
-Alias domain checklist
-
-	- Privacy Policy & TOS 
-	- Email Disclaimer
-	- Footer Disclaimer
-	- xVerify
-		- oiuwqepoiruqoiweuor@yahoo.in
-		- gibberish@fakemail.pk
-	- Anti Spam
-	- lead posting
-		- auto posting
-	- Linkout (loading, no console error)
-	- Offerwall (loading, no console error)
-	- Journaya
-	- Trusted form
-	- Events
-	- MAX feed call (PII + linkout) - purl
-	- OnO
-	- Pushnami/NotifyAI - can be changed ( service worker configuration )
-	- CCPA
-	- Subdomains
-		- assets
-		- end to end
-		- console/network error
-
-
----X---X---X---X---X--X---X---X---X---X--X---X---X---X---X--X---X---X---X---X--X---X---X---X---X---
-
-
 Table optimization
 
 To test:
@@ -102,42 +73,6 @@ IF  optin date >= 90 days
 If unsub
 	delete
 	
-
-=========================================================================
-DB Schema - automation
-
-identifier - 					- string			user_id OR cookie_id or session_id
-testcase_id 					- string
-
-user_id 						- int
-lead_id 						- array
-
-step_execution_success 			- boolean	
-step_exectuion_timestamp 		- timestamp
-is_rerun 						- boolean
-
-validation_success 				- boolean
-validation_failure_message		- string		//if required
-validation_execution_timestamp 	- timestamp
-
-tester's name/employee_code 	- string
-
-
-Should be able to pick my cases only
-	tester = 'Sanket.Oswal',
-	step_execution_success = true
-	step_exectuion_timestamp >= curdate()
-	testcase_id = testcase_id of the scenario under test
-	validation_success = NULL
-	
-
-If I execute multiple times then I should be able to pick the desired range of cases only	
-	
-	- if the (current_time ~ step_exectuion_timestamp + 30 mins)
-	
-	- before_all - create a batch number = HHMM and use it for all scenario under test in the current behave execution
-	
-
 =================================================================
 
 "surveyOnPII": false,
@@ -165,8 +100,10 @@ hash_key (live) - e94qi1nga235DhsJtyw7vshd9bwh
 
 =====================================================================
 
-
 Links for different domain types
 
 Alias - https://toprewardspot.com/?cid=hmxb3&t8=1000paypal&test=1&canary=1
 Alias sub - https://rewardsinsider.net/?test=1&cid=7lult&canary=1&t8=500Walmart
+
+==================================================================
+

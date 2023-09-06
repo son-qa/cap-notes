@@ -1,26 +1,14 @@
-Tasks:
+ToDo:
 	- Dependency doc
 	- Update CCPA cases
 		- Domains - 4 domains
 		- Correct My Information
 		- Request for Information
-	- CMT Unsub compliance
-	- https://trello.com/c/KmTWZpRR/3654-campaign-initiate-with-hashes-of-email-phone
-	- https://trello.com/c/hgD6sfm5/990-for-a-given-cmt-stack-show-the-estimated-number-of-users-that-will-qualify-given-the-settings-of-the-stack
-	- Multiple Linkout - override config - 
-		enableExitMonetization
-		linkout_order
-		linkout_group
-		limit_linkout
-		enableDynamicLinkout
-	- https://trello.com/c/tDPyiic6/790-content-manager-20
-
-
+	- Preping end-to-end
+	- https://trello.com/c/K8VAliDF/3668-ow-user-level-redis-reset-happening-after-30-days-from-1st-conversion-but-redis-again-gets-updated-with-previous-recorded-conver
+	- https://trello.com/c/GW8QNiDz/3667-ow-offer-preclick-event-is-getting-fired-for-every-other-offer-visible-on-tier-while-it-should-get-fired-only-for-the-offer-for
 
 Secondary:
-	- Tab filters on offers page - https://trello.com/c/9zXK3DEa/965-show-offer-tag-group-coloumns-in-offers-pagesearch-filter-should-work-along-with-filter-on-coloumn-name-show-as-tabs-in-offers-p - on hold
-	- CCPA Request for Information https://trello.com/c/1711ip47/3228-ccpa-automating-request-for-information
-		- Update CCPA compliance test cases
 	- Check CCPA for autoposting, duplicate user
 	- Revamp compliance email body/report
 	- Update compliance sheet - tabs, checklist, test cases, 
@@ -28,6 +16,7 @@ Secondary:
 	- CCPA test planning
 	- https://github.com/typhoon-hil/allure-docx
 	- Allure reporting - jyoti (allure-docx, ctrl+p, )
+	- CCPA automation
 
 
 Requirement Gathering:
@@ -62,21 +51,13 @@ Validation scope:
 
 
 python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=regression-compliance
+python -m behave @rerun_failing.features
 allure serve output/reports/ to generate html reports
 allure-docx output/reports/ filename.docx
 
 
-python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=sanket
+python -m behave --tags=sanket
 
+https://qa-v1.freesamplesprousa.com/?test=1&cid=qa-slug1&exp=Flow2-qa-v1-QA-Only
 https://qa-v2.freesamplesprousa.com/?test=1&cid=qa-slug2&exp=Flow1-QA-Only
 
-
-
-l group
-map offaers to l group
-entries in 'offer_linkout_position 
-
-
-
-
-97999622

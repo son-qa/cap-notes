@@ -1,0 +1,4 @@
+https://trello.com/c/GW8QNiDz/3667-ow-offer-preclick-event-is-getting-fired-for-every-other-offer-visible-on-tier-while-it-should-get-fired-only-for-the-offer-for
+
+https://stage.primerewardspot.com/?cid=ybcjn&test=1&exp=prs-stage-v3-test
+
