@@ -7,73 +7,8 @@ Pushnami URLs
 
 	- https://freesamplesprousa.com/?cid=vn1ws&test=1&email=emilyjames202115@gmail.com&userFname=ray&last=Jenson&userAddress=601%20Westchester%20Ave&cityName=Bronx&stateName=Newyork&stateCode=NY&zipcode=10455&countryName=%7Bcountry%7D&mobile=6095587775&dobdate=09&dobmonth=09&dobyear=2000&gender=M
 
-----------------------------------------------------------------
-
-Table optimization
-
-To test:
-
-What does the feature do?
-	- Delete PII info for unsubbed users
-	- Remove Inactive users
-	
-Unsub:
-	- Email users
-		- Delete PII
-		- Move PII data into archive table	(Performed by cron)
-		- User comes with same data then entry in "users" table should not be made
-	- Phone users
-		- For single/few entities
-			- Delete row for that entity from company mapping
-			- Move company mapping data in archive table	(Performed by cron)
-			- User comes with same data then entry in "users" table should not be made
-		- For all entities
-			- Delete from company mapping
-			- Delete PII
-			- Move PII data into archive table	(Performed by cron)
-			- Move company mapping data in archive table	(Performed by cron)
-			- User comes with same data then entry in "users" table should not be made
-
-
-
-Inactive users:
-	- Email users (180)
-		- Delete data and mark inactive in two tables
-		- New user ki entry hogi
-	- Phone users (90)
-		- 
-		
-		
-Doubts:
-	- Entity level and full unsub
-	- When does the cron run and how what is the output of the cron?
-		- 30th min of every hour
-		- will add everything in the backup table
-	- On staging can we reduce the cron's scheduled time
-	- Can a user be unsub as well as inactive
-		- user_tracking table - stores optin, confirmed, 
-	- Document says inactive = no event from user's side
-	- 
-
-
-Tables in use:
-	- camapaignmanager.users - stores user's information
-	- camapaignmanager.user_company_mapping - stores user's entities (marketing partners for which user has opted in on leadgen)
-	- camapaignmanager.user_event_snap - snapshot of user's event
-	- camapaignmanager.users_entity_unsub - stores request -> 
-	
 	
 ------------------------><------------------------
-
-user_event_snap to fetch/check optin dates -> 90 se purane wale delete
-users_entity_unsub stores unsub -> unsub users ko nikal do
-
-IF  optin date >= 90 days
-	delete
-If unsub
-	delete
-	
-=================================================================
 
 "surveyOnPII": false,
 "surveyOnLander": false,
@@ -106,4 +41,85 @@ Alias - https://toprewardspot.com/?cid=hmxb3&t8=1000paypal&test=1&canary=1
 Alias sub - https://rewardsinsider.net/?test=1&cid=7lult&canary=1&t8=500Walmart
 
 ==================================================================
+
+Offerwall test offers - live
+
+https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e0009e4cc1
+https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e0009e4cc123
+https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e00e4cc234
+https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e0009e4cc345
+https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e0009e4cc456
+https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e0009e4cc567
+
+https://ads.cap-cloud.co/campaigns/113459
+https://ads.cap-cloud.co/campaigns/112496
+https://ads.cap-cloud.co/campaigns/112494
+https://ads.cap-cloud.co/campaigns/112483
+https://ads.cap-cloud.co/campaigns/112497
+https://ads.cap-cloud.co/campaigns/112493 
+
+=========================================
+
+Offerwall group ids
+	- 20
+	- 10
+	- 18 (try avoiding - as its live)
+
+Offerwall cids
+	- 9swmg
+	- akytq
+	- z86fr
+
+Offerwall experiments
+	- PRS-offerwallv2-QA-Only
+	- PRS-Offerwallv1-FE-QA
+	- Offerwallv1-FE-QA
+	- Offerwallv2-FE-QA
+
+Offerwall links
+	- https://stage.primerewardspot.com/?cid=ybcjn&test=1&exp=prs-stage-v3-test
+	- https://stage.primerewardspot.com/?cid=d1mfq&test=1&exp=PRS-test-default
+	- https://primerewardspot.com/?test=1&cid=9swmg&exp=Offerwallv2-FE-QA
+
+=========================================
+
+Offerwall quick check list
+	- Redis generation - expiry time, is_conversion
+	- First Conversion - expiry time reset, is_conversion
+	- Gray out
+	- Redis
+		- entry
+		- expiry
+	- Popup
+	- rewards status
+	- Events
+		- Offer impression (only for visbile offers)
+		- Reward popup impression
+		- OfferPreclickImpression
+
+=========================================
+
+Offerwall test users conversion (offerwall - 20)
+https://primerewardspot.com/?cid=akytq&test=1&exp=PRS-offerwallv2-QA-Only&canary=1
+	- 2 bronze - rodes91073@tiuas.com
+	- 1 bronze - tegodav570@tiuas.com
+
+=========================================
+
+
+Disclaimer Font color: #000, Hyperlinks Font color: #2851e1, Font size: 10px
+Disclaimer Font color: #000, Hyperlinks Font color: #2851e1, Font size: 10px
+Disclaimer Font color: #000, Hyperlinks Font color: #2851e1, Font size: 10px
+
+For colored backgrounds > TCPA/iTCPA disclaimer: Disclaimer Font color: #FFF, Hyperlinks Font color: #FFAEFF, Font size: 10px
+For colored backgrounds > TCPA/iTCPA disclaimer: Disclaimer Font color: #FFF, Hyperlinks Font color: #F832F8, Font size: 10px
+For colored backgrounds > TCPA/iTCPA disclaimer: Disclaimer Font color: #FFF, Hyperlinks Font color: #FF7CFF, Font size: 10px
+
+https://topsurveyspot.com/?cid=gl0o4&test=1
+
+https://primerewardspot.com/?cid=zylqx&test=1
+
+https://dontwakemommy.com/?cid=vakfs&test=1
+
+=========================================
 

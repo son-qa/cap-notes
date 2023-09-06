@@ -1,0 +1,11 @@
+https://freesamplesprousa.com/?test=1&canary=1&cid=mjtbc&exp=CRUD-Test-QA-Sanket
+
+
+arguments[0].click();
+
+
+
+https://freesamplesprousa.com/?cid=21eo8&test=1&exp=FSPU-Personalized-Auto-Rank-CstmLP
+
+
+

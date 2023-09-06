@@ -1,0 +1,130 @@
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=396&exp=FSPU-Dynamic-Flow-SPII-AutoSurvey-V5B-Variant -> TCPA On REG with Fname & Lname #4
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=396&exp=FSPU-SrcDisp-DynamicFlow-3-Step-PII -> TCPA On REG Direct #3
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=396&exp=FSPU-Dynamic-SPII-Zeeto-AutoSurvey-V5B -> TCPA On Lander #2
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=396&exp=FSPU-TCPAOnReg-AutoSurvey-V5-Control -> TCPA On Reg Only Email #1
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=396&exp=FSPU-Personalized-Auto-Rank-CstmLP -> Full TCPA 3 step
+
+
+&userFname=ray&last=Jenson&userAddress=601%20Westchester%20Ave&cityName=Bronx&stateName=Newyork&stateCode=NY&zipcode=10455&countryName=%7Bcountry%7D&mobile=6095587775&dobdate=09&dobmonth=09&dobyear=2000&gender=M
+
+
+TCPA On Reg Only Email #1
+    - New user
+        - bonepe8893@cwtaa.com
+        - "userId": 102790973,
+    - Skip reg
+        - "userId": 102791774,
+    - Partial
+        - mewibi3354@jontra.com
+        - "userId": 102794335,
+
+
+TCPA On Lander #2
+    - User
+        - mewibi3354@jontra.com
+        - "userId": 102795316,
+
+
+TCPA On REG Direct #3
+    - Skip reg
+        - mewibi3354@jontra.com
+        - "userId": 102796202,
+    - New
+        - xocey61636@backva.com
+        - "userId": 102797639,
+    - Partial + prepop
+        - botakob861@gienig.com
+        - "userId": 102798848,
+
+TCPA On REG with Fname & Lname #4
+    - New
+        - kebos20278@jontra.com
+        - "userId": 102802093,
+    - Skip reg
+        - "userId": 102802801,
+    - Partial
+        - 
+    - Not matching DB
+        - "userId": 102800835,
+
+3 step reg full tcpa
+    - "userId": 102808002,
+
+-----------------------------
+
+Issues found
+#1 - Skip reg - last reg step visible for a moment
+#4 - forward backward - uses data from prepop/fetched data
+
+
+RegistrationSectionComplete -> direct_redirect:true -> if user got auto redirected
+UserPiiDetails -> prepop_missing_data,db_missing_data -> has missing pii details
+
+
+-- skip reg canary , 103640426, 103642207 #3, 103643183 #1
+    - delayed
+        - 103633825 #3
+        - 103643781 #4
+-- canary no skip 103637297
+-- live tas 103636428
+-- live full fspu 103637751
+
+
+
+------------------------------------------------------ Live
+
+https://freesamplesprousa.com/?cid=21eo8&test=1&var=396&exp=FSPU-Dynamic-Flow-SPII-AutoSurvey-V5B-Variant -> TCPA On REG with Fname & Lname 1
+https://freesamplesprousa.com/?cid=21eo8&test=1&var=396&exp=FSPU-SrcDisp-DynamicFlow-3-Step-PII -> TCPA On REG Direct 2
+https://freesamplesprousa.com/?cid=21eo8&test=1&var=396&exp=FSPU-Dynamic-SPII-Zeeto-AutoSurvey-V5B -> TCPA On Lander 3
+https://freesamplesprousa.com/?cid=21eo8&test=1&var=396&exp=FSPU-TCPAOnReg-AutoSurvey-V5-Control -> TCPA On Reg Only Email 4
+https://freesamplesprousa.com/?cid=21eo8&test=1&var=396&exp=FSPU-Personalized-Auto-Rank-CstmLP -> Full TCPA 3 step 5
+
+------------------------------------------------------ Canary - 3 flags
+
+Variant Id
+406 -> Only populate pii data
+407 -> Redirect to Linkout
+408 -> Redirect to Survey
+
+enableAutoRedirectRegUser
+enableAutoPopulateDBRegUser
+enableAutoRedirectRegUserToLinkout
+
+407
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=407&exp=FSPU-Dynamic-SPII-Zeeto-AutoSurvey-V5B = ToL 1
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=407&exp=FSPU-TCPAOnReg-AutoSurvey-V5-Control -> TCPA On Reg Only Email 2
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=407&exp=FSPU-Personalized-Auto-Rank-CstmLP -> Full TCPA 3 step 3
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=407&exp=Multiple-Lo-Test-QA -> multiple LO
+
+406
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=406&exp=FSPU-Dynamic-SPII-Zeeto-AutoSurvey-V5B -> TCPA On Lander 1
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=406&exp=FSPU-TCPAOnReg-AutoSurvey-V5-Control -> TCPA On Reg Only Email 2
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=406&exp=FSPU-Personalized-Auto-Rank-CstmLP -> Full TCPA 3 step 5
+
+408
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=408&exp=FSPU-Dynamic-SPII-Zeeto-AutoSurvey-V5B -> TCPA On Lander 1
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=408&exp=FSPU-TCPAOnReg-AutoSurvey-V5-Control -> TCPA On Reg Only Email 2
+https://freesamplesprousa.com/?cid=4rsp5&test=1&canary=1&var=408&exp=FSPU-Personalized-Auto-Rank-CstmLP -> Full TCPA 3 step 5
+
+
+Issues/concerns:
+    - Behaviour - when multiple flags are enabled
+    - Check for Multi LO flow
+    - gender value 1 parameter in LO redirected URL
+
+
+- Threshold is not crossed, time is not elapsed
+- Threshold is not crossed, time is elapsed
+- Threshold is crossed, time is not elapsed
+- Threshold is crossed, time is elapsed
+
+- Scroll down, till end, immediately on loading (without meeting impression condition for any offer)
+- Scroll up - 50% of offer is visible for 5 secs - condition met
+- Scroll out from view the offer for whose impression is fired and scroll back in that offer
+- 
+
+
+
+
+https://imtrk.go2cloud.org/aff_c?offeruid=2459ca69-11e8-4500-a56e-2c9b8be69ec2&emailAddress=phamanathon%40gmail.com&userFname=AnaDB&userLname=PhamDB&mobile=5048319091&userAddress=AccessDB&cityName=Golconda&stateCode=NV&zipcode=89414&dobmonth=12&dobdate=31&dobyear=2001&gendervalue1=Male&offer_id=6842&aff_id=1&aff_sub=4rsp5&aff_sub2=1&aff_sub3=ee7080e0-b9e5-46f0-97a7-79507cd35efe&aff_sub4=0bab90cc-6b96-492e-b26c-420aa3ad2540&aff_sub5=526917f9-0773-47b7-b498-e81c6acccf5a&aff_unique1=226e298aab63af431cd2690bbb62cbd4&aff_unique2=1996&leaduid=ee7080e0-b9e5-46f0-97a7-79507cd35efe&leadcookie=0bab90cc-6b96-492e-b26c-420aa3ad2540&canary=1&oid=6842
+

@@ -1,4 +1,10 @@
-https://trello.com/c/GW8QNiDz/3667-ow-offer-preclick-event-is-getting-fired-for-every-other-offer-visible-on-tier-while-it-should-get-fired-only-for-the-offer-for
+#1 Impression configurable
+Flag level = cid, exp, site
+Millis, %
 
-https://stage.primerewardspot.com/?cid=ybcjn&test=1&exp=prs-stage-v3-test
 
+#2
+Claimed in previous session and MAX is not returning in new session - should be visible for current session - grayed out in that respective tier
+
+Case
+    - Different group id

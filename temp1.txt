@@ -1,73 +1,176 @@
-curl --location 'https://demo.freesamplesprousa.com/api/active-window/?redisKey=offerwall%3A53fe9ddc6a8c8740ade7f647d9bb9e05-18&redisExpiry=3600' \
---header 'Cookie: leadgennewcookie=eyJpdiI6IjhnL25ZU0pjdHhwMFYxQ1UxYzZSRmc9PSIsInZhbHVlIjoickxTL01GV3Y4akdEZ013cFNUY1NTSDhxSVBnNUR1YUljL05Odzg5SXJ5STg3NVgwZGtTZFpTaWxkMUl1bzNEMSIsIm1hYyI6ImQwMTVmYzQ4NzhlNGRlYmZhNGE1NzQ4ZmU5ZThmMmQwNzBmNzgwZjc5NjAyNWM5YTVhMTYzN2Y0OTFmM2I0MTcifQ%3D%3D; leadgenuid=1968bf37-c4fc-4d0b-b747-4583f76d8204; usercookie=9b5222da-93b6-4b67-8b0b-75802466e5d0; leadgennewcookie=eyJpdiI6Im9BZE54V2hhd0hsaGJhU25HQ1NHbEE9PSIsInZhbHVlIjoiRmNWVHFuRk1vdE5RNFJVNW5MM0ZVZnRYS2ZkZnBnVVY4ckxTOXNUaHVGM2JCYWdBWVU4dzM4NEFkTkl5Z0pHVCIsIm1hYyI6IjJiZjY2Y2VlMzgyZTJhMmI1OTVjMGM2ODdkNDE0MmU3ODgzNWJlOGI1Mzc2NzBjODA0NWVhNjMxZGQ5YWQ4ODAifQ%3D%3D; leadgenuid=b7619444-8cb7-4047-8f8e-d0737e1f69f9; usercookie=f8a8da9f-b00a-451c-a548-d7918b6eaeb2'
+env qa-v1
+session based lead quality
+
+site config - default scores
+
+"lead_score": 2.745, (lower the better)
+"lead_score_minimal": 2 (lower the better),
+    - $num_ips_score + $ip_state_mismatch_score + $fast_revenue_score + $system_single_optin_score;
 
 
-
-[30/03/2023 5:58 PM] Govinda S: https://ads.cap-cloud.co/campaigns/113459
-https://ads.cap-cloud.co/campaigns/112496
-https://ads.cap-cloud.co/campaigns/112494
-https://ads.cap-cloud.co/campaigns/112483
-https://ads.cap-cloud.co/campaigns/112497
-https://ads.cap-cloud.co/campaigns/112493
-
-[30/03/2023 6:01 PM] Govinda S: https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e0009e4cc1
-https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e0009e4cc123
-https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e00e4cc234
-https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e0009e4cc345
-https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e0009e4cc456
-https://staging-console.im-reporting.com/offerwall-offers/21ae6176-ec96-4c98-a44b-79e0009e4cc567
+"user_clicked_or_touched": touch/click
+"user_clicked_or_touched_score": > 0 is bad, 0 is good score
 
 
-https://demo-prod.primerewardspot.com/?cid=9swmg&test=1&exp=PRS-offerwallv2-QA-Only&emailAddress=alex123@gmail.com&userFname=james&userLname=luis&zipcode=10001&gendervalue1=Female&userAddress=test%20dr&cityName=New%20York%20City&stateCode=NY&mobile=8128348235&dobdate=17&dobmonth=12&dobyear=1999&stateName=New%20York
+"num_ips_score": 2
 
-https://demo.freesamplesprousa.com/webhook/offerwall-conversion?oid={offer_id}&sid={aff_unique2}&tid={transaction_id}&owallid={aff_unique3}&owalltypeid={aff_unique4}&po={payout}&rev={revenue}&owsid={aff_unique5}&lgsid={aff_sub3}
+"ip_state_mismatch_score": 0,
+    if more than 1 ips then increase score
+    netacuity ip based
+    if not match then score is given
+    test with netacuity on demo
 
-https://demo.freesamplesprousa.com/webhook/offerwall-conversion?oid=342&sid=35cb750e743dbe52bfae797d7c0d9918&tid=1&owallid=18&owalltypeid=1&po=1&rev=5&owsid=808872fb-95e7-41ef-966b-bc91f461cba3&lgsid=b4460b84-1039-437f-b222-975bc3ee179a
+    "ip_state_mismatch_values": [
+        0,
+        0,
+        0
+    ],
 
-oid --> HasOffer id
-sid --> aff_unique2(email_md5 hash)
-tid --> transaction_id
-owallid --> aff_unique3(offerwall id)
-owalltypeid --> aff_unique4
-po --> payout
-rev --> revenue
-owsid --> aff_unique5(session_offerwall_conversion_id)
-lgsid --> aff_sub3(session_id)
-
-
-PRS-Offerwallv2-FE-QA - slug with strategy set to 'manual '
-
-offerwall ranking flags enabled on experiments slugs
-
-PRS-offerwallv2-QA-Only
-PRS-Offerwallv1-FE-QA
-
---------------------------------
-
-Cases:
-- Existing User
-- New User
-    - Key creation
-    - Expiry value
-    - is_converstion
+    "ips": [
+        "122.169.63.217",
+        "165.22.14.114"
+    ],
 
 
-- First conversion
-    - expiry value
-    - Second conversion
-        - no change
-    - different session conversions
+"fast_survey_score": 0.7450000000000001 (threshold < 2.2 secs)
+    - avg_question_time is sum(total time consumed)/sum(number of questions)
+    - sum(total time consumed) = time_per_question -> [] of time taken per question
+        - question_time = is set on each quesiton impr and reset on each new question impression
+    - 3 - min(avg q time, 3)
 
 
-- After expiry
-    - Same user same offerwall
+blind_revenue_score: 
+    - single optin questions (yes/no questions only)
+    - `Min(Optin-rates/avg, 3)`, here avg=0.06
+        - optin-rates = number of question_type 1 answered positively / number of questions
+            - "system_single_optin_questions" variable is number of question type 1 answered positively
 
-- Same user new offerwall
+"fast_revenue_score": sum of total revenue / number of questions -> (threshold > 0.013)
+    - sum of total revenue = "expected_revenue" variable
 
 
-========================
+site, 
+campagin, 
+experiment, 
+offer
+    leadQualityConfig {
+        "type": "and",
+        "fields": [
+{
+        "type": "and",
+        "fields": [
+            {
+                "type": "selector",
+                "dimension": "num_ips_score",
+                "value": 3,
+                "operator": "!="
+            },
+            {
+                "type": "selector",
+                "dimension": "ip_state_mismatch_score",
+                "value": 3,
+                "operator": ">="
+            }
+        ]
+    },
+            {
+                "type": "selector",
+                "dimension": "ip_state_mismatch_score",
+                "value": 3,
+                "operator": ">="
+            }
+        ]
+    }
 
-Isssues/Questions:
-- No instruction for completing the offers within duration
-- After expiry a new redis is created -> in this the is_conversion is 0 whereas user had done some conversions in the past
-- 
+    LeadsDoNotPostLogActivate: true/false (event = LeadsDoNotPostLogging)
+    LeadsDoNotPost: true/false (event = LeadsDoNotPost)
+
+[
+ 'lead_score' ,
+ 'lead_score_minimal',
+ 'fast_survey_score' ,
+ 'fast_revenue_score',
+ 'num_ips_score' ,
+ 'ip_state_mismatch_score' ,
+ 'user_clicked_or_touched_score' ,
+ 'system_single_optin_score'
+]
+
+api:
+https://qa-v1.freesamplesprousa.com/api/survey/get-json-details?key=jsonset:campaign:survey:user:leadquality:e1d0727f-89ae-4cc4-89fd-a9a52e4c1e4d
+
+getLeadQualityStatus
+
+
+-------------------------------------------
+
+Scoring mechanism
+
+Individual metrics calculation
+    - user_clicked_or_touched
+    - num_ips_score
+    - ip_state_mismatch_score
+    - fast_survey_score
+    - blind_revenue_score
+    - fast_revenue_score
+    - lead_score
+    - lead_score_minimal
+
+
+Decision making:
+    - Configs
+        - LeadsDoNotPostLogActivate
+        - LeadsDoNotPost
+        - leadQualityConfig
+            - each key
+            - operators
+    - Rule
+        - Single metrics - Individual metrics
+        - Multiple metrics
+            - AND
+            - OR
+    - Complex rule - tree structure
+    - Config level
+    - Config present at multiple levels
+    - LeadsDoNotPostLogActivate, LeadsDoNotPost, leadQualityConfig - each one is on different levels or mutiple levels
+    - Impact on email offer, tcpa offer, aged offer
+    - Impact on Autoposting, Delayed posting
+
+---------------------
+
+Works on campaign level
+Works on offer level
+Skips if the flag is missing
+Mulitple level
+
+---------------------
+
+Functionality
+    - Log
+    - Post
+    - Expression
+Entity level
+    - Offer
+    - Exp
+    - Camp
+    - Site
+Types of offers
+    - Aged
+    - Email
+    - TCPA -> auto, delayed
+
+Multiple expression on one entity:
+    - None satisfy
+    - One satisfy
+    - Multiple satisfy
+
+Mulitiple vs multiple
+    - None on none level satisfy
+    - One on current level
+    - One on another level
+    - Multiple on current level
+
+Partial configs
+    - No other available - matching
+    - Available on only current
+    - Available on next entity
