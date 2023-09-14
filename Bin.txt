@@ -73,12 +73,12 @@ Offerwall cids
 Offerwall experiments
 	- PRS-offerwallv2-QA-Only
 	- PRS-Offerwallv1-FE-QA
-	- Offerwallv1-FE-QA
-	- Offerwallv2-FE-QA
+	- PRS-Offerwallv2-FE-QA
 
 Offerwall links
 	- https://stage.primerewardspot.com/?cid=ybcjn&test=1&exp=prs-stage-v3-test
 	- https://stage.primerewardspot.com/?cid=d1mfq&test=1&exp=PRS-test-default
+	- https://stage.primerewardspot.com/?cid=m9evn&test=1&exp=prs-stage-v3-test
 	- https://primerewardspot.com/?test=1&cid=9swmg&exp=Offerwallv2-FE-QA
 
 =========================================
@@ -106,6 +106,7 @@ https://primerewardspot.com/?cid=akytq&test=1&exp=PRS-offerwallv2-QA-Only&canary
 
 =========================================
 
+Disclaimer checks rules
 
 Disclaimer Font color: #000, Hyperlinks Font color: #2851e1, Font size: 10px
 Disclaimer Font color: #000, Hyperlinks Font color: #2851e1, Font size: 10px
@@ -123,3 +124,22 @@ https://dontwakemommy.com/?cid=vakfs&test=1
 
 =========================================
 
+Request log for user send to OnO query
+
+select * from email_monetization.email_request_log 
+where json_extract_path_text(meta_data, 'sessionId') = '9c6efbf1-5f53-4224-b588-fe0afabb16eb' ;
+
+=========================================
+
+Skip to reg, skip to lo, prefill registration variants
+
+Variant Id
+406 -> Only populate pii data  -> enableAutoPopulateDBRegUser
+407 -> Redirect to Linkout  -> enableAutoRedirectRegUserToLinkout
+408 -> Redirect to Survey  -> enableAutoRedirectRegUser
+
+=========================================
+
+
+
+=========================================

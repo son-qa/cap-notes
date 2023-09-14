@@ -1,10 +1,61 @@
-#1 Impression configurable
-Flag level = cid, exp, site
-Millis, %
+https://trello.com/c/ykdvvAJI/3754-ow-changes-session-based-frequency-capping-and-exclusivity-grouping-for-display-capping
+
+https://stage.primerewardspot.com/?cid=ybcjn&test=1&exp=prs-stage-v3-test
+
+https://demo-prod.primerewardspot.com/?cid=9swmg&test=1&exp=PRS-offerwallv2-QA-Only
+
+#4 Impression configurable
+"offerVisbilityTimeOW":5000
+"offerVisbilityThresholdOW":0.5
 
 
-#2
+---------------------------------------------
+
+#3 Show offer even when MAX is not returning
 Claimed in previous session and MAX is not returning in new session - should be visible for current session - grayed out in that respective tier
+
+"----------------------pdList max offers--------------------"
+
+21ae6176-ec96-4c98-a44b-79e0009e4cc456
 
 Case
     - Different group id
+    - Different pages
+    - Conversion, no conversion
+    - Redis expired
+    - Another exp with same offerwall
+
+Max is returning
+    - User has claimed
+        - Redis is not expired
+            - Comes on same offerwallgroup id
+            - Comes on different offerwallgroup id
+        - Redis is expired
+    - User has not claimed
+
+Max is not returning
+
+
+---------------------------------------------
+
+#1 Do not show offer, in the CURRENT SESSION, until conversion is received
+
+"frequencyCappingOW":true,
+
+https://demo-prod.primerewardspot.com/?cid=9swmg&test=1&exp=PRS-offerwallv2-QA-Only
+
+https://demo-prod.primerewardspot.com/?cid=z86fr&test=1&exp=PRS-Offerwallv2-FE-QA
+
+demo-prod.primerewardspot.com
+
+Case
+
+- Config - true/false/absent
+- Clicked
+    - Session - same, different
+        - Back forward
+        - Refresh
+    - Converted/Not converted
+    - 
+    - Exploratory offers
+
