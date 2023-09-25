@@ -59,3 +59,69 @@ Case
     - 
     - Exploratory offers
 
+
+---------------------------------------------
+
+#2
+
+https://stage.primerewardspot.com/?cid=ybcjn&test=1&exp=prs-stage-v3-test
+
+exclusivityOW
+frequencyCappingOW
+
+"---------------------offerIds from ranking----------------------------"
+"---------------------pidList from max----------------------------"
+"---------------------offerList after claimed----------------------------"
+
+redis key = owExclusiveOfferTag
+
+1. Impression
+
+o1 --> tagA --> rank3 
+o2 ->  tagA  --> rank1
+o3 --> tagA  --->rank5
+o5 --> no exclusive tag
+
+---> show (usecase1) 
+o2 ->  tagA  --> rank1
+o5 --> no exclusive tag
+
+1.
+Impression Fired ---> for {o1-->tag1} {in tier 1}
+
+not tag1 related offer will show on upcoming tier
+if same offer {o1-->tag1} return in upcoming teir then show(no matter whatever ranking)
+
+2.
+if impression not fired in tier 1:
+
+upcoming ranking --> if new offer gets higher rank then it'll show..!
+and goes same as above..!(same logic for impression and exclusivity)
+
+
+2. Click
+
+
+3.Conversion:
+if any exclusive tag related offer is converted  (will show converted offer in tier from which it was converted..!)
+
+same exclusive tag vaale offer will not show in all teir..!
+
+
+
+cases
+- Highest ranking - Multiple offers with same tag (no impression) - show the highest ranked
+- Impression is fired
+    - For tag
+    - For non tag
+    - On next tier, same tier, back forward
+    - Offer not returned from max
+- Frequency capping
+- Converted
+- Exploratory slots
+- redis expiry
+- ranking table - offerwall_ranking
+
+{"insert_exploratory_at_rank": 2, "exploratory_slots": 2}
+
+https://primerewardspot.com/?cid=z86fr&test=1&exp=PRS-Offerwallv2-FE-QA&canary=1

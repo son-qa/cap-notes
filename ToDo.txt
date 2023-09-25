@@ -10,10 +10,14 @@ ToDo:
 			- skip reg - no notag tcpa leads
 			- skip lo - no tcpa leads
 		- VID checks
-		- Delayed posting - events validation
 	- Lead quality - https://trello.com/c/Htt7V63k/3730-lead-quality-lead-postings-do-not-post-lead-to-advertiser-based-on-bad-quality-score-of-session
-	- OW 4 changes - https://trello.com/c/ykdvvAJI/3754-ow-changes-session-based-frequency-capping-and-exclusivity-grouping-for-display-capping
-	- https://trello.com/c/PbaGGVG2/3781-add-additional-text-on-the-top-left-right-of-the-question-question-not-required
+	- OW 4 changes - https://trello.com/c/ykdvvAJI/3754-ow-changes-session-based-frequency-capping-and-exclusivity-grouping-for-display-capping		
+	- Lead quality redirection - https://trello.com/c/MymSUkhs/3783-lead-quality-403-redirection-support
+	- OW on canary
+		test started on canary for these 3 offers and with tag name = petjoy
+		Exp ID = 205
+		Variant ID = 484
+		Test name = OW Offer Deduping
 
 
 Secondary:
@@ -25,10 +29,8 @@ Secondary:
 	- https://github.com/typhoon-hil/allure-docx
 	- Allure reporting - jyoti (allure-docx, ctrl+p, )
 	- CCPA automation
-	- Cookie hack by Arihant
-	- Local setup doubts
-		- third party services
-		- 
+	- Create test variants on live
+	- Local setup
 
 
 Requirement Gathering:
@@ -110,3 +112,5 @@ https://qa-v2.freesamplesprousa.com/?test=1&cid=qa-slug2&exp=Flow1-QA-Only
 
 
 https://freesamplesprousa.com/?cid=21eo8&test=1&var=405&exp=FSPU-Personalized-Auto-Rank-CstmLP
+
+

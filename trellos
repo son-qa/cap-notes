@@ -32,6 +32,9 @@ Offerwall impression bug fix - https://trello.com/c/RE8McYK8/3703-change-the-way
 
 LO, OW zero conversion - https://trello.com/c/j8YNcPNY/3692-handling-of-offers-that-send-zero-value-conversions-along-with-final-non-zero-conversionlo-ow
 
+Offerwall frequency capping, exclusivity, configurable impression conditions, show converted offers - https://trello.com/c/ykdvvAJI/3754-ow-changes-session-based-frequency-capping-and-exclusivity-grouping-for-display-capping
+
+
 
 
 ---------- Ops Interface ----------

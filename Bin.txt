@@ -27,6 +27,10 @@ experimentConfig
 
 307 - CRUD-Test-QA-Sanket - create bucket
 
+https://freesamplesprousa.com/?test=1&cid=mjtbc&exp=CRUD-Test-QA-Sanket
+
+https://freesamplesprousa.com/?test=1&cid=mjtbc&var=405&exp=FSPU-Personalized-Auto-Rank-CstmLP
+
 ==================================================================
 
 hash_key (stage) - e94qi1nga2
@@ -106,7 +110,7 @@ https://primerewardspot.com/?cid=akytq&test=1&exp=PRS-offerwallv2-QA-Only&canary
 
 =========================================
 
-Disclaimer checks rules
+TCPA Disclaimer checks rules
 
 Disclaimer Font color: #000, Hyperlinks Font color: #2851e1, Font size: 10px
 Disclaimer Font color: #000, Hyperlinks Font color: #2851e1, Font size: 10px
@@ -140,6 +144,13 @@ Variant Id
 
 =========================================
 
+Hey, read only access for HasOffers Interface has been created.
 
+https://imtrk.hasoffers.com/
+Email: qa@customer-acquisition.co
+Password: 4lv4kf5wNWs4XAO
+
+Offers page link will not be accessible via the menu sidebar. You'll have to use the direct link.
+https://imtrk.hasoffers.com/admin/offers
 
 =========================================
