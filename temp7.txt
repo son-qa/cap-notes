@@ -1,0 +1,12 @@
+- Entry in onetrust_requests table
+- PII data in user_master and user_master_pii should be masked
+
+- If leads are posted then lead posting data should be set to null
+- Leads should not be posted
+
+- Email should be set to advertisers
+- Email should be received on user's end
+
+- User should be blacklisted, entry in leadgen_unsubscribed_list
+- User's raw data should be entered in leadgen_unsubscribed_list, and should be deleted after 1 day
+- User should not be able to register using same email/mobile

@@ -1,21 +1,7 @@
 ToDo:
-	- Compliance Cses Update 
-		- CCPA
-			- Domains - 4 domains
-			- Correct My Information
-			- Request for Information
-			- Raw data - addition/deletion
-		- Disclaimer checks for random flows, add to list
-		- Skip reg
-			- skip reg - no notag tcpa leads
-			- skip lo - no tcpa leads
-		- VID checks
-		- Question not required / Sponsored ad label should be visible
-	- Lead quality - https://trello.com/c/Htt7V63k/3730-lead-quality-lead-postings-do-not-post-lead-to-advertiser-based-on-bad-quality-score-of-session
+	- leadgen-automation-test setup
 	- .\init.ps1 D:\GitHub\leadgen-platform-api\ master-local D:\GitHub\freesamplesprousa.com\ master
-	- Question not required for variants
-	- Mehul's request for pushnami - on TAS
-	- 
+
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
@@ -27,7 +13,6 @@ Secondary:
 	- Allure reporting - jyoti (allure-docx, ctrl+p, )
 	- CCPA automation
 	- Create test variants on live
-	- Local setup
 
 
 Requirement Gathering:
@@ -72,30 +57,6 @@ password - 1234
 
 -------------------------------------------------
 
-VID compliance
-
-global_cookie => data1
-
-domain_cookie => data2
-
-created on comparison => latest entry picked from data1 and data2
-
-latest data = dupUsermethod 
-
-default method = phoneEmailHash
-
-if dupUsermethod = global_cookie
-	current user = global_cookie
-if dupUsermethod = domain_cookie and old site = new site
-	current user = domain_cookie
-if dupUsermethod = phone email hash
-	current user = phone email hash
-
-
-user_master -> json_metadata -> dupusermethod
-
--------------------------------------------------
-
 python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=regression-compliance
 python -m behave @rerun_failing.features
 allure serve output/reports/ to generate html reports
@@ -109,4 +70,6 @@ https://qa-v2.freesamplesprousa.com/?test=1&cid=qa-slug2&exp=Flow1-QA-Only
 
 https://freesamplesprousa.com/?cid=21eo8&test=1&var=405&exp=FSPU-Personalized-Auto-Rank-CstmLP
 
+
+---------------
 

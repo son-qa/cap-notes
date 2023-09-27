@@ -91,3 +91,28 @@ Offers page link will not be accessible via the menu sidebar. You'll have to use
 https://imtrk.hasoffers.com/admin/offers
 
 =========================================
+
+VID compliance
+
+global_cookie => data1
+
+domain_cookie => data2
+
+created on comparison => latest entry picked from data1 and data2
+
+latest data = dupUsermethod 
+
+default method = phoneEmailHash
+
+if dupUsermethod = global_cookie
+	current user = global_cookie
+if dupUsermethod = domain_cookie and old site = new site
+	current user = domain_cookie
+if dupUsermethod = phone email hash
+	current user = phone email hash
+
+
+user_master -> json_metadata -> dupusermethod
+
+=========================================
+

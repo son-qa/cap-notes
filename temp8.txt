@@ -1,0 +1,10 @@
+Documentation
+
+What to test?
+    - Coverage/Cases for current feature
+        - Current understanding
+        - Reference of older cases for similar/same feature
+    - Features that would be impacted due to current feature
+        - Reference of older cases of feature
+    - Features that impacts current feature
+        - Reference of older cases of feature
