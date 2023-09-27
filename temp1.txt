@@ -202,16 +202,38 @@ Partial configs
 ]
 
 
------------------- Prod 21 Sept 2023
+------------------ redirect to
 
-Normal
-    "userId": 108981269,
-    "leadId": 74388630,
+https://qa-v1.freesamplesprousa.com/api/survey/get-json-details?key=jsonset:campaign:survey:user:leadquality:e1d0727f-89ae-4cc4-89fd-a9a52e4c1e4d
+
+"RedirectTo": "403 | Offerwall | Fulfillment" (Redirect at HP Complete)
+
+Events
+    - LeadQualityRedirectTo
+    - LeadQualityRedirectToTrigger
 
 
-Sus
-    "userId": 108979794,
-    "leadId": 74387485,
+- Config is not set
+- Config is set
+    - Threshold Crossed
+        - redirect to thank you
+        - redirect to offerwall
+        - redirect to 403
+            events
+    - Not crossed
 
-    "userId": 108980080,
-    "leadId": 74387661,
+    - different levels
+
+
+ "leadQualityConfig": [
+        {
+            "RedirectTo": "Offerwall",
+            "LeadsDoNotPost": false,
+            "AMMDoNotCreditTxnID": true,
+            "LeadQualityExpression": "(lead_score >= 0) ",
+            "AMMDoNotFireConversion": true,
+            "LeadsDoNotPostLogActivate": true,
+            "AMMDoNotCreditTxnIDLogActivate": true,
+            "AMMDoNotFireConversionLogActivate": true
+        }
+    ],

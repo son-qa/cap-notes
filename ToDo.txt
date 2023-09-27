@@ -10,15 +10,12 @@ ToDo:
 			- skip reg - no notag tcpa leads
 			- skip lo - no tcpa leads
 		- VID checks
+		- Question not required / Sponsored ad label should be visible
 	- Lead quality - https://trello.com/c/Htt7V63k/3730-lead-quality-lead-postings-do-not-post-lead-to-advertiser-based-on-bad-quality-score-of-session
-	- OW 4 changes - https://trello.com/c/ykdvvAJI/3754-ow-changes-session-based-frequency-capping-and-exclusivity-grouping-for-display-capping		
-	- Lead quality redirection - https://trello.com/c/MymSUkhs/3783-lead-quality-403-redirection-support
-	- OW on canary
-		test started on canary for these 3 offers and with tag name = petjoy
-		Exp ID = 205
-		Variant ID = 484
-		Test name = OW Offer Deduping
-
+	- .\init.ps1 D:\GitHub\leadgen-platform-api\ master-local D:\GitHub\freesamplesprousa.com\ master
+	- Question not required for variants
+	- Mehul's request for pushnami - on TAS
+	- 
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
@@ -96,7 +93,6 @@ if dupUsermethod = phone email hash
 
 
 user_master -> json_metadata -> dupusermethod
-
 
 -------------------------------------------------
 
