@@ -1,25 +1,12 @@
-https://cert.trustedform.com/978c735e5658d3857317b9561b8a0b9a355efbb8
-https://app.leadid.com/leads/lead?token=1CB7CEE6-0B05-12FE-5FCE-969D17825576 - optin
+- Entry in onetrust_requests table
+- PII data in user_master and user_master_pii should be masked
 
-https://cert.trustedform.com/4087b2adb80e9f59720b58ca351914c2d739e7eb
-A364FA9C-9B8D-22B2-B07D-3D534B152A6F
+- If leads are posted then lead posting data should be set to null
+- Leads should not be posted
 
-https://cert.trustedform.com/e31e50905afaddcdf96347e7da35e755cd14329e - extra text box
-FE295F27-4BA2-1795-91B7-F6A7B33DDA8D
+- Email should be set to advertisers
+- Email should be received on user's end
 
-
-https://freesamplesprousa.com/?test=1&cid=has03
-https://theamericansweepstakes.com/?test=1&cid=xa9mp
-https://topsurveyspot.com/?test=1&cid=6xymj
-https://primerewardspot.com/?test=1&cid=xnupe
-https://findyourfreesamples.com/?test=1&cid=wwzji
-
-
-
-Disclaimer Font color: #000, Hyperlinks Font color: #2851e1, Font size: 10px
-Disclaimer Font color: #000, Hyperlinks Font color: #2851e1, Font size: 10px
-Disclaimer Font color: #000, Hyperlinks Font color: #2851e1, Font size: 10px
-
-For colored backgrounds > TCPA/iTCPA disclaimer: Disclaimer Font color: #FFF, Hyperlinks Font color: #FFAEFF, Font size: 10px
-For colored backgrounds > TCPA/iTCPA disclaimer: Disclaimer Font color: #FFF, Hyperlinks Font color: #F832F8, Font size: 10px
-For colored backgrounds > TCPA/iTCPA disclaimer: Disclaimer Font color: #FFF, Hyperlinks Font color: #FF7CFF, Font size: 10px
+- User should be blacklisted, entry in leadgen_unsubscribed_list
+- User's raw data should be entered in leadgen_unsubscribed_list, and should be deleted after 1 day
+- User should not be able to register using same email/mobile

@@ -1,17 +1,7 @@
 ToDo:
-	- Dependency doc
-	- Update CCPA cases
-		- Domains - 4 domains
-		- Correct My Information
-		- Request for Information
-	- Compliance - disclaimer checks for random flows, add to list
-	- Skip reg
-		- skip reg - no notag tcpa leads
-		- skip lo - no tcpa leads
-	- Compliance - VID addition 
-	- Compliance - CCPA - raw data - addition/deletion
-	- OW - ac7bbf87-ee2d-4ca6-b990-803cccacc6ff - https://vpc-leadgen-q4yb6mssiq5gt24no7baggzea4.us-east-1.es.amazonaws.com/_dashboards/goto/b959349f31fe6be9e33f00fcd9c42eef
-	- https://trello.com/c/Htt7V63k/3730-lead-quality-lead-postings-do-not-post-lead-to-advertiser-based-on-bad-quality-score-of-session
+	- leadgen-automation-test setup
+	- .\init.ps1 D:\GitHub\leadgen-platform-api\ master-local D:\GitHub\freesamplesprousa.com\ master
+
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
@@ -22,10 +12,7 @@ Secondary:
 	- https://github.com/typhoon-hil/allure-docx
 	- Allure reporting - jyoti (allure-docx, ctrl+p, )
 	- CCPA automation
-	- Cookie hack by Arihant
-	- Local setup doubts
-		- third party services
-		- 
+	- Create test variants on live
 
 
 Requirement Gathering:
@@ -39,7 +26,7 @@ Requirement Gathering:
 	- Where to test?
 	- Scope of testing?
 	- Is there any impact on the compliance front?
-	- What is the impact of this feature on other features?
+	- What is the impact of this feature on other features or existing?
 	- Trello
 
 
@@ -59,6 +46,16 @@ Validation scope:
 	- Eye on the number & type of leads posted
 	- Checking trusted form
 
+-------------------------------------------------
+
+Local setup - https://gitlab.com/cap_tech1/sre/developer-setup-scripts/-/tree/master
+
+WSL - user
+
+username - sanket
+password - 1234
+
+-------------------------------------------------
 
 python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=regression-compliance
 python -m behave @rerun_failing.features
@@ -72,4 +69,7 @@ https://qa-v2.freesamplesprousa.com/?test=1&cid=qa-slug2&exp=Flow1-QA-Only
 
 
 https://freesamplesprousa.com/?cid=21eo8&test=1&var=405&exp=FSPU-Personalized-Auto-Rank-CstmLP
+
+
+---------------
 

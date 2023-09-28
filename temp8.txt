@@ -1,78 +1,10 @@
-"leadQualityConfig": {
-        "type": "selector",
-        "value": 0,
-        "operator": ">=",
-        "dimension": "lead_score"
-    },
-"LeadsDoNotPostLogActivate": true,
-"LeadsDoNotPost": true,
+Documentation
 
----------------------
-
-"leadQualityConfig": "(lead_score >= 0)",
-"LeadsDoNotPostLogActivate": true,
-"LeadsDoNotPost": true,
-
-
--------------------
-
-"leadQualityConfig": {
-        "LeadsDoNotPost": true,
-        "LeadQualityExpression": "lead_score>=0",
-        "LeadsDoNotPostLogActivate": true
-},
-
-
-----------------------
-
-
-"leadQualityConfig": [
-{
-    "LeadQualityExpression": "(lead_score  >= 0) ",
-    "LeadsDoNotPost": true,
-    "LeadsDoNotPostLogActivate": true,
-    "AMMDoNotFireConversion": true,
-    "AMMDoNotFireConversionLogActivate": true,
-    "AMMDoNotCreditTxnID": true,
-    "AMMDoNotCreditTxnIDLogActivate": true,
-    "RedirectTo": "403"
-},
-{
-    "LeadQualityExpression": "(lead_score  >= 6)",
-    "AMMDoNotFireConversion": false,
-    "AMMDoNotFireConversionLogActivate": true
-}
-]
-
--------------------------
-
-"leadQualityConfig": [
-{
-    "LeadQualityExpression": "(lead_score >= 0) ",
-    "LeadsDoNotPost": true,
-    "LeadsDoNotPostLogActivate": true,
-    "AMMDoNotFireConversion": true,
-    "AMMDoNotFireConversionLogActivate": true,
-    "AMMDoNotCreditTxnID": true,
-    "AMMDoNotCreditTxnIDLogActivate": true,
-    "RedirectTo": "403"
-},
-{
-    "LeadQualityExpression": "(lead_score >= 2) ",
-    "LeadsDoNotPost": false,
-    "LeadsDoNotPostLogActivate": true,
-    "AMMDoNotFireConversion": true,
-    "AMMDoNotFireConversionLogActivate": true,
-    "AMMDoNotCreditTxnID": true,
-    "AMMDoNotCreditTxnIDLogActivate": true,
-    "RedirectTo": "403"
-}
-]
-
----------------------------
-
-"leadQualityConfig":{
-    "LeadQualityExpression": "(lead_score >= 0) ",
-    "LeadsDoNotPost": true,
-    "LeadsDoNotPostLogActivate": true,
-}
+What to test?
+    - Coverage/Cases for current feature
+        - Current understanding
+        - Reference of older cases for similar/same feature
+    - Features that would be impacted due to current feature
+        - Reference of older cases of feature
+    - Features that impacts current feature
+        - Reference of older cases of feature

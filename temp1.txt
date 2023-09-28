@@ -174,3 +174,66 @@ Partial configs
     - No other available - matching
     - Available on only current
     - Available on next entity
+
+
+------------------------------------
+
+"leadQualityConfig": [
+{
+    "LeadQualityExpression": "(lead_score >= 0) ",
+    "LeadsDoNotPost": true,
+    "LeadsDoNotPostLogActivate": true,
+    "AMMDoNotFireConversion": true,
+    "AMMDoNotFireConversionLogActivate": true,
+    "AMMDoNotCreditTxnID": true,
+    "AMMDoNotCreditTxnIDLogActivate": true,
+    "RedirectTo": "403"
+},
+{
+    "LeadQualityExpression": "(lead_score >= 2) ",
+    "LeadsDoNotPost": false,
+    "LeadsDoNotPostLogActivate": true,
+    "AMMDoNotFireConversion": true,
+    "AMMDoNotFireConversionLogActivate": true,
+    "AMMDoNotCreditTxnID": true,
+    "AMMDoNotCreditTxnIDLogActivate": true,
+    "RedirectTo": "403"
+}
+]
+
+
+------------------ redirect to
+
+https://qa-v1.freesamplesprousa.com/api/survey/get-json-details?key=jsonset:campaign:survey:user:leadquality:e1d0727f-89ae-4cc4-89fd-a9a52e4c1e4d
+
+"RedirectTo": "403 | Offerwall | Fulfillment" (Redirect at HP Complete)
+
+Events
+    - LeadQualityRedirectTo
+    - LeadQualityRedirectToTrigger
+
+
+- Config is not set
+- Config is set
+    - Threshold Crossed
+        - redirect to thank you
+        - redirect to offerwall
+        - redirect to 403
+            events
+    - Not crossed
+
+    - different levels
+
+
+ "leadQualityConfig": [
+        {
+            "RedirectTo": "Offerwall",
+            "LeadsDoNotPost": false,
+            "AMMDoNotCreditTxnID": true,
+            "LeadQualityExpression": "(lead_score >= 0) ",
+            "AMMDoNotFireConversion": true,
+            "LeadsDoNotPostLogActivate": true,
+            "AMMDoNotCreditTxnIDLogActivate": true,
+            "AMMDoNotFireConversionLogActivate": true
+        }
+    ],

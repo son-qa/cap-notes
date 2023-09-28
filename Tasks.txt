@@ -62,8 +62,38 @@ Q2 → o1 = offer1_qa, o2
 Now if offer1_qa gets pruned during survey pruning then ‘o1’ from q1 will be removed
 
 
+================== Core ==================
 
-================== ONO ==================
+Lead quality - action taken based upon score
+	- https://trello.com/c/Htt7V63k/3730-lead-quality-lead-postings-do-not-post-lead-to-advertiser-based-on-bad-quality-score-of-session
+	- Based on the scores generated, actions would be taken:
+		- Flag 'LeadsDoNotPostLogActivate'
+			- when flag is true and expressions evaluates to true event 'LeadsDoNotPostLogging' logs would be registered
+		- Flag 'LeadsDoNotPost'
+			- when flag is true and expressions evaluates to true event 'LeadsDoNotPost' leads not be posted
+	- Sample config
+		"leadQualityConfig": [
+		{
+		    "LeadQualityExpression": "(lead_score >= 0) ",
+		    "LeadsDoNotPost": true,
+		    "LeadsDoNotPostLogActivate": true,
+		    "AMMDoNotFireConversion": true,
+		    "AMMDoNotFireConversionLogActivate": true,
+		    "AMMDoNotCreditTxnID": true,
+		    "AMMDoNotCreditTxnIDLogActivate": true,
+		    "RedirectTo": "403"
+		}
+		]
+	- The config can be set on multiple levels - hierarchy - offer > exp > camp > site
+	- The flags which are missing on the current hierarchy level would be fetch from the immediate next hierarchy (will be picked only if the expression of that config is satisfied)
+	- Multiple configs can be present on the same level
+	- 
+
+
+================== Ops interface ==================
+
+
+================== CMT ==================
 
 
 All table optimization #ono
