@@ -237,3 +237,11 @@ Events
             "AMMDoNotFireConversionLogActivate": true
         }
     ],
+
+
+-------- prod
+
+https://freesamplesprousa.com/?cid=sprzg&test=1&var=405&exp=FSPU-Personalized-Auto-Rank-CstmLP
+
+sus - 110209900
+normal - 110210198

@@ -1,6 +1,14 @@
 ToDo:
-	- leadgen-automation-test setup
-	- .\init.ps1 D:\GitHub\leadgen-platform-api\ master-local D:\GitHub\freesamplesprousa.com\ master
+	- Create test variants on live
+	- offer 1,2,3 setup
+	- ini file
+	- env file
+	- https://trello.com/c/Z9vOqND2/3789-delayed-lead-exclusivity-check-optimization
+	- https://trello.com/c/O1Ng6zmq/3790-live-lead-exclusivity-check-optimization
+		- Post completion reset
+			- offers - flags, delayed posting, exlcusivity
+			- exp - flag
+			- category - exclusivity
 
 
 Secondary:
@@ -72,4 +80,6 @@ https://freesamplesprousa.com/?cid=21eo8&test=1&var=405&exp=FSPU-Personalized-Au
 
 
 ---------------
+
+https://gitlab.com/cap_tech1/frontend/freesamplesprousa.com/-/issues/3932
 
