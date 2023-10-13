@@ -37,33 +37,33 @@ Issues
 --------
 
 
-Time Window (o2 has higher bid) (both have offers delayed) Catergory Exclusive (offer not)
-    o2 first, o1 later
+Time Window (c2 has higher bid) (both have offers delayed) Catergory Exclusive (offer not)
+    c2 first, c1 later
         - 110930349 - unmatched
         - 111073985 - matched (check on sept 6)
-    o2 later, o1 first
-        - 111077043 - matched (o2 got posted) (check on sept 6)
-        - 111080884 - (o2 does not have delayed on) (check on sept 6)
+    c2 later, c1 first
+        - 111077043 - matched (c2 got posted) (check on sept 6)
+        - 111080884 - (c2 does not have delayed on) (check on sept 6)
 
 
-Offer exclusive (category not) (o1 has higher bid)
+Offer exclusive (category not) (c1 has higher bid)
     - Offers are not exclusive but delayed - 111087407
-    - o1 exlcusive o2 not
-        - o1 delayed - 111098255 - o1, o2 both posted - check with arihant why both are posted
-        - o2 delayed - 111098497 - only o1 posted - check with arihant why delayed event are not persent
+    - c1 exlcusive c2 not
+        - c1 delayed - 111098255 - c1, c2 both posted - check with arihant why both are posted
+        - c2 delayed - 111098497 - only c1 posted - check with arihant why delayed event are not persent
         - both delayed
-            - o1 first then o2 - 
-            - o2 first then o1 - 111097172 - both are posted - check with arihant why both are posted, ideally only o1 shouldn't have been posted
-    - o2 exclusive o1 not
-        - o1 delayed - 111099676 - only o2 posted
-        - o2 delayed - 111101871 - only o1 got posted - check with Arihant why o2 was not posted
+            - c1 first then c2 - 
+            - c2 first then c1 - 111097172 - both are posted - check with arihant why both are posted, ideally only c1 shouldn't have been posted
+    - c2 exclusive c1 not
+        - c1 delayed - 111099676 - only c2 posted
+        - c2 delayed - 111101871 - only c1 got posted - check with Arihant why c2 was not posted
         - both delayed
     - both exlcusive
-        - o1 delayed
-        - o2 delayed
+        - c1 delayed
+        - c2 delayed
         - both delayed
-            - o1 first then o2 - 111088011 - o1 posted, o2 queued
-            - o2 first then o1 - 111089557 - o2 posted, o1 not queued - concern
+            - c1 first then c2 - 111088011 - c1 posted, c2 queued
+            - c2 first then c1 - 111089557 - c2 posted, c1 not queued - concern - recheck
 
 
 User comes again
@@ -81,3 +81,6 @@ Bid value
     - Higher bid offer is posted - done
 
 
+
+
+    - 

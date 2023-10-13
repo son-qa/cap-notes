@@ -1,0 +1,57 @@
+import requests
+import json
+
+url = "https://campaignmanager-user-service-staging-private.cap-cloud.co/api/v1/users"
+
+count = 200
+# email = f"jamie{count}@customer-acquisition.co"
+# leadgenSessionId = f'abcd-xyz-{count}'
+leadgenUserId = 212151200
+
+for i in range(101):
+    email = f"jamie{count}@customer-acquisition.co"
+    leadgenSessionId = f'abcd-xyz-{count}'
+    payload = json.dumps({
+        "address": "NY",
+        "city": "NY",
+        "country": "US",
+        "dob": "2002-01-01",
+        "domain": "freesamplesprousa.com",
+        "email": email,
+        "emailDomain": "sportrid.com",
+        "firstName": "Jyoti",
+        "gender": "Male",
+        "ip": "198.168.0.1",
+        "lastName": "Yaday",
+        "leadgenCid": "vn1ws",
+        "leadgenEncKey": "93eb7aca99109f4981f2083398d244c3f752031d3fad579085fce52c6980d9ed",
+        "leadgenSessionId": leadgenSessionId,
+        "leadgenTags": [
+            "jyoti"
+        ],
+        "leadgenUserId": leadgenUserId,
+        "optinDate": 1697110536,
+        "parentDomain": "freesamplesprousa.com",
+        "phone": 5048316788,
+        "state": "NY",
+        "status": "UNCONFIRMED",
+        "subcid": "blxu5",
+        "timezone": "-07:00",
+        "type": "EMAIL",
+        "url": "https://freesamplesprousa.com",
+        "zip": "10101"
+    })
+
+    headers = {
+        'Authorization': 'Basic Y2FtcGFpZ25tYW46cm9mdEtSVTFob2ZmMHNsZQ',
+        'Content-Type': 'application/json'
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload)
+
+    # print(f'Iteration: {i} - {email}' + response.text)
+
+    # print(i, count, email, leadgenSessionId, leadgenUserId)
+
+    count += 1
+    leadgenUserId += 1

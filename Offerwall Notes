@@ -61,5 +61,7 @@ Offerwall links
 
 Offerwall autoranking DB
 	Stage
-		- offerwall_ranking
-		- offerwall_ranking_groups
+		- offerwall_ranking - ranking
+		- offerwall_ranking_groups - ranking group, exploratory slots, exploratory slot position
+		- exp level flag - offerwallRankingStrategy - 
+		- exp level flag - offerwallRankingGroup - to set which ranking group to use
