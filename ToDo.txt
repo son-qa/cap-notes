@@ -9,9 +9,7 @@ ToDo:
 			- exp - flag
 			- category - exclusivity
 			- canary user = 112417851
-	- Top experiments in use
 	- https://trello.com/c/k9NXjGUN/1017-maker-checker-role
-	- CCPA - request for information behaviour - follow up
 
 
 Secondary:
@@ -89,5 +87,15 @@ https://trello.com/c/jTiybf83/844-tcpa-disclaimer-discrepancies
 
 pytest -rA -v -p no:logging --html=leadgen\reports\fullTCPA.html leadgen\test_cases\test_full_tcpa.py
 
+M@ster0swal
+
 --------------------------------------------------
 
+https://github.com/topics/tempmail-api
+
+https://github.com/krypton-byte/xtempmail
+
+https://github.com/riz4d/TempMail-Bot
+
+"userId": 113657483,
+"leadId": 77960379,
