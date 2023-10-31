@@ -2,25 +2,24 @@ ToDo:
 	- Create test variants on live
 	- ini file
 	- env file
+	- gmail leave filter
+	- forceExperiment=1 abv3 URL parameter
 
-	- https://trello.com/c/O1Ng6zmq/3790-live-lead-exclusivity-check-optimization
-		- Post completion reset
-			- offers - flags, delayed posting, exlcusivity
-			- exp - flag
-			- category - exclusivity
-			- canary user = 112417851
-	- https://trello.com/c/k9NXjGUN/1017-maker-checker-role
+	- Live lead on prod
+		- 115754998
 
+	- Delayed exvlusivity
+		- With offer flag - 115777127
+		- Without offer flag - 115799728
+
+		115803828
+
+	- https://trello.com/c/sn3vJrlK/3838-handling-required-in-survey-to-not-increase-impression-counter-for-leads-qualified-as-bad-else-offer-rpms-will-get-diluted
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
-	- Revamp compliance email body/report
-	- Update compliance sheet - tabs, checklist, test cases, 
 	- Postman - variables, enviroment, sites for CCPA
 	- CCPA test planning
-	- https://github.com/typhoon-hil/allure-docx
-	- Allure reporting - jyoti (allure-docx, ctrl+p, )
-	- CCPA automation
 	- Create test variants on live
 
 

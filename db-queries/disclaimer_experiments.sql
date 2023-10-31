@@ -10,8 +10,8 @@ and experiment_slug not in
 'TAS-Pre-Filled-Reg') 
 order by experiment_type desc ;
 
--- https://freesamplesprousa.com/?test=1&var=405&cid=21eo8&exp=TASF-Lander-Flow
--- https://theamericansweepstakes.com/?test=1&var=405&cid=n9gb2&exp=TAS-Pre-Filled-Reg
+-- https://freesamplesprousa.com/?test=1&var=405&cid=21eo8&exp=FSPU-Personalized-Dynamic2-Flow
+-- https://theamericansweepstakes.com/?test=1&var=405&cid=n9gb2&exp=DAS-Lander-Flow-V2
 
 -- select * from campaign_master where site_id in (1)
 -- and campaign_slug not in ('has03', 'vv3dp') and is_active = 1 ;
