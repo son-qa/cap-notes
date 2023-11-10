@@ -5,16 +5,13 @@ ToDo:
 	- gmail leave filter
 	- forceExperiment=1 abv3 URL parameter
 
-	- Live lead on prod
-		- 115754998
+	- https://trello.com/c/ZSaBrHoz/3808-fulfilment-offer-and-status-to-be-db-driven
 
-	- Delayed exvlusivity
-		- With offer flag - 115777127
-		- Without offer flag - 115799728
+	- https://trello.com/c/bkvaFkeN/3854-ow-retargeting-via-cmt
 
-		115803828
+	- https://trello.com/c/bxc3WXsQ/3876-start-logging-site-level-data-for-ow-conversions-due-to-ow-expanding-to-other-domains
 
-	- https://trello.com/c/sn3vJrlK/3838-handling-required-in-survey-to-not-increase-impression-counter-for-leads-qualified-as-bad-else-offer-rpms-will-get-diluted
+	- https://trello.com/c/ONwNhY0G/3870-ow-ability-to-cap-the-number-of-offers-shown-on-any-tier-instead-of-showing-all-list-of-available-offers
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
@@ -56,15 +53,6 @@ Validation scope:
 
 -------------------------------------------------
 
-Local setup - https://gitlab.com/cap_tech1/sre/developer-setup-scripts/-/tree/master
-
-WSL - user
-
-username - sanket
-password - 1234
-
--------------------------------------------------
-
 python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=regression-compliance
 python -m behave @rerun_failing.features
 allure serve output/reports/ to generate html reports
@@ -84,17 +72,5 @@ https://freesamplesprousa.com/?cid=21eo8&test=1&var=405&exp=FSPU-Personalized-Au
 https://trello.com/c/jTiybf83/844-tcpa-disclaimer-discrepancies
 
 
-pytest -rA -v -p no:logging --html=leadgen\reports\fullTCPA.html leadgen\test_cases\test_full_tcpa.py
-
-M@ster0swal
-
 --------------------------------------------------
 
-https://github.com/topics/tempmail-api
-
-https://github.com/krypton-byte/xtempmail
-
-https://github.com/riz4d/TempMail-Bot
-
-"userId": 113657483,
-"leadId": 77960379,

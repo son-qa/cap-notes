@@ -1,30 +1,77 @@
-https://trello.com/c/sn3vJrlK/3838-handling-required-in-survey-to-not-increase-impression-counter-for-leads-qualified-as-bad-else-offer-rpms-will-get-diluted
-
-Exp ID - 253
-Variant ID - 587
+https://trello.com/c/bkvaFkeN/3854-ow-retargeting-via-cmt
 
 
-offerruletypecampehancerpm_new
-offerruletypecampehancerpm_history
+>select('user_master_pii.user_id','user_master_pii.user_first_name','user_master_pii.user_last_name','user_master_pii.user_mobile',
+
+ 'user_master_pii.user_dob','user_master_pii.encryption_key', 'user_master_pii.user_email_address',
+
+ 'user_master_pii.user_zip_code','user_master_pii.ip_address', 'user_master_pii.user_address',
+
+ 'user_master_pii.user_city_name', 'user_master_pii.user_gender', 'user_master_pii.user_state_code',
+
+ 'user_master.json_metadata')
 
 
-To cover:
-    - Lead posting
-        - delayed
-        - auto
-        - optin - 115809875
-        - optout - 115811231
+---------------------
 
-    - Trsuted form
-    - journaya
+phamanathon@gmail.com - a7ba005e00ca681716f353b4cdd0fa78
 
-    - Flows
-        - Full
-        - Reg - 115815956
-        - Land - 115815669
+fiximor367@mkurg.com - abeed25242d543ba7a89f17ca8fc4ac6
+(212154627, 212154642)
 
-    - Exclusivity
-    - Live lead
-    - Delayed exlcusivity
-    - Lead quality
-    - 
+verohov620@eazenity.com - e62242dccffab5ae5e7bf8f357c121f7
+(212154652, 212154655)
+
+
+
+"t8": "1000CashApp",
+
+
+https://creatives.primerewardspot.com/email-template/prs/variant-1/no_conversion_1.html
+
+---------------------
+
+Scenarios
+
+- Request level
+    - Authorization
+    - Invalid headers
+    - Body
+        - variant id - not available, duplicate, inactive
+    - Overriding request parameters - when not sent
+
+Reponse
+    - html
+    - remaining day & time
+    - subject
+    - variant - available, all inactive, non available variant
+    - macros in subject
+
+
+- User's existence
+    - Does not exist
+    - Exist but on site_id !=34, =34
+    - Profile score - complete, incomplete
+    - Conversion - Converted, not converted
+    - redis - exists, expired
+    - mulitple profiles
+
+- HTML
+    - converted
+        - dyanmic count - multiple, sinlge, duplicate conversions
+    - non converted
+
+- User's hook
+    - No hook/does not exissts
+    - different hooks/exists
+
+- html template returned
+
+-----------------------
+
+- Email - what all should be clickable - should redirect where?
+- End to end
+- what data would be picked when user has multiple OW visits
+- what happens when the cid sent is not valid, is inactive
+- Hooks - each possible hook combination for converted non converted users
+- check autoprepop on live

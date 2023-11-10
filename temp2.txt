@@ -1,86 +1,16 @@
-https://trello.com/c/O1Ng6zmq/3790-live-lead-exclusivity-check-optimization
-
-
-            
-
-
-Is category exlcusive
-
-First offer posted
-    - is exclusive
-    - delayed
-
-Offers in que (sorted as per bid value)
-    2nd
-        - is exclusive
-        - delayed
-    3rd
-        - is exclusive
-        - delayed
+- https://trello.com/c/bxc3WXsQ/3876-start-logging-site-level-data-for-ow-conversions-due-to-ow-expanding-to-other-domains
 
 
 
 
-------------------  Delayed + Exclusive
-
-https://freesamplesprousa.com/?cid=f6gu2&test=1&exp=QA-FLOW-ComplianceTest
-
-
-Live - 110920013 - offer with lower bid value was posted
-
-
-Issues
-    - Multiple DelayedDequeue event
-    - No entries in the jobs table
-
-
---------
-
-
-Time Window (c2 has higher bid) (both have offers delayed) Catergory Exclusive (offer not)
-    c2 first, c1 later
-        - 110930349 - unmatched
-        - 111073985 - matched (check on sept 6)
-    c2 later, c1 first
-        - 111077043 - matched (c2 got posted) (check on sept 6)
-        - 111080884 - (c2 does not have delayed on) (check on sept 6)
-
-
-Offer exclusive (category not) (c1 has higher bid)
-    - Offers are not exclusive but delayed - 111087407
-    - c1 exlcusive c2 not
-        - c1 delayed - 111098255 - c1, c2 both posted - check with arihant why both are posted
-        - c2 delayed - 111098497 - only c1 posted - check with arihant why delayed event are not persent
-        - both delayed
-            - c1 first then c2 - 
-            - c2 first then c1 - 111097172 - both are posted - check with arihant why both are posted, ideally only c1 shouldn't have been posted
-    - c2 exclusive c1 not
-        - c1 delayed - 111099676 - only c2 posted
-        - c2 delayed - 111101871 - only c1 got posted - check with Arihant why c2 was not posted
-        - both delayed
-    - both exlcusive
-        - c1 delayed
-        - c2 delayed
-        - both delayed
-            - c1 first then c2 - 111088011 - c1 posted, c2 queued
-            - c2 first then c1 - 111089557 - c2 posted, c1 not queued - concern - recheck
-
-
-User comes again
-    - When delayed is enabled (on both offers)
-        - Comes within exlcusivity period
-        - Comes after exclusivity period
-    - When delayed is not enabled
-        - Comes within exlcusivity period
-            - First time - 111105753
-            - Second time - 111106045
-        - Comes after exclusivity period
-
-
-Bid value
-    - Higher bid offer is posted - done
 
 
 
 
-    - 
+- https://trello.com/c/ONwNhY0G/3870-ow-ability-to-cap-the-number-of-offers-shown-on-any-tier-instead-of-showing-all-list-of-available-offers
+    - exp level
+
+    - test on canary
+
+    - cases
+        - 5 limit, exp is at 7
