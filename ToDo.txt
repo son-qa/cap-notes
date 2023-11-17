@@ -5,13 +5,12 @@ ToDo:
 	- gmail leave filter
 	- forceExperiment=1 abv3 URL parameter
 
-	- https://trello.com/c/ZSaBrHoz/3808-fulfilment-offer-and-status-to-be-db-driven
-
 	- https://trello.com/c/bkvaFkeN/3854-ow-retargeting-via-cmt
 
-	- https://trello.com/c/bxc3WXsQ/3876-start-logging-site-level-data-for-ow-conversions-due-to-ow-expanding-to-other-domains
-
 	- https://trello.com/c/ONwNhY0G/3870-ow-ability-to-cap-the-number-of-offers-shown-on-any-tier-instead-of-showing-all-list-of-available-offers
+		- frequency capping
+
+	- redis expiry
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
@@ -61,6 +60,7 @@ allure-docx output/reports/ filename.docx
 python -m behave --tags=sanket
 
 https://qa-v1.freesamplesprousa.com/?test=1&cid=qa-slug1&exp=Flow2-qa-v1-QA-Only
+
 https://qa-v2.freesamplesprousa.com/?test=1&cid=qa-slug2&exp=Flow1-QA-Only
 
 
@@ -71,6 +71,9 @@ https://freesamplesprousa.com/?cid=21eo8&test=1&var=405&exp=FSPU-Personalized-Au
 
 https://trello.com/c/jTiybf83/844-tcpa-disclaimer-discrepancies
 
+#2851e1
+
+#FFAEFF or #F832F8 or #FF7CFF
 
 --------------------------------------------------
 
