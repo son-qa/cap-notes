@@ -1,239 +1,77 @@
-env qa-v1
-session based lead quality
-
-site config - default scores
-
-"lead_score": 2.745, (lower the better)
-"lead_score_minimal": 2 (lower the better),
-    - $num_ips_score + $ip_state_mismatch_score + $fast_revenue_score + $system_single_optin_score;
+https://trello.com/c/bkvaFkeN/3854-ow-retargeting-via-cmt
 
 
-"user_clicked_or_touched": touch/click
-"user_clicked_or_touched_score": > 0 is bad, 0 is good score
+>select('user_master_pii.user_id','user_master_pii.user_first_name','user_master_pii.user_last_name','user_master_pii.user_mobile',
 
+ 'user_master_pii.user_dob','user_master_pii.encryption_key', 'user_master_pii.user_email_address',
 
-"num_ips_score": 2
+ 'user_master_pii.user_zip_code','user_master_pii.ip_address', 'user_master_pii.user_address',
 
-"ip_state_mismatch_score": 0,
-    if more than 1 ips then increase score
-    netacuity ip based
-    if not match then score is given
-    test with netacuity on demo
+ 'user_master_pii.user_city_name', 'user_master_pii.user_gender', 'user_master_pii.user_state_code',
 
-    "ip_state_mismatch_values": [
-        0,
-        0,
-        0
-    ],
+ 'user_master.json_metadata')
 
-    "ips": [
-        "122.169.63.217",
-        "165.22.14.114"
-    ],
-
-
-"fast_survey_score": 0.7450000000000001 (threshold < 2.2 secs)
-    - avg_question_time is sum(total time consumed)/sum(number of questions)
-    - sum(total time consumed) = time_per_question -> [] of time taken per question
-        - question_time = is set on each quesiton impr and reset on each new question impression
-    - 3 - min(avg q time, 3)
-
-
-blind_revenue_score: 
-    - single optin questions (yes/no questions only)
-    - `Min(Optin-rates/avg, 3)`, here avg=0.06
-        - optin-rates = number of question_type 1 answered positively / number of questions
-            - "system_single_optin_questions" variable is number of question type 1 answered positively
-
-"fast_revenue_score": sum of total revenue / number of questions -> (threshold > 0.013)
-    - sum of total revenue = "expected_revenue" variable
-
-
-site, 
-campagin, 
-experiment, 
-offer
-    leadQualityConfig {
-        "type": "and",
-        "fields": [
-{
-        "type": "and",
-        "fields": [
-            {
-                "type": "selector",
-                "dimension": "num_ips_score",
-                "value": 3,
-                "operator": "!="
-            },
-            {
-                "type": "selector",
-                "dimension": "ip_state_mismatch_score",
-                "value": 3,
-                "operator": ">="
-            }
-        ]
-    },
-            {
-                "type": "selector",
-                "dimension": "ip_state_mismatch_score",
-                "value": 3,
-                "operator": ">="
-            }
-        ]
-    }
-
-    LeadsDoNotPostLogActivate: true/false (event = LeadsDoNotPostLogging)
-    LeadsDoNotPost: true/false (event = LeadsDoNotPost)
-
-[
- 'lead_score' ,
- 'lead_score_minimal',
- 'fast_survey_score' ,
- 'fast_revenue_score',
- 'num_ips_score' ,
- 'ip_state_mismatch_score' ,
- 'user_clicked_or_touched_score' ,
- 'system_single_optin_score'
-]
-
-api:
-https://qa-v1.freesamplesprousa.com/api/survey/get-json-details?key=jsonset:campaign:survey:user:leadquality:e1d0727f-89ae-4cc4-89fd-a9a52e4c1e4d
-
-getLeadQualityStatus
-
-
--------------------------------------------
-
-Scoring mechanism
-
-Individual metrics calculation
-    - user_clicked_or_touched
-    - num_ips_score
-    - ip_state_mismatch_score
-    - fast_survey_score
-    - blind_revenue_score
-    - fast_revenue_score
-    - lead_score
-    - lead_score_minimal
-
-
-Decision making:
-    - Configs
-        - LeadsDoNotPostLogActivate
-        - LeadsDoNotPost
-        - leadQualityConfig
-            - each key
-            - operators
-    - Rule
-        - Single metrics - Individual metrics
-        - Multiple metrics
-            - AND
-            - OR
-    - Complex rule - tree structure
-    - Config level
-    - Config present at multiple levels
-    - LeadsDoNotPostLogActivate, LeadsDoNotPost, leadQualityConfig - each one is on different levels or mutiple levels
-    - Impact on email offer, tcpa offer, aged offer
-    - Impact on Autoposting, Delayed posting
 
 ---------------------
 
-Works on campaign level
-Works on offer level
-Skips if the flag is missing
-Mulitple level
+phamanathon@gmail.com - a7ba005e00ca681716f353b4cdd0fa78
+
+fiximor367@mkurg.com - abeed25242d543ba7a89f17ca8fc4ac6
+(212154627, 212154642)
+
+verohov620@eazenity.com - e62242dccffab5ae5e7bf8f357c121f7
+(212154652, 212154655)
+
+
+
+"t8": "1000CashApp",
+
+
+https://creatives.primerewardspot.com/email-template/prs/variant-1/no_conversion_1.html
 
 ---------------------
 
-Functionality
-    - Log
-    - Post
-    - Expression
-Entity level
-    - Offer
-    - Exp
-    - Camp
-    - Site
-Types of offers
-    - Aged
-    - Email
-    - TCPA -> auto, delayed
+Scenarios
 
-Multiple expression on one entity:
-    - None satisfy
-    - One satisfy
-    - Multiple satisfy
+- Request level
+    - Authorization
+    - Invalid headers
+    - Body
+        - variant id - not available, duplicate, inactive
+    - Overriding request parameters - when not sent
 
-Mulitiple vs multiple
-    - None on none level satisfy
-    - One on current level
-    - One on another level
-    - Multiple on current level
-
-Partial configs
-    - No other available - matching
-    - Available on only current
-    - Available on next entity
+Reponse
+    - html
+    - remaining day & time
+    - subject
+    - variant - available, all inactive, non available variant
+    - macros in subject
 
 
-------------------------------------
+- User's existence
+    - Does not exist
+    - Exist but on site_id !=34, =34
+    - Profile score - complete, incomplete
+    - Conversion - Converted, not converted
+    - redis - exists, expired
+    - mulitple profiles
 
-"leadQualityConfig": [
-{
-    "LeadQualityExpression": "(lead_score >= 0) ",
-    "LeadsDoNotPost": true,
-    "LeadsDoNotPostLogActivate": true,
-    "AMMDoNotFireConversion": true,
-    "AMMDoNotFireConversionLogActivate": true,
-    "AMMDoNotCreditTxnID": true,
-    "AMMDoNotCreditTxnIDLogActivate": true,
-    "RedirectTo": "403"
-},
-{
-    "LeadQualityExpression": "(lead_score >= 2) ",
-    "LeadsDoNotPost": false,
-    "LeadsDoNotPostLogActivate": true,
-    "AMMDoNotFireConversion": true,
-    "AMMDoNotFireConversionLogActivate": true,
-    "AMMDoNotCreditTxnID": true,
-    "AMMDoNotCreditTxnIDLogActivate": true,
-    "RedirectTo": "403"
-}
-]
+- HTML
+    - converted
+        - dyanmic count - multiple, sinlge, duplicate conversions
+    - non converted
 
+- User's hook
+    - No hook/does not exissts
+    - different hooks/exists
 
------------------- redirect to
+- html template returned
 
-https://qa-v1.freesamplesprousa.com/api/survey/get-json-details?key=jsonset:campaign:survey:user:leadquality:e1d0727f-89ae-4cc4-89fd-a9a52e4c1e4d
+-----------------------
 
-"RedirectTo": "403 | Offerwall | Fulfillment" (Redirect at HP Complete)
-
-Events
-    - LeadQualityRedirectTo
-    - LeadQualityRedirectToTrigger
-
-
-- Config is not set
-- Config is set
-    - Threshold Crossed
-        - redirect to thank you
-        - redirect to offerwall
-        - redirect to 403
-            events
-    - Not crossed
-
-    - different levels
-
-
- "leadQualityConfig": [
-        {
-            "RedirectTo": "Offerwall",
-            "LeadsDoNotPost": false,
-            "AMMDoNotCreditTxnID": true,
-            "LeadQualityExpression": "(lead_score >= 0) ",
-            "AMMDoNotFireConversion": true,
-            "LeadsDoNotPostLogActivate": true,
-            "AMMDoNotCreditTxnIDLogActivate": true,
-            "AMMDoNotFireConversionLogActivate": true
-        }
-    ],
+- Email - what all should be clickable - should redirect where?
+- End to end
+- what data would be picked when user has multiple OW visits
+- what happens when the cid sent is not valid, is inactive
+- Hooks - each possible hook combination for converted non converted users
+- check autoprepop on live

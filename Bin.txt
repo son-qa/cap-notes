@@ -19,6 +19,8 @@ experimentConfig
 
 ==================================================================
 
+My testing elements on live
+
 5007 - mjtbc - clone
 
 1002320 - CRUD-Test-QA-Sanket - create
@@ -27,7 +29,9 @@ experimentConfig
 
 307 - CRUD-Test-QA-Sanket - create bucket
 
-https://freesamplesprousa.com/?test=1&cid=mjtbc&exp=CRUD-Test-QA-Sanket
+ab_v2 -  - 
+
+https://freesamplesprousa.com/?test=1&cid=mjtbc&exp=CRUD-Test-QA-Sanket&var=405
 
 https://freesamplesprousa.com/?test=1&cid=mjtbc&var=405&exp=FSPU-Personalized-Auto-Rank-CstmLP
 
@@ -115,4 +119,28 @@ if dupUsermethod = phone email hash
 user_master -> json_metadata -> dupusermethod
 
 =========================================
+
+HP offers returned on stage
+
+["abb7d06a-5b88-4c39-8acc-cbb24a813ffe","2556db45-2adf-41b2-b0ba-f7cf2b1d39c1","b8abef74-add6-480c-894a-0ffaef9a46c0","b4a31218-8f53-40f9-83e9-535f080c8440","a3a177f4-5fa2-4665-b837-c5453688ad03","53129093-cf41-4659-936c-94c70485413e","9d503b07-40be-4dfd-8d9a-112fa5469bc8","6f70e4ba-0824-412b-9770-4bba12117cd6","ccbff4d6-e311-472d-ad4b-211c16c8bfb1","afbf8f9d-cef4-4d06-85c6-6b6ce123a634","a70101d6-d641-test-test-664f1c9cc44d"]
+
+HP Offers on stage
+
+('b4a31218-8f53-40f9-83e9-535f080c8440',
+'b8abef74-add6-480c-894a-0ffaef9a46c0',
+'9d503b07-40be-4dfd-8d9a-112fa5469bc8',
+'afbf8f9d-cef4-4d06-85c6-6b6ce123a634',
+'a3a177f4-5fa2-4665-b837-c5453688ad03',
+'2556db45-2adf-41b2-b0ba-f7cf2b1d39c1',
+'6f70e4ba-0824-412b-9770-4bba12117cd6',
+'ccbff4d6-e311-472d-ad4b-211c16c8bfb1',
+'abb7d06a-5b88-4c39-8acc-cbb24a813ffe',
+'53129093-cf41-4659-936c-94c70485413e',)
+
+
+----------------------------------------------------
+
+
+avaialble offers for use on staging
+['b4a31218-8f53-40f9-83e9-535f080c8440', 'b8abef74-add6-480c-894a-0ffaef9a46c0', '9d503b07-40be-4dfd-8d9a-112fa5469bc8', 'afbf8f9d-cef4-4d06-85c6-6b6ce123a634', 'a3a177f4-5fa2-4665-b837-c5453688ad03', '2556db45-2adf-41b2-b0ba-f7cf2b1d39c1', '6f70e4ba-0824-412b-9770-4bba12117cd6', 'ccbff4d6-e311-472d-ad4b-211c16c8bfb1', 'abb7d06a-5b88-4c39-8acc-cbb24a813ffe', '53129093-cf41-4659-936c-94c70485413e']
 

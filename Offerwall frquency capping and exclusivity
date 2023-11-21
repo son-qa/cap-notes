@@ -8,8 +8,8 @@ https://stage.primerewardspot.com/?cid=ybcjn&test=1&exp=prs-stage-v3-test
 https://demo-prod.primerewardspot.com/?cid=9swmg&test=1&exp=PRS-offerwallv2-QA-Only
 
 #4 Impression configurable
-"offerVisbilityTimeOW":5000
-"offerVisbilityThresholdOW":0.5
+"offerVisibilityTimeOW":5000
+"offerVisibilityThresholdOW":0.5
 
 
 ---------------------------------------------
