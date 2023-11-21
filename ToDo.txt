@@ -1,36 +1,22 @@
 ToDo:
-	- Compliance Cses Update 
-		- CCPA
-			- Domains - 4 domains
-			- Correct My Information
-			- Request for Information
-			- Raw data - addition/deletion
-		- Disclaimer checks for random flows, add to list
-		- Skip reg
-			- skip reg - no notag tcpa leads
-			- skip lo - no tcpa leads
-		- VID checks
-	- Lead quality - https://trello.com/c/Htt7V63k/3730-lead-quality-lead-postings-do-not-post-lead-to-advertiser-based-on-bad-quality-score-of-session
-	- OW 4 changes - https://trello.com/c/ykdvvAJI/3754-ow-changes-session-based-frequency-capping-and-exclusivity-grouping-for-display-capping		
-	- Lead quality redirection - https://trello.com/c/MymSUkhs/3783-lead-quality-403-redirection-support
-	- OW on canary
-		test started on canary for these 3 offers and with tag name = petjoy
-		Exp ID = 205
-		Variant ID = 484
-		Test name = OW Offer Deduping
+	- Create test variants on live
+	- ini file
+	- env file
+	- gmail leave filter
+	- forceExperiment=1 abv3 URL parameter
 
+	- https://trello.com/c/bkvaFkeN/3854-ow-retargeting-via-cmt
+
+	- https://trello.com/c/ONwNhY0G/3870-ow-ability-to-cap-the-number-of-offers-shown-on-any-tier-instead-of-showing-all-list-of-available-offers
+		- frequency capping
+
+	- redis expiry
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
-	- Revamp compliance email body/report
-	- Update compliance sheet - tabs, checklist, test cases, 
 	- Postman - variables, enviroment, sites for CCPA
 	- CCPA test planning
-	- https://github.com/typhoon-hil/allure-docx
-	- Allure reporting - jyoti (allure-docx, ctrl+p, )
-	- CCPA automation
 	- Create test variants on live
-	- Local setup
 
 
 Requirement Gathering:
@@ -66,40 +52,6 @@ Validation scope:
 
 -------------------------------------------------
 
-Local setup - https://gitlab.com/cap_tech1/sre/developer-setup-scripts/-/tree/master
-
-WSL - user
-
-username - sanket
-password - 1234
-
--------------------------------------------------
-
-VID compliance
-
-global_cookie => data1
-
-domain_cookie => data2
-
-created on comparison => latest entry picked from data1 and data2
-
-latest data = dupUsermethod 
-
-default method = phoneEmailHash
-
-if dupUsermethod = global_cookie
-	current user = global_cookie
-if dupUsermethod = domain_cookie and old site = new site
-	current user = domain_cookie
-if dupUsermethod = phone email hash
-	current user = phone email hash
-
-
-user_master -> json_metadata -> dupusermethod
-
-
--------------------------------------------------
-
 python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=regression-compliance
 python -m behave @rerun_failing.features
 allure serve output/reports/ to generate html reports
@@ -108,9 +60,20 @@ allure-docx output/reports/ filename.docx
 python -m behave --tags=sanket
 
 https://qa-v1.freesamplesprousa.com/?test=1&cid=qa-slug1&exp=Flow2-qa-v1-QA-Only
+
 https://qa-v2.freesamplesprousa.com/?test=1&cid=qa-slug2&exp=Flow1-QA-Only
 
 
 https://freesamplesprousa.com/?cid=21eo8&test=1&var=405&exp=FSPU-Personalized-Auto-Rank-CstmLP
 
+
+---------------
+
+https://trello.com/c/jTiybf83/844-tcpa-disclaimer-discrepancies
+
+#2851e1
+
+#FFAEFF or #F832F8 or #FF7CFF
+
+--------------------------------------------------
 

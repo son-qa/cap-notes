@@ -1,22 +1,53 @@
-campaign_config = JSON_SET(campaign_config,'$.leadQualityConfig',JSON_ARRAY(
-    JSON_OBJECT('LeadsDoNotPost',true,'selectedFields',JSON_ARRAY(
-        'LeadsDoNotPostLogActivate','LeadsDoNotPost'
-    ),'LeadQualityExpression','lead_score_minimal>=6'
-    ,'LeadsDoNotPostLogActivate',true
-    )
-)) where campaign_slug in (
-    'ilvfe-1703','jnlgb-1703','isw3x-1703','sprzg','tdbrl','rjbhg-1682',
-    'qutd4','ualnz-1703','pqxtw-1703','btfgx','4pwsn','1jqav','1pps8',
-    '2drnh','3o3du','3vxqt','4cmny','4jz8j','4quzn','9bm96-1703','9j1bv',
-    '27fub','73i2p','a1hpk','alsyl','cjrlt','cvtyu','d5f5u','d7nfr','dpcvc',
-    'e9b1t','ej0hq','eyozu','f3cgi','ggdw4','gihm5','hn99g','hrwt9','hzbze',
-    'imkkj-1697','iuhmf','iyood','j77qx','jqjhg-1722','jzcml-1703','k6dpc',
-    'ki9xp-1650','kjihx','ktugu','lh4rc','lqkkf','md2li','mibdq','mnofz',
-    'mxk7g','nqdg9','nwr4e','oala5','offic','oghxp','okpxf','p5wvo','pe4bg-1722',
-    'pnfj5','pzihh','qrywh','qt98e','qyib2','qyvqk','r2va6','r8ox9','rda5w','repqj',
-    'rkycu','rqq0t','s2cek','s5x0d-1698','st03a','tfor4','tg00z-1722','tz4f4','u5grj',
-    'u7tzq-1682','ufdbz','v3mop','vhqky-1703','w2ayw','w9lud','wf5z0','wk2tv','wozmm',
-    'xdbxx','xhjou','xxqvz','ysqzt'
-)
-and JSON_EXTRACT(campaign_config,'$.leadQualityConfig') is null
+Elaborate device testing
 
+Add - about documentation - config documentation
+
+Add - tested Admin facing & client facing modules
+
+Add - module testing, integration testing
+
+Add - Experience in Geolocation testing with different time zones
+
+Add - given overviews to other members/juniors
+
+
+------------------------------------------------------------------------
+
+- Restructure - move relevant & important details on top
+
+- Profile description - can we make it sound like more experienced person?
+
+- Skills section - can we adjust the skills in such a way that it forms 3 columns? Would be easier to read
+
+- Experience section
+    - Add 2-3 lines about what project was -> this wil help to portray what have you worked on and what all things you would have done
+
+    - Zeus' exp - add individual projects - just as above it can help to add weightage to the experience
+
+    - Along with mobile application also mention web application
+
+    - Add - experience in working with scrum methodologies
+
+    - Add - coordinating with the developement team to ensure timely completion of the tasks/work/spring
+
+    - VERY IMPORTANT - Add - testing the functionality with respect to all the possible configurations of the application
+
+    - Introduce terminologies - cross-browser (for web and mobile app) & cross platform testing (for mpbile app)
+
+    - Add - Automating ngrok link update
+
+    - We need to think about adding the term 'STLC' in the experience (this applies for me as well)
+
+    - Add - addressing queries/tickets raised by the clients
+
+
+- How about we write the points in the experience (project/company exp) in a sequential manner? As in analysis comes first (or last), then test cases, then performing tests and so on...
+
+
+-----------------------------------
+
+- Move education to last, Profile - Skills - Exp - Edu
+
+- Think/Add to the TCS
+
+- 

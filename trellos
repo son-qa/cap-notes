@@ -34,13 +34,25 @@ LO, OW zero conversion - https://trello.com/c/j8YNcPNY/3692-handling-of-offers-t
 
 Offerwall frequency capping, exclusivity, configurable impression conditions, show converted offers - https://trello.com/c/ykdvvAJI/3754-ow-changes-session-based-frequency-capping-and-exclusivity-grouping-for-display-capping
 
+Question Not Required label - https://trello.com/c/PbaGGVG2/3781-add-additional-text-on-the-top-left-right-of-the-question-question-not-required
 
+Lead quality redirect to - https://trello.com/c/MymSUkhs/3783-lead-quality-403-redirection-support
 
+Delayed Exclusive leads - https://trello.com/c/Z9vOqND2/3789-delayed-lead-exclusivity-check-optimization
+
+Live lead exclusivity - https://trello.com/c/O1Ng6zmq/3790-live-lead-exclusivity-check-optimization
+
+Leadgen to OnO offerwall information for retargetting users - https://trello.com/c/bkvaFkeN/3854-ow-retargeting-via-cmt
+
+DB driven fulfillment offers - https://trello.com/c/ZSaBrHoz/3808-fulfilment-offer-and-status-to-be-db-driven
+
+Capture offerwall metadata for conversions - https://trello.com/c/bxc3WXsQ/3876-start-logging-site-level-data-for-ow-conversions-due-to-ow-expanding-to-other-domains
 
 ---------- Ops Interface ----------
 
 Content management v1 to v2 conversion - https://trello.com/c/EPZbLGob/992-dynamic-10-hooks-to-be-automatically-created-fro-20-whenever-new-hooks-created-from-interface-verify-for-all-exiting-10-hooks
 
+Maker Chekcer - https://trello.com/c/k9NXjGUN/1017-maker-checker-role
 
 ---------- OnO ----------
 

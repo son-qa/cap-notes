@@ -1,127 +1,16 @@
-https://trello.com/c/ykdvvAJI/3754-ow-changes-session-based-frequency-capping-and-exclusivity-grouping-for-display-capping
-
-https://stage.primerewardspot.com/?cid=ybcjn&test=1&exp=prs-stage-v3-test
-
-https://demo-prod.primerewardspot.com/?cid=9swmg&test=1&exp=PRS-offerwallv2-QA-Only
-
-#4 Impression configurable
-"offerVisbilityTimeOW":5000
-"offerVisbilityThresholdOW":0.5
-
-
----------------------------------------------
-
-#3 Show offer even when MAX is not returning
-Claimed in previous session and MAX is not returning in new session - should be visible for current session - grayed out in that respective tier
-
-"----------------------pdList max offers--------------------"
-
-21ae6176-ec96-4c98-a44b-79e0009e4cc456
-
-Case
-    - Different group id
-    - Different pages
-    - Conversion, no conversion
-    - Redis expired
-    - Another exp with same offerwall
-
-Max is returning
-    - User has claimed
-        - Redis is not expired
-            - Comes on same offerwallgroup id
-            - Comes on different offerwallgroup id
-        - Redis is expired
-    - User has not claimed
-
-Max is not returning
-
-
----------------------------------------------
-
-#1 Do not show offer, in the CURRENT SESSION, until conversion is received
-
-"frequencyCappingOW":true,
-
-https://demo-prod.primerewardspot.com/?cid=9swmg&test=1&exp=PRS-offerwallv2-QA-Only
-
-https://demo-prod.primerewardspot.com/?cid=z86fr&test=1&exp=PRS-Offerwallv2-FE-QA
-
-demo-prod.primerewardspot.com
-
-Case
-
-- Config - true/false/absent
-- Clicked
-    - Session - same, different
-        - Back forward
-        - Refresh
-    - Converted/Not converted
-    - 
-    - Exploratory offers
-
-
----------------------------------------------
-
-#2
-
-https://stage.primerewardspot.com/?cid=ybcjn&test=1&exp=prs-stage-v3-test
-
-exclusivityOW
-frequencyCappingOW
-
-"---------------------offerIds from ranking----------------------------"
-"---------------------pidList from max----------------------------"
-"---------------------offerList after claimed----------------------------"
-
-redis key = owExclusiveOfferTag
-
-1. Impression
-
-o1 --> tagA --> rank3 
-o2 ->  tagA  --> rank1
-o3 --> tagA  --->rank5
-o5 --> no exclusive tag
-
----> show (usecase1) 
-o2 ->  tagA  --> rank1
-o5 --> no exclusive tag
-
-1.
-Impression Fired ---> for {o1-->tag1} {in tier 1}
-
-not tag1 related offer will show on upcoming tier
-if same offer {o1-->tag1} return in upcoming teir then show(no matter whatever ranking)
-
-2.
-if impression not fired in tier 1:
-
-upcoming ranking --> if new offer gets higher rank then it'll show..!
-and goes same as above..!(same logic for impression and exclusivity)
-
-
-2. Click
-
-
-3.Conversion:
-if any exclusive tag related offer is converted  (will show converted offer in tier from which it was converted..!)
-
-same exclusive tag vaale offer will not show in all teir..!
+- https://trello.com/c/bxc3WXsQ/3876-start-logging-site-level-data-for-ow-conversions-due-to-ow-expanding-to-other-domains
 
 
 
-cases
-- Highest ranking - Multiple offers with same tag (no impression) - show the highest ranked
-- Impression is fired
-    - For tag
-    - For non tag
-    - On next tier, same tier, back forward
-    - Offer not returned from max
-- Frequency capping
-- Converted
-- Exploratory slots
-- redis expiry
-- ranking table - offerwall_ranking
 
-{"insert_exploratory_at_rank": 2, "exploratory_slots": 2}
 
-https://primerewardspot.com/?cid=z86fr&test=1&exp=PRS-Offerwallv2-FE-QA&canary=1
+
+
+
+- https://trello.com/c/ONwNhY0G/3870-ow-ability-to-cap-the-number-of-offers-shown-on-any-tier-instead-of-showing-all-list-of-available-offers
+    - exp level
+
+    - test on canary
+
+    - cases
+        - 5 limit, exp is at 7
