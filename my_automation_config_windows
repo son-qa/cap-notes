@@ -1,0 +1,49 @@
+configs: dict = {
+
+    'env': 'live',
+
+    'browser_detail': {
+        'browser_name': 'CHROME',  # needs to be a string
+        'implicit_wait': 0,  # needs to be an integer
+        'explicit_wait': 20,  # needs to be an integer
+        'delete_cookies': True,  # needs to be a boolean
+        'headless': False,  # needs to be a boolean
+        'detach': True,  # needs to be a boolean
+    },
+
+    'log_file_path': {
+        'verbose_log': 'D:\\GitHub\\CAP\\leadgen\\logs\\verbose_logs.log',
+        'high_level_log': 'D:\\GitHub\\CAP\\leadgen\\logs\\high_level.log',
+        'user_details_text_file': 'D:\\GitHub\\CAP\\leadgen\\logs\\user_details.txt',
+        'user_details_log': 'D:\\GitHub\\CAP\\leadgen\\logs\\user_details.log',
+        'all_temp_user_details_log': 'D:\\GitHub\\CAP\\leadgen\\logs\\all_user_details.log',
+        'user_responses_log': 'D:\\GitHub\\CAP\\leadgen\\logs\\user_responses.log',
+    },
+
+    'database': {
+        'mysql_leadgen_stage': {
+            'host': 'staging-mysql-private.cap-cloud.co',
+            'username': 'read_write_devs',
+            'password': '4TU^R&I$FEWE%HGFEAG',
+            'database': 'leadgen-new',
+            'port': '3306'
+        },
+
+        'mysql_leadgen_live': {
+            'host': 'leadgen-prod-slave-misc.c5rg9dilhqmr.us-east-1.rds.amazonaws.com',
+            # 'host': '172.31.102.117',
+            'username': 'sanket.o_ro',
+            'password': 'sdERY%^HEeWE!',
+            'database': 'leadgen',
+            'port': '3306'
+        },
+
+        'redshift_leadgen_live': {
+            'host': 'web-apps.cepyv1ofeibj.us-west-2.redshift.amazonaws.com',
+            'username': 'sanketoswal_ro',
+            'password': 'VWA#%b46v$n8u&%EA$v5&TM(<8n76rXQ',
+            'database': 'imedia',
+            'port': '5439'
+        },
+    }
+}
