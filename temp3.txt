@@ -1,0 +1,41 @@
+https://trello.com/c/E5yunY6E/3900-use-user-prepop-data-email-to-prefill-reg-pages-for-platform-dup-users
+
+https://trello.com/c/d6n2EaiZ/885-peh-dup-flows
+
+flag - enableDataByPrepop
+
+event - NotYouClickedSurveyLoader
+
+
+enableAutoRedirectRegUser - Skip registration
+enableAutoPopulateDBRegUser - Prefill PII
+enableAutoRedirectRegUserToLinkout - skip to linkout
+
+
+https://stage.freesamplesprousa.com/?cid=fpcor&exp=FSPU-test-v1&test=1&t7=dove&bypassap=1
+
+https://stage.freesamplesprousa.com/?cid=fpcor&exp=FSPU-test-v1&test=1
+
+https://stage.freesamplesprousa.com/?cid=fpcor&exp=FSPU-test-v1&test=1&email=haniwa3207@notedns.com
+
+----------------------------
+
+ONLY WORKS FOR FULL PII DATA
+
+By clicking not you the data from prepop would be used
+
+-----------------------------
+
+enableDataByPrepop - True
+    - Back forward
+    - Lead posting
+    - Skip reg/LO, not you
+    - 3 flags
+    - Partial data in DB
+
+
+
+Issues/Concern:
+ - NotYouClickedSurveyLoader -> will come on the old user?
+ - No lead posting
+ - Should Not you button be shown when enableDataByPrepop is false
