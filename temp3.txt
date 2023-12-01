@@ -16,7 +16,7 @@ https://stage.freesamplesprousa.com/?cid=fpcor&exp=FSPU-test-v1&test=1&t7=dove&b
 
 https://stage.freesamplesprousa.com/?cid=fpcor&exp=FSPU-test-v1&test=1
 
-https://stage.freesamplesprousa.com/?cid=fpcor&exp=FSPU-test-v1&test=1&email=haniwa3207@notedns.com
+https://stage.freesamplesprousa.com/?cid=fpcor&exp=FSPU-test-v1&test=1&email=haniwa3207@notedns.com&fname=testt
 
 ----------------------------
 
@@ -39,3 +39,8 @@ Issues/Concern:
  - NotYouClickedSurveyLoader -> will come on the old user?
  - No lead posting
  - Should Not you button be shown when enableDataByPrepop is false
+
+
+-----------------------------
+
+https://stage.freesamplesprousa.com/?cid=has02&test=1&exp=FSPU-tcpa-on-spii-survey&email=haniwa3207@notedns.com

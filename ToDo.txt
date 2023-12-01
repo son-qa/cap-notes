@@ -5,6 +5,7 @@ ToDo:
 	- gmail leave filter
 	- forceExperiment=1 abv3 URL parameter
 
+	- OW offer setup
 
 	- https://trello.com/c/ONwNhY0G/3870-ow-ability-to-cap-the-number-of-offers-shown-on-any-tier-instead-of-showing-all-list-of-available-offers
 		- frequency capping
@@ -12,6 +13,8 @@ ToDo:
 	- https://trello.com/c/E5yunY6E/3900-use-user-prepop-data-email-to-prefill-reg-pages-for-platform-dup-users
 
 	- https://trello.com/c/hJQgVDWS/1093-table-crud-fulfillmentoffers
+
+	- https://trello.com/c/DI06xbwZ/1120-move-all-select-queries-in-application-to-mysql-read
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
