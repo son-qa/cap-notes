@@ -140,7 +140,25 @@ HP Offers on stage
 
 ----------------------------------------------------
 
+OW offers - stage & live
 
-avaialble offers for use on staging
-['b4a31218-8f53-40f9-83e9-535f080c8440', 'b8abef74-add6-480c-894a-0ffaef9a46c0', '9d503b07-40be-4dfd-8d9a-112fa5469bc8', 'afbf8f9d-cef4-4d06-85c6-6b6ce123a634', 'a3a177f4-5fa2-4665-b837-c5453688ad03', '2556db45-2adf-41b2-b0ba-f7cf2b1d39c1', '6f70e4ba-0824-412b-9770-4bba12117cd6', 'ccbff4d6-e311-472d-ad4b-211c16c8bfb1', 'abb7d06a-5b88-4c39-8acc-cbb24a813ffe', '53129093-cf41-4659-936c-94c70485413e']
+('21ae6176-ec96-4c98-a44b-79e0009e4cc1',
+'21ae6176-ec96-4c98-a44b-79e0009e4cc123',
+'21ae6176-ec96-4c98-a44b-79e00e4cc234',
+'21ae6176-ec96-4c98-a44b-79e0009e4cc345',
+'21ae6176-ec96-4c98-a44b-79e0009e4cc456',
+'21ae6176-ec96-4c98-a44b-79e0009e4cc567',
+
+'7b91fd8d-f03d-4f1a-911d-d56fa16ad40b',
+'a58b7d51-25c2-4b0e-8598-b14ec11e9b75',
+'28ce7104-ec15-4ccc-a4b2-9dde28aaa4d8',
+'8c80c984-d649-4ce1-afc5-83e6469e8bbe',
+'015ec4b0-45c9-4f52-9655-8262d7a842ea',
+'6de06915-551c-4e95-babc-cf87b64bdcae',
+'d762aade-37dc-4deb-9ec9-2c1ea1ee3d41',
+'69d41236-0662-4541-a069-68ccb78f6516',
+'51dee7f6-d55a-4d42-b002-ed6cf72c92be',
+'75a80572-2f53-4076-b08e-0af6063847c4',
+'835a72d6-7952-4c61-92b0-970cd9a269d6',
+'d4824baf-2460-4fda-8104-d87598accc49');
 

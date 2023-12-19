@@ -5,5 +5,7 @@ col_name = JSON_SET(col_name, '$.<json_path>', '<value>')
 
 col_name = JSON_REMOVE(offer_config,'$.exclusive_tag')
 
+JSON_ARRAY('abc',1,3,true)
+
 between (curdate() - interval 5 day) and curdate()
 */
