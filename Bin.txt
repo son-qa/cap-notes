@@ -162,3 +162,7 @@ OW offers - stage & live
 '835a72d6-7952-4c61-92b0-970cd9a269d6',
 'd4824baf-2460-4fda-8104-d87598accc49');
 
+----------------------------------------------------
+
+campaign abv3 cache clearing link
+https://qa-v2.freesamplesprousa.com/api/admin/app/refresh-cache/key?id={key}

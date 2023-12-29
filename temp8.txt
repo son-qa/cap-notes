@@ -1,53 +1,26 @@
-Elaborate device testing
 
-Add - about documentation - config documentation
+normal campaigns and generic-campaigns 
+        - non promoted
+        - promoted
+    external lead preping
+    flow
+    random configs
+    configs overriden by experiment (without forcing exp, default flow, duplicate flow)
+    configs overridden by global config
 
-Add - tested Admin facing & client facing modules
+----------
+https://staging-v1.freesamplesprousa.com/api/externallead/preping?cid=5fDew&user_email_address=test@gmail.com&user_mobile=987654321
 
-Add - module testing, integration testing
+----------
 
-Add - Experience in Geolocation testing with different time zones
+https://staging-v1.freesamplesprousa.com/api/getValueFromRedis?key=ExternalPrepingLog:cid:5fDew:email:1aedb8d9dc4751e229a335e371db8058
 
-Add - given overviews to other members/juniors
-
-
-------------------------------------------------------------------------
-
-- Restructure - move relevant & important details on top
-
-- Profile description - can we make it sound like more experienced person?
-
-- Skills section - can we adjust the skills in such a way that it forms 3 columns? Would be easier to read
-
-- Experience section
-    - Add 2-3 lines about what project was -> this wil help to portray what have you worked on and what all things you would have done
-
-    - Zeus' exp - add individual projects - just as above it can help to add weightage to the experience
-
-    - Along with mobile application also mention web application
-
-    - Add - experience in working with scrum methodologies
-
-    - Add - coordinating with the developement team to ensure timely completion of the tasks/work/spring
-
-    - VERY IMPORTANT - Add - testing the functionality with respect to all the possible configurations of the application
-
-    - Introduce terminologies - cross-browser (for web and mobile app) & cross platform testing (for mpbile app)
-
-    - Add - Automating ngrok link update
-
-    - We need to think about adding the term 'STLC' in the experience (this applies for me as well)
-
-    - Add - addressing queries/tickets raised by the clients
+Coverage:
+- Preping
+- Flow
+        - 
 
 
-- How about we write the points in the experience (project/company exp) in a sequential manner? As in analysis comes first (or last), then test cases, then performing tests and so on...
 
 
------------------------------------
-
-- Move education to last, Profile - Skills - Exp - Edu
-
-- Think/Add to the TCS
-
-- 
+https://qa-v2.freesamplesprousa.com/?test=1&cid=qa-slug2&exp=Flow1-QA-Only&email=peyax52094@usoplay.com
