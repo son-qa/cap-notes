@@ -38,16 +38,20 @@ where offer_unique_id in
 ----------------
 Auto rank tables
 
-select * from offerwall_ranking_groups ;
-select * from offerwall_ranking where ranking_group_id = 1 and offer_group_type_id = 1 order by offer_rank ;
-select * from offerwall_ranking where ranking_group_id = 1 and offer_group_type_id = 3 order by offer_rank ;
-select * from offerwall_ranking where ranking_group_id = 1 and offer_group_type_id = 4 order by offer_rank ;
+select * from offerwall_ranking_group ;
+
+set @ranking_group_id = 2 ;
+select * from offerwall_ranking where ranking_group_id = @ranking_group_id ;
+select * from offerwall_ranking where ranking_group_id = @ranking_group_id and offer_group_type_id = 1 order by offer_rank ;
+select * from offerwall_ranking where ranking_group_id = @ranking_group_id and offer_group_type_id = 3 order by offer_rank ;
+select * from offerwall_ranking where ranking_group_id = @ranking_group_id and offer_group_type_id = 4 order by offer_rank ;
 
 --------------
 
 select * from offerwall_conversion where email_md5 = 'a7ba005e00ca681716f353b4cdd0fa78' ;
 
 --------------
+
 Setting Dimension Hash
 
 update offerwall_ranking
@@ -62,5 +66,23 @@ update offerwall_ranking
 set dimension_hash = md5('Other_diamond')
 where ranking_group_id = 2 and offer_group_type_id = 4 ;
 
+--------------
+
+, json_extract(offer_config, '$.is_exclusive')
+, json_extract(offer_config, '$.exclusive_tag')
+
+--------------
+
+update advertiser_offers
+set offer_config = json_set(offer_config, '$.is_exclusive', true, '$.exclusive_tag', 'sanket')
+where offer_unique_id in
+
+--------------
+
+update ab_experiment_v2
+set config_data = json_set(config_data, '$.exclusivityOW', true)
+where experiment_slug = 'prs-stage-v3-test' ;
+
+--------------
 
 */

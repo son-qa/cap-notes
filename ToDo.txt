@@ -3,47 +3,17 @@ ToDo:
 	- ini file
 	- env file
 
+	- OW live setup 10 group id
+
 	- https://trello.com/c/Ii93In6u/3938-ow-deduping-changes-to-show-both-e-and-ne-offer
 
 	- Staging - update domain for prepop URL
 
-	- https://trello.com/c/fmBe0r4Q/3945-seperating-delayed-posting-flag-and-day-parting-setting-if-day-parting-hours-are-not-set-assume-24hour-window?filter=member:arihantjain81
+	- https://trello.com/c/fmBe0r4Q/3945-seperating-delayed-posting-flag-and-day-parting-setting-if-day-parting-hours-are-not-set-assume-24hour-window
 	
 Secondary:
 	- Check CCPA for autoposting, duplicate user
 	- Postman - variables, enviroment, sites for CCPA
-
-
-Requirement Gathering:
-	- What is the feature?
-	- Why is it introduced? What problem is being solved using this feature?
-	- How does this feature works
-	- What inputs are required? What is the output of the feature? Expected result
-	- DB involved? Which columns
-	- Test link?
-	- How to test?
-	- Where to test?
-	- Scope of testing?
-	- Is there any impact on the compliance front?
-	- What is the impact of this feature on other features or existing?
-	- Trello
-
-
-Mindset:
-	- Is the requirement meeting? Is the problem solved?
-	- Is there an exisiting way to solve the problem
-	- Does the solution/functionality/outcome makes sense?
-	- Business perspective
-	- End user's perspective
-	- 
-
-
-Validation scope:
-	- Validating tcpa leads are posted only in the intended cases
-	- No null lead posting
-	- NO posting for invalid leadid
-	- Eye on the number & type of leads posted
-	- Checking trusted form
 
 -------------------------------------------------
 

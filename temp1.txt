@@ -1,3 +1,18 @@
-https://trello.com/c/fmBe0r4Q/3945-seperating-delayed-posting-flag-and-day-parting-setting-if-day-parting-hours-are-not-set-assume-24hour-window?filter=member:arihantjain81
+https://trello.com/c/fmBe0r4Q/3945-seperating-delayed-posting-flag-and-day-parting-setting-if-day-parting-hours-are-not-set-assume-24hour-window
+
+- Delayed + Active hours cases
+- Delayed posting
+- Delayed Exclusivity
+- Holiday Check
+- Types of offers
 
 
+
+Delayed exclusivity
+    - Catergory
+    - Offer excl
+    - Delayed + Active
+
+
+
+- Delayed job is queued and then the offer goes into holiday

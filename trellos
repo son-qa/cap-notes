@@ -52,6 +52,9 @@ Limit for number of offerwall offers to show - https://trello.com/c/ONwNhY0G/387
 
 Fetch data for email from prepop - https://trello.com/c/E5yunY6E/3900-use-user-prepop-data-email-to-prefill-reg-pages-for-platform-dup-users
 
+OW Exclusivity/Deduping - https://trello.com/c/Ii93In6u/3938-ow-deduping-changes-to-show-both-e-and-ne-offer
+
+
 ---------- Ops Interface ----------
 
 Content management v1 to v2 conversion - https://trello.com/c/EPZbLGob/992-dynamic-10-hooks-to-be-automatically-created-fro-20-whenever-new-hooks-created-from-interface-verify-for-all-exiting-10-hooks

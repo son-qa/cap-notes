@@ -1,3 +1,27 @@
+Requirement Gathering:
+	- What is the feature?
+	- Why is it introduced? What problem is being solved using this feature?
+	- How does this feature works
+	- What inputs are required? What is the output of the feature? Expected result
+	- DB involved? Which columns
+	- Test link?
+	- How to test?
+	- Where to test?
+	- Scope of testing?
+	- Is there any impact on the compliance front?
+	- What is the impact of this feature on other features or existing?
+	- Trello
+
+
+Mindset:
+	- Is the requirement meeting? Is the problem solved?
+	- Is there an exisiting way to solve the problem
+	- Does the solution/functionality/outcome makes sense?
+	- Business perspective
+	- End user's perspective
+
+==================================================================
+
 Pushnami URLs
 	- https://topsurveyspot.com/?cid=urw2j&test=1&exp=TSS-Default-Test-QA
 

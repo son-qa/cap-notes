@@ -16,4 +16,4 @@ and experiment_slug not in
 order by experiment_type desc, updated_on desc ;
 
 -- https://freesamplesprousa.com/?test=1&var=405&cid=21eo8&exp=FSPU-TCPA-Opt-Out-Feature
--- https://theamericansweepstakes.com/?test=1&var=405&cid=n9gb2&exp=TAS-Husky-Tools-Flow
+-- https://theamericansweepstakes.com/?test=1&var=405&cid=n9gb2&exp=TAS-Uber-Eats-Flow
