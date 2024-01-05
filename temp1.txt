@@ -16,3 +16,22 @@ Delayed exclusivity
 
 
 - Delayed job is queued and then the offer goes into holiday
+
+
+Individual
+    - Delayed
+    - Delayed Exclusivity
+    - Holiday
+
+
+Delayed + Delayed exclusivity
+Delayed Exclusivity + Holiday
+
+Ops interface
+
+preping outside working hurs
+
+
+o1,o3 -> delayed excl + scheduled + holiday tomorrow
+o5 -> in holiday ending soon + delayed
+o10 -> in holiday of 10 days + delayed
