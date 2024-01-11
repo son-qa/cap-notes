@@ -1,0 +1,23 @@
+vw_campaign_master
+
+Log::info("[OW Max OfferIds]".json_encode($offerIdsMax));
+ Log::info("[OW PidList]".json_encode($pidList));
+Log::info("[OW dimesion]", array("dimension_string" =>@$dimension_string,"hashKey" =>@$hashKey ));
+Log::info("[OW Ranking OfferIds]".json_encode($offerIdsRanking));
+
+
+0-17,
+18-24,
+25-34,
+35-44,
+45-54,
+55-64,
+65+
+
+
+UPDATE offerwall_ranking
+INNER JOIN advertiser_offers ON (offerwall_ranking.offer_unique_id = advertiser_offers.offer_unique_id)
+SET offerwall_ranking.offer_id = advertiser_offers.offer_id ;
+
+
+

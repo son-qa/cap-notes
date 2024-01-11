@@ -1,0 +1,53 @@
+white_bg_recommendation = '#2851e1'
+        coloured_bg_recommendation = ['#FFAEFF', '#F832F8', '#FF7CFF']
+
+        font_size_validation_result = {}
+        font_colour_validation_result = {}
+        font_underline_validation_result = {}
+
+        validation_result = {}
+
+        bg_colour = self._attributes.reg_tcpa_disclaimer_details['disclaimer_bg_hex_colour']
+        hyperlinks_details = self._attributes.reg_tcpa_disclaimer_details['hyperlinks_details']
+
+        if bg_colour == '#FFFFFF':
+            coloured_bg = False
+        else:
+            print('Reg Background colour ->', bg_colour)
+            coloured_bg = True
+
+        # ToDo - add reason why failed
+
+        for key, value in hyperlinks_details.items():
+            validation_result[key] = {}
+
+            if value['font_size'] >= 10:
+                validation_result[key]['font_size'] = True
+                font_size_validation_result[key] = True
+            else:
+                validation_result[key]['font_size'] = False
+                font_size_validation_result[key] = False
+
+            if value['underline'] == 'underline':
+                validation_result[key]['underline'] = True
+                font_underline_validation_result[key] = True
+            else:
+                validation_result[key]['underline'] = False
+                font_underline_validation_result[key] = False
+
+            if coloured_bg:
+                if value['hex_colour'] in coloured_bg_recommendation:
+                    validation_result[key]['hex_colour'] = True
+                    font_colour_validation_result[key] = True
+                else:
+                    validation_result[key]['hex_colour'] = False
+                    font_colour_validation_result[key] = False
+            else:
+                if value['hex_colour'] == white_bg_recommendation:
+                    validation_result[key]['hex_colour'] = True
+                    font_colour_validation_result[key] = True
+                else:
+                    validation_result[key]['hex_colour'] = False
+                    font_colour_validation_result[key] = False
+
+        return validation_result

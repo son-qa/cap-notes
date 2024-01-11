@@ -1,17 +1,7 @@
-Linkout:
+TCPA disclaimer
 
-- Limit Linkout -> limit_linkout
-- Ranking -> linkoutStrategy
-- Linkout order -> linkout_order, linkout_order_2
-- Ranked by 
-- Max
-- Forced linkout position (offer level config) -> "showOfferOnlyAtPosition": 1
-- Exit Linkout
-- Inapp LO
-- Handshaking for all survey versions
-- VLO LO (offer level - needs to attach a tag and configure that tag in survey)
-- LO based Historical data (dup user) -> enableHistoryTagsInFeed
-- Linkout section 2
-
-- Dynamic length linkout - enableDynamicLinkout, enableDynamicLinkout_2
-- Skip linkout - skipLinkoutIfAllOffersViewed
+All types of questions
+At all postions
+AB Exp
+AB Questions
+Journaya, Trusted form

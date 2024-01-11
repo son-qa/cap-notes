@@ -1,26 +1,2 @@
+https://api.flock.com/hooks/sendMessage/06436f09-dc60-4f5e-b1ad-0762161b0819
 
-normal campaigns and generic-campaigns 
-        - non promoted
-        - promoted
-    external lead preping
-    flow
-    random configs
-    configs overriden by experiment (without forcing exp, default flow, duplicate flow)
-    configs overridden by global config
-
-----------
-https://staging-v1.freesamplesprousa.com/api/externallead/preping?cid=5fDew&user_email_address=test@gmail.com&user_mobile=987654321
-
-----------
-
-https://staging-v1.freesamplesprousa.com/api/getValueFromRedis?key=ExternalPrepingLog:cid:5fDew:email:1aedb8d9dc4751e229a335e371db8058
-
-Coverage:
-- Preping
-- Flow
-        - 
-
-
-
-
-https://qa-v2.freesamplesprousa.com/?test=1&cid=qa-slug2&exp=Flow1-QA-Only&email=peyax52094@usoplay.com

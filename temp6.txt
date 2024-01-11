@@ -1,0 +1,173 @@
+import os
+import time
+from typing import List
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webelement import WebElement
+from selenium.webdriver.support.color import Color
+from selenium.webdriver.support.wait import WebDriverWait
+
+from leadgen.configurations.config import configs
+from leadgen.attributes import test_suite_attributes, test_case_attributes
+
+from common.modules.database import database_module
+# from leadgen.modules.registration import registration_module
+from leadgen.modules.survey import survey_module
+from leadgen.modules.temp_user import temp_user_data_via_api_module as temp_user_module
+from leadgen.modules.tcpa import tcpa_module
+from leadgen.modules.registration_new import registration_module
+
+from leadgen.interface.registration_new import registration_interface
+from leadgen.interface.survey import survey_interface
+from leadgen.interface.temp_user import temp_user_interface
+from leadgen.interface.validations import validation_interface
+
+"""
+Setup steps
+- Create a new folder where the profile data would be stored
+- Open chrome (browser) in debugging mode using following command
+    cd C:\Program Files\Google\Chrome\Application
+    chrome.exe --remote-debugging-port=1811 --user-data-dir="D:\sanket-chrome-auto-profile"
+    
+- Create options, and create the following option
+    <option object>.add_experimental_option("debuggerAddress", f"localhost:{port}")
+"""
+
+ana = {
+    "email": "tasteyuri@gmail.com",
+    "fname": "Yuri",
+    "lname": "Charles",
+    "zip": 89414,
+    "gender": "Female",
+    "address": "Access Road",
+    "city": "Golconda",
+    "state": "NV",
+    "phone": '5048319091',
+    "country": "USA",
+    "doby": "1996",
+    "dobm": "11",
+    "dobd": "18"
+}
+
+chrome_application_path = r'C:\Program Files\Google\Chrome\Application'
+chrome_test_profile = r'D:\sanket-chrome-auto-profile'
+port = 1811
+
+opt = Options()
+opt.add_experimental_option("debuggerAddress", f"localhost:{port}")
+driver = webdriver.Chrome(options=opt)
+wait = WebDriverWait(driver, 5)
+
+suite_attributes = test_suite_attributes()
+test_attributes = test_case_attributes()
+test_attributes.driver = driver
+test_attributes.wait = wait
+test_attributes.config = configs
+
+' ------ modules ------ '
+
+reg = registration_module(suite_attributes=suite_attributes, case_attributes=test_attributes)
+survey = survey_module(suite_attributes=suite_attributes, case_attributes=test_attributes)
+tcpa = tcpa_module(suite_attributes=suite_attributes, case_attributes=test_attributes)
+# temp_user = temp_user_module(suite_attributes=suite_attributes, case_attributes=test_attributes)
+# db = database_module()
+
+
+' ------ interfaces ------ '
+
+reg_int = registration_interface(suite_attributes=suite_attributes, case_attributes=test_attributes)
+survey_int = survey_interface(suite_attributes=suite_attributes, case_attributes=test_attributes)
+# temp_user_int = temp_user_interface(suite_attributes=suite_attributes, case_attributes=test_attributes)
+# v = validation_interface(suite_attributes=suite_attributes, case_attributes=test_attributes)
+
+
+""" 
+==================================================================================================
+                                    Test code below
+==================================================================================================
+"""
+
+# if reg_int.is_registration_available():
+#     print('Reg is avaialble')
+#     reg_disclaimer_webelement = reg.is_tcpa_disclaimer_present()
+#     print('Disclaimer availablity ->', reg_disclaimer_webelement is not False)
+#
+#     if reg_disclaimer_webelement:
+#
+#         disclaimer_bg_colour_rgb = reg_disclaimer_webelement.value_of_css_property('color')
+#         disclaimer_bg_colour_hex = Color.from_string(disclaimer_bg_colour_rgb).hex
+#         print('Disclaimer bg colour ->', disclaimer_bg_colour_hex)
+#
+#         disclaimer_hyperlinks: list[WebElement] = reg_disclaimer_webelement.find_elements(By.XPATH,
+#                                                                                           './/button | .//a')
+#         print('Count of hyperlinks in TCPA Text ->', len(disclaimer_hyperlinks))
+#         print('')
+#         for webelement in disclaimer_hyperlinks:
+#             print('Webelement type ->', webelement.tag_name)
+#             print('Text ->', webelement.text)
+#             print('Font size ->', webelement.value_of_css_property('font-size'))
+#             print('Font underline ->', webelement.value_of_css_property('text-decoration-line'))
+#             rgb_colour = webelement.value_of_css_property('color')
+#             hex_colour = Color.from_string(rgb_colour).hex
+#             # print(type(rgb_colour))
+#             print('Font colour in rgb ->', rgb_colour)
+#             print('Font colour in hex ->', hex_colour)
+#             print('')
+
+if survey.is_survey_available(instant_check=False):
+    print('Survey is available')
+
+    question_details = survey.get_current_question_details()
+    print('Question id ->', question_details['questionId'])
+    print('TCPA Text returned ->', question_details['tcpaText'] is not None)
+
+    survey_disclaimer_webelement = survey.is_tcpa_disclaimer_available()
+    print('Survey Disclaimer availability ->', survey_disclaimer_webelement is not False)
+
+    if survey_disclaimer_webelement:
+
+        disclaimer_bg_colour_rgb = survey_disclaimer_webelement.value_of_css_property('background-color')
+        disclaimer_bg_colour_hex = Color.from_string(disclaimer_bg_colour_rgb).hex
+        print('Survey Disclaimer bg colour ->', disclaimer_bg_colour_hex)
+
+        disclaimer_hyperlinks: list[WebElement] = survey_disclaimer_webelement.find_elements(By.XPATH,
+                                                                                             './/button | .//a')
+
+        print('Count of hyperlinks in Survey TCPA Text ->', len(disclaimer_hyperlinks))
+        print('')
+
+        for webelement in disclaimer_hyperlinks:
+            print('Webelement type ->', webelement.tag_name)
+            print('Text ->', webelement.text)
+            print('Font size ->', webelement.value_of_css_property('font-size'))
+            print('Font underline ->', webelement.value_of_css_property('text-decoration-line'))
+            rgb_colour = webelement.value_of_css_property('color')
+            hex_colour = Color.from_string(rgb_colour).hex
+            # print(type(rgb_colour))
+            print('Font colour in rgb ->', rgb_colour)
+            print('Font colour in hex ->', hex_colour)
+            print('')
+
+# hyperlinks = tcpa.get_tcpa_disclaimer_hyperlinks()
+# if hyperlinks:
+#     for webelement in hyperlinks:
+#         print('Webelement type ->', webelement.tag_name)
+#         print('Text ->', webelement.text)
+#         print('Font size ->', webelement.value_of_css_property('font-size'))
+#         print('Font underline ->', webelement.value_of_css_property('text-decoration-line'))
+#         rgb_colour = webelement.value_of_css_property('color')
+#         hex_colour = Color.from_string(rgb_colour).hex
+#         # print(type(rgb_colour))
+#         print('Font colour in rgb ->', rgb_colour)
+#         print('Font colour in hex ->', hex_colour)
+#         print('')
+
+a = {
+    's': None,
+    't': 0,
+}
+
+print('asdfsadf')
+a['s'] = 'rape'
