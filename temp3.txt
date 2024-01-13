@@ -1,3 +1,14 @@
+https://trello.com/c/TvtZt43z/4001-create-a-flag-at-slug-to-move-tcpa-language-above-options-across-all-questions-which-have-tcpa-lang-ability-to-exclude-questions
+
+
+"moveTCPAConsentAboveOptionsAllQuestions": true,
+"excludeQuestionsToNotMoveTCPAConsentAboveOptions": [
+292,
+333
+]
+
+
+
 TCPA disclaimer
 
 All types of questions
@@ -5,3 +16,28 @@ At all postions
 AB Exp
 AB Questions
 Journaya, Trusted form
+v5.4, v5.5 - only on auto survey, and tcpa question
+
+-------------------------------
+
+Questions on qa-v1
+793
+222
+794
+226
+798
+186
+
+793, 222, 794, 226, 798, 186
+
+-------------------------------
+
+Coverage:
+- Only exp level config (no exclude)
+- Types of questions - warmup, 1, 2, 3, 5, 6
+- AB Questions
+    - Control - up + down
+    - Variant - up + down
+- Exp config
+    - moveTCPAConsentAboveOptionsAllQuestions - false
+    - excludeQuestionsToNotMoveTCPAConsentAboveOptions - question, none

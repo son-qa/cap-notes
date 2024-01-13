@@ -7,6 +7,13 @@ ToDo:
 	- https://trello.com/c/piMDlcV3/4002-peh-dup-flow-qa-as-time-taken-to-progress-from-q1-q2-is-high
 		- https://beta-console.im-reporting.com/flow-test-v3/edit/284
 
+	- https://trello.com/c/TvtZt43z/4001-create-a-flag-at-slug-to-move-tcpa-language-above-options-across-all-questions-which-have-tcpa-lang-ability-to-exclude-questions
+
+	- Trusted form scrolling issue log
+		- 130657206
+
+	- Reset staging HP offers
+
 Secondary:
 	- Create test variants on live
 	- Check CCPA for autoposting, duplicate user
