@@ -1,23 +1,21 @@
 ToDo:
+	
+	- https://trello.com/c/jQBIwSH5/3958-offerwall-redis-cleanup
 
 	- OW live setup 10 group id
 
-	- https://trello.com/c/fmBe0r4Q/3945-seperating-delayed-posting-flag-and-day-parting-setting-if-day-parting-hours-are-not-set-assume-24hour-window
-	
-	- https://trello.com/c/piMDlcV3/4002-peh-dup-flow-qa-as-time-taken-to-progress-from-q1-q2-is-high
-		- https://beta-console.im-reporting.com/flow-test-v3/edit/284
-
-	- https://trello.com/c/TvtZt43z/4001-create-a-flag-at-slug-to-move-tcpa-language-above-options-across-all-questions-which-have-tcpa-lang-ability-to-exclude-questions
-
 	- Trusted form scrolling issue log
 		- 130657206
-
-	- Reset staging HP offers
 
 Secondary:
 	- Create test variants on live
 	- Check CCPA for autoposting, duplicate user
 	- Postman - variables, enviroment, sites for CCPA
+
+	- Headless
+	- Skype chat
+	- IRCTC
+	- Appium
 
 -------------------------------------------------
 
@@ -43,6 +41,10 @@ https://trello.com/c/jTiybf83/844-tcpa-disclaimer-discrepancies
 #2851e1
 
 #FFAEFF or #F832F8 or #FF7CFF
+
+Font Colour should be as per recommendation, i.e. #2851e1. 
+
+Font size should be as per recommendation, i.e. 10px, instead is 12px, but might not be an issue.
 
 --------------------------------------------------
 

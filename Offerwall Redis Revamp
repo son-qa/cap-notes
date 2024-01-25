@@ -1,0 +1,34 @@
+Changes in redis, client side, endpoints, webhooks
+
+Store data on click -> clickid
+
+
+Coverage
+- Clicks
+- Impressions
+- Conversion
+- Redirection to 3rd party
+- New logic applies only to new user, for old user old logic would be used
+- 
+
+
+
+--------------------------------------
+
+Test Coverage:
+- Redis key generation
+	- timeout
+	- timeout after first conversion
+- Offer Impression
+- Configurable impressoin
+- Click
+	- Click id generated & stored in redis
+- Conversion
+- Exclusivity
+- Frequency capping
+- Redis expiry
+- OW Rewards status page
+- OW Reward popup
+- Exploratory slots & position
+- Devices
+- Backword compatibility

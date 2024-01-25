@@ -1,37 +1,95 @@
-https://trello.com/c/fmBe0r4Q/3945-seperating-delayed-posting-flag-and-day-parting-setting-if-day-parting-hours-are-not-set-assume-24hour-window
-
-- Delayed + Active hours cases
-- Delayed posting
-- Delayed Exclusivity
-- Holiday Check
-- Types of offers
+https://trello.com/c/Eg00yLNT/4018-support-to-copy-duplicate-user-config-to-new-user-if-user-is-peh-dup
 
 
+enableAutoRedirectRegUser OR enableAutoRedirectRegUserToLinkout : true
 
-Delayed exclusivity
-    - Catergory
-    - Offer excl
-    - Delayed + Active
+enableCopyDuplicateUserConfig: true
 
 
+duplicatePEHConfigList: [
+  copy config list
+]
 
-- Delayed job is queued and then the offer goes into holiday
+---------------------------------------
 
-
-Individual
-    - Delayed
-    - Delayed Exclusivity
-    - Holiday
-
-
-Delayed + Delayed exclusivity
-Delayed Exclusivity + Holiday
-
-Ops interface
-
-preping outside working hurs
+https://freesamplesprousa.com/?test=1&cid=4rsp5&var=787&canary=1&forceExperiment=1
 
 
-o1,o3 -> delayed excl + scheduled + holiday tomorrow
-o5 -> in holiday ending soon + delayed
-o10 -> in holiday of 10 days + delayed
+https://freesamplesprousa.com/?test=1&cid=21eo8&var=787&canary=1&forceExperiment=1&email=panir63246@grassdev.com&mobile=5048319091
+
+
+https://qa-v1.freesamplesprousa.com/?test=1&cid=qa-slug1
+
+
+https://qa-v1.freesamplesprousa.com/?test=1&cid=qa-slug1&email=tiyofib866@tsderp.com&mobile=5048319091
+
+---------------------------------------
+
+Coverage
+- Nothing is enabled
+- Skip reg & Copy config combinations
+- When no exp is passed in URL
+- When exp is paased in URL
+
+
+        "autoSurveyVersion",
+        "survey_ranking_group_id",
+        "enableDelayedPosting",
+        "enableExitMonetization",
+        "v5_survey_config",
+        "linkout_group",
+        "linkoutStrategy"
+
+
+------------------------------------
+
+
+
+"duplicatePEHConfigList": [
+        "v5_survey_config",
+        "linkoutStrategy",
+        "enableExtraTCPATags",
+        "surveyv2",
+        "enableHostPostPruning",
+        "surveySkipQuestionCap",
+        "surveyQuestionCap",
+        "surveyDefaultQuestionCount",
+        "surveyId",
+        "surveyVersion",
+        "smartSurvey",
+        "survey_ranking_group_id",
+        "show_dynamic_tag_together",
+        "filterDuplicateQuestions",
+        "enableHistoryTagsInFeed",
+        "enableIntermediateTcpa",
+        "linkout_order",
+        "linkout_group",
+        "enableCaching",
+        "warmupQuestionsLimit",
+        "enableRpmBasedRanking",
+        "showSurveyQuesImage",
+        "autoSurveyVersion",
+        "expressProgressBarForInitialQues",
+        "enableEagerIntermediateTcpa",
+        "epcPriority",
+        "enableGenericLinkoutAbTest",
+        "linkout_groups",
+        "piiDataNotRequired",
+        "profileScoreExcludeColumns",
+        "enableSurveyPruning",
+        "surveyOnLander",
+        "usePhoneEmailHashForHistoricData",
+        "openOfferInSameTabForIOSWebview",
+        "skipLinkoutIfAllOffersViewed",
+        "limit_linkout",
+        "enableDynamicLinkout",
+        "options_pruning",
+        "RPUTargeting",
+        "RPUTargetingV2",
+        "epcPriorityV2",
+        "surveyFallbackOptimisation",
+        "hourlyHpCvrEnable",
+        "enableDelayedExclusivityCheckForLiveLead",
+        "cidLevelProgressionData",
+        "doNotShowWarmupQuestionToPlatformDupUsers"
+    ],
