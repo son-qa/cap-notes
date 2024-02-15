@@ -117,3 +117,30 @@ VALUES
 
 
 --------------
+
+UPDATE offerwall_ranking 
+SET 
+    offer_group_type = CASE
+        WHEN offer_group_type_id = 1 THEN 'bronze'
+        WHEN offer_group_type_id = 3 THEN 'gold'
+        WHEN offer_group_type_id = 4 THEN 'diamond'
+    END,
+    offer_id = (SELECT 
+            offer_id
+        FROM
+            advertiser_offers
+        WHERE
+            offer_unique_id = offerwall_ranking.offer_unique_id),
+    offer_name = (SELECT 
+            offer_name
+        FROM
+            advertiser_offers
+        WHERE
+            offer_unique_id = offerwall_ranking.offer_unique_id),
+    json_metadata = JSON_OBJECT('exploration_type', 'non-exploratory'),
+    strategy = 'v2',
+    dimension_hash = MD5(CONCAT('Other_', offer_group_type));
+
+
+--------------
+
