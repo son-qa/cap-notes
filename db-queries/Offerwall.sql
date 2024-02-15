@@ -85,3 +85,35 @@ where experiment_slug = 'prs-stage-v3-test' ;
 
 --------------
 
+set @oui = "32beeb6e-6e96-4870-889d-1551614d94a9" ;
+set @group_type_id = 4 ;
+set @group_type_name = "diamond" ;
+set @rank = 1 ;
+set @json_m = json_object("exploration_type", "non-exploratory") ;
+set @strat = "v2" ;
+set @dim_hash = md5(concat("Other_", @group_type_name)) ;
+
+INSERT INTO `leadgen-new`.`offerwall_ranking`
+(
+`ranking_group_id`,
+`offer_group_type_id`,
+`offer_group_type`,
+`offer_id`,
+`offer_name`,
+`offer_unique_id`,
+`offer_rank`,
+`json_metadata`,
+`strategy`,
+`dimension_hash`)
+VALUES
+(1, @group_type_id, @group_type_name
+, (select offer_id from advertiser_offers where offer_unique_id = @oui)
+, (select offer_name from advertiser_offers where offer_unique_id = @oui)
+, @oui
+, @rank
+, @json_m
+, @strat
+, @dim_hash) ;
+
+
+--------------

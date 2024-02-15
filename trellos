@@ -60,6 +60,7 @@ Move TCPA Disclaimer above options experiment level configuration - https://trel
 
 Copy configs from duplicate flow for dup user - https://trello.com/c/Eg00yLNT/4018-support-to-copy-duplicate-user-config-to-new-user-if-user-is-peh-dup
 
+Addition of new dimension in LO global - https://trello.com/c/gszxdvwk/4037-lo-offer-global-impression-capping-to-be-moved-to-site-new-dup-hour-check-if-we-can-add-support-for-site-phduphour-or-make-this
 
 ---------- Ops Interface ----------
 

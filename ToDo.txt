@@ -2,17 +2,13 @@ ToDo:
 	
 	- https://trello.com/c/jQBIwSH5/3958-offerwall-redis-cleanup
 
-	- OW live setup 10 group id
+	- https://trello.com/c/gszxdvwk/4037-lo-offer-global-impression-capping-to-be-moved-to-site-new-dup-hour-check-if-we-can-add-support-for-site-phduphour-or-make-this
 
-	- Trusted form scrolling issue log
-		- 130657206
 
 Secondary:
-	- Create test variants on live
 	- Check CCPA for autoposting, duplicate user
 	- Postman - variables, enviroment, sites for CCPA
 
-	- Headless
 	- Skype chat
 	- IRCTC
 	- Appium
@@ -46,6 +42,18 @@ Font Colour should be as per recommendation, i.e. #2851e1.
 
 Font size should be as per recommendation, i.e. 10px, instead is 12px, but might not be an issue.
 
+
+https://freesamplesprousa.com/?test=1&cid=21eo8&exp=FSPU-Dynamic-Flow-SPII-AutoSurvey-V5B-Variant
+
+
+https://theamericansweepstakes.com/?test=1&cid=n9gb2&exp=TAS-SS-Personalized-V2-AutoSurvey-V5B
+
 --------------------------------------------------
 
 https://www.g2.com/wizard/single-product-700inr/finish?last_completed_step=6&product_id=flock
+
+https://staging-v9.freesamplesprousa.com/?test=1&cid=r7cyw
+
+
+
+https://topsurveyspot.com/?cid=bu8ix&test=1&exp=TSS-TCPAonRef-Flow-FE-QA-v1

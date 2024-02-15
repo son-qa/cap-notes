@@ -1,6 +1,27 @@
+https://trello.com/c/jQBIwSH5/3958-offerwall-redis-cleanup
+
+https://stage.primerewardspot.com/?cid=ybcjn&test=1&exp=prs-stage-v3-test
+
+https://staging-v3.primerewardspot.com/?cid=ybcjn&test=1&exp=prs-stage-v3-test
+
+
 Changes in redis, client side, endpoints, webhooks
 
 Store data on click -> clickid
+
+
+to get click and conversion details - https://staging-v3.primerewardspot.com/server/get-redis-data?key=conversion_id&conversion_id=d94fdf51-93d5-4e02-b113-cc05c28e4bde
+
+to get offerwall_session_id: https://staging-v3.primerewardspot.com/server/get-redis-data?key=email_hash&emailHash=4ed08d11308db67a6f29ba728d6bfd17&offerwallGroupId=99
+
+yeh arihant ka api - https://staging-v3.primerewardspot.com/api/active-window/?version=2&redisKey=offerwallv2_session:4ed08d11308db67a6f29ba728d6bfd17-99
+
+to make a conversion - https://demo-prod.primerewardspot.com/webhook/offerwall-conversion?owalltypeid=3&oid=344&sid=7e99e2ba6473490a96461e14d358d72c&owsid=af1ee70b-7a02-4292-ae2e-21a6dc41fcc2&tid=345678&owallid=10&rev=1&lgsid=a3bf190a-8fab-459f-8e30-4487238876f8
+
+url : https://staging-v3.primerewardspot.com/?cid=ybcjn&test=1&exp=PRS-SPII-and-survey&t8=1000amazon&t7=1000amazon
+
+
+
 
 
 Coverage
@@ -11,8 +32,6 @@ Coverage
 - New logic applies only to new user, for old user old logic would be used
 - 
 
-
-
 --------------------------------------
 
 Test Coverage:
@@ -20,15 +39,29 @@ Test Coverage:
 	- timeout
 	- timeout after first conversion
 - Offer Impression
-- Configurable impressoin
+	- Configurable impressoin
 - Click
 	- Click id generated & stored in redis
+	- Frequency capping
 - Conversion
+	- zero, multi
 - Exclusivity
-- Frequency capping
 - Redis expiry
 - OW Rewards status page
 - OW Reward popup
 - Exploratory slots & position
 - Devices
-- Backword compatibility
+- Backward compatibility
+	- All of the above for
+		- New user
+		- Old user
+- Hooks
+- All converted - request status on ops
+
+
+-----------------------------------
+
+- Multiple getoffer requests
+- Remove/clear click/conversion data once redis is expired?
+- Expiry time in new redis data
+- Cant convert without clicking the offer? 500 error without click

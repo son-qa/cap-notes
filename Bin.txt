@@ -190,3 +190,69 @@ OW offers - stage & live
 
 campaign abv3 cache clearing link
 https://qa-v2.freesamplesprousa.com/api/admin/app/refresh-cache/key?id={key}
+
+
+----------------------------------------------------
+
+Internet Reimbursement apporoved link
+
+Old link - https://servicedesk.internal.media.net/WorkOrder.do?woMode=viewWO&woID=17071
+
+New link - https://servicedesk.internal.media.net/WorkOrder.do?woMode=viewWO&woID=37454
+
+
+----------------------------------------------------
+
+select event,event_value, event_data from leadgen.user_metadata 
+where session_id = '3670d323-d031-4a15-af04-4f679169237e'
+--(select session_id from user_master where user_id = 104080061 )
+--and stats_date = '12-04-2023'
+--and event in ('RegistrationSectionComplete', 'UserPiiDetails')
+and event_data like '%"qid": 59,%' or event_data like '%"qid": 51,%'
+order by event_timestamp ;
+
+select event, event_data
+from leadgen.user_metadata um
+where
+user_id = 115777127
+--session_id = '07437183-55d5-426f-9b77-5f720762e081'
+--and event in ('LeadPosting', 'DelayedPostDeQueued', 'DelayedPostQueued', 'LeadPostingNotAttempted',
+-- 'LeadsDoNotPostLogging', 'LeadsDoNotPost', 'LeadQualityRedirectTo', 'RegistrationSectionComplete', 'UserPiiDetails', 'HostPostHolidayOfferRemoved')
+--and stats_date ='2023-10-05'
+order by event_timestamp ;
+
+--SELECT *
+--FROM "leadgen-new".dim_advertiser_offers;
+
+select 
+--(select offer_name from "leadgen-new".dim_advertiser_offers where offer_unique_id = JSON_EXTRACT_PATH_TEXT(event_data, 'offerId')),
+event, event_data from user_metadata 
+where session_id = '76dbf860-d7f3-4248-bc4c-84aec7ab5e17'
+--and stats_date >= curdate()
+and event in ('LeadsDoNotPostLogging', 'LeadsDoNotPost', 'LeadQualityRedirectTo') ;
+
+--select * from leadgen.user_metadata where user_id = 102798848
+--and stats_date <= current_date
+--order by event_timestamp ;
+
+
+/* select event,event_value, event_data from leadgen.user_metadata 
+where session_id = '370db778-f487-46c3-b453-24a0a0c21688'
+and stats_date <= current_date and event like '%OfferWallOfferPreClick%'
+order by event_timestamp desc ;  */
+
+select event,event_value, event_data from leadgen.user_metadata 
+where session_id = '0f190f05-4afe-4388-8aeb-7ffdbc4e97ac'
+--(select session_id from user_master where user_id = 104080061 )
+and stats_date = '01-29-2024'
+--and event in ('RegistrationSectionComplete', 'UserPiiDetails')
+order by event_timestamp ;
+
+
+
+select event,event_value, event_data from leadgen.user_metadata 
+where session_id = 'e51351c3-8ab3-4cc1-b506-9cb9a8ffb2c3' 
+and stats_date >= current_date
+and event like '%UserPiiDetailsExistingUser%'
+order by event_timestamp  ;
+

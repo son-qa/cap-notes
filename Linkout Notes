@@ -1,0 +1,19 @@
+Ranking is stored in - dimensional_offer_linkout_position
+
+dimension_name to dimension_key mapping - linkout_features
+
+dimension groups - dimension_groups
+
+offer exploratory/non exploratory is picked from - lo_autoranking_history
+
+global capping table, dimensions and capping limit set in this table - linkout_global_capping_config
+
+ranking dimensions are definded in this table - dimension_group_mapping
+
+
+
+
+('72c30f69-42b0-46b4-b48c-3b246e92e95a',
+'dc988fad-37e1-4a3e-816d-8a536dda57dd',
+'eeed28ab-7c75-495b-a771-e8edd1acdfda',
+'9e554dd6-9097-4188-a184-5449d331d440')
