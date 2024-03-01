@@ -118,28 +118,60 @@ VALUES
 
 --------------
 
+
+INSERT INTO `leadgen-new`.`offerwall_conversion`
+(`offer_id`, `offerwall_id`, `offer_group_type_id`, `email_md5`, `transaction_id`, `click_id`, `is_active`, `session_offerwall_conversion_id`,
+`session_id`, `is_fulfilled`, `offerwall_metadata`)
+VALUES
+("9d614965-6a0e-4605-81a0-621072e900895", 99, 1, "17c566816898d063fe0222146e50fcbe", 1, 07010640720000080099617332313, 1
+, "5bddf984-7526-453f-a7ca-b200b04e4ad5", "6017bcf7-7ece-4355-a330-2ae25ceb70ab", 0, json_object("site_id", 34)) ;
+
+
+
+INSERT INTO `leadgen-new`.`offerwall_conversion`
+(`offer_id`, `offerwall_id`, `offer_group_type_id`, `email_md5`, `transaction_id`, `click_id`, `is_active`, `session_offerwall_conversion_id`,
+`session_id`, `is_fulfilled`, `offerwall_metadata`)
+VALUES
+('ce1bd2fb-00d3-4f26-be0e-225336bacf308', 99, 3, "17c566816898d063fe0222146e50fcbe", 1, 07010640720000080099617332313, 1
+, "5bddf984-7526-453f-a7ca-b200b04e4ad5", "6017bcf7-7ece-4355-a330-2ae25ceb70ab", 0, json_object("site_id", 34)) ;
+
+
+
+INSERT INTO `leadgen-new`.`offerwall_conversion`
+(`offer_id`, `offerwall_id`, `offer_group_type_id`, `email_md5`, `transaction_id`, `click_id`, `is_active`, `session_offerwall_conversion_id`,
+`session_id`, `is_fulfilled`, `offerwall_metadata`)
+VALUES
+('32beeb6e-6e96-4870-889d-1551614d94a910', 99, 4, "17c566816898d063fe0222146e50fcbe", 1, 07010640720000080099617332313, 1
+, "5bddf984-7526-453f-a7ca-b200b04e4ad5", "6017bcf7-7ece-4355-a330-2ae25ceb70ab", 0, json_object("site_id", 34)) ;
+
+
+--------------
+
+
 UPDATE offerwall_ranking 
 SET 
     offer_group_type = CASE
         WHEN offer_group_type_id = 1 THEN 'bronze'
         WHEN offer_group_type_id = 3 THEN 'gold'
         WHEN offer_group_type_id = 4 THEN 'diamond'
-    END,
-    offer_id = (SELECT 
+    END
+    , offer_id = (SELECT 
             offer_id
         FROM
             advertiser_offers
         WHERE
-            offer_unique_id = offerwall_ranking.offer_unique_id),
-    offer_name = (SELECT 
+            offer_unique_id = offerwall_ranking.offer_unique_id)
+    , offer_name = (SELECT 
             offer_name
         FROM
             advertiser_offers
         WHERE
-            offer_unique_id = offerwall_ranking.offer_unique_id),
-    json_metadata = JSON_OBJECT('exploration_type', 'non-exploratory'),
-    strategy = 'v2',
-    dimension_hash = MD5(CONCAT('Other_', offer_group_type));
+            offer_unique_id = offerwall_ranking.offer_unique_id)
+    , json_metadata = JSON_OBJECT('exploration_type', 'non-exploratory')
+    , strategy = 'v2'
+    , dimension_hash = MD5(CONCAT('Other_', offer_group_type))
+WHERE
+    ranking_group_id = 1 ;
 
 
 --------------

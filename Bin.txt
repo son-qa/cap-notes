@@ -256,3 +256,48 @@ and stats_date >= current_date
 and event like '%UserPiiDetailsExistingUser%'
 order by event_timestamp  ;
 
+
+
+=============================================================
+=============================================================
+=============================================================
+=============================================================
+
+
+
+cd GitHub\CAP\leadgen\test_cases
+cd leadgen\test_cases
+
+pytest -rA -v -p no:logging --html=leadgen\reports\full_TCPA.html
+
+leadgen\test_cases\test_lead_posting\
+
+test_full_tcpa.py
+test_tcpa_on_lander.py
+test_tcpa_on_reg.py
+
+===========
+Windows:
+===========
+
+pytest -rA -v -p no:logging --html=leadgen\reports\leads_optins_steps_01032024.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_steps.py
+
+
+
+pytest -rA -v -n 6 -p no:logging --html=leadgen\reports\leads_optins_validations_01032024.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_validations.py
+
+
+pytest -rA -v -n 6 -p no:logging --html=leadgen\reports\ccpa_01032024.html leadgen\tests\test_ccpa\test_ccpa.py  
+
+
+===========
+Mac:
+===========
+
+pytest -rA -v -p no:logging -m regression --html=/Users/govinda.s/GitHub/CAP/leadgen/reports/regression.html
+
+pytest -rA -v -n 6 -p no:logging --html=leadgen/reports/validation_050124.html leadgen/test_cases/test_lead_posting/validations/test_full_tcpa_validations.py
+
+------------------------------------------------------
+
+------------------------------------------------------

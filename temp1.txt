@@ -1,0 +1,32 @@
+
+
+
+Bucket 37
+- https://freesamplesprousa.com/?test=1&cid=21eo8&exp=FSPU-Dynamic-2stepreg-PEHDup
+    - Dup
+    - 139291789
+    - 7c648b94-6882-4fd5-a79e-2cc1095a76f6
+
+    - New - 139292117, 4efa97e6-9894-4ea6-b63b-c23a8d8cbb10
+
+Bucket 246
+- https://freesamplesprousa.com/?test=1&cid=0cfbu&exp=FSPU-Dynamic-Push-2stepreg-PEHDup&email=cohosi4789@ricorit.com
+    - df8e47d4-2558-41ce-9480-e1d626dac186
+    - 139293306
+
+
+Bucket 10
+- https://freesamplesprousa.com/?test=1&cid=07hnb&exp=FSPU-Generic-3stepreg-PEHDup&email=wojim71689@ebuthor.com
+    - new - 139293688 - 53c81ee2-2142-4877-9c81-8aaecfaa1c1b
+    - dup - 139293899 - 0d46780f-86a2-4ee4-8407-17356e4fb8bf
+
+
+Bucket 333
+- https://freesamplesprousa.com/?test=1&cid=5jnmf&exp=FSPU-BKost-3Stepreg-Prelander-PEHDup&email=wojim71689@ebuthor.com
+    - dup - 139294699 - 9dcbcf50-dff7-42f6-902a-1c69249ae28a
+
+
+https://freesamplesprousa.com/?test=1&cid=vsasg-1653&email=wojim71689@ebuthor.com&var=750&forceExperiment=1
+
+
+https://freesamplesprousa.com/?test=1&cid=0cfbu&exp=FSPU-Shift44-Generic-TCPAonLander&email=cohosi4789@ricorit.com&var=927&forceExperiment=1

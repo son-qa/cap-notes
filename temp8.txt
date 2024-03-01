@@ -1,0 +1,109 @@
+rediskey not present (new/expired) (done)
+    - config same
+    - config updated
+
+rediskey present (done)
+    - config same
+    - config updated
+
+offer (out of scope)
+    - enable 
+    - disable
+
+multiple 25 conversions to meet entire criteria (test on demo/canary)
+    - same offer
+    - multiple offers
+
+multiple conversions to meet criteria of specific page. (test on demo/canary)
+    - same offer
+    - different offer
+
+ow compliance
+    - pop up
+    - reward status
+
+- session across different offerwall ids (done)
+    - same offer
+    - different offer
+
+
+cookie_id: db3b12ac-be2f-40f1-a0dd-7b1db5e81005
+session_id: 041b2b6d-96b8-4f05-a173-c59767cd7b00
+session_offerwall_conversion_id: 4af80049-9d29-4d3b-8bf1-f59df7a92982
+email: devije1674@newnime.com
+email_md5: 60b24f22b9d01d95830fc25692b04e78
+user_id: 118666814
+offerwall_group_id: 10
+conversion for offer:
+    - 21ae6176-ec96-4c98-a44b-79e0009e4cc1 (bronze 1)
+        - allowMultipleConversion: false, enableZeroConvertedEvent: true, offer_revenue:0.0, has_offer_id: 342, adv_cost=0.0, conv=0
+        - clickid [07010640400000999789735772620]
+        - rev [0, 0, 1, 2, 1]
+        - event [zeroConverted, zeroConverted, converted, converted, converted]
+        - max [fired, fired, fired, not fired, not fired]
+        - db [not stored, not stored, stored, not stored, not stored]
+        - time [9:57pm, 10:01pm, 10:02pm, 10:04pm, 10:11pm]
+        - adv_cost=1.0, conv=1, conversion_in_db=1
+
+    - 21ae6176-ec96-4c98-a44b-79e0009e4cc123 (bronze 2)
+        - allowMultipleConversion: false, enableZeroConvertedEvent: false, offer_revenue:0.0, has_offer_id: 349, adv_cost=0.0, conv=0
+        - clickid [07010642230000999803600173147]
+        - rev [0, 1, 2, 1]
+        - event [converted, converted, converted, converted]
+        - max [not fired, fired, not fired, not fired]
+        - db [not stored, stored, not stored, not stored]
+        - time [10:18pm, 10:20pm, 10:22pm, 10:23pm]
+        - adv_cost=1.0, conv=1, conversion_in_db=1
+
+    - 21ae6176-ec96-4c98-a44b-79e00e4cc234 (diamond 1)
+        - allowMultipleConversion: true, enableZeroConvertedEvent: true, offer_revenue:0.0, has_offer_id: 344, adv_cost=0.0, conv=0
+        - clickid [07010640400002999810154378851]
+        - rev [0, 1, 2, 1]
+        - event [zeroConverted, converted, converted_1, converted_2]
+        - max [fired, fired, fired, fired]
+        - db [not stored, stored, stored, stored]
+        - time [10:35pm, 10:38pm, 10:39pm, 10:41pm]
+        - adv_cost=0.0, conv=0, conversion_in_db=3
+
+    - 21ae6176-ec96-4c98-a44b-79e0009e4cc567 (diamond 2)
+        - allowMultipleConversion: true, enableZeroConvertedEvent: false, offer_revenue:0.0, has_offer_id: 351, adv_cost=0.0, conv=0
+        - clickid [07010642500002999821060742781]
+        - rev [0, 1, 2, 1]
+        - event [converted, converted, converted_1, converted_2]
+        - max [not fired, fired, fired, fired]
+        - db [not stored, stored, stored, stored]
+        - time [10:48pm, 10:51pm, 10:54pm, 10:56pm]
+        - adv_cost=0, conv=0, conversion_in_db=3
+
+
+update leadgen.advertiser_offers
+set offer_config = JSON_SET(offer_config, '$.allowMultipleConversion', false)
+where offer_unique_id = '21ae6176-ec96-4c98-a44b-79e0009e4cc1';
+
+update leadgen.advertiser_offers
+set offer_config = JSON_SET(offer_config, '$.enableZeroConvertedEvent', true)
+where offer_unique_id = '21ae6176-ec96-4c98-a44b-79e0009e4cc1';
+
+update leadgen.advertiser_offers
+set offer_config = JSON_SET(offer_config, '$.allowMultipleConversion', false)
+where offer_unique_id = '21ae6176-ec96-4c98-a44b-79e0009e4cc123';
+
+update leadgen.advertiser_offers
+set offer_config = JSON_SET(offer_config, '$.enableZeroConvertedEvent', false)
+where offer_unique_id = '21ae6176-ec96-4c98-a44b-79e0009e4cc123';
+
+update leadgen.advertiser_offers
+set offer_config = JSON_SET(offer_config, '$.allowMultipleConversion', true)
+where offer_unique_id = '21ae6176-ec96-4c98-a44b-79e00e4cc234';
+
+update leadgen.advertiser_offers
+set offer_config = JSON_SET(offer_config, '$.enableZeroConvertedEvent', true)
+where offer_unique_id = '21ae6176-ec96-4c98-a44b-79e00e4cc234';
+
+update leadgen.advertiser_offers
+set offer_config = JSON_SET(offer_config, '$.allowMultipleConversion', true)
+where offer_unique_id = '21ae6176-ec96-4c98-a44b-79e0009e4cc567';
+
+update leadgen.advertiser_offers
+set offer_config = JSON_SET(offer_config, '$.enableZeroConvertedEvent', false)
+where offer_unique_id = '21ae6176-ec96-4c98-a44b-79e0009e4cc567';

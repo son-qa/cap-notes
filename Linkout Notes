@@ -11,9 +11,36 @@ global capping table, dimensions and capping limit set in this table - linkout_g
 ranking dimensions are definded in this table - dimension_group_mapping
 
 
-
-
+select offer_id, offer_name, offer_unique_id, bid_type, tag, offer_config
+from advertiser_offers
+where offer_unique_id in
 ('72c30f69-42b0-46b4-b48c-3b246e92e95a',
 'dc988fad-37e1-4a3e-816d-8a536dda57dd',
 'eeed28ab-7c75-495b-a771-e8edd1acdfda',
-'9e554dd6-9097-4188-a184-5449d331d440')
+'9e554dd6-9097-4188-a184-5449d331d440',
+'878b480a-7618-4456-8779-3a26c12eb9dc',
+'fb8230d2-0b23-499a-bc1d-060a7540e8cc',
+'977d2ad6-0509-459c-ab64-2cc4aa9af1c3',
+'d149d8b4-b5d6-4477-8b22-ae19d44924ab') ;
+
+
+-- select * from dimension_groups ;
+
+select * from dimensional_offer_linkout_position where dimension_group_id = 48 ;
+
+select * from lo_autoranking_history where dimension_group_id = 48 ;
+
+-- select * from dimension_group_mapping where dimension_group_id = 48 ;
+
+-- select * from linkout_global_capping_config ;
+
+
+/*
+update dimensional_offer_linkout_position
+set hashkey = '6311ae17c1ee52b36e68aaf4ad066387'
+where linkout_group_id = 118 and dimension_group_id = 48 ;
+
+update lo_autoranking_history
+set json_metadata = json_set(json_metadata, '$.hashKey', '6311ae17c1ee52b36e68aaf4ad066387')
+where lo_group = 118 and dimension_group_id = 48 ;
+*/
