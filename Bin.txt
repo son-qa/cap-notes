@@ -280,11 +280,11 @@ test_tcpa_on_reg.py
 Windows:
 ===========
 
-pytest -rA -v -p no:logging --html=leadgen\reports\leads_optins_steps_01032024.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_steps.py
+pytest -rA -v -p no:logging --html=leadgen\reports\leads_optins_steps_08032024.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_steps.py
 
 
 
-pytest -rA -v -n 6 -p no:logging --html=leadgen\reports\leads_optins_validations_01032024.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_validations.py
+pytest -rA -v -n 6 -p no:logging --html=leadgen\reports\leads_optins_validations_08032024.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_validations.py
 
 
 pytest -rA -v -n 6 -p no:logging --html=leadgen\reports\ccpa_01032024.html leadgen\tests\test_ccpa\test_ccpa.py  

@@ -4,6 +4,10 @@ ToDo:
 
 	- https://trello.com/c/LPwVIC1X/4038-enhanced-exploration-logic-for-lo-offers-to-be-fag-at-slug-level
 
+	- dd9d9738-a77b-424b-8c30-4568021c4228
+
+	- https://trello.com/c/Hx9l7Vbp/4039-pass-additional-fields-to-survey-during-lo-survey-handshake
+
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
