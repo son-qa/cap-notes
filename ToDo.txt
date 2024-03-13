@@ -1,21 +1,14 @@
 ToDo:
 	
-	- https://trello.com/c/jQBIwSH5/3958-offerwall-redis-cleanup
-
-	- https://trello.com/c/LPwVIC1X/4038-enhanced-exploration-logic-for-lo-offers-to-be-fag-at-slug-level
-
-	- dd9d9738-a77b-424b-8c30-4568021c4228
-
 	- https://trello.com/c/Hx9l7Vbp/4039-pass-additional-fields-to-survey-during-lo-survey-handshake
 
+	- https://trello.com/c/abrw01z9/4110-spa-integration
+
+	- https://trello.com/c/bkvaFkeN/3854-ow-retargeting-via-cmt
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
 	- Postman - variables, enviroment, sites for CCPA
-
-	- IRCTC
-	- Appium
-	- Selenium grid
 
 
 -------------------------------------------------
@@ -48,10 +41,10 @@ Font Colour should be as per recommendation, i.e. #2851e1.
 Font size should be as per recommendation, i.e. 10px, instead is 12px, but might not be an issue.
 
 
-https://freesamplesprousa.com/?test=1&cid=21eo8&exp=FSPU-Dynamic-SPII-Zeeto-AutoSurvey-V5B
+https://freesamplesprousa.com/?test=1&cid=21eo8&exp=FSPU-Generic-Pre-filled-Reg
 
 
-https://theamericansweepstakes.com/?test=1&cid=n9gb2&exp=TAS-Optimised-Dup-ExpressReg
+https://theamericansweepstakes.com/?test=1&cid=n9gb2&exp=TAS-AutoLinkoutV3-Apptness-Lander-V2-TCPA-on-Lander
 
 --------------------------------------------------
 

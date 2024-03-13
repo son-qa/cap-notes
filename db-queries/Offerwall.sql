@@ -38,7 +38,7 @@ where offer_unique_id in
 ----------------
 Auto rank tables
 
-select * from offerwall_ranking_group ;
+select * from offerwall_ranking_groups ;
 
 set @ranking_group_id = 2 ;
 select * from offerwall_ranking where ranking_group_id = @ranking_group_id ;

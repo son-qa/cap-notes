@@ -60,7 +60,11 @@ Move TCPA Disclaimer above options experiment level configuration - https://trel
 
 Copy configs from duplicate flow for dup user - https://trello.com/c/Eg00yLNT/4018-support-to-copy-duplicate-user-config-to-new-user-if-user-is-peh-dup
 
-Addition of new dimension in LO global - https://trello.com/c/gszxdvwk/4037-lo-offer-global-impression-capping-to-be-moved-to-site-new-dup-hour-check-if-we-can-add-support-for-site-phduphour-or-make-this
+Addition of new dimension in LO global capping - https://trello.com/c/gszxdvwk/4037-lo-offer-global-impression-capping-to-be-moved-to-site-new-dup-hour-check-if-we-can-add-support-for-site-phduphour-or-make-this
+
+Offerwall redis revamp - https://trello.com/c/jQBIwSH5/3958-offerwall-redis-cleanup
+
+LO enhanced logic for showing exploratory offers - https://trello.com/c/LPwVIC1X/4038-enhanced-exploration-logic-for-lo-offers-to-be-fag-at-slug-level
 
 ---------- Ops Interface ----------
 
