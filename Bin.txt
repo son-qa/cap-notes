@@ -280,11 +280,13 @@ test_tcpa_on_reg.py
 Windows:
 ===========
 
-pytest -rA -v -p no:logging --html=leadgen\reports\leads_optins_steps_08032024.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_steps.py
+pytest -rA -v -p no:logging --html=leadgen\reports\leads_optins_steps_290324.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_steps.py
 
 
 
-pytest -rA -v -n 6 -p no:logging --html=leadgen\reports\leads_optins_validations_08032024.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_validations.py
+pytest -rA -v -n 6 -p no:logging --html=leadgen\reports\leads_optins_validations_290324.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_validations.py
+
+
 
 
 pytest -rA -v -n 6 -p no:logging --html=leadgen\reports\ccpa_01032024.html leadgen\tests\test_ccpa\test_ccpa.py  
@@ -301,3 +303,12 @@ pytest -rA -v -n 6 -p no:logging --html=leadgen/reports/validation_050124.html l
 ------------------------------------------------------
 
 ------------------------------------------------------
+
+Hi, looking for a flat or preoccupied flat or PG near Andheri or near Lower Parel. I'm male and looking to share space only with pure vegetarians, non-smokers, and non-drinkers.
+Preferably Jains.
+Budget - 8k to 10k
+Will be able to move-in from May 01.
+
+
+
+#enable-web-app-system-media-controls-win

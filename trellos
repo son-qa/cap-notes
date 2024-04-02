@@ -66,6 +66,10 @@ Offerwall redis revamp - https://trello.com/c/jQBIwSH5/3958-offerwall-redis-clea
 
 LO enhanced logic for showing exploratory offers - https://trello.com/c/LPwVIC1X/4038-enhanced-exploration-logic-for-lo-offers-to-be-fag-at-slug-level
 
+Passing additional details to LO Survey handshake - https://trello.com/c/Hx9l7Vbp/4039-pass-additional-fields-to-survey-during-lo-survey-handshake
+
+
+
 ---------- Ops Interface ----------
 
 Content management v1 to v2 conversion - https://trello.com/c/EPZbLGob/992-dynamic-10-hooks-to-be-automatically-created-fro-20-whenever-new-hooks-created-from-interface-verify-for-all-exiting-10-hooks

@@ -1,10 +1,12 @@
 ToDo:
-	
-	- https://trello.com/c/Hx9l7Vbp/4039-pass-additional-fields-to-survey-during-lo-survey-handshake
 
-	- https://trello.com/c/abrw01z9/4110-spa-integration
+	- pls add express with full tcpa and without full tcpa in compliance checklist
 
-	- https://trello.com/c/bkvaFkeN/3854-ow-retargeting-via-cmt
+	- https://trello.com/c/9nozWoZy/4117-ow-additional-offer-capping-layer-on-top-of-existing-capping-using-show-more-cta-handle-0-value-config-case-from-js
+
+		- https://trello.com/c/GGHqokTy/1029-prs-offerwall-show-more-deals
+
+
 
 Secondary:
 	- Check CCPA for autoposting, duplicate user
@@ -12,6 +14,7 @@ Secondary:
 
 
 -------------------------------------------------
+
 
 python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=regression-compliance
 python -m behave @rerun_failing.features
@@ -24,9 +27,7 @@ https://qa-v1.freesamplesprousa.com/?test=1&cid=qa-slug1&exp=Flow2-qa-v1-QA-Only
 
 https://qa-v2.freesamplesprousa.com/?test=1&cid=qa-slug2&exp=Flow1-QA-Only
 
-
 https://freesamplesprousa.com/?cid=21eo8&test=1&var=405&exp=FSPU-Personalized-Auto-Rank-CstmLP
-
 
 ---------------
 
@@ -40,11 +41,11 @@ Font Colour should be as per recommendation, i.e. #2851e1.
 
 Font size should be as per recommendation, i.e. 10px, instead is 12px, but might not be an issue.
 
+	
+https://freesamplesprousa.com/?test=1&cid=21eo8&exp=FSPU-SrcDisp-DynamicFlow-3-Step-PII
 
-https://freesamplesprousa.com/?test=1&cid=21eo8&exp=FSPU-Generic-Pre-filled-Reg
 
-
-https://theamericansweepstakes.com/?test=1&cid=n9gb2&exp=TAS-AutoLinkoutV3-Apptness-Lander-V2-TCPA-on-Lander
+https://theamericansweepstakes.com/?test=1&cid=n9gb2&exp=TAS-Optimised-SrcDisp-SS-Auto-Linkout2C-TCPAonReg
 
 --------------------------------------------------
 
@@ -53,3 +54,32 @@ https://staging-v9.freesamplesprousa.com/?test=1&cid=r7cyw
 
 https://topsurveyspot.com/?cid=bu8ix&test=1&exp=TSS-TCPAonRef-Flow-FE-QA-v1
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hi, if you happen to know the same as you have posted though for a male then can you please tag me in?
+
+
+
+
+
+
+Have developed a framework to automate the end-to-end test cases and assert the results. The test cases were written in pytest and the underlying logic was written in Python. In a test first the actions are performed on the webpage and then the essential data is fetched and stored from these webpages. Then consuming some APIs and querying a few tables in the database, some additional data is fetched and asserted.
+
+
+
+
+https://www.instagram.com/mehekwritings/

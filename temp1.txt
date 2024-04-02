@@ -1,32 +1,44 @@
+https://trello.com/c/9nozWoZy/4117-ow-additional-offer-capping-layer-on-top-of-existing-capping-using-show-more-cta-handle-0-value-config-case-from-js
 
 
 
-Bucket 37
-- https://freesamplesprousa.com/?test=1&cid=21eo8&exp=FSPU-Dynamic-2stepreg-PEHDup
-    - Dup
-    - 139291789
-    - 7c648b94-6882-4fd5-a79e-2cc1095a76f6
-
-    - New - 139292117, 4efa97e6-9894-4ea6-b63b-c23a8d8cbb10
-
-Bucket 246
-- https://freesamplesprousa.com/?test=1&cid=0cfbu&exp=FSPU-Dynamic-Push-2stepreg-PEHDup&email=cohosi4789@ricorit.com
-    - df8e47d4-2558-41ce-9480-e1d626dac186
-    - 139293306
+https://stage.primerewardspot.com/?cid=d1mfq&test=1&exp=PRS-test-default&t8=100temu
 
 
-Bucket 10
-- https://freesamplesprousa.com/?test=1&cid=07hnb&exp=FSPU-Generic-3stepreg-PEHDup&email=wojim71689@ebuthor.com
-    - new - 139293688 - 53c81ee2-2142-4877-9c81-8aaecfaa1c1b
-    - dup - 139293899 - 0d46780f-86a2-4ee4-8407-17356e4fb8bf
+update ab_experiment_v2 
+set config_data = json_set(config_data, '$.offerCapOW', true)
+where experiment_slug = 'PRS-test-default' ;
+
+update ab_experiment_v2
+set config_data = json_set(config_data, '$.bronzeOfferCap', 0, '$.goldOfferCap', 0, '$.diamondOfferCap', 0)
+where experiment_slug = 'PRS-test-default' ;
+
+update ab_experiment_v2
+set config_data = json_set(config_data, '$.bronzeOfferAdditionalCap', 5, '$.goldOfferAdditionalCap', 5, '$.diamondOfferAdditionalCap', 5)
+where experiment_slug = 'PRS-test-default' ;
 
 
-Bucket 333
-- https://freesamplesprousa.com/?test=1&cid=5jnmf&exp=FSPU-BKost-3Stepreg-Prelander-PEHDup&email=wojim71689@ebuthor.com
-    - dup - 139294699 - 9dcbcf50-dff7-42f6-902a-1c69249ae28a
 
 
-https://freesamplesprousa.com/?test=1&cid=vsasg-1653&email=wojim71689@ebuthor.com&var=750&forceExperiment=1
+
+Coverage:
+- FUnctionality
+    - No capping
+    - Only capping
+    - Capping + additional capping
+        - No offers reamaining for additional capping
+        - When capping is zero
+        - When more offers are available than set capping
+        - When less offers are available than set capping
 
 
-https://freesamplesprousa.com/?test=1&cid=0cfbu&exp=FSPU-Shift44-Generic-TCPAonLander&email=cohosi4789@ricorit.com&var=927&forceExperiment=1
+- Devices
+
+
+- Show more
+    - Click, impression - for extra offers
+    - Event for show more - offerWallShowmoreDealsClicked
+    - Rewards status - page + end
+    - Conversion for show more
+    - Back to top
+        - always visible for 0 additional cap
