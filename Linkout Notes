@@ -1,3 +1,10 @@
+Access denied issue:
+	- add "CREATIVES_DOMAIN_URL": "https://staging-creatives.freesamplesprousa.com" into site configs
+
+---------------------------------------------
+
+Ranking:
+
 Ranking is stored in - dimensional_offer_linkout_position
 
 dimension_name to dimension_key mapping - linkout_features

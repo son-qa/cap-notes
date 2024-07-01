@@ -1,35 +1,27 @@
 ToDo:
+	
+	- https://trello.com/c/7hBuQg7R/4196-tabover-lo-section-impression-and-lo-ofer-impression-event-should-fire-only-on-focus
 
-	- pls add express with full tcpa and without full tcpa in compliance checklist
+	- https://trello.com/c/DuTRUiPp/4207-exp-slug-level-flag-to-skip-fulltcpa-page-after-survey-for-experiment-type-dup-expressreg-it-should-not-impact-flows-where-surve
 
-	- https://trello.com/c/9nozWoZy/4117-ow-additional-offer-capping-layer-on-top-of-existing-capping-using-show-more-cta-handle-0-value-config-case-from-js
-
-		- https://trello.com/c/GGHqokTy/1029-prs-offerwall-show-more-deals
-
-
-
-Secondary:
-	- Check CCPA for autoposting, duplicate user
-	- Postman - variables, enviroment, sites for CCPA
-
-
--------------------------------------------------
-
-
-python -m behave -f allure_behave.formatter:AllureFormatter -o output/reports/ --tags=regression-compliance
-python -m behave @rerun_failing.features
-allure serve output/reports/ to generate html reports
-allure-docx output/reports/ filename.docx
-
-python -m behave --tags=sanket
-
-https://qa-v1.freesamplesprousa.com/?test=1&cid=qa-slug1&exp=Flow2-qa-v1-QA-Only
-
-https://qa-v2.freesamplesprousa.com/?test=1&cid=qa-slug2&exp=Flow1-QA-Only
-
-https://freesamplesprousa.com/?cid=21eo8&test=1&var=405&exp=FSPU-Personalized-Auto-Rank-CstmLP
 
 ---------------
+
+
+Jobs in Malaysia - May 2024
+Latest Job Vacancies  available and always updated. Start Your Career Path with Mau Kerja Today! Full time, part time, internship
+https://www.maukerja.my/en
+
+New Job Vacancies in Malaysia - Search By Location, Specialisation & Job Type | Hiredly
+Easy and fast job search on one of Malaysia's leading job portal. Find remote and work-from-home job vacancies for full-time and internship career opportunities in Malaysia.
+https://my.hiredly.com/jobs
+
+https://orsted.com/en/careers/vacancies-list?gad_source=1&gclid=Cj0KCQjwxqayBhDFARIsAANWRnQF0zm5i9gFW6FOTX4g9UkPz4RrDGeUnQTwcEPY4xJJTQegpsh6rEoaAln5EALw_wcB&page=1#cat=it-and-digital|ctry=malaysia|
+the last one is IT focused
+Ostred
+
+
+---------------------
 
 https://trello.com/c/jTiybf83/844-tcpa-disclaimer-discrepancies
 
@@ -42,44 +34,78 @@ Font Colour should be as per recommendation, i.e. #2851e1.
 Font size should be as per recommendation, i.e. 10px, instead is 12px, but might not be an issue.
 
 	
-https://freesamplesprousa.com/?test=1&cid=21eo8&exp=FSPU-SrcDisp-DynamicFlow-3-Step-PII
+https://freesamplesprousa.com/?test=1&cid=21eo8&exp=FSPU-Dup-ExpressReg-Survey-Push-Control
 
 
-https://theamericansweepstakes.com/?test=1&cid=n9gb2&exp=TAS-Optimised-SrcDisp-SS-Auto-Linkout2C-TCPAonReg
+https://theamericansweepstakes.com/?test=1&cid=n9gb2&exp=TAS-Apptness-Dup-ExpressReg
 
 --------------------------------------------------
 
-https://staging-v9.freesamplesprousa.com/?test=1&cid=r7cyw
 
+ROOT_FOLDER=D:\GitHub\CAP
 
-https://topsurveyspot.com/?cid=bu8ix&test=1&exp=TSS-TCPAonRef-Flow-FE-QA-v1
+#DB Connection Details
+LIVE_MYSQL_HOST=leadgen-prod-slave-misc.c5rg9dilhqmr.us-east-1.rds.amazonaws.com
+LIVE_MYSQL_USERNAME=sanket.o_ro
+LIVE_MYSQL_PASSWORD='sdERY%^HEeWE!'
+LIVE_MYSQL_DATABASE=leadgen
+LIVE_MYSQL_PORT=3306
 
+STAGE_MYSQL_HOST=staging-mysql-private.cap-cloud.co
+STAGE_MYSQL_USERNAME=read_write_devs
+STAGE_MYSQL_PASSWORD='4TU^R&I$FEWE%HGFEAG'
+STAGE_MYSQL_DATABASE=leadgen-new
+STAGE_MYSQL_PORT=3306
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Hi, if you happen to know the same as you have posted though for a male then can you please tag me in?
-
-
+#LIVE_REDSHIFT_HOST=web-apps.cepyv1ofeibj.us-west-2.redshift.amazonaws.com
+#LIVE_REDSHIFT_USERNAME=sanketoswal_ro
+#LIVE_REDSHIFT_PASSWORD='VWA#%b46v$n8u&%EA$v5&TM(<8n76rXQ'
+#LIVE_REDSHIFT_DATABASE=imedia
+#LIVE_REDSHIFT_PORT=5439
 
 
 
+28:EE:52:FF:3F:01
 
-Have developed a framework to automate the end-to-end test cases and assert the results. The test cases were written in pytest and the underlying logic was written in Python. In a test first the actions are performed on the webpage and then the essential data is fetched and stored from these webpages. Then consuming some APIs and querying a few tables in the database, some additional data is fetched and asserted.
+28EE52FF3F01
+
+
+https://staging-v3.freesamplesprousa.com/?cid=yv7ay&test=1&exp=EDF-FLOW-TEST
 
 
 
+python -W ignore -m behave -f html-pretty -o output\reports\report.html cap\specs\features\core\branded_tcpa_with_validations.feature
 
-https://www.instagram.com/mehekwritings/
+
+Sayali - girl - job
+Tejas - patchup - annoying - call
+Abhishek - Chocolate - Germany
+Karjat - Station - snack - 4hrs
+Issue - block - explain - talk
+
+
+----------------------------------------------
+
+Payslip for June & July
+Clear passwords, history, data
+Push and copy my repos
+Backup of Govinda's repo
+Entire govinda repo backup - all branches
+Remove access from sanket-media & sanket-ca
+Remove personal chrome profile
+Delete all logs
+Capterra
+Gartner
+G2
+SBI Account - mummy
+
+
+earphones
+laptop/desktop
+Maharashtra history
+Mummy mobile
+Ghar ghatti
+Gujarati
+Passport
+Earphones
+

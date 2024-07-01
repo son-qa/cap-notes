@@ -1,44 +1,11 @@
-https://trello.com/c/9nozWoZy/4117-ow-additional-offer-capping-layer-on-top-of-existing-capping-using-show-more-cta-handle-0-value-config-case-from-js
+Exit interview
 
-
-
-https://stage.primerewardspot.com/?cid=d1mfq&test=1&exp=PRS-test-default&t8=100temu
-
-
-update ab_experiment_v2 
-set config_data = json_set(config_data, '$.offerCapOW', true)
-where experiment_slug = 'PRS-test-default' ;
-
-update ab_experiment_v2
-set config_data = json_set(config_data, '$.bronzeOfferCap', 0, '$.goldOfferCap', 0, '$.diamondOfferCap', 0)
-where experiment_slug = 'PRS-test-default' ;
-
-update ab_experiment_v2
-set config_data = json_set(config_data, '$.bronzeOfferAdditionalCap', 5, '$.goldOfferAdditionalCap', 5, '$.diamondOfferAdditionalCap', 5)
-where experiment_slug = 'PRS-test-default' ;
-
-
-
-
-
-Coverage:
-- FUnctionality
-    - No capping
-    - Only capping
-    - Capping + additional capping
-        - No offers reamaining for additional capping
-        - When capping is zero
-        - When more offers are available than set capping
-        - When less offers are available than set capping
-
-
-- Devices
-
-
-- Show more
-    - Click, impression - for extra offers
-    - Event for show more - offerWallShowmoreDealsClicked
-    - Rewards status - page + end
-    - Conversion for show more
-    - Back to top
-        - always visible for 0 additional cap
+- Would I have been fired if I had not resigned?
+- Will there be more layoffs
+- Point of contact for any help
+- Form 16s, salary slips
+- Appraisal, arrears? My feedback
+- How was it for you to convey the message
+- Bouncers for what? Was it fair, respectful?
+- In future, how can I join back here
+- 

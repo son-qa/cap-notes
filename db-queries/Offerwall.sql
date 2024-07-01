@@ -70,6 +70,7 @@ where ranking_group_id = 2 and offer_group_type_id = 4 ;
 
 , json_extract(offer_config, '$.is_exclusive')
 , json_extract(offer_config, '$.exclusive_tag')
+'$.allowMultipleConversion', true
 
 --------------
 

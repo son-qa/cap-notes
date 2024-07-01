@@ -163,11 +163,3 @@ if survey.is_survey_available(instant_check=False):
 #         print('Font colour in rgb ->', rgb_colour)
 #         print('Font colour in hex ->', hex_colour)
 #         print('')
-
-a = {
-    's': None,
-    't': 0,
-}
-
-print('asdfsadf')
-a['s'] = 'rape'

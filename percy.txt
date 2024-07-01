@@ -1,0 +1,40 @@
+https://www.browserstack.com/docs/
+
+
+
+https://www.browserstack.com/docs/percy/integrate/selenium/python
+
+
+Prequistes
+	- Installed node.js
+		- install nvm
+			- refered doc - https://github.com/coreybutler/nvm-windows/wiki#manual-installation
+			- Installer link https://github.com/coreybutler/nvm-windows/releases
+
+		- Installing node.js
+			- https://nodejs.org/en/download/package-manager
+			- nvm install node
+			- close and open new cmd
+			- nvm use 22
+
+
+	- Login to percy
+
+	- New project on percy
+
+	- Fetch and set percy token
+
+	- npm install --save-dev @percy/cli
+		- above is for cli commands
+
+	- pip install percy-selenium
+
+	- from percy import percy_snapshot
+
+	- percy_snapshot(driver, name[, **kwargs])
+
+	- percy upload D:\percy_baseline
+
+	- percy exec -- python D:\GitHub\CAP\TESTING-STUFF\percy_trial.py
+
+

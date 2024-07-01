@@ -270,21 +270,15 @@ cd leadgen\test_cases
 
 pytest -rA -v -p no:logging --html=leadgen\reports\full_TCPA.html
 
-leadgen\test_cases\test_lead_posting\
-
-test_full_tcpa.py
-test_tcpa_on_lander.py
-test_tcpa_on_reg.py
 
 ===========
 Windows:
 ===========
 
-pytest -rA -v -p no:logging --html=leadgen\reports\leads_optins_steps_290324.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_steps.py
+pytest -rA -v -p no:logging --html=leadgen\reports\leads_optins_steps_190424.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_steps.py
 
 
-
-pytest -rA -v -n 6 -p no:logging --html=leadgen\reports\leads_optins_validations_290324.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_validations.py
+pytest -rA -v -p no:logging --html=leadgen\reports\leads_optins_validations_190424.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_validations.py
 
 
 
@@ -292,23 +286,27 @@ pytest -rA -v -n 6 -p no:logging --html=leadgen\reports\leads_optins_validations
 pytest -rA -v -n 6 -p no:logging --html=leadgen\reports\ccpa_01032024.html leadgen\tests\test_ccpa\test_ccpa.py  
 
 
-===========
-Mac:
-===========
 
-pytest -rA -v -p no:logging -m regression --html=/Users/govinda.s/GitHub/CAP/leadgen/reports/regression.html
+pytest -rA -v -n 4 -p no:logging --html=leadgen\reports\email_validation.html leadgen\tests\test_alias.py
 
-pytest -rA -v -n 6 -p no:logging --html=leadgen/reports/validation_050124.html leadgen/test_cases/test_lead_posting/validations/test_full_tcpa_validations.py
 
 ------------------------------------------------------
 
+python -m pytest -rA -v -p no:logging --alluredir leadgen\allure-reports\leads_optins\ --html=leadgen\reports\leads_optins_steps_100524.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_steps.py
+
+
+
+python -m pytest -rA -v -p no:logging --alluredir leadgen\allure-reports\leads_optins_validations\ --clean-alluredir --html=leadgen\reports\leads_optins_validations_100524.html leadgen\tests\test_leads_and_optins\test_leads_and_optins_validations.py
+
+
+python -m pytest -rA -v -p no:logging --alluredir leadgen\allure-reports\ccpa\ --html=leadgen\reports\ccpa_validations_04042024.html leadgen\tests\test_ccpa\test_ccpa.py
+
+
+allure open /home/user/myproject/build/allure-report
+
+allure serve leadgen\allure-reports
+
+
 ------------------------------------------------------
 
-Hi, looking for a flat or preoccupied flat or PG near Andheri or near Lower Parel. I'm male and looking to share space only with pure vegetarians, non-smokers, and non-drinkers.
-Preferably Jains.
-Budget - 8k to 10k
-Will be able to move-in from May 01.
-
-
-
-#enable-web-app-system-media-controls-win
+python -m pytest -rA -v -p no:logging --lf leadgen\tests\test_leads_and_optins\test_leads_and_optins_steps.py
