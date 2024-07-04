@@ -76,36 +76,3 @@ https://staging-v3.freesamplesprousa.com/?cid=yv7ay&test=1&exp=EDF-FLOW-TEST
 
 python -W ignore -m behave -f html-pretty -o output\reports\report.html cap\specs\features\core\branded_tcpa_with_validations.feature
 
-
-Sayali - girl - job
-Tejas - patchup - annoying - call
-Abhishek - Chocolate - Germany
-Karjat - Station - snack - 4hrs
-Issue - block - explain - talk
-
-
-----------------------------------------------
-
-Payslip for June & July
-Clear passwords, history, data
-Push and copy my repos
-Backup of Govinda's repo
-Entire govinda repo backup - all branches
-Remove access from sanket-media & sanket-ca
-Remove personal chrome profile
-Delete all logs
-Capterra
-Gartner
-G2
-SBI Account - mummy
-
-
-earphones
-laptop/desktop
-Maharashtra history
-Mummy mobile
-Ghar ghatti
-Gujarati
-Passport
-Earphones
-
